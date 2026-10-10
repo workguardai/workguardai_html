@@ -276,9 +276,7 @@ a:hover { color: var(--ink); }
 .supported { margin-top: var(--s-6); color: var(--ink-3); font-size: var(--fs-small); }
 
 /* Team */
-.team { list-style: none; margin: 0; padding: 0; display: grid; gap: 0 var(--s-5); grid-template-columns: 1fr; }
-@media (min-width: 560px) { .team { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .team { grid-template-columns: repeat(4, 1fr); } }
+.team { list-style: none; margin: 0; padding: 0; display: grid; gap: 0 var(--s-5); grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
 .team li { border-top: 1px solid var(--ink); padding: var(--s-4) 0 var(--s-6); }
 .team .name { font-family: var(--font-head); font-weight: 500; font-size: 1.1875rem; }
 .team .role { display: block; margin-top: var(--s-1); color: var(--ink-3); text-transform: uppercase; }
