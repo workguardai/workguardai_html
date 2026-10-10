@@ -297,6 +297,9 @@ a:hover { color: var(--ink); }
 @media (min-width: 768px) { .team { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1024px) { .team { grid-template-columns: repeat(5, 1fr); } }
 .team li { border-top: 1px solid var(--ink); padding: var(--s-4) 0 var(--s-6); }
+.team .avatar { display: block; width: 96px; height: 96px; margin-bottom: var(--s-4); }
+.team .avatar img { width: 96px; height: 96px; object-fit: cover; background: #d9d3c6; }
+.team .avatar-initials { display: grid; place-items: center; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink-3); font-size: 1rem; letter-spacing: .08em; }
 .team .name { font-family: var(--font-head); font-weight: 500; font-size: 1.1875rem; }
 .team .role { display: block; margin-top: var(--s-1); color: var(--ink-3); text-transform: uppercase; }
 .team a { font-size: var(--fs-small); display: inline-block; margin-top: var(--s-3); }
