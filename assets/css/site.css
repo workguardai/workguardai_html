@@ -269,6 +269,11 @@ a:hover { color: var(--ink); }
 .audience h3 { font-size: var(--fs-h3); margin-bottom: var(--s-3); }
 .audience p { color: var(--ink-2); }
 
+.for-photo { margin: var(--s-7) 0 0; }
+.for-photo img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; background: #d9d3c6; }
+@media (min-width: 768px) { .for-photo img { aspect-ratio: 21 / 9; object-position: center 40%; } }
+.for-photo figcaption { margin-top: var(--s-3); font-size: var(--fs-small); color: var(--ink-3); }
+
 /* About: home base */
 .about-grid { display: grid; gap: var(--s-7); }
 
