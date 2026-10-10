@@ -23,3 +23,51 @@
     });
   });
 })();
+
+// Pilot form: send to Formspree without leaving the page.
+// Without JavaScript the form posts normally and Formspree shows its own confirmation.
+(() => {
+  const form = document.getElementById('pilot-form');
+  if (!form || form.getAttribute('action') === '#') return;
+  const status = form.querySelector('.form-status');
+  const button = form.querySelector('button[type="submit"]');
+
+  const show = (text, isError) => {
+    status.textContent = text;
+    status.classList.toggle('is-error', Boolean(isError));
+    status.hidden = false;
+  };
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    button.disabled = true;
+    show(form.dataset.sending);
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      form.reset();
+      show(form.dataset.success);
+    } catch {
+      show(form.dataset.error, true);
+    } finally {
+      button.disabled = false;
+    }
+  });
+})();
+
+// Hero: size the plan-point tag to its (translated) label.
+(() => {
+  const tag = document.querySelector('.survey-grid .tag');
+  if (!tag) return;
+  const rect = tag.querySelector('rect');
+  const fit = () => {
+    const width = Math.max(...[...tag.querySelectorAll('text')].map((t) => t.getBBox().width));
+    if (width > 0) rect.setAttribute('width', (width + 10).toFixed(1));
+  };
+  document.fonts.ready.then(fit);
+})();
