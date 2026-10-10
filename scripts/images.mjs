@@ -12,6 +12,11 @@ const WIDTHS = [480, 800, 1080];
 const CROPS = {
   // Excavation only; leaves out the apartment blocks behind the site
   'hero-excavation': ['excavation-day-05.jpg', { left: 80, top: 760, width: 1640, height: 1640 }],
+  // "From the field" strip: square crops on the ground, away from buildings and signage
+  'field-cut': ['excavation-day-02.jpg', { left: 0, top: 600, width: 1800, height: 1800 }],
+  'field-floor': ['excavation-day-03.jpg', { left: 0, top: 600, width: 1800, height: 1800 }],
+  'field-shoring': ['shored-excavation-night-02.jpg', { left: 0, top: 600, width: 1800, height: 1800 }],
+  'field-drone': ['drone-controller-closeup.jpg', { left: 0, top: 300, width: 1800, height: 1800 }],
 };
 
 const jobs = (await readdir(SRC))

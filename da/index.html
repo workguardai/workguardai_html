@@ -182,6 +182,43 @@
         </article>
       </div>
       <p class="note">Illustrativt koncept med eksempeldata. Fungerende prototype; felttest afventer. Vi undersøger næste gang: kamera-GPS og LiDAR for højere præcision.</p>
+
+      <div class="field">
+        <div class="field-head">
+          <h3>Fra pladsen</h3>
+          <p>Almindelige byggepladsfotos, som dem prototypen måler på: taget med telefon eller drone, om dagen og om natten.</p>
+        </div>
+        <div class="field-grid">
+          <figure>
+            <picture>
+              <source type="image/avif" srcset="../assets/img/field-cut-480.avif 480w, ../assets/img/field-cut-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw">
+              <img src="../assets/img/field-cut-480.webp" srcset="../assets/img/field-cut-480.webp 480w, ../assets/img/field-cut-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw" width="800" height="800" loading="lazy" decoding="async" alt="Skrånende udgravningsvæg med en sandet bund.">
+            </picture>
+            <figcaption class="mono">Udgravning · dag</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source type="image/avif" srcset="../assets/img/field-floor-480.avif 480w, ../assets/img/field-floor-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw">
+              <img src="../assets/img/field-floor-480.webp" srcset="../assets/img/field-floor-480.webp 480w, ../assets/img/field-floor-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw" width="800" height="800" loading="lazy" decoding="async" alt="Udgravningsbund med stående vand og en lang skygge.">
+            </picture>
+            <figcaption class="mono">Udgravningsbund · dag</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source type="image/avif" srcset="../assets/img/field-shoring-480.avif 480w, ../assets/img/field-shoring-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw">
+              <img src="../assets/img/field-shoring-480.webp" srcset="../assets/img/field-shoring-480.webp 480w, ../assets/img/field-shoring-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw" width="800" height="800" loading="lazy" decoding="async" alt="Dyb udgravning med stålafstivning, oplyst om natten.">
+            </picture>
+            <figcaption class="mono">Afstivet udgravning · nat</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source type="image/avif" srcset="../assets/img/field-drone-480.avif 480w, ../assets/img/field-drone-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw">
+              <img src="../assets/img/field-drone-480.webp" srcset="../assets/img/field-drone-480.webp 480w, ../assets/img/field-drone-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw" width="800" height="800" loading="lazy" decoding="async" alt="Skærmen på en dronefjernbetjening med luftfoto under en fototest.">
+            </picture>
+            <figcaption class="mono">Fototest · Espoo</figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -195,19 +232,40 @@
       </div>
       <div class="screens">
         <figure class="screen">
-          <div class="screen-frame"><span class="todo">[TODO: redacted screenshot: upload by coordinate]</span></div>
+          <div class="screen-frame screen-shot">
+            <a href="../assets/img/screen-upload-1200.webp" target="_blank" rel="noopener">
+            <picture>
+              <source type="image/avif" srcset="../assets/img/screen-upload-640.avif 640w, ../assets/img/screen-upload-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
+              <img src="../assets/img/screen-upload-640.webp" srcset="../assets/img/screen-upload-640.webp 640w, ../assets/img/screen-upload-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="Prototypens skærm til upload af fotos ved en plankoordinat, med felter til X og Y.">
+            </picture>
+            </a>
+          </div>
           <figcaption><span>Upload pr. koordinat</span><span class="mono">SKÆRM 1</span></figcaption>
         </figure>
         <figure class="screen">
-          <div class="screen-frame"><span class="todo">[TODO: redacted screenshot: DWG coordinate map]</span></div>
+          <div class="screen-frame screen-shot">
+            <a href="../assets/img/screen-map-1200.webp" target="_blank" rel="noopener">
+            <picture>
+              <source type="image/avif" srcset="../assets/img/screen-map-640.avif 640w, ../assets/img/screen-map-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
+              <img src="../assets/img/screen-map-640.webp" srcset="../assets/img/screen-map-640.webp 640w, ../assets/img/screen-map-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="Prototypens overblik, der viser DWG-tegningen som et kort med koordinatpunkter. Filnavn og fremdriftstal er sløret.">
+            </picture>
+            </a>
+          </div>
           <figcaption><span>DWG-koordinatkort</span><span class="mono">SKÆRM 2</span></figcaption>
         </figure>
         <figure class="screen">
-          <div class="screen-frame"><span class="todo">[TODO: redacted screenshot: progress alert]</span></div>
+          <div class="screen-frame screen-shot">
+            <a href="../assets/img/screen-alerts-1200.webp" target="_blank" rel="noopener">
+            <picture>
+              <source type="image/avif" srcset="../assets/img/screen-alerts-640.avif 640w, ../assets/img/screen-alerts-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
+              <img src="../assets/img/screen-alerts-640.webp" srcset="../assets/img/screen-alerts-640.webp 640w, ../assets/img/screen-alerts-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="Prototypens meddelelser om igangværende udgravning, med slørede koordinater.">
+            </picture>
+            </a>
+          </div>
           <figcaption><span>Fremdriftsadvarsel på e-mail</span><span class="mono">SKÆRM 3</span></figcaption>
         </figure>
       </div>
-      <p class="note">Prototypens brugerflade, testet på et rigtigt projekts tegning og billeder. Felttest er næste skridt.</p>
+      <p class="note">Prototypens brugerflade, testet på et rigtigt projekts tegning og billeder. Felttest er næste skridt. Kundens filnavne, pladskoordinater og tal er sløret.</p>
 
       <div class="status-cols">
         <div>
@@ -273,7 +331,7 @@
           <source type="image/webp" srcset="../assets/img/drone-controller-field-480.webp 480w, ../assets/img/drone-controller-field-800.webp 800w" sizes="(min-width: 960px) 400px, 100vw">
           <img src="../assets/img/drone-controller-field-800.webp" width="800" height="1067" loading="lazy" decoding="async" alt="Hænder, der holder en dronefjernbetjening med et kort på skærmen, ved en skovvej.">
         </picture>
-        <figcaption>Dronefjernbetjening under fotografering af en byggeplads. <span class="todo">[TODO: confirm caption and location]</span></figcaption>
+        <figcaption>Fototest i Espoo, Finland.</figcaption>
       </figure>
     </div>
   </section>

@@ -172,6 +172,43 @@
         </article>
       </div>
       <p class="note">{{how.note}}</p>
+
+      <div class="field">
+        <div class="field-head">
+          <h3>{{how.fieldH}}</h3>
+          <p>{{how.fieldP}}</p>
+        </div>
+        <div class="field-grid">
+          <figure>
+            <picture>
+              <source type="image/avif" srcset="{{@base}}assets/img/field-cut-480.avif 480w, {{@base}}assets/img/field-cut-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw">
+              <img src="{{@base}}assets/img/field-cut-480.webp" srcset="{{@base}}assets/img/field-cut-480.webp 480w, {{@base}}assets/img/field-cut-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw" width="800" height="800" loading="lazy" decoding="async" alt="{{how.f1a}}">
+            </picture>
+            <figcaption class="mono">{{how.f1}}</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source type="image/avif" srcset="{{@base}}assets/img/field-floor-480.avif 480w, {{@base}}assets/img/field-floor-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw">
+              <img src="{{@base}}assets/img/field-floor-480.webp" srcset="{{@base}}assets/img/field-floor-480.webp 480w, {{@base}}assets/img/field-floor-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw" width="800" height="800" loading="lazy" decoding="async" alt="{{how.f2a}}">
+            </picture>
+            <figcaption class="mono">{{how.f2}}</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source type="image/avif" srcset="{{@base}}assets/img/field-shoring-480.avif 480w, {{@base}}assets/img/field-shoring-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw">
+              <img src="{{@base}}assets/img/field-shoring-480.webp" srcset="{{@base}}assets/img/field-shoring-480.webp 480w, {{@base}}assets/img/field-shoring-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw" width="800" height="800" loading="lazy" decoding="async" alt="{{how.f3a}}">
+            </picture>
+            <figcaption class="mono">{{how.f3}}</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source type="image/avif" srcset="{{@base}}assets/img/field-drone-480.avif 480w, {{@base}}assets/img/field-drone-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw">
+              <img src="{{@base}}assets/img/field-drone-480.webp" srcset="{{@base}}assets/img/field-drone-480.webp 480w, {{@base}}assets/img/field-drone-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 560px) 45vw, 100vw" width="800" height="800" loading="lazy" decoding="async" alt="{{how.f4a}}">
+            </picture>
+            <figcaption class="mono">{{how.f4}}</figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -185,19 +222,40 @@
       </div>
       <div class="screens">
         <figure class="screen">
-          <div class="screen-frame"><span class="todo">[TODO: redacted screenshot: upload by coordinate]</span></div>
+          <div class="screen-frame screen-shot">
+            <a href="{{@base}}assets/img/screen-upload-1200.webp" target="_blank" rel="noopener">
+            <picture>
+              <source type="image/avif" srcset="{{@base}}assets/img/screen-upload-640.avif 640w, {{@base}}assets/img/screen-upload-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
+              <img src="{{@base}}assets/img/screen-upload-640.webp" srcset="{{@base}}assets/img/screen-upload-640.webp 640w, {{@base}}assets/img/screen-upload-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="{{proto.sc1a}}">
+            </picture>
+            </a>
+          </div>
           <figcaption><span>{{proto.sc1}}</span><span class="mono">{{proto.screen}} 1</span></figcaption>
         </figure>
         <figure class="screen">
-          <div class="screen-frame"><span class="todo">[TODO: redacted screenshot: DWG coordinate map]</span></div>
+          <div class="screen-frame screen-shot">
+            <a href="{{@base}}assets/img/screen-map-1200.webp" target="_blank" rel="noopener">
+            <picture>
+              <source type="image/avif" srcset="{{@base}}assets/img/screen-map-640.avif 640w, {{@base}}assets/img/screen-map-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
+              <img src="{{@base}}assets/img/screen-map-640.webp" srcset="{{@base}}assets/img/screen-map-640.webp 640w, {{@base}}assets/img/screen-map-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="{{proto.sc2a}}">
+            </picture>
+            </a>
+          </div>
           <figcaption><span>{{proto.sc2}}</span><span class="mono">{{proto.screen}} 2</span></figcaption>
         </figure>
         <figure class="screen">
-          <div class="screen-frame"><span class="todo">[TODO: redacted screenshot: progress alert]</span></div>
+          <div class="screen-frame screen-shot">
+            <a href="{{@base}}assets/img/screen-alerts-1200.webp" target="_blank" rel="noopener">
+            <picture>
+              <source type="image/avif" srcset="{{@base}}assets/img/screen-alerts-640.avif 640w, {{@base}}assets/img/screen-alerts-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
+              <img src="{{@base}}assets/img/screen-alerts-640.webp" srcset="{{@base}}assets/img/screen-alerts-640.webp 640w, {{@base}}assets/img/screen-alerts-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="{{proto.sc3a}}">
+            </picture>
+            </a>
+          </div>
           <figcaption><span>{{proto.sc3}}</span><span class="mono">{{proto.screen}} 3</span></figcaption>
         </figure>
       </div>
-      <p class="note">{{proto.note}}</p>
+      <p class="note">{{proto.note}} {{proto.blurNote}}</p>
 
       <div class="status-cols">
         <div>
@@ -263,7 +321,7 @@
           <source type="image/webp" srcset="{{@base}}assets/img/drone-controller-field-480.webp 480w, {{@base}}assets/img/drone-controller-field-800.webp 800w" sizes="(min-width: 960px) 400px, 100vw">
           <img src="{{@base}}assets/img/drone-controller-field-800.webp" width="800" height="1067" loading="lazy" decoding="async" alt="{{about.photoAlt}}">
         </picture>
-        <figcaption>{{about.photoCaption}} <span class="todo">[TODO: confirm caption and location]</span></figcaption>
+        <figcaption>{{about.photoCaption}}</figcaption>
       </figure>
     </div>
   </section>
