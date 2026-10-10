@@ -232,7 +232,7 @@ a:hover { color: var(--ink); }
 .field-head h3 { font-size: var(--fs-h3); }
 .field-head p { color: var(--ink-2); }
 .field-grid { display: grid; gap: var(--s-4); grid-template-columns: repeat(2, 1fr); }
-@media (min-width: 1024px) { .field-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { .field-grid { grid-template-columns: repeat(3, 1fr); } }
 .field figure { margin: 0; }
 .field img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; background: #d9d3c6; }
 .field figcaption { margin-top: var(--s-2); color: var(--ink-3); text-transform: uppercase; }

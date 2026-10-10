@@ -17,6 +17,8 @@ const CROPS = {
   'field-floor': ['excavation-day-03.jpg', { left: 0, top: 600, width: 1800, height: 1800 }],
   'field-shoring': ['shored-excavation-night-02.jpg', { left: 0, top: 600, width: 1800, height: 1800 }],
   'field-drone': ['drone-controller-closeup.jpg', { left: 0, top: 300, width: 1800, height: 1800 }],
+  'field-urban-compactor': ['urban-site-dusk-04.jpg', { left: 0, top: 1250, width: 1150, height: 1150 }],
+  'field-urban-materials': ['urban-site-dusk-02.jpg', { left: 250, top: 1100, width: 1300, height: 1300 }],
 };
 
 const jobs = (await readdir(SRC))
