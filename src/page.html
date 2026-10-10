@@ -322,6 +322,15 @@
           <h2 id="pilot-title">{{pilot.h2}}</h2>
           <p class="sec-lead">{{pilot.lead}}</p>
         </div>
+        <div class="pilot-how">
+          <h3>{{pilot.howH}}</h3>
+          <ol class="pilot-steps">
+            <li><span class="mono">01</span><div><strong>{{pilot.s1h}}</strong><p>{{pilot.s1p}}</p></div></li>
+            <li><span class="mono">02</span><div><strong>{{pilot.s2h}}</strong><p>{{pilot.s2p}}</p></div></li>
+            <li><span class="mono">03</span><div><strong>{{pilot.s3h}}</strong><p>{{pilot.s3p}}</p></div></li>
+          </ol>
+          <p class="pilot-pricing">{{pilot.pricing}}</p>
+        </div>
         <div class="partner" id="partner">
           <h3>{{partner.h}}</h3>
           <p>{{partner.p}}</p>
@@ -360,7 +369,7 @@
         <p class="form-status" role="status" aria-live="polite" hidden></p>
         <div class="form-foot">
           <button class="btn btn-primary" type="submit"{{@formDisabled}}>{{form.send}}</button>
-          <p>{{form.notice}}{{@formTodo}}</p>
+          <p>{{form.notice}} <a href="{{@privacy}}">{{privacy.link}}</a>{{@formTodo}}</p>
         </div>
       </form>
     </div>
@@ -380,6 +389,7 @@
           <li><a href="mailto:ek@workguardai.com">ek@workguardai.com</a></li>
           <li><a href="https://www.linkedin.com/company/workguardai" rel="noopener" target="_blank">LinkedIn</a></li>
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
+          <li><a href="{{@privacy}}">{{privacy.link}}</a></li>
         </ul>
       </div>
       <div>

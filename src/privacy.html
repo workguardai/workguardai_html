@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{privacy.title}}</title>
+<meta name="description" content="{{privacy.metaDesc}}">
+{{@robots}}
+<meta name="theme-color" content="#fbfaf7">
+<link rel="canonical" href="{{@canonical}}">
+{{@alternates}}
+<link rel="preload" href="{{@base}}assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{@base}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{@base}}assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">{{skip}}</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="{{@home}}" aria-label="{{home}}">
+      <img src="{{@base}}assets/img/logo.png" alt="WorkGuardAI" width="433" height="71">
+    </a>
+    <div class="header-end">
+      <nav class="lang" aria-label="{{nav.language}}">
+{{@langnav}}
+      </nav>
+      <a class="btn btn-primary btn-small header-cta" href="{{@home}}#pilot">{{cta.pilot}}</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="legal">
+  <div class="container">
+    <p class="sec-index mono">{{privacy.link}}</p>
+    <h1>{{privacy.h1}}</h1>
+    <p class="legal-updated mono">{{privacy.updated}}</p>
+    <p class="legal-lead">{{privacy.intro}}</p>
+
+    <h2>{{privacy.whoH}}</h2>
+    <p>{{privacy.whoP}}</p>
+    <p><span class="todo">[TODO: legal company name, business ID (Y-tunnus), registered address]</span><br>Email: <a href="mailto:ek@workguardai.com">ek@workguardai.com</a></p>
+
+    <h2>{{privacy.collectH}}</h2>
+    <p>{{privacy.collectP1}}</p>
+    <p>{{privacy.collectP2}}</p>
+
+    <h2>{{privacy.whyH}}</h2>
+    <p>{{privacy.whyP}}</p>
+
+    <h2>{{privacy.procH}}</h2>
+    <ul>
+      <li>{{privacy.procFormspree}} <span class="todo">[TODO: confirm Formspree's transfer safeguard, e.g. EU–US Data Privacy Framework or Standard Contractual Clauses]</span></li>
+      <li>{{privacy.procEmail}} <span class="todo">[TODO: name of the email provider for workguardai.com]</span></li>
+      <li>{{privacy.procHosting}}</li>
+    </ul>
+    <p>{{privacy.procNoSale}}</p>
+
+    <h2>{{privacy.keepH}}</h2>
+    <p>{{privacy.keepP}}</p>
+
+    <h2>{{privacy.rightsH}}</h2>
+    <p>{{privacy.rightsP}}</p>
+    <p>{{privacy.complaintP}}</p>
+
+    <h2>{{privacy.changesH}}</h2>
+    <p>{{privacy.changesP}}</p>
+
+    <p class="legal-back"><a class="link-arrow" href="{{@home}}">{{privacy.back}} <span aria-hidden="true">→</span></a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-base mono" style="margin-top:0"><span>© 2026 WorkGuardAI</span><span>{{footer.base}}</span></div>
+  </div>
+</footer>
+</body>
+</html>

@@ -288,11 +288,18 @@ a:hover { color: var(--ink); }
 /* Pilot + partner */
 .pilot-grid { display: grid; gap: var(--s-8); }
 @media (min-width: 960px) { .pilot-grid { grid-template-columns: 0.9fr 1.1fr; gap: var(--s-9); } }
+.pilot-how { margin-top: var(--s-6); }
+.pilot-how h3, .partner h3 { font-size: var(--fs-h3); margin-bottom: var(--s-3); }
+.pilot-steps { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+.pilot-steps li { display: grid; grid-template-columns: 2rem 1fr; gap: var(--s-3); padding: var(--s-4) 0; border-bottom: 1px solid var(--line); }
+.pilot-steps .mono { color: var(--brand-strong); font-size: 0.8125rem; padding-top: 3px; }
+.pilot-steps strong { font-weight: 600; }
+.pilot-steps p { margin-top: var(--s-1); color: var(--ink-2); font-size: 0.9875rem; }
+.pilot-pricing { margin-top: var(--s-4); font-size: var(--fs-small); color: var(--ink-2); padding-left: var(--s-3); border-left: 2px solid var(--brand); }
 .partner { margin-top: var(--s-7); padding-top: var(--s-5); border-top: 1px solid var(--line-strong); }
-.partner h3 { font-size: var(--fs-h3); margin-bottom: var(--s-3); }
 .partner p { color: var(--ink-2); }
 .partner .link-arrow { display: inline-block; margin-top: var(--s-4); }
-.form { display: grid; gap: var(--s-5); background: var(--surface); border: 1px solid var(--line); padding: var(--s-5); }
+.form { display: grid; gap: var(--s-5); align-self: start; align-content: start; background: var(--surface); border: 1px solid var(--line); padding: var(--s-5); }
 @media (min-width: 560px) { .form { grid-template-columns: 1fr 1fr; padding: var(--s-6); } }
 .field { display: grid; gap: var(--s-2); min-width: 0; }
 .field-full { grid-column: 1 / -1; }
@@ -330,3 +337,15 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Legal pages */
+.legal .container { max-width: 46rem; padding-block: var(--s-8) var(--s-9); }
+.legal h1 { font-size: var(--fs-h2); line-height: 1.12; letter-spacing: -0.015em; }
+.legal h2 { font-size: var(--fs-h3); margin: var(--s-7) 0 var(--s-3); padding-top: var(--s-4); border-top: 1px solid var(--line); }
+.legal p, .legal li { color: var(--ink-2); }
+.legal p + p { margin-top: var(--s-3); }
+.legal ul + p { margin-top: var(--s-4); }
+.legal ul { margin: 0; padding-left: 1.2em; display: grid; gap: var(--s-2); }
+.legal-updated { margin-top: var(--s-3); color: var(--ink-3); }
+.legal-lead { margin-top: var(--s-5); font-size: var(--fs-lead); }
+.legal-back { margin-top: var(--s-8); }
