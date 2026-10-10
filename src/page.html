@@ -372,14 +372,23 @@
           <li>{{about.c1}} <span class="home">· {{about.homeBase}}</span></li><li>{{about.c2}}</li><li>{{about.c3}}</li><li>{{about.c4}}</li><li>{{about.c5}}</li><li>{{about.c6}}</li>
         </ul>
       </div>
-      <figure class="photo">
+      <div class="about-photos">
+      <figure class="photo photo-wide">
         <picture>
-          <source type="image/avif" srcset="{{@base}}assets/img/drone-controller-field-480.avif 480w, {{@base}}assets/img/drone-controller-field-800.avif 800w" sizes="(min-width: 960px) 400px, 100vw">
-          <source type="image/webp" srcset="{{@base}}assets/img/drone-controller-field-480.webp 480w, {{@base}}assets/img/drone-controller-field-800.webp 800w" sizes="(min-width: 960px) 400px, 100vw">
+          <source type="image/avif" srcset="{{@base}}assets/img/site-visit-team-480.avif 480w, {{@base}}assets/img/site-visit-team-800.avif 800w, {{@base}}assets/img/site-visit-team-1080.avif 1080w" sizes="(min-width: 1280px) 580px, (min-width: 560px) 50vw, 100vw">
+          <img src="{{@base}}assets/img/site-visit-team-800.webp" srcset="{{@base}}assets/img/site-visit-team-480.webp 480w, {{@base}}assets/img/site-visit-team-800.webp 800w, {{@base}}assets/img/site-visit-team-1080.webp 1080w" sizes="(min-width: 1280px) 580px, (min-width: 560px) 50vw, 100vw" width="1080" height="810" loading="lazy" decoding="async" alt="{{about.siteAlt}}">
+        </picture>
+        <figcaption>{{about.siteCap}}</figcaption>
+      </figure>
+      <figure class="photo photo-wide">
+        <picture>
+          <source type="image/avif" srcset="{{@base}}assets/img/drone-controller-field-480.avif 480w, {{@base}}assets/img/drone-controller-field-800.avif 800w" sizes="(min-width: 1280px) 580px, (min-width: 560px) 50vw, 100vw">
+          <source type="image/webp" srcset="{{@base}}assets/img/drone-controller-field-480.webp 480w, {{@base}}assets/img/drone-controller-field-800.webp 800w" sizes="(min-width: 1280px) 580px, (min-width: 560px) 50vw, 100vw">
           <img src="{{@base}}assets/img/drone-controller-field-800.webp" width="800" height="1067" loading="lazy" decoding="async" alt="{{about.photoAlt}}">
         </picture>
         <figcaption>{{about.photoCaption}}</figcaption>
       </figure>
+      </div>
     </div>
   </section>
 

@@ -271,7 +271,7 @@ a:hover { color: var(--ink); }
 
 /* About: home base */
 .about-grid { display: grid; gap: var(--s-7); }
-@media (min-width: 960px) { .about-grid { grid-template-columns: 1.2fr 0.8fr; gap: var(--s-9); align-items: start; } }
+
 .about-grid .sec-head { margin-bottom: 0; }
 .countries { list-style: none; margin: var(--s-6) 0 0; padding: 0; display: flex; flex-wrap: wrap; border-top: 1px solid var(--line); }
 .countries li { font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: .04em; color: var(--ink-2); padding: var(--s-3) var(--s-5) var(--s-3) 0; }
@@ -279,6 +279,9 @@ a:hover { color: var(--ink); }
 .countries .home { color: var(--ink-3); }
 .photo { margin: 0; }
 .photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; background: #d9d3c6; }
+.about-photos { display: grid; gap: var(--s-5); }
+@media (min-width: 560px) { .about-photos { grid-template-columns: 1fr 1fr; } }
+.photo-wide img { aspect-ratio: 4 / 3; }
 .photo figcaption { margin-top: var(--s-3); font-size: var(--fs-small); color: var(--ink-3); }
 .milestones { margin-top: var(--s-6); }
 
