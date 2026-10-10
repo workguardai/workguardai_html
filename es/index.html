@@ -94,7 +94,7 @@
               <path d="M156 160 L160 196" stroke="#fff" stroke-width="1" vector-effect="non-scaling-stroke"/>
               <rect x="160" y="196" width="110" height="24" rx="1.5"/>
               <text x="165" y="206">D·04 PUNTO DEL PLANO</text>
-              <text x="165" y="215">CAMBIO MEDIDO</text>
+              <text x="165" y="215">PROFUNDIDAD ESTIMADA</text>
             </g>
             <g>
               <text x="23" y="10">A</text><text x="73" y="10">B</text><text x="123" y="10">C</text>
@@ -138,17 +138,17 @@
             <circle class="ring" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
             <circle class="ring" style="animation-delay:1.2s" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
           </svg>
-          <p>Fotos normales de obra con un móvil, una cámara o un dron, tomadas en coordenadas de su plano. Sin hardware especial.</p>
+          <p>Fotos de cámaras fijas en obra, tomadas automáticamente cada cuatro horas, o subidas desde un móvil, una cámara o un dron en coordenadas de su plano.</p>
         </article>
         <article class="step">
           <div class="step-head"><span class="mono">02</span><h3>Analizar</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="Puntos del plano DWG con las zonas que han cambiado resaltadas">
+          <svg viewBox="0 0 240 170" role="img" aria-label="Puntos del plano DWG con la profundidad estimada a partir de una foto nueva">
             <g id="hiw-dots"></g>
             <g class="chg"><rect x="98" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="114" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="130" y="138" width="10" height="8" rx="1.5" fill="#17845a"/></g>
-            <rect x="40" y="40" width="160" height="26" rx="3" fill="#e6f3ec" stroke="#17845a"/>
-            <text x="120" y="57" text-anchor="middle" fill="#17845a" font-size="12" font-weight="600" font-family="Inter, sans-serif">Cambio detectado</text>
+            <rect x="28" y="40" width="184" height="26" rx="3" fill="#e6f3ec" stroke="#17845a"/>
+            <text x="120" y="57" text-anchor="middle" fill="#17845a" font-size="12" font-weight="600" font-family="Inter, sans-serif">Profundidad estimada</text>
           </svg>
-          <p>En cada foto nueva se mide el cambio de píxeles y de color en su coordenada del plano.</p>
+          <p>Un modelo de IA de código abierto (Depth Anything V2) estima la profundidad de la excavación en metros a partir de cada foto, en su coordenada del plano.</p>
         </article>
         <article class="step">
           <div class="step-head"><span class="mono">03</span><h3>Comparar</h3></div>
@@ -162,7 +162,7 @@
             <line x1="112" y1="154" x2="130" y2="154" stroke="#17845a" stroke-width="3"/>
             <text x="135" y="158" fill="#3e4a66" font-size="10" font-family="Inter, sans-serif">Detectado en obra</text>
           </svg>
-          <p>El avance se compara automáticamente con el plano DWG que el contratista ya tiene.</p>
+          <p>La profundidad estimada se compara con la profundidad prevista en el DWG y da el avance en cada punto del plano.</p>
         </article>
         <article class="step">
           <div class="step-head"><span class="mono">04</span><h3>Actuar</h3></div>
@@ -182,7 +182,7 @@
               <text x="52" y="143" fill="#9a5f00" font-size="10" font-family="Inter, sans-serif">Desviación avisada al jefe de obra</text>
             </g>
           </svg>
-          <p>El avance se actualiza por coordenada, con alertas por correo sobre avances, paradas y desviaciones.</p>
+          <p>Cada punto muestra su estado por color, una barra de avance general resume la obra y las alertas por correo indican las coordenadas con la profundidad actual y la prevista.</p>
         </article>
       </div>
       <p class="note">Concepto ilustrativo con datos de ejemplo. Prototipo funcional; prueba en obra pendiente. Exploramos a continuación: GPS de cámara y LiDAR para mayor precisión.</p>
@@ -331,16 +331,17 @@
         <div>
           <h3>Qué hace hoy</h3>
           <ul class="status-list status-today">
-            <li><span>Lee el plano DWG y crea un mapa de coordenadas de la obra.</span></li>
-            <li><span>Mide el cambio de píxeles y de color en fotos tomadas en coordenadas del plano.</span></li>
-            <li><span>Muestra el avance por coordenada.</span></li>
-            <li><span>Envía alertas por correo sobre avances, paradas y desviaciones.</span></li>
+            <li><span>Lee el plano DWG y lo convierte en una malla de puntos del plano, cada uno con su profundidad prevista.</span></li>
+            <li><span>Estima la profundidad de excavación de cada foto con un modelo de IA de código abierto (Depth Anything V2).</span></li>
+            <li><span>Muestra el avance por punto frente a la profundidad prevista, con colores de no iniciado a en curso y terminado, y una barra de avance general.</span></li>
+            <li><span>Toma fotos de cámaras fijas en obra cada cuatro horas o usa fotos subidas por coordenada.</span></li>
+            <li><span>Envía alertas por correo con las coordenadas y la profundidad actual y prevista.</span></li>
           </ul>
         </div>
         <div>
           <h3>Qué viene después</h3>
           <ul class="status-list">
-            <li><span class="chip">Siguiente</span><span>Una prueba en una obra en curso, con un contratista o un propietario de infraestructura.</span></li>
+            <li><span class="chip">Siguiente</span><span>Una prueba en una obra en curso, con un contratista o un propietario de infraestructura, comparando las profundidades estimadas con mediciones topográficas.</span></li>
             <li><span class="chip">En estudio</span><span>GPS de cámara combinado con LiDAR, para situar las fotos y medir la profundidad con más precisión.</span></li>
             <li><span class="chip">Previsto</span><span>Integraciones con las herramientas que ya usan los equipos de obra.</span></li>
           </ul>

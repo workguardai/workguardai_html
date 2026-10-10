@@ -94,7 +94,7 @@
               <path d="M156 160 L160 196" stroke="#fff" stroke-width="1" vector-effect="non-scaling-stroke"/>
               <rect x="160" y="196" width="110" height="24" rx="1.5"/>
               <text x="165" y="206">D·04 SUUNNITELMAPISTE</text>
-              <text x="165" y="215">MUUTOS MITATTU</text>
+              <text x="165" y="215">SYVYYS ARVIOITU</text>
             </g>
             <g>
               <text x="23" y="10">A</text><text x="73" y="10">B</text><text x="123" y="10">C</text>
@@ -138,17 +138,17 @@
             <circle class="ring" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
             <circle class="ring" style="animation-delay:1.2s" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
           </svg>
-          <p>Tavallisia työmaakuvia puhelimella, kameralla tai droonilla, otettuina suunnitelman koordinaateissa. Ei erikoislaitteita.</p>
+          <p>Kuvia työmaan kiinteistä kameroista automaattisesti neljän tunnin välein, tai puhelimella, kameralla tai droonilla suunnitelman koordinaateissa ladattuina.</p>
         </article>
         <article class="step">
           <div class="step-head"><span class="mono">02</span><h3>Analysoi</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="DWG-suunnitelman pisteet, joissa uudet muutokset on korostettu">
+          <svg viewBox="0 0 240 170" role="img" aria-label="DWG-suunnitelman pisteet ja uudesta kuvasta arvioitu syvyys">
             <g id="hiw-dots"></g>
             <g class="chg"><rect x="98" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="114" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="130" y="138" width="10" height="8" rx="1.5" fill="#17845a"/></g>
-            <rect x="40" y="40" width="160" height="26" rx="3" fill="#e6f3ec" stroke="#17845a"/>
-            <text x="120" y="57" text-anchor="middle" fill="#17845a" font-size="12" font-weight="600" font-family="Inter, sans-serif">Muutos havaittu</text>
+            <rect x="28" y="40" width="184" height="26" rx="3" fill="#e6f3ec" stroke="#17845a"/>
+            <text x="120" y="57" text-anchor="middle" fill="#17845a" font-size="12" font-weight="600" font-family="Inter, sans-serif">Syvyys arvioitu</text>
           </svg>
-          <p>Jokaisesta uudesta kuvasta mitataan pikseli- ja värimuutos sen suunnitelmakoordinaatissa.</p>
+          <p>Avoimen lähdekoodin tekoälymalli (Depth Anything V2) arvioi kaivannon syvyyden metreinä jokaisesta kuvasta sen suunnitelmakoordinaatissa.</p>
         </article>
         <article class="step">
           <div class="step-head"><span class="mono">03</span><h3>Vertaa</h3></div>
@@ -162,7 +162,7 @@
             <line x1="112" y1="154" x2="130" y2="154" stroke="#17845a" stroke-width="3"/>
             <text x="135" y="158" fill="#3e4a66" font-size="10" font-family="Inter, sans-serif">Havaittu työmaalla</text>
           </svg>
-          <p>Edistymistä verrataan automaattisesti DWG-suunnitelmaan, joka urakoitsijalla jo on.</p>
+          <p>Arvioitua syvyyttä verrataan DWG-suunnitelman mukaiseen syvyyteen, jolloin saadaan edistyminen suunnitelman jokaisessa pisteessä.</p>
         </article>
         <article class="step">
           <div class="step-head"><span class="mono">04</span><h3>Toimi</h3></div>
@@ -182,7 +182,7 @@
               <text x="52" y="143" fill="#9a5f00" font-size="10" font-family="Inter, sans-serif">Poikkeama ilmoitettu vastaavalle</text>
             </g>
           </svg>
-          <p>Edistyminen päivittyy koordinaatti kerrallaan, ja sähköpostihälytykset kertovat edistymisestä, pysähdyksistä ja poikkeamista.</p>
+          <p>Jokainen piste näyttää tilansa värillä, kokonaisedistymispalkki kokoaa työmaan tilanteen, ja sähköpostihälytykset kertovat koordinaatit sekä nykyisen ja suunnitellun syvyyden.</p>
         </article>
       </div>
       <p class="note">Havainnollistava konsepti esimerkkidatalla. Toimiva prototyyppi; kenttätesti tulossa. Selvitämme seuraavaksi: kameran GPS ja LiDAR tarkkuuden parantamiseksi.</p>
@@ -331,16 +331,17 @@
         <div>
           <h3>Mitä se tekee nyt</h3>
           <ul class="status-list status-today">
-            <li><span>Lukee DWG-suunnitelman ja luo työmaasta koordinaattikartan.</span></li>
-            <li><span>Mittaa pikseli- ja värimuutoksen kuvista, jotka on otettu suunnitelman koordinaateissa.</span></li>
-            <li><span>Näyttää edistymisen koordinaatti kerrallaan.</span></li>
-            <li><span>Lähettää sähköpostihälytykset edistymisestä, pysähdyksistä ja poikkeamista.</span></li>
+            <li><span>Lukee DWG-suunnitelman ja muuttaa sen suunnitelmapisteiden ruudukoksi, jossa jokaisella pisteellä on suunniteltu syvyys.</span></li>
+            <li><span>Arvioi kaivannon syvyyden jokaisesta kuvasta avoimen lähdekoodin tekoälymallilla (Depth Anything V2).</span></li>
+            <li><span>Näyttää edistymisen pisteittäin suunniteltuun syvyyteen verrattuna värikoodattuna (ei aloitettu, käynnissä, valmis) sekä kokonaisedistymispalkin.</span></li>
+            <li><span>Ottaa kuvia työmaan kiinteistä kameroista neljän tunnin välein tai käyttää koordinaatin mukaan ladattuja kuvia.</span></li>
+            <li><span>Lähettää sähköpostihälytykset, joissa on koordinaatit sekä nykyinen ja suunniteltu syvyys.</span></li>
           </ul>
         </div>
         <div>
           <h3>Mitä seuraavaksi</h3>
           <ul class="status-list">
-            <li><span class="chip">Seuraavaksi</span><span>Kenttätesti käynnissä olevalla työmaalla urakoitsijan tai infran omistajan kanssa.</span></li>
+            <li><span class="chip">Seuraavaksi</span><span>Kenttätesti käynnissä olevalla työmaalla urakoitsijan tai infran omistajan kanssa: arvioituja syvyyksiä verrataan mitattuihin.</span></li>
             <li><span class="chip">Selvitteillä</span><span>Kameran GPS yhdistettynä LiDARiin, jotta kuvat voidaan paikantaa ja syvyys mitata tarkemmin.</span></li>
             <li><span class="chip">Suunnitteilla</span><span>Integraatiot työkaluihin, joita työmaan tiimit jo käyttävät.</span></li>
           </ul>

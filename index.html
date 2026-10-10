@@ -94,7 +94,7 @@
               <path d="M156 160 L160 196" stroke="#fff" stroke-width="1" vector-effect="non-scaling-stroke"/>
               <rect x="160" y="196" width="110" height="24" rx="1.5"/>
               <text x="165" y="206">D·04 PLAN POINT</text>
-              <text x="165" y="215">CHANGE MEASURED</text>
+              <text x="165" y="215">DEPTH ESTIMATED</text>
             </g>
             <g>
               <text x="23" y="10">A</text><text x="73" y="10">B</text><text x="123" y="10">C</text>
@@ -138,17 +138,17 @@
             <circle class="ring" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
             <circle class="ring" style="animation-delay:1.2s" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
           </svg>
-          <p>Ordinary site photos from a phone, camera or drone, taken at coordinates from your plan. No special hardware.</p>
+          <p>Photos from fixed site cameras, taken automatically every four hours, or uploaded from a phone, camera or drone at coordinates from your plan.</p>
         </article>
         <article class="step">
           <div class="step-head"><span class="mono">02</span><h3>Analyse</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="Points from the DWG plan with newly changed areas highlighted">
+          <svg viewBox="0 0 240 170" role="img" aria-label="Points from the DWG plan, with the depth estimated from a new photo">
             <g id="hiw-dots"></g>
             <g class="chg"><rect x="98" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="114" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="130" y="138" width="10" height="8" rx="1.5" fill="#17845a"/></g>
-            <rect x="40" y="40" width="160" height="26" rx="3" fill="#e6f3ec" stroke="#17845a"/>
-            <text x="120" y="57" text-anchor="middle" fill="#17845a" font-size="12" font-weight="600" font-family="Inter, sans-serif">Change detected</text>
+            <rect x="28" y="40" width="184" height="26" rx="3" fill="#e6f3ec" stroke="#17845a"/>
+            <text x="120" y="57" text-anchor="middle" fill="#17845a" font-size="12" font-weight="600" font-family="Inter, sans-serif">Depth estimated</text>
           </svg>
-          <p>Each new photo is measured for pixel and colour change at its plan coordinate.</p>
+          <p>An open-source AI depth model (Depth Anything V2) estimates the excavation depth in metres from each photo, at its plan coordinate.</p>
         </article>
         <article class="step">
           <div class="step-head"><span class="mono">03</span><h3>Compare</h3></div>
@@ -162,7 +162,7 @@
             <line x1="112" y1="154" x2="130" y2="154" stroke="#17845a" stroke-width="3"/>
             <text x="135" y="158" fill="#3e4a66" font-size="10" font-family="Inter, sans-serif">Detected on site</text>
           </svg>
-          <p>Progress is compared automatically with the DWG plan the contractor already has.</p>
+          <p>The estimated depth is compared with the planned depth from the DWG, giving progress at each point of the plan.</p>
         </article>
         <article class="step">
           <div class="step-head"><span class="mono">04</span><h3>Act</h3></div>
@@ -182,7 +182,7 @@
               <text x="52" y="143" fill="#9a5f00" font-size="10" font-family="Inter, sans-serif">Deviation flagged to manager</text>
             </g>
           </svg>
-          <p>Progress updates per coordinate, with email alerts on progress, stalls and deviations.</p>
+          <p>Each point shows its status by colour, an overall progress bar sums up the site, and email alerts report the coordinates with current and planned depth.</p>
         </article>
       </div>
       <p class="note">Illustrative concept with sample data. Working prototype; field test pending. Exploring next: camera GPS and LiDAR for higher precision.</p>
@@ -331,16 +331,17 @@
         <div>
           <h3>What it does today</h3>
           <ul class="status-list status-today">
-            <li><span>Reads the DWG plan and builds a coordinate map of the site.</span></li>
-            <li><span>Measures pixel and colour change in site photos taken at plan coordinates.</span></li>
-            <li><span>Shows progress per coordinate.</span></li>
-            <li><span>Sends email alerts on progress, stalls and deviations.</span></li>
+            <li><span>Reads the DWG plan and turns it into a grid of plan points, each with its planned depth.</span></li>
+            <li><span>Estimates excavation depth from each photo with an open-source AI depth model (Depth Anything V2).</span></li>
+            <li><span>Shows progress per point against the planned depth, colour-coded from not started to in progress to complete, with an overall progress bar.</span></li>
+            <li><span>Takes photos from fixed site cameras every four hours, or from photos uploaded by coordinate.</span></li>
+            <li><span>Sends email alerts with the coordinates and the current and planned depth.</span></li>
           </ul>
         </div>
         <div>
           <h3>What comes next</h3>
           <ul class="status-list">
-            <li><span class="chip">Next</span><span>A field test on a live site, with a contractor or infrastructure owner.</span></li>
+            <li><span class="chip">Next</span><span>A field test on a live site, with a contractor or infrastructure owner, comparing the estimated depths with surveyed measurements.</span></li>
             <li><span class="chip">Exploring</span><span>Camera GPS combined with LiDAR, to place photos and measure depth more precisely.</span></li>
             <li><span class="chip">Planned</span><span>Integrations with the tools site teams already use.</span></li>
           </ul>
