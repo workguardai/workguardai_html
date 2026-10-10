@@ -25,7 +25,7 @@
     <nav class="nav" aria-label="{{nav.sections}}">
       <a href="#how">{{nav.how}}</a>
       <a href="#prototype">{{nav.prototype}}</a>
-      <a href="#recognition">{{nav.recognition}}</a>
+      <a href="#milestones">{{nav.recognition}}</a>
       <a href="#about">{{nav.about}}</a>
     </nav>
     <div class="header-end">
@@ -51,6 +51,7 @@
           <a class="link-arrow" href="#partner">{{cta.partner}} <span aria-hidden="true">→</span></a>
         </div>
         <p class="hero-meta mono"><span>{{hero.meta1}}</span><span>{{hero.meta2}}</span><span>{{hero.meta3}}</span></p>
+        <a class="hero-event" href="#milestones"><span class="mono">{{hero.eventTag}}</span> {{hero.event}} <span aria-hidden="true">→</span></a>
       </div>
 
       <figure class="survey">
@@ -311,9 +312,6 @@
         <ul class="countries" aria-label="{{about.countries}}">
           <li>{{about.c1}} <span class="home">· {{about.homeBase}}</span></li><li>{{about.c2}}</li><li>{{about.c3}}</li><li>{{about.c4}}</li><li>{{about.c5}}</li><li>{{about.c6}}</li>
         </ul>
-        <div class="milestones">
-          <span class="todo">[TODO: milestone timeline from Endrit (after the 30 July 2024 founding)]</span>
-        </div>
       </div>
       <figure class="photo">
         <picture>
@@ -326,31 +324,149 @@
     </div>
   </section>
 
-  <!-- 6. Recognition -->
-  <section class="section" id="recognition" aria-labelledby="recog-title">
+  <!-- 6. Milestones -->
+  <section class="section" id="milestones" aria-labelledby="ms-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">05 · {{recog.index}}</p>
-        <h2 id="recog-title">{{recog.h2}}</h2>
+        <p class="sec-index mono">05 · {{ms.index}}</p>
+        <h2 id="ms-title">{{ms.h2}}</h2>
+        <p class="sec-lead">{{ms.lead}}</p>
       </div>
-      <ul class="recog">
+
+      <div class="ms-highlights">
+        <figure class="ms-photo">
+          <picture>
+            <source type="image/avif" srcset="{{@base}}assets/img/sisu-win-480.avif 480w, {{@base}}assets/img/sisu-win-800.avif 800w, {{@base}}assets/img/sisu-win-1080.avif 1080w" sizes="(min-width: 1024px) 560px, 100vw">
+            <img src="{{@base}}assets/img/sisu-win-800.webp" srcset="{{@base}}assets/img/sisu-win-480.webp 480w, {{@base}}assets/img/sisu-win-800.webp 800w, {{@base}}assets/img/sisu-win-1080.webp 1080w" sizes="(min-width: 1024px) 560px, 100vw" width="1080" height="720" loading="lazy" decoding="async" alt="{{ms.photoAlt}}">
+          </picture>
+          <figcaption><span class="mono">{{ms.photoTag}}</span>{{ms.photoCap}}</figcaption>
+        </figure>
+        <div class="ms-stats">
+          <div class="ms-stat">
+            <p class="mono ms-label">{{ms.s1label}}</p>
+            <p class="ms-num">{{ms.s1num}}</p>
+            <p>{{ms.s1text}}</p>
+          </div>
+          <div class="ms-stat">
+            <p class="mono ms-label">{{ms.s2label}}</p>
+            <p class="ms-num">{{ms.s2num}}</p>
+            <p>{{ms.s2text}}</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="ms-sub">{{ms.timelineH}}</h3>
+      <ol class="timeline">
         <li>
-          <span class="who">{{recog.r1who}}</span>
-          <p>{{recog.r1}}</p>
-          <a href="https://www.linkedin.com/posts/sisu-factory_sisufactory-startup-pitching-activity-7300066903111135233-Zzur" rel="noopener" target="_blank">{{recog.linkedin}} <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a>
+          <time class="mono">{{ms.t1d}}</time>
+          <div>
+            <h3>{{ms.t1h}}</h3>
+            <p>{{ms.t1p}}</p>
+            <span class="todo">[TODO: link to the EU-Startups article, once its LiDAR/machine-learning wording is corrected]</span>
+          </div>
         </li>
         <li>
-          <span class="who">{{recog.r2who}}</span>
-          <p>{{recog.r2}}</p>
-          <a href="https://www.linkedin.com/posts/workguardai_circulareconomy-innovation-sustainablecities-activity-7368658654012669952-Crxp" rel="noopener" target="_blank">{{recog.linkedin}} <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a>
+          <time class="mono">{{ms.t2d}}</time>
+          <div>
+            <h3>{{ms.t2h}}</h3>
+            <p>{{ms.t2p}}</p>
+          </div>
         </li>
         <li>
-          <span class="who">{{recog.r3who}}</span>
-          <p>{{recog.r3}}</p>
-          <a href="https://pitchbob.io/secretseeds/revolutionizing-the-construction-industry-how-workguardai-is-leading-the-ai-driven-transformation" rel="noopener" target="_blank">{{recog.read}} <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a>
+          <time class="mono">{{ms.t3d}}</time>
+          <div>
+            <h3>{{ms.t3h}}</h3>
+            <p>{{ms.t3p}}</p>
+            <span class="todo">[TODO: month VINCI Energies shortlisted WorkGuardAI]</span>
+          </div>
         </li>
-      </ul>
-      <p class="supported"><span class="mono">{{recog.supported}}</span> <span class="todo">[TODO: list only the supporters Endrit has confirmed in writing]</span></p>
+        <li>
+          <time class="mono">{{ms.t4d}}</time>
+          <div>
+            <h3>{{ms.t4h}}</h3>
+            <p>{{ms.t4p}}</p>
+            <a href="https://centralbaltic.eu/project/baltic-impact-accelerator/" rel="noopener" target="_blank">{{ms.programme}} <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a>
+          </div>
+        </li>
+        <li>
+          <time class="mono">{{ms.t5d}}</time>
+          <div>
+            <h3>{{ms.t5h}}</h3>
+            <p>{{ms.t5p}}</p>
+          </div>
+        </li>
+        <li>
+          <time class="mono">{{ms.t6d}}</time>
+          <div>
+            <h3>{{ms.t6h}}</h3>
+            <p>{{ms.t6p}}</p>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7394758461210841088/" rel="noopener" target="_blank">{{recog.linkedin}} <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a>
+          </div>
+        </li>
+        <li>
+          <time class="mono">{{ms.t7d}}</time>
+          <div>
+            <h3>{{ms.t7h}}</h3>
+            <p>{{ms.t7p}}</p>
+            <a href="https://www.linkedin.com/posts/workguardai_circulareconomy-innovation-sustainablecities-activity-7368658654012669952-Crxp" rel="noopener" target="_blank">{{recog.linkedin}} <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a>
+          </div>
+        </li>
+        <li>
+          <time class="mono">{{ms.t8d}}</time>
+          <div>
+            <h3>{{ms.t8h}}</h3>
+            <p>{{ms.t8p}}</p>
+            <span class="todo">[TODO: date of Polar Bear Pitching, Oulu]</span>
+          </div>
+        </li>
+        <li>
+          <time class="mono">{{ms.t9d}}</time>
+          <div>
+            <h3>{{ms.t9h}}</h3>
+            <p>{{ms.t9p}}</p>
+            <a href="https://www.linkedin.com/posts/sisu-factory_sisufactory-startup-pitching-activity-7300066903111135233-Zzur" rel="noopener" target="_blank">{{recog.linkedin}} <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a>
+          </div>
+        </li>
+        <li>
+          <time class="mono">{{ms.t10d}}</time>
+          <div>
+            <h3>{{ms.t10h}}</h3>
+            <p>{{ms.t10p}}</p>
+            <a href="https://pitchbob.io/secretseeds/revolutionizing-the-construction-industry-how-workguardai-is-leading-the-ai-driven-transformation" rel="noopener" target="_blank">{{recog.read}} <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a>
+            <span class="todo">[TODO: date of the PitchBob feature]</span>
+          </div>
+        </li>
+        <li>
+          <time class="mono">{{ms.t11d}}</time>
+          <div>
+            <h3>{{ms.t11h}}</h3>
+            <p>{{ms.t11p}}</p>
+            <span class="todo">[TODO: confirm the year NEXUS ended (11 November)]</span>
+          </div>
+        </li>
+        <li>
+          <time class="mono">{{ms.t12d}}</time>
+          <div>
+            <h3>{{ms.t12h}}</h3>
+            <p>{{ms.t12p}}</p>
+          </div>
+        </li>
+        <li>
+          <time class="mono">{{ms.t13d}}</time>
+          <div>
+            <h3>{{ms.t13h}}</h3>
+            <p>{{ms.t13p}}</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="supported">
+        <p class="mono">{{recog.supported}}</p>
+        <div class="supported-row">
+          <img src="{{@base}}assets/img/bia-interreg-acknowledgement.webp" width="456" height="232" loading="lazy" decoding="async" alt="{{ms.biaAlt}}">
+          <p>{{ms.programmes}}</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -452,7 +568,7 @@
       </div>
       <div>
         <p class="foot-label mono">{{footer.company}}</p>
-        <p><span class="todo">[TODO: legal name, business ID, registered address]</span></p>
+        <p>WorkGuardAI Oy<br><span class="todo">[TODO: business ID (Y-tunnus), registered address]</span></p>
       </div>
     </div>
     <div class="foot-base mono"><span>© 2026 WorkGuardAI</span><span>{{footer.base}}</span></div>
