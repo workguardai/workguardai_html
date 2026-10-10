@@ -238,7 +238,7 @@
   "privacy.whyH": "Para qué los usamos",
   "privacy.whyP": "Solo para responder a su solicitud y hablar con usted sobre un posible piloto. La base jurídica es la aplicación, a petición suya, de medidas previas a un posible acuerdo (artículo 6.1.b del RGPD) y nuestro interés legítimo en responder a consultas comerciales (artículo 6.1.f).",
   "privacy.procH": "Quién los trata por cuenta nuestra",
-  "privacy.procFormspree": "Formspree, Inc. (Estados Unidos) recibe el formulario y lo envía a nuestro correo. Para ello, sus datos se transfieren a Estados Unidos.",
+  "privacy.procFormspree": "Formspree, Inc. (Estados Unidos) recibe el formulario y lo envía a nuestro correo. Para ello, sus datos se transfieren a Estados Unidos; la política de privacidad de Formspree indica que realiza estas transferencias según lo permitido por la ley y que protege los datos de forma adecuada.",
   "privacy.procEmail": "Google Workspace presta nuestro servicio de correo y guarda los mensajes que recibimos.",
   "privacy.procHosting": "GitHub, Inc. aloja este sitio web. Como cualquier servidor web, puede registrar datos técnicos, como direcciones IP, por motivos de seguridad.",
   "privacy.procNoSale": "No vendemos sus datos ni los compartimos con nadie más.",

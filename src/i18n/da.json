@@ -238,7 +238,7 @@
   "privacy.whyH": "Hvorfor vi bruger dem",
   "privacy.whyP": "Kun til at svare på din forespørgsel og drøfte en mulig pilot med dig. Retsgrundlaget er at træffe foranstaltninger på din anmodning forud for en mulig aftale (GDPR artikel 6, stk. 1, litra b) og vores legitime interesse i at besvare forretningshenvendelser (artikel 6, stk. 1, litra f).",
   "privacy.procH": "Hvem behandler dem for os",
-  "privacy.procFormspree": "Formspree, Inc. (USA) modtager formularen og sender den til vores e-mail. Dine oplysninger overføres til USA i den forbindelse.",
+  "privacy.procFormspree": "Formspree, Inc. (USA) modtager formularen og sender den til vores e-mail. Dine oplysninger overføres til USA i den forbindelse; ifølge Formsprees privatlivspolitik sker sådanne overførsler som tilladt efter loven, og oplysningerne beskyttes passende.",
   "privacy.procEmail": "Google Workspace leverer vores e-mail og opbevarer de beskeder, vi modtager.",
   "privacy.procHosting": "GitHub, Inc. hoster hjemmesiden. Som enhver webserver kan den logge tekniske data såsom IP-adresser af sikkerhedshensyn.",
   "privacy.procNoSale": "Vi sælger ikke dine oplysninger og deler dem ikke med andre.",

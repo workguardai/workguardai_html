@@ -2,5 +2,5 @@
   "baseUrl": "https://workguardai.com",
   "formspreeId": "xgaoynap",
   "languages": ["en", "sq", "da", "fi", "es"],
-  "noindex": true
+  "noindex": false
 }

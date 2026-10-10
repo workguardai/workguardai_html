@@ -238,7 +238,7 @@
   "privacy.whyH": "Miksi käytämme tietoja",
   "privacy.whyP": "Ainoastaan pyyntöösi vastaamiseen ja mahdollisesta pilotista keskustelemiseen. Käsittelyn oikeusperuste on pyynnöstäsi tehtävät toimenpiteet ennen mahdollista sopimusta (tietosuoja-asetuksen 6 artiklan 1 kohdan b alakohta) ja oikeutettu etumme vastata liiketoimintaa koskeviin yhteydenottoihin (f alakohta).",
   "privacy.procH": "Kuka käsittelee tietoja puolestamme",
-  "privacy.procFormspree": "Formspree, Inc. (Yhdysvallat) vastaanottaa lomakkeen ja välittää sen sähköpostiimme. Tietosi siirretään tätä varten Yhdysvaltoihin.",
+  "privacy.procFormspree": "Formspree, Inc. (Yhdysvallat) vastaanottaa lomakkeen ja välittää sen sähköpostiimme. Tietosi siirretään tätä varten Yhdysvaltoihin; Formspreen tietosuojakäytännön mukaan siirrot tehdään lain sallimalla tavalla ja tiedot suojataan asianmukaisesti.",
   "privacy.procEmail": "Sähköpostimme tarjoaa Google Workspace, joka säilyttää saamamme viestit.",
   "privacy.procHosting": "GitHub, Inc. ylläpitää sivuston palvelinta. Kuten mikä tahansa verkkopalvelin, se voi tallentaa teknisiä tietoja, kuten IP-osoitteita, tietoturvan vuoksi.",
   "privacy.procNoSale": "Emme myy tietojasi emmekä luovuta niitä muille.",

@@ -18,6 +18,8 @@ for (const lang of LANGS) dicts[lang] = JSON.parse(await readFile(`src/i18n/${la
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const pathOf = (lang) => (lang === 'en' ? '' : `${lang}/`);
+// A translation stays out of search engines until a native speaker has reviewed it.
+const indexable = (lang) => (dicts[lang]._meta?.status ?? 'source') !== 'needs native review';
 const urlOf = (lang, slug = '') => `${config.baseUrl}/${pathOf(lang)}${slug}`;
 
 const usedKeys = new Set(PAGES.flatMap(({ template }) => [...template.matchAll(/\{\{([^@}][^}]*)\}\}/g)].map((m) => m[1])));
@@ -54,7 +56,7 @@ for (const lang of LANGS) {
       canonical: urlOf(lang, slug),
       alternates,
       langnav,
-      robots: config.noindex ? '<meta name="robots" content="noindex">' : '',
+      robots: config.noindex || !indexable(lang) ? '<meta name="robots" content="noindex">' : '',
       formAction: formReady ? `https://formspree.io/f/${config.formspreeId}` : '#',
       formDisabled: formReady ? '' : ' disabled',
       formTodo: formReady ? '' : ' <span class="todo">[TODO: Formspree form ID in site.config.json]</span>',
@@ -76,5 +78,17 @@ for (const lang of LANGS) {
     console.log(`wrote ${dir}index.html${status === 'needs native review' ? '  (needs native review)' : ''}`);
   }
 }
+
+// robots.txt and sitemap.xml (indexable pages only)
+const sitemapUrls = config.noindex ? [] : LANGS.filter(indexable).flatMap((lang) => PAGES.map(({ slug }) => urlOf(lang, slug)));
+await writeFile('robots.txt', config.noindex
+  ? 'User-agent: *\nDisallow: /\n'
+  : `User-agent: *\nAllow: /\n\nSitemap: ${config.baseUrl}/sitemap.xml\n`);
+await writeFile('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.map((u) => `  <url><loc>${u}</loc></url>`).join('\n')}
+</urlset>
+`);
+console.log(`wrote robots.txt, sitemap.xml (${sitemapUrls.length} urls)`);
 
 if (problems) process.exit(1);

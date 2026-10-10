@@ -238,7 +238,7 @@
   "privacy.whyH": "Pse i përdorim",
   "privacy.whyP": "Vetëm për t'iu përgjigjur kërkesës suaj dhe për të diskutuar një pilot të mundshëm me ju. Baza ligjore është ndërmarrja e hapave me kërkesën tuaj përpara një marrëveshjeje të mundshme (GDPR, neni 6(1)(b)) dhe interesi ynë i ligjshëm për t'iu përgjigjur kërkesave të biznesit (neni 6(1)(f)).",
   "privacy.procH": "Kush i përpunon për ne",
-  "privacy.procFormspree": "Formspree, Inc. (Shtetet e Bashkuara) merr formularin dhe e dërgon në emailin tonë. Për këtë, të dhënat tuaja transferohen në Shtetet e Bashkuara.",
+  "privacy.procFormspree": "Formspree, Inc. (Shtetet e Bashkuara) merr formularin dhe e dërgon në emailin tonë. Për këtë, të dhënat tuaja transferohen në Shtetet e Bashkuara; politika e privatësisë së Formspree thotë se këto transferime bëhen sipas ligjit dhe se të dhënat mbrohen siç duhet.",
   "privacy.procEmail": "Google Workspace ofron emailin tonë dhe ruan mesazhet që marrim.",
   "privacy.procHosting": "GitHub, Inc. pret këtë faqe. Si çdo server, mund të regjistrojë të dhëna teknike si adresat IP për siguri.",
   "privacy.procNoSale": "Nuk i shesim të dhënat tuaja dhe nuk i ndajmë me askënd tjetër.",
