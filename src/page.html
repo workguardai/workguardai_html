@@ -377,32 +377,31 @@
           <p class="sec-lead">{{about.lead}}</p>
         </div>
         <ul class="countries" aria-label="{{about.countries}}">
-          <li>{{about.c1}} <span class="home">· {{about.homeBase}}</span></li><li>{{about.c2}}</li><li>{{about.c3}}</li><li>{{about.c4}}</li><li>{{about.c5}}</li><li>{{about.c6}}</li>
+          <li>{{about.c1}} <span class="home">· {{about.homeBase}}</span></li><li>{{about.c2}}</li><li>{{about.c3}}</li><li>{{about.c4}}</li><li>{{about.c5}}</li>
         </ul>
       </div>
       <div class="about-photos">
-      <figure class="photo photo-lead">
-        <picture>
-          <source type="image/avif" srcset="{{@base}}assets/img/about-helsinki-trench-640.avif 640w, {{@base}}assets/img/about-helsinki-trench-1080.avif 1080w, {{@base}}assets/img/about-helsinki-trench-1600.avif 1600w" sizes="(min-width: 1280px) 1120px, 100vw">
-          <img src="{{@base}}assets/img/about-helsinki-trench-1080.webp" srcset="{{@base}}assets/img/about-helsinki-trench-640.webp 640w, {{@base}}assets/img/about-helsinki-trench-1080.webp 1080w, {{@base}}assets/img/about-helsinki-trench-1600.webp 1600w" sizes="(min-width: 1280px) 1120px, 100vw" width="1600" height="1067" loading="lazy" decoding="async" alt="{{about.trenchAlt}}">
-        </picture>
-        <figcaption>{{about.trenchCap}}</figcaption>
-      </figure>
-      <figure class="photo photo-wide">
-        <picture>
-          <source type="image/avif" srcset="{{@base}}assets/img/site-visit-team-480.avif 480w, {{@base}}assets/img/site-visit-team-800.avif 800w, {{@base}}assets/img/site-visit-team-1080.avif 1080w" sizes="(min-width: 1280px) 580px, (min-width: 560px) 50vw, 100vw">
-          <img src="{{@base}}assets/img/site-visit-team-800.webp" srcset="{{@base}}assets/img/site-visit-team-480.webp 480w, {{@base}}assets/img/site-visit-team-800.webp 800w, {{@base}}assets/img/site-visit-team-1080.webp 1080w" sizes="(min-width: 1280px) 580px, (min-width: 560px) 50vw, 100vw" width="1080" height="810" loading="lazy" decoding="async" alt="{{about.siteAlt}}">
-        </picture>
-        <figcaption>{{about.siteCap}}</figcaption>
-      </figure>
-      <figure class="photo photo-wide">
-        <picture>
-          <source type="image/avif" srcset="{{@base}}assets/img/drone-controller-field-480.avif 480w, {{@base}}assets/img/drone-controller-field-800.avif 800w" sizes="(min-width: 1280px) 580px, (min-width: 560px) 50vw, 100vw">
-          <source type="image/webp" srcset="{{@base}}assets/img/drone-controller-field-480.webp 480w, {{@base}}assets/img/drone-controller-field-800.webp 800w" sizes="(min-width: 1280px) 580px, (min-width: 560px) 50vw, 100vw">
-          <img src="{{@base}}assets/img/drone-controller-field-800.webp" width="800" height="1067" loading="lazy" decoding="async" alt="{{about.photoAlt}}">
-        </picture>
-        <figcaption>{{about.photoCaption}}</figcaption>
-      </figure>
+        <figure class="photo">
+          <picture>
+            <source type="image/avif" srcset="{{@base}}assets/img/about-helsinki-trench-640.avif 640w, {{@base}}assets/img/about-helsinki-trench-1080.avif 1080w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
+            <img src="{{@base}}assets/img/about-helsinki-trench-640.webp" srcset="{{@base}}assets/img/about-helsinki-trench-640.webp 640w, {{@base}}assets/img/about-helsinki-trench-1080.webp 1080w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="1080" height="720" loading="lazy" decoding="async" alt="{{about.trenchAlt}}">
+          </picture>
+          <figcaption class="mono">{{about.trenchCap}}</figcaption>
+        </figure>
+        <figure class="photo">
+          <picture>
+            <source type="image/avif" srcset="{{@base}}assets/img/site-visit-team-480.avif 480w, {{@base}}assets/img/site-visit-team-800.avif 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
+            <img src="{{@base}}assets/img/site-visit-team-800.webp" srcset="{{@base}}assets/img/site-visit-team-480.webp 480w, {{@base}}assets/img/site-visit-team-800.webp 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="800" height="600" loading="lazy" decoding="async" alt="{{about.siteAlt}}">
+          </picture>
+          <figcaption class="mono">{{about.siteCap}}</figcaption>
+        </figure>
+        <figure class="photo">
+          <picture>
+            <source type="image/avif" srcset="{{@base}}assets/img/drone-controller-field-480.avif 480w, {{@base}}assets/img/drone-controller-field-800.avif 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
+            <img src="{{@base}}assets/img/drone-controller-field-800.webp" srcset="{{@base}}assets/img/drone-controller-field-480.webp 480w, {{@base}}assets/img/drone-controller-field-800.webp 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="800" height="1067" loading="lazy" decoding="async" alt="{{about.photoAlt}}">
+          </picture>
+          <figcaption class="mono">{{about.photoCaption}}</figcaption>
+        </figure>
       </div>
     </div>
   </section>
