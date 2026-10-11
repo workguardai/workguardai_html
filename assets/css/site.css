@@ -303,11 +303,11 @@ a:hover { color: var(--ink); }
 .team { list-style: none; margin: 0; padding: 0; display: grid; gap: 0 var(--s-5); grid-template-columns: 1fr; }
 @media (min-width: 560px) { .team { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 768px) { .team { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 1024px) { .team { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 1100px) { .team { grid-template-columns: repeat(6, 1fr); } }
 .team li { border-top: 1px solid var(--ink); padding: var(--s-4) 0 var(--s-6); }
 .team .avatar { display: block; width: 96px; height: 96px; margin-bottom: var(--s-4); }
 .team .avatar img { width: 96px; height: 96px; object-fit: cover; background: #d9d3c6; }
-.team .name { font-family: var(--font-head); font-weight: 500; font-size: 1.1875rem; }
+.team .name { display: block; line-height: 1.25; font-family: var(--font-head); font-weight: 500; font-size: 1.1875rem; }
 .team .role { display: block; margin-top: var(--s-1); color: var(--ink-3); text-transform: uppercase; }
 .team a { font-size: var(--fs-small); display: inline-block; margin-top: var(--s-3); }
 
@@ -416,7 +416,13 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .timeline p { color: var(--ink-2); margin-top: 2px; }
 .timeline a { display: inline-block; margin-top: var(--s-1); font-size: var(--fs-small); }
 .timeline .todo { display: inline-block; margin-top: var(--s-1); }
-.supported { margin-top: var(--s-7); padding-top: var(--s-4); border-top: 1px solid var(--line); }
+.supported { margin-top: var(--s-7); padding-top: var(--s-4); border-top: 1px solid var(--line); display: grid; gap: var(--s-6); }
+@media (min-width: 960px) { .supported { grid-template-columns: 1fr 420px; align-items: start; gap: var(--s-8); } }
+.cert { margin: 0; }
+.cert a { display: block; cursor: zoom-in; }
+.cert img { width: 100%; height: auto; border: 1px solid var(--line-strong); background: #fff; transition: opacity .15s; }
+.cert a:hover img { opacity: .9; }
+.cert figcaption { margin-top: var(--s-2); color: var(--ink-3); text-transform: uppercase; }
 .supported > .mono { color: var(--ink-3); margin-bottom: var(--s-3); }
 .supported-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-4) var(--s-6); }
 .supported-row img { width: 228px; height: auto; background: #fff; }
