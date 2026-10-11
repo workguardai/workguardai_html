@@ -287,6 +287,9 @@ a:hover { color: var(--ink); }
 .about-photos { display: grid; gap: var(--s-5); }
 @media (min-width: 560px) { .about-photos { grid-template-columns: 1fr 1fr; } }
 .photo-wide img { aspect-ratio: 4 / 3; }
+.photo-lead { grid-column: 1 / -1; }
+.photo-lead img { aspect-ratio: 3 / 2; }
+@media (min-width: 768px) { .photo-lead img { aspect-ratio: 16 / 8; object-position: center 70%; } }
 .photo figcaption { margin-top: var(--s-3); font-size: var(--fs-small); color: var(--ink-3); }
 .milestones { margin-top: var(--s-6); }
 
