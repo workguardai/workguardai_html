@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{@pageTitle}}</title>
+<meta name="description" content="{{@pageDescription}}">
+{{@robots}}
+{{@og}}
+<meta name="theme-color" content="#fbfaf7">
+<link rel="icon" type="image/png" sizes="32x32" href="{{@base}}assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="{{@base}}assets/img/favicon-48.png">
+<link rel="apple-touch-icon" href="{{@base}}assets/img/apple-touch-icon.png">
+<link rel="canonical" href="{{@canonical}}">
+{{@alternates}}
+<link rel="preload" href="{{@base}}assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{@base}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{@base}}assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">{{skip}}</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="{{@home}}" aria-label="{{home}}">
+      <img src="{{@base}}assets/img/logo.png" alt="WorkGuardAI" width="433" height="71">
+    </a>
+    <div class="header-end">
+      <nav class="lang" aria-label="{{nav.language}}">
+{{@langnav}}
+      </nav>
+      <a class="btn btn-primary btn-small header-cta" href="{{@home}}#pilot">{{cta.pilot}}</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="news-page article">
+  <div class="container">
+    <p class="sec-index mono"><a href="{{@home}}news/">{{news.all}}</a></p>
+    <time class="mono" datetime="{{@articleIso}}">{{@articleDate}}</time>
+    <h1>{{@articleTitle}}</h1>
+{{@articleBody}}
+    {{@articleShare}}
+    <p class="article-cta">{{@articleCta}}</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-base mono" style="margin-top:0"><span>© 2026 WorkGuardAI</span><span>{{footer.base}}</span></div>
+  </div>
+</footer>
+<script src="{{@base}}assets/js/site.js" defer></script>
+</body>
+</html>

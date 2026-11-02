@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="{{@lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{press.title}}</title>
+<meta name="description" content="{{press.metaDesc}}">
+{{@robots}}
+{{@og}}
+<meta name="theme-color" content="#fbfaf7">
+<link rel="icon" type="image/png" sizes="32x32" href="{{@base}}assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="{{@base}}assets/img/favicon-48.png">
+<link rel="apple-touch-icon" href="{{@base}}assets/img/apple-touch-icon.png">
+<link rel="canonical" href="{{@canonical}}">
+{{@alternates}}
+<link rel="preload" href="{{@base}}assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{@base}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{@base}}assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">{{skip}}</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="{{@home}}" aria-label="{{home}}">
+      <img src="{{@base}}assets/img/logo.png" alt="WorkGuardAI" width="433" height="71">
+    </a>
+    <div class="header-end">
+      <nav class="lang" aria-label="{{nav.language}}">
+{{@langnav}}
+      </nav>
+      <a class="btn btn-primary btn-small header-cta" href="{{@home}}#pilot">{{cta.pilot}}</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="news-page press">
+  <div class="container">
+    <p class="sec-index mono">{{work.c4h}}</p>
+    <h1>{{press.link}}</h1>
+
+    <h2>{{press.aboutH}}</h2>
+    <p lang="en">WorkGuardAI is a construction technology company founded in Finland in 2024. Its working prototype reads the DWG plan a site already has and estimates groundwork progress from ordinary site photos, using an open-source AI depth model. It compares estimated depth with planned depth at each point of the plan and sends email alerts. The prototype has been tested on one real project plan but not yet on a live site. A first field test is the next step.</p>
+
+    <h2>{{press.founderH}}</h2>
+    <p>Endrit Kola, {{team.ceo}}</p>
+
+    <h2>{{press.factsH}}</h2>
+    <dl class="press-facts">
+      <div><dt>{{press.fCompany}}</dt><dd>WorkGuardAI Ab, Business ID 3465002-8, Espoo, Finland</dd></div>
+      <div><dt>{{press.fFounded}}</dt><dd>{{press.fFoundedV}}</dd></div>
+      <div><dt>{{press.fStage}}</dt><dd>{{hero.stage1}} / {{hero.stage2}}</dd></div>
+      <div><dt>{{press.fProduct}}</dt><dd>{{footer.tagline}}</dd></div>
+      <div><dt>{{press.fTested}}</dt><dd>{{ms.builtWith}}</dd></div>
+    </dl>
+
+    <h2>{{press.photosH}}</h2>
+    <div class="press-photos">
+      <figure>
+        <a href="{{@base}}assets/img/team-endrit-kola-384.webp" target="_blank" rel="noopener">
+          <picture><source type="image/avif" srcset="{{@base}}assets/img/team-endrit-kola-384.avif"><img src="{{@base}}assets/img/team-endrit-kola-384.webp" width="384" height="384" loading="lazy" decoding="async" alt="Endrit Kola, {{team.ceo}}"></picture>
+        </a>
+        <figcaption>Endrit Kola, {{team.ceo}} · <a href="{{@base}}assets/img/team-endrit-kola-384.webp" target="_blank" rel="noopener">{{press.fullSize}}</a></figcaption>
+      </figure>
+      <figure>
+        <a href="{{@base}}assets/img/about-helsinki-trench-1600.webp" target="_blank" rel="noopener">
+          <picture><source type="image/avif" srcset="{{@base}}assets/img/about-helsinki-trench-1080.avif"><img src="{{@base}}assets/img/about-helsinki-trench-1080.webp" width="1080" height="720" loading="lazy" decoding="async" alt="{{about.trenchAlt}}"></picture>
+        </a>
+        <figcaption>{{about.trenchCap}} · <a href="{{@base}}assets/img/about-helsinki-trench-1600.webp" target="_blank" rel="noopener">{{press.fullSize}}</a></figcaption>
+      </figure>
+      <figure>
+        <a href="{{@base}}assets/img/hero-excavation-1080.webp" target="_blank" rel="noopener">
+          <picture><source type="image/avif" srcset="{{@base}}assets/img/hero-excavation-800.avif"><img src="{{@base}}assets/img/hero-excavation-800.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="{{hero.alt}}"></picture>
+        </a>
+        <figcaption>{{how.f1}} · <a href="{{@base}}assets/img/hero-excavation-1080.webp" target="_blank" rel="noopener">{{press.fullSize}}</a></figcaption>
+      </figure>
+      <figure>
+        <a href="{{@base}}assets/img/field-floor-800.webp" target="_blank" rel="noopener">
+          <picture><source type="image/avif" srcset="{{@base}}assets/img/field-floor-800.avif"><img src="{{@base}}assets/img/field-floor-800.webp" width="800" height="800" loading="lazy" decoding="async" alt="{{how.f2a}}"></picture>
+        </a>
+        <figcaption>{{how.f2}} · <a href="{{@base}}assets/img/field-floor-800.webp" target="_blank" rel="noopener">{{press.fullSize}}</a></figcaption>
+      </figure>
+    </div>
+
+    <h2>{{press.contactH}}</h2>
+    <p>Endrit Kola · <a href="mailto:ek@workguardai.com">ek@workguardai.com</a></p>
+    <p class="article-cta"><a class="link-arrow" href="{{@home}}?interest=press#work-form">{{press.request}} <span aria-hidden="true">→</span></a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-base mono" style="margin-top:0"><span>© 2026 WorkGuardAI</span><span>{{footer.base}}</span></div>
+  </div>
+</footer>
+<script src="{{@base}}assets/js/site.js" defer></script>
+</body>
+</html>

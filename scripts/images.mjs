@@ -39,3 +39,6 @@ for (const [name, file, crop] of jobs) {
   }
   console.log('done', name);
 }
+
+// Social sharing image (JPEG, because not every link preview reads WebP or AVIF).
+await sharp(path.join(SRC, 'excavation-day-05.jpg')).rotate().extract({ left: 80, top: 1000, width: 1640, height: 861 }).resize(1200, 630).jpeg({ quality: 82, mozjpeg: true }).toFile(path.join(OUT, 'og-default.jpg'));

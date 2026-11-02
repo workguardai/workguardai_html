@@ -1,0 +1,176 @@
+{
+  "_TODO": "TODO native review: sq, da, fi, es text below needs a native speaker.",
+  "items": [
+    {
+      "id": "meout-2026",
+      "date": "2026-11-25",
+      "endDate": "2026-11-26",
+      "title": {
+        "en": "MeOut Summit Pitch Marathon, Budapest",
+        "sq": "MeOut Summit Pitch Marathon, Budapest",
+        "da": "MeOut Summit Pitch Marathon, Budapest",
+        "fi": "MeOut Summit Pitch Marathon, Budapest",
+        "es": "MeOut Summit Pitch Marathon, Budapest"
+      },
+      "text": {
+        "en": "Selected as one of 20 startups, from roughly 200 applications, to pitch on stage in the Pitch Marathon on 25–26 November, in front of an investor panel. Featured on EU-Startups.",
+        "sq": "I përzgjedhur si një nga 20 startupet, nga rreth 200 aplikime, për të prezantuar në skenë në Pitch Marathon më 25–26 nëntor, para një paneli investitorësh. I prezantuar në EU-Startups.",
+        "da": "Udvalgt som en af 20 startups blandt omkring 200 ansøgninger til at pitche på scenen ved Pitch Marathon 25.–26. november, foran et investorpanel. Omtalt på EU-Startups.",
+        "fi": "Valittiin yhdeksi 20 startupista noin 200 hakemuksen joukosta pitchaamaan lavalla Pitch Marathonissa 25.–26.11. sijoittajaraadin edessä. Esillä EU-Startupsissa.",
+        "es": "Seleccionada como una de las 20 startups, entre unas 200 candidaturas, para presentar en el escenario del Pitch Marathon el 25–26 de noviembre, ante un jurado de inversores. Destacada en EU-Startups."
+      },
+      "link": {
+        "url": "https://www.eu-startups.com/2026/10/meout-summit-2026-meet-the-pitch-marathon-contestants/",
+        "label": {
+          "en": "Article on EU-Startups",
+          "sq": "Artikulli në EU-Startups",
+          "da": "Artikel på EU-Startups",
+          "fi": "Artikkeli EU-Startupsissa",
+          "es": "Artículo en EU-Startups"
+        }
+      },
+      "event": {
+        "start": "2026-11-25",
+        "end": "2026-11-26",
+        "banner": {
+          "en": "Pitching on stage at MeOut Summit, Budapest",
+          "sq": "Prezantim në skenë në MeOut Summit, Budapest",
+          "da": "Pitcher på scenen ved MeOut Summit, Budapest",
+          "fi": "Pitchaamme lavalla MeOut Summitissa Budapestissa",
+          "es": "Presentamos en el escenario del MeOut Summit, Budapest"
+        },
+        "short": {
+          "en": "MeOut Summit, Budapest",
+          "sq": "MeOut Summit, Budapest",
+          "da": "MeOut Summit, Budapest",
+          "fi": "MeOut Summit, Budapest",
+          "es": "MeOut Summit, Budapest"
+        },
+        "name": "MeOut Summit, Budapest"
+      }
+    },
+    {
+      "id": "airex-2026",
+      "date": "2026-11-06",
+      "title": {
+        "en": "AIREX 2026 PropTech Competition, Baku",
+        "sq": "AIREX 2026 PropTech Competition, Baku",
+        "da": "AIREX 2026 PropTech Competition, Baku",
+        "fi": "AIREX 2026 PropTech Competition, Baku",
+        "es": "AIREX 2026 PropTech Competition, Bakú"
+      },
+      "text": {
+        "en": "Invited to pitch at the AIREX 2026 PropTech Competition in Baku on 6 November. The prize pool is EUR 15,000.",
+        "sq": "I ftuar të prezantojë në AIREX 2026 PropTech Competition në Baku më 6 nëntor. Fondi i çmimeve është 15 000 EUR.",
+        "da": "Inviteret til at pitche ved AIREX 2026 PropTech Competition i Baku den 6. november. Præmiepuljen er 15.000 EUR.",
+        "fi": "Kutsuttu pitchaamaan AIREX 2026 PropTech Competitionissa Bakussa 6. marraskuuta. Palkintopotti on 15 000 euroa.",
+        "es": "Invitada a presentar en la AIREX 2026 PropTech Competition en Bakú el 6 de noviembre. El fondo de premios es de 15 000 EUR."
+      },
+      "event": {
+        "start": "2026-11-04",
+        "end": "2026-11-06",
+        "banner": {
+          "en": "Invited to pitch at AIREX, Baku",
+          "sq": "I ftuar të prezantojë në AIREX, Baku",
+          "da": "Inviteret til at pitche på AIREX, Baku",
+          "fi": "Kutsuttu pitchaamaan AIREX-messuilla Bakussa",
+          "es": "Invitada a presentar en AIREX, Bakú"
+        },
+        "short": {
+          "en": "AIREX, Baku",
+          "sq": "AIREX, Baku",
+          "da": "AIREX, Baku",
+          "fi": "AIREX, Baku",
+          "es": "AIREX, Bakú"
+        },
+        "name": "AIREX, Baku"
+      },
+      "link": {
+        "url": "https://airex.az/",
+        "label": {
+          "en": "Official source",
+          "sq": "Burimi zyrtar",
+          "da": "Officiel kilde",
+          "fi": "Virallinen lähde",
+          "es": "Fuente oficial"
+        }
+      }
+    },
+    {
+      "id": "tampere-accelerator-2026",
+      "date": "2026-09-09",
+      "title": {
+        "en": "Finland Global Startup Accelerator",
+        "sq": "Finland Global Startup Accelerator",
+        "da": "Finland Global Startup Accelerator",
+        "fi": "Finland Global Startup Accelerator",
+        "es": "Finland Global Startup Accelerator"
+      },
+      "text": {
+        "en": "Shortlisted to pitch for the 10-week growth programme, commissioned by the City of Tampere, and pitched to the selection panel on Selection Day, 9 September.",
+        "sq": "Në listën e ngushtë për të prezantuar për programin 10-javor të rritjes, të porositur nga Qyteti i Tamperes, dhe prezantoi para panelit të përzgjedhjes në Selection Day, më 9 shtator.",
+        "da": "På shortlisten til at pitche til det 10 uger lange vækstprogram, bestilt af Tampere Kommune, og pitchede for udvælgelsespanelet på Selection Day den 9. september.",
+        "fi": "Pääsi jatkoon pitchaamaan 10 viikon kasvuohjelmaan, jonka tilaaja on Tampereen kaupunki, ja pitchasi valintaraadille Selection Dayna 9.9.",
+        "es": "Preseleccionada para presentar al programa de crecimiento de 10 semanas, encargado por la ciudad de Tampere, y presentó ante el jurado en el Selection Day, el 9 de septiembre."
+      }
+    },
+    {
+      "id": "vinci-startup-connect",
+      "date": "2026-05-20",
+      "monthOnly": true,
+      "title": {
+        "en": "VINCI Energies Startup Connect",
+        "sq": "VINCI Energies Startup Connect",
+        "da": "VINCI Energies Startup Connect",
+        "fi": "VINCI Energies Startup Connect",
+        "es": "VINCI Energies Startup Connect"
+      },
+      "text": {
+        "en": "VINCI Energies expressed interest after an initial review, and we applied to its 2026 challenge “Expertise meets AI”.",
+        "sq": "VINCI Energies shprehu interes pas një shqyrtimi fillestar dhe ne aplikuam në sfidën e saj të vitit 2026 “Expertise meets AI”.",
+        "da": "VINCI Energies viste interesse efter en første gennemgang, og vi søgte virksomhedens 2026-udfordring “Expertise meets AI”.",
+        "fi": "VINCI Energies kiinnostui alustavan arvioinnin jälkeen, ja haimme sen vuoden 2026 haasteeseen ”Expertise meets AI”.",
+        "es": "VINCI Energies mostró interés tras una primera revisión y presentamos candidatura a su reto 2026 “Expertise meets AI”."
+      },
+      "link": {
+        "url": "https://www.digitalecosystem.vinci-energies.de/explore-our-ecosystem/discover-our-challenges/expertise-meets-ai-ssd26/",
+        "label": {
+          "en": "Official source",
+          "sq": "Burimi zyrtar",
+          "da": "Officiel kilde",
+          "fi": "Virallinen lähde",
+          "es": "Fuente oficial"
+        }
+      }
+    },
+    {
+      "id": "circular-buildings-tender",
+      "date": "2025-10-17",
+      "monthOnly": true,
+      "title": {
+        "en": "Helsinki, Espoo and Vantaa: Circular Buildings Innovation Challenge",
+        "sq": "Helsinki, Espoo dhe Vantaa: Circular Buildings Innovation Challenge",
+        "da": "Helsinki, Espoo og Vantaa: Circular Buildings Innovation Challenge",
+        "fi": "Helsinki, Espoo ja Vantaa: Kiertotalot-innovaatiohaaste",
+        "es": "Helsinki, Espoo y Vantaa: Circular Buildings Innovation Challenge"
+      },
+      "text": {
+        "en": "Took part in the joint innovation challenge of the three cities and submitted an offer in their tender.",
+        "sq": "Mori pjesë në sfidën e përbashkët të inovacionit të tre qyteteve dhe dorëzoi ofertë në tenderin e tyre.",
+        "da": "Deltog i de tre byers fælles innovationsudfordring og afgav tilbud i deres udbud.",
+        "fi": "Osallistui kolmen kaupungin yhteiseen innovaatiohaasteeseen ja jätti tarjouksen niiden hankinnassa.",
+        "es": "Participó en el reto de innovación conjunto de las tres ciudades y presentó una oferta en su licitación."
+      },
+      "link": {
+        "url": "https://hevinnovations.fi/circular-buildings-innovation-challenge/",
+        "label": {
+          "en": "Official source",
+          "sq": "Burimi zyrtar",
+          "da": "Officiel kilde",
+          "fi": "Virallinen lähde",
+          "es": "Fuente oficial"
+        }
+      }
+    }
+  ]
+}

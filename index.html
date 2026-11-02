@@ -7,6 +7,18 @@
 <title>WorkGuardAI: measured groundwork progress from your DWG plan</title>
 <meta name="description" content="WorkGuardAI reads the DWG plan you already have and measures groundwork and infrastructure progress from ordinary site photos, location by location. Working prototype, looking for the first pilot site.">
 
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WorkGuardAI">
+<meta property="og:title" content="WorkGuardAI: measured groundwork progress from your DWG plan">
+<meta property="og:description" content="WorkGuardAI reads the DWG plan you already have and measures groundwork and infrastructure progress from ordinary site photos, location by location. Working prototype, looking for the first pilot site.">
+<meta property="og:url" content="https://workguardai.com/">
+<meta property="og:image" content="https://workguardai.com/assets/img/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WorkGuardAI: measured groundwork progress from your DWG plan">
+<meta name="twitter:description" content="WorkGuardAI reads the DWG plan you already have and measures groundwork and infrastructure progress from ordinary site photos, location by location. Working prototype, looking for the first pilot site.">
+<meta name="twitter:image" content="https://workguardai.com/assets/img/og-default.jpg">
 <meta name="theme-color" content="#fbfaf7">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png">
@@ -36,6 +48,8 @@
       <a href="#prototype">Prototype</a>
       <a href="#milestones">Milestones</a>
       <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <div class="header-end">
       <nav class="lang" aria-label="Language">
@@ -64,7 +78,8 @@
           <a class="link-arrow" href="#partner">Partner with us <span aria-hidden="true">→</span></a>
         </div>
         <p class="hero-meta mono"><span>Born in Finland</span><span>Working across Europe</span><span>Founded 2024</span></p>
-        <a class="hero-event" href="#milestones"><span class="mono">25–26 Nov 2026</span> Pitching on stage at MeOut Summit, Budapest <span aria-hidden="true">→</span></a>
+        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>4–6 Nov 2026</span> <span data-event-label>Invited to pitch at AIREX, Baku</span> <span aria-hidden="true">→</span></a>
+        <script type="application/json" id="upcoming-events">[{"end":"2026-11-06","tag":"4–6 Nov 2026","label":"Invited to pitch at AIREX, Baku","cta":"Meet us at AIREX, Baku","meet":"./?interest=event&event=AIREX%2C%20Baku#work-form"},{"end":"2026-11-26","tag":"25–26 Nov 2026","label":"Pitching on stage at MeOut Summit, Budapest","cta":"Meet us at MeOut Summit, Budapest","meet":"./?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
       </div>
 
       <figure class="survey">
@@ -117,6 +132,66 @@
         <p class="sec-index mono">01 · How it works</p>
         <h2 id="how-title">From a DWG plan and ordinary photos to progress at each location.</h2>
       </div>
+      <figure class="explainer">
+        <figcaption class="mono">Illustration of the concept</figcaption>
+        <input class="ex-toggle" type="checkbox" id="ex-pause">
+        <ol class="ex-steps">
+          <li class="ex-step">
+            <svg viewBox="0 0 160 110" aria-hidden="true">
+              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
+              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
+              <line x1="22" y1="44" x2="22" y2="18" stroke="#5f6880" stroke-width="2"/>
+              <rect x="14" y="9" width="18" height="11" rx="2" fill="#0f1b3d"/>
+              <g class="ex-in1">
+                <polygon points="30,16 72,76 92,76" fill="#5255e0" opacity=".2"/>
+                <circle cx="82" cy="76" r="4" fill="#5255e0"/>
+              </g>
+            </svg>
+            <p class="ex-title"><span class="mono">01</span> Capture</p>
+            <p>A photo at a plan point</p>
+          </li>
+          <li class="ex-step">
+            <svg viewBox="0 0 160 110" aria-hidden="true">
+              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
+              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
+              <circle cx="82" cy="76" r="4" fill="#5255e0"/>
+              <g class="ex-in2">
+                <path d="M82 44V72M76 44H88M76 52H82M76 60H82M76 68H82" fill="none" stroke="#17845a" stroke-width="2"/>
+              </g>
+            </svg>
+            <p class="ex-title"><span class="mono">02</span> Analyse</p>
+            <p>Depth estimated from the photo</p>
+          </li>
+          <li class="ex-step">
+            <svg viewBox="0 0 160 110" aria-hidden="true">
+              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
+              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
+              <g class="ex-in3">
+                <path d="M0 44H46L66 98H94L114 44H160" fill="none" stroke="#5255e0" stroke-width="2" stroke-dasharray="5 4"/>
+                <path d="M46 44L58 76H102L114 44" fill="none" stroke="#17845a" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M80 78V96M76 82L80 78L84 82M76 92L80 96L84 92" fill="none" stroke="#0f1b3d" stroke-width="1.5"/>
+              </g>
+            </svg>
+            <p class="ex-title"><span class="mono">03</span> Compare</p>
+            <p>Estimated depth against planned depth</p>
+          </li>
+          <li class="ex-step">
+            <svg viewBox="0 0 160 110" aria-hidden="true">
+              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
+              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
+              <circle cx="82" cy="76" r="4" fill="#9a5f00"/>
+              <g class="ex-in4">
+                <rect x="50" y="8" width="60" height="38" rx="3" fill="#fbf1e1" stroke="#9a5f00" stroke-width="1.5"/>
+                <path d="M50 11L80 30L110 11" fill="none" stroke="#9a5f00" stroke-width="1.5"/>
+              </g>
+            </svg>
+            <p class="ex-title"><span class="mono">04</span> Act</p>
+            <p>Email alert with coordinates and depths</p>
+          </li>
+        </ol>
+        <label class="ex-pause mono" for="ex-pause">Pause animation</label>
+      </figure>
+
       <div class="steps">
         <article class="step">
           <div class="step-head"><span class="mono">01</span><h3>Capture</h3></div>
@@ -326,6 +401,18 @@
         </figure>
       </div>
       <p class="note">Prototype interface, tested on a real project's plan and imagery. Field test next. Client file names, site coordinates and figures are blurred.</p>
+      <p class="alert-open"><a class="btn btn-outline" id="alert-open" href="assets/img/screen-alerts-1200.webp" target="_blank" rel="noopener">See a sample alert</a></p>
+      <dialog class="alert-dialog" id="alert-dialog" aria-labelledby="alert-dialog-title">
+        <div class="alert-dialog-head">
+          <p id="alert-dialog-title">Progress alert by email</p>
+          <form method="dialog"><button class="btn btn-outline btn-small" type="submit">Close</button></form>
+        </div>
+        <picture>
+          <source type="image/avif" srcset="assets/img/screen-alerts-1200.avif">
+          <img src="assets/img/screen-alerts-1200.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Prototype notifications listing excavation in progress, with coordinates blurred.">
+        </picture>
+        <p class="note">Prototype interface, tested on a real project's plan and imagery. Field test next. Client file names, site coordinates and figures are blurred.</p>
+      </dialog>
 
       <div class="status-cols">
         <div>
@@ -425,6 +512,7 @@
         <p class="sec-lead">Three years of programmes, competitions and building, each step recorded with its source.</p>
       </div>
 
+
       <div class="ms-highlights">
         <figure class="ms-photo">
           <picture>
@@ -462,17 +550,17 @@
           </picture>
           <figcaption class="mono">Guests at Polar Bear Pitching · Oulu · 27 Feb 2025</figcaption>
         </figure>
-        <figure class="g-wide">
-          <picture>
-            <source type="image/avif" srcset="assets/img/circular-buildings-en-480.avif 480w, assets/img/circular-buildings-en-800.avif 800w, assets/img/circular-buildings-en-1080.avif 1080w" sizes="(min-width: 960px) 40vw, 100vw">
-            <img src="assets/img/circular-buildings-en-800.webp" srcset="assets/img/circular-buildings-en-480.webp 480w, assets/img/circular-buildings-en-800.webp 800w, assets/img/circular-buildings-en-1080.webp 1080w" sizes="(min-width: 960px) 40vw, 100vw" width="2000" height="1125" loading="lazy" decoding="async" alt="Announcement: We are part of the Circular Buildings Innovation Challenge, together with Helsinki, Espoo and Vantaa.">
-          </picture>
-          <figcaption class="mono">Circular Buildings Innovation Challenge · Helsinki, Espoo, Vantaa · 2025</figcaption>
-        </figure>
       </div>
 
       <h3 class="ms-sub">Timeline</h3>
       <ol class="timeline">
+        <li>
+          <time class="mono">Nov 2026</time>
+          <div>
+            <h3>AIREX 2026 PropTech Competition · Baku</h3>
+            <p>Invited to pitch at the AIREX 2026 PropTech Competition in Baku on 6 November.</p>
+          </div>
+        </li>
         <li>
           <time class="mono">Nov 2026</time>
           <div>
@@ -485,14 +573,14 @@
           <time class="mono">Sep 2026</time>
           <div>
             <h3>Finland Global Startup Accelerator · Plug and Play and the City of Tampere</h3>
-            <p>Shortlisted for the 10-week growth programme and pitched to the selection panel on Selection Day, 9 September.</p>
+            <p>Shortlisted to pitch for the 10-week growth programme, commissioned by the City of Tampere, and pitched to the selection panel on Selection Day, 9 September.</p>
           </div>
         </li>
         <li>
           <time class="mono">May 2026</time>
           <div>
             <h3>VINCI Energies · Startup Connect</h3>
-            <p>After an initial review, VINCI Energies expressed interest in WorkGuardAI and invited us to apply to its 2026 challenge “Expertise meets AI”. Application submitted.</p>
+            <p>VINCI Energies expressed interest after an initial review, and we applied to its 2026 challenge “Expertise meets AI”.</p>
           </div>
         </li>
         <li>
@@ -507,7 +595,7 @@
           <time class="mono">Dec 2025</time>
           <div>
             <h3>MVP completed</h3>
-            <p>The core engine was built with a development partner, funded through the Baltic Impact Accelerator.</p>
+            <p>The core engine was built with a development partner, funded through the Baltic Impact Accelerator. Built with input from a site manager at an infrastructure contractor, and tested on one real project plan.</p>
           </div>
         </li>
         <li>
@@ -519,11 +607,10 @@
           </div>
         </li>
         <li>
-          <time class="mono">Sep 2025</time>
+          <time class="mono">Oct 2025</time>
           <div>
             <h3>Circular Buildings Innovation Challenge · Helsinki, Espoo, Vantaa</h3>
-            <p>Selected by the three cities among competing bidders, to develop more sustainable building practices in the Helsinki region.</p>
-            <a href="https://www.linkedin.com/posts/workguardai_circulareconomy-innovation-sustainablecities-activity-7368658654012669952-Crxp" rel="noopener" target="_blank">Announcement on LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
+            <p>Took part in the joint innovation challenge of the three cities and submitted an offer in their tender.</p>
           </div>
         </li>
         <li>
@@ -593,30 +680,134 @@
     </div>
   </section>
 
-  <!-- 7. Team -->
-  <section class="section section-alt" id="team" aria-labelledby="team-title">
+  <!-- 7. News (from src/news.json) -->
+  <section class="section section-alt" id="news" aria-labelledby="news-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">06 · Team</p>
+        <p class="sec-index mono">06 · News</p>
+        <h2 id="news-title">Latest news</h2>
+      </div>
+      <ol class="news-list">
+        <li id="meout-2026">
+          <time class="mono" datetime="2026-11-25">25–26 Nov 2026</time>
+          <h3>MeOut Summit Pitch Marathon, Budapest</h3>
+          <p>Selected as one of 20 startups, from roughly 200 applications, to pitch on stage in the Pitch Marathon on 25–26 November, in front of an investor panel. Featured on EU-Startups.</p>
+          <a href="https://www.eu-startups.com/2026/10/meout-summit-2026-meet-the-pitch-marathon-contestants/" rel="noopener" target="_blank">Article on EU-Startups <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
+        </li>
+        <li id="airex-2026">
+          <time class="mono" datetime="2026-11-06">6 Nov 2026</time>
+          <h3>AIREX 2026 PropTech Competition, Baku</h3>
+          <p>Invited to pitch at the AIREX 2026 PropTech Competition in Baku on 6 November. The prize pool is EUR 15,000.</p>
+          <a href="https://airex.az/" rel="noopener" target="_blank">Official source <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
+        </li>
+        <li id="tampere-accelerator-2026">
+          <time class="mono" datetime="2026-09-09">9 Sept 2026</time>
+          <h3>Finland Global Startup Accelerator</h3>
+          <p>Shortlisted to pitch for the 10-week growth programme, commissioned by the City of Tampere, and pitched to the selection panel on Selection Day, 9 September.</p>
+        </li>
+      </ol>
+      <p class="news-more"><a class="link-arrow" href="news/">All news <span aria-hidden="true">→</span></a> <a class="link-arrow" href="./?interest=updates#work-form">Follow our progress <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- 8. Team -->
+  <section class="section" id="team" aria-labelledby="team-title">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">07 · Team</p>
         <h2 id="team-title">Team</h2>
       </div>
       <ul class="team">
         <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-endrit-kola-192.avif 1x, assets/img/team-endrit-kola-384.avif 2x"><img src="assets/img/team-endrit-kola-192.webp" srcset="assets/img/team-endrit-kola-192.webp 1x, assets/img/team-endrit-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Endrit Kola"></picture><span class="name">Endrit Kola</span><span class="role mono">Founder &amp; CEO</span><a href="https://www.linkedin.com/in/endritkola/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-maiju-karhu-192.avif 1x, assets/img/team-maiju-karhu-384.avif 2x"><img src="assets/img/team-maiju-karhu-192.webp" srcset="assets/img/team-maiju-karhu-192.webp 1x, assets/img/team-maiju-karhu-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><span class="name">Maiju Karhu</span><span class="role mono">Co-founder &amp; Technical Lead</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-larissa-chaves-192.avif 1x, assets/img/team-larissa-chaves-384.avif 2x"><img src="assets/img/team-larissa-chaves-192.webp" srcset="assets/img/team-larissa-chaves-192.webp 1x, assets/img/team-larissa-chaves-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><span class="name">Larissa Chaves</span><span class="role mono">Software Engineer</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-pratham-srivastava-192.avif 1x, assets/img/team-pratham-srivastava-384.avif 2x"><img src="assets/img/team-pratham-srivastava-192.webp" srcset="assets/img/team-pratham-srivastava-192.webp 1x, assets/img/team-pratham-srivastava-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><span class="name">Pratham Srivastava</span><span class="role mono">Full Stack Developer</span></li>
+        <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-maiju-karhu-192.avif 1x, assets/img/team-maiju-karhu-384.avif 2x"><img src="assets/img/team-maiju-karhu-192.webp" srcset="assets/img/team-maiju-karhu-192.webp 1x, assets/img/team-maiju-karhu-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><span class="name">Maiju Karhu</span><span class="role mono">Startup advisor</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
+        <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-larissa-chaves-192.avif 1x, assets/img/team-larissa-chaves-384.avif 2x"><img src="assets/img/team-larissa-chaves-192.webp" srcset="assets/img/team-larissa-chaves-192.webp 1x, assets/img/team-larissa-chaves-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><span class="name">Larissa Chaves</span><span class="role mono">Technical contributor</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
+        <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-pratham-srivastava-192.avif 1x, assets/img/team-pratham-srivastava-384.avif 2x"><img src="assets/img/team-pratham-srivastava-192.webp" srcset="assets/img/team-pratham-srivastava-192.webp 1x, assets/img/team-pratham-srivastava-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><span class="name">Pratham Srivastava</span><span class="role mono">Programming contributor</span></li>
         <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-altin-kola-192.avif 1x, assets/img/team-altin-kola-384.avif 2x"><img src="assets/img/team-altin-kola-192.webp" srcset="assets/img/team-altin-kola-192.webp 1x, assets/img/team-altin-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Altin Kola"></picture><span class="name">Altin Kola</span><span class="role mono">Field &amp; Infrastructure Advisor</span></li>
         <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-ergis-topi-192.avif 1x, assets/img/team-ergis-topi-384.avif 2x"><img src="assets/img/team-ergis-topi-192.webp" srcset="assets/img/team-ergis-topi-192.webp 1x, assets/img/team-ergis-topi-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Ergis Topi"></picture><span class="name">Ergis Topi</span><span class="role mono">Site Management Advisor</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- 8. Pilot call + partner -->
+  <!-- 9. FAQ -->
+  <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">08 · FAQ</p>
+        <h2 id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details><summary>How accurate is it?</summary><p>We do not know yet, because it has not been measured on a live site. That is what the pilot is for: we compare the estimated depths with your own measurements and give you the results in a written report.</p></details>
+        <details><summary>What about privacy and people on camera?</summary><p>The prototype estimates the depth of the ground at points on the plan. It does not identify or track people. Which cameras are used, where they point, who can see the photos and how long they are kept are agreed in the written pilot agreement before any photos are taken.</p></details>
+        <details><summary>What do you need from a pilot site?</summary><p>A DWG plan of the site, and access to site cameras or someone who can take photos at plan coordinates.</p></details>
+        <details><summary>What does it not do yet?</summary><p>It has not been tested on an active site. LiDAR is not in the product; we are exploring it, together with camera GPS, for higher precision.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Work with us: each card opens the one form with its interest preselected -->
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">09 · Work with us</p>
+        <h2 id="work-title">Work with us</h2>
+      </div>
+      <ul class="who">
+        <li><h3>Customers</h3><p>Groundwork and infrastructure teams with a DWG plan who want to test progress measurement on a real site.</p><a class="link-arrow" href="./?interest=pilot#work-form">Book a pilot call <span aria-hidden="true">→</span></a></li>
+        <li><h3>Universities, research groups and hubs</h3><p>Research and learning collaborations: students and researchers working with a real prototype; scope, data use and IP are agreed in writing first.</p><a class="link-arrow" href="./?interest=research#work-form">Talk about a collaboration <span aria-hidden="true">→</span></a></li>
+        <li><h3>Events</h3><p>Organising an event, or attending one we will be at? Tell us which one.</p><a class="link-arrow" id="event-cta-link" href="./?interest=event&amp;event=AIREX%2C%20Baku#work-form"><span id="event-cta" data-none="Talk to us">Meet us at AIREX, Baku</span> <span aria-hidden="true">→</span></a></li>
+        <li><h3>Press, podcasts and speaking</h3><p>Facts, photos and contact details are on the press page. <a href="press/">Press and speaking</a></p><a class="link-arrow" href="./?interest=press#work-form">Get in touch <span aria-hidden="true">→</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Events (from src/news.json). The script hides a row once its event has ended. -->
+  <section class="section section-alt" id="events" aria-labelledby="events-title">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">10 · Events</p>
+        <h2 id="events-title">Meet us at</h2>
+      </div>
+      <ul class="events">
+        <li id="event-airex-2026" data-end="2026-11-06">
+          <time class="mono" datetime="2026-11-04">4–6 Nov 2026</time>
+          <div>
+            <h3>AIREX, Baku</h3>
+            <p>Invited to pitch at AIREX, Baku</p>
+            <div class="share"><span class="mono">Share</span>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fworkguardai.com%2F%23event-airex-2026" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden">(opens in a new tab)</span></a>
+            <a href="https://wa.me/?text=Invited%20to%20pitch%20at%20AIREX%2C%20Baku%20https%3A%2F%2Fworkguardai.com%2F%23event-airex-2026" rel="noopener" target="_blank">WhatsApp<span class="visually-hidden">(opens in a new tab)</span></a>
+            <a href="mailto:?subject=Invited%20to%20pitch%20at%20AIREX%2C%20Baku&amp;body=https%3A%2F%2Fworkguardai.com%2F%23event-airex-2026">Email</a>
+            <a href="https://workguardai.com/#event-airex-2026" data-copy="Link copied">Copy link</a>
+            <button type="button" class="share-native" data-share-title="Invited to pitch at AIREX, Baku" data-share-url="https://workguardai.com/#event-airex-2026" hidden>Share…</button>
+          </div>
+          </div>
+          <a class="btn btn-outline btn-small" href="./?interest=event&amp;event=AIREX%2C%20Baku#work-form">Request a meeting</a>
+        </li>
+        <li id="event-meout-2026" data-end="2026-11-26">
+          <time class="mono" datetime="2026-11-25">25–26 Nov 2026</time>
+          <div>
+            <h3>MeOut Summit, Budapest</h3>
+            <p>Pitching on stage at MeOut Summit, Budapest</p>
+            <div class="share"><span class="mono">Share</span>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fworkguardai.com%2F%23event-meout-2026" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden">(opens in a new tab)</span></a>
+            <a href="https://wa.me/?text=Pitching%20on%20stage%20at%20MeOut%20Summit%2C%20Budapest%20https%3A%2F%2Fworkguardai.com%2F%23event-meout-2026" rel="noopener" target="_blank">WhatsApp<span class="visually-hidden">(opens in a new tab)</span></a>
+            <a href="mailto:?subject=Pitching%20on%20stage%20at%20MeOut%20Summit%2C%20Budapest&amp;body=https%3A%2F%2Fworkguardai.com%2F%23event-meout-2026">Email</a>
+            <a href="https://workguardai.com/#event-meout-2026" data-copy="Link copied">Copy link</a>
+            <button type="button" class="share-native" data-share-title="Pitching on stage at MeOut Summit, Budapest" data-share-url="https://workguardai.com/#event-meout-2026" hidden>Share…</button>
+          </div>
+          </div>
+          <a class="btn btn-outline btn-small" href="./?interest=event&amp;event=MeOut%20Summit%2C%20Budapest#work-form">Request a meeting</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 11. Pilot call + partner -->
   <section class="section" id="pilot" aria-labelledby="pilot-title">
     <div class="container pilot-grid">
       <div>
         <div class="sec-head">
-          <p class="sec-index mono">07 · Pilot</p>
+          <p class="sec-index mono">11 · Pilot</p>
           <h2 id="pilot-title">Book a pilot call.</h2>
           <p class="sec-lead">We are looking for the first live site. If you run groundwork or infrastructure work and have DWG plans for it, a short call is enough to see whether a pilot fits.</p>
         </div>
@@ -636,15 +827,27 @@
         </div>
       </div>
 
-      <form class="form" id="pilot-form" aria-labelledby="pilot-title" method="POST" action="https://formspree.io/f/xgaoynap"
-            data-sending="Sending…" data-success="Thank you. Your request has been sent. We will reply by email." data-error="The request could not be sent. Please try again, or write to ek@workguardai.com.">
-        <input type="hidden" name="_subject" value="Pilot call request (en)">
+      <form class="form" id="work-form" aria-labelledby="work-title" method="POST" action="https://formspree.io/f/xgaoynap"
+            data-sending="Sending…" data-success="Thank you. Your request has been sent. We will reply by email." data-success-updates="Thank you. You will hear from us when there is news." data-error="The request could not be sent. Please try again, or write to ek@workguardai.com.">
+        <input type="hidden" name="_subject" value="WorkGuardAI: Pilot project">
         <input type="hidden" name="page_language" value="en">
         <div class="hp" aria-hidden="true"><label>Leave empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
-        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
-        <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization" required></div>
-        <div class="field"><label for="f-role">Role</label><input id="f-role" name="role" type="text" autocomplete="organization-title"></div>
-        <div class="field">
+        <div class="field field-full">
+          <label for="f-interest">What is this about?</label>
+          <select id="f-interest" name="interest">
+            <option value="Pilot project" data-key="pilot">Pilot project</option>
+            <option value="Research or education collaboration" data-key="research">Research or education collaboration</option>
+            <option value="Meet us at an event" data-key="event">Meet us at an event</option>
+            <option value="Press, podcast or speaking" data-key="press">Press, podcast or speaking</option>
+            <option value="Investment or partnership" data-key="invest">Investment or partnership</option>
+            <option value="Updates" data-key="updates">Updates</option>
+          </select>
+        </div>
+        <div class="field" data-for="pilot research event press invest"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field" data-for="pilot research event press invest"><label for="f-org">Organisation</label><input id="f-org" name="organisation" type="text" autocomplete="organization"></div>
+        <div class="field" data-for="pilot research event press invest"><label for="f-role">Role</label><input id="f-role" name="role" type="text" autocomplete="organization-title"></div>
+        <div class="field" data-for="event"><label for="f-event">Event</label><input id="f-event" name="event_name" type="text"></div>
+        <div class="field" data-for="pilot">
           <label for="f-site">Type of site</label>
           <select id="f-site" name="site_type">
             <option value="">Choose one</option>
@@ -655,19 +858,25 @@
             <option value="Other infrastructure">Other infrastructure</option>
           </select>
         </div>
-        <fieldset class="field field-full">
+        <fieldset class="field field-full" data-for="pilot">
           <legend>Do you have DWG plans for it?</legend>
           <div class="radios">
             <label><input type="radio" name="has_dwg" value="yes"> Yes</label>
             <label><input type="radio" name="has_dwg" value="no"> No</label>
           </div>
         </fieldset>
+        <div class="field field-full" data-for="research"><label for="f-explore">What would you like to explore?</label><textarea id="f-explore" name="explore"></textarea></div>
+        <div class="field field-full" data-for="research"><label for="f-timeline">Timeline</label><input id="f-timeline" name="timeline" type="text"></div>
         <div class="field field-full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-        <div class="field field-full"><label for="f-msg">Message <span class="opt">(optional)</span></label><textarea id="f-msg" name="message"></textarea></div>
+        <div class="field field-full" data-for="pilot research event press invest"><label for="f-msg">Message <span class="opt">(optional)</span></label><textarea id="f-msg" name="message"></textarea></div>
+        <div class="field-full" data-for="updates">
+          <label class="consent"><input type="checkbox" id="f-consent" name="consent" value="Agreed to receive email updates"> <span>I agree to receive email updates about WorkGuardAI's progress.</span></label>
+          <p class="note">To unsubscribe, reply to any email from us.</p>
+        </div>
         <p class="form-status" role="status" aria-live="polite" hidden></p>
         <div class="form-foot">
           <button class="btn btn-primary" type="submit">Send request</button>
-          <p>We use these details only to reply to your request. The form is delivered by Formspree. <a href="privacy/">Privacy notice</a></p>
+          <p>We use these details to reply to you, and to send updates only if you ask for them. The form is delivered by Formspree. <a href="privacy/">Privacy notice</a></p>
         </div>
       </form>
     </div>
@@ -687,6 +896,9 @@
           <li><a href="mailto:ek@workguardai.com">ek@workguardai.com</a></li>
           <li><a href="https://www.linkedin.com/company/workguardai" rel="noopener" target="_blank">LinkedIn</a></li>
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
+          <li><a href="#work">Work with us</a></li>
+          <li><a href="news/">News</a></li>
+          <li><a href="press/">Press and speaking</a></li>
           <li><a href="privacy/">Privacy notice</a></li>
         </ul>
       </div>

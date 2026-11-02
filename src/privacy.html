@@ -6,6 +6,7 @@
 <title>{{privacy.title}}</title>
 <meta name="description" content="{{privacy.metaDesc}}">
 {{@robots}}
+{{@og}}
 <meta name="theme-color" content="#fbfaf7">
 <link rel="icon" type="image/png" sizes="32x32" href="{{@base}}assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="{{@base}}assets/img/favicon-48.png">
@@ -45,11 +46,15 @@
     <p>WorkGuardAI Ab<br>Business ID 3465002-8<br>Espoo, Finland<br>Email: <a href="mailto:ek@workguardai.com">ek@workguardai.com</a></p>
 
     <h2>{{privacy.collectH}}</h2>
+    <!-- TODO legal review: collectP1 covers the one contact form: interests, conditional fields, event meeting requests. collectP3 covers Updates. -->
     <p>{{privacy.collectP1}}</p>
+    <p>{{privacy.collectP3}}</p>
     <p>{{privacy.collectP2}}</p>
 
     <h2>{{privacy.whyH}}</h2>
+    <!-- TODO legal review: whyP names collaborations, event meetings and press requests; whyP2 covers consent for Updates, Article 6(1)(a). -->
     <p>{{privacy.whyP}}</p>
+    <p>{{privacy.whyP2}}</p>
 
     <h2>{{privacy.procH}}</h2>
     <ul>
@@ -60,6 +65,7 @@
     <p>{{privacy.procNoSale}}</p>
 
     <h2>{{privacy.keepH}}</h2>
+    <!-- TODO legal review: keepP adds how long updates sign-ups are kept. -->
     <p>{{privacy.keepP}}</p>
 
     <h2>{{privacy.rightsH}}</h2>
