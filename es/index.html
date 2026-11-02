@@ -7,6 +7,18 @@
 <title>WorkGuardAI: avance de la obra medido desde su plano DWG</title>
 <meta name="description" content="WorkGuardAI lee el plano DWG que ya tiene y mide el avance de movimientos de tierra e infraestructura a partir de fotos normales de obra, punto por punto. Prototipo funcional; buscamos la primera obra piloto.">
 <meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WorkGuardAI">
+<meta property="og:title" content="WorkGuardAI: avance de la obra medido desde su plano DWG">
+<meta property="og:description" content="WorkGuardAI lee el plano DWG que ya tiene y mide el avance de movimientos de tierra e infraestructura a partir de fotos normales de obra, punto por punto. Prototipo funcional; buscamos la primera obra piloto.">
+<meta property="og:url" content="https://workguardai.com/es/">
+<meta property="og:image" content="https://workguardai.com/assets/img/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WorkGuardAI: avance de la obra medido desde su plano DWG">
+<meta name="twitter:description" content="WorkGuardAI lee el plano DWG que ya tiene y mide el avance de movimientos de tierra e infraestructura a partir de fotos normales de obra, punto por punto. Prototipo funcional; buscamos la primera obra piloto.">
+<meta name="twitter:image" content="https://workguardai.com/assets/img/og-default.jpg">
 <meta name="theme-color" content="#fbfaf7">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="../assets/img/favicon-48.png">
@@ -36,6 +48,8 @@
       <a href="#prototype">Prototipo</a>
       <a href="#milestones">Hitos</a>
       <a href="#about">Quiénes somos</a>
+      <a href="#news">Noticias</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <div class="header-end">
       <nav class="lang" aria-label="Idioma">
@@ -64,7 +78,8 @@
           <a class="link-arrow" href="#partner">Colabore con nosotros <span aria-hidden="true">→</span></a>
         </div>
         <p class="hero-meta mono"><span>Nacido en Finlandia</span><span>Trabajamos en toda Europa</span><span>Fundada en 2024</span></p>
-        <a class="hero-event" href="#milestones"><span class="mono">25–26 nov 2026</span> Presentamos en el escenario del MeOut Summit, Budapest <span aria-hidden="true">→</span></a>
+        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>4–6 nov 2026</span> <span data-event-label>Invitada a presentar en AIREX, Bakú</span> <span aria-hidden="true">→</span></a>
+        <script type="application/json" id="upcoming-events">[{"end":"2026-11-06","tag":"4–6 nov 2026","label":"Invitada a presentar en AIREX, Bakú","cta":"Encuéntrenos en AIREX, Bakú","meet":"../es/?interest=event&event=AIREX%2C%20Baku#work-form"},{"end":"2026-11-26","tag":"25–26 nov 2026","label":"Presentamos en el escenario del MeOut Summit, Budapest","cta":"Encuéntrenos en MeOut Summit, Budapest","meet":"../es/?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
       </div>
 
       <figure class="survey">
@@ -117,6 +132,66 @@
         <p class="sec-index mono">01 · Cómo funciona</p>
         <h2 id="how-title">Del plano DWG y fotos normales al avance en cada punto.</h2>
       </div>
+      <figure class="explainer">
+        <figcaption class="mono">Ilustración del concepto</figcaption>
+        <input class="ex-toggle" type="checkbox" id="ex-pause">
+        <ol class="ex-steps">
+          <li class="ex-step">
+            <svg viewBox="0 0 160 110" aria-hidden="true">
+              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
+              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
+              <line x1="22" y1="44" x2="22" y2="18" stroke="#5f6880" stroke-width="2"/>
+              <rect x="14" y="9" width="18" height="11" rx="2" fill="#0f1b3d"/>
+              <g class="ex-in1">
+                <polygon points="30,16 72,76 92,76" fill="#5255e0" opacity=".2"/>
+                <circle cx="82" cy="76" r="4" fill="#5255e0"/>
+              </g>
+            </svg>
+            <p class="ex-title"><span class="mono">01</span> Capturar</p>
+            <p>Una foto en un punto del plano</p>
+          </li>
+          <li class="ex-step">
+            <svg viewBox="0 0 160 110" aria-hidden="true">
+              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
+              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
+              <circle cx="82" cy="76" r="4" fill="#5255e0"/>
+              <g class="ex-in2">
+                <path d="M82 44V72M76 44H88M76 52H82M76 60H82M76 68H82" fill="none" stroke="#17845a" stroke-width="2"/>
+              </g>
+            </svg>
+            <p class="ex-title"><span class="mono">02</span> Analizar</p>
+            <p>Profundidad estimada a partir de la foto</p>
+          </li>
+          <li class="ex-step">
+            <svg viewBox="0 0 160 110" aria-hidden="true">
+              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
+              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
+              <g class="ex-in3">
+                <path d="M0 44H46L66 98H94L114 44H160" fill="none" stroke="#5255e0" stroke-width="2" stroke-dasharray="5 4"/>
+                <path d="M46 44L58 76H102L114 44" fill="none" stroke="#17845a" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M80 78V96M76 82L80 78L84 82M76 92L80 96L84 92" fill="none" stroke="#0f1b3d" stroke-width="1.5"/>
+              </g>
+            </svg>
+            <p class="ex-title"><span class="mono">03</span> Comparar</p>
+            <p>Profundidad estimada frente a la planificada</p>
+          </li>
+          <li class="ex-step">
+            <svg viewBox="0 0 160 110" aria-hidden="true">
+              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
+              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
+              <circle cx="82" cy="76" r="4" fill="#9a5f00"/>
+              <g class="ex-in4">
+                <rect x="50" y="8" width="60" height="38" rx="3" fill="#fbf1e1" stroke="#9a5f00" stroke-width="1.5"/>
+                <path d="M50 11L80 30L110 11" fill="none" stroke="#9a5f00" stroke-width="1.5"/>
+              </g>
+            </svg>
+            <p class="ex-title"><span class="mono">04</span> Actuar</p>
+            <p>Alerta por correo con coordenadas y profundidades</p>
+          </li>
+        </ol>
+        <label class="ex-pause mono" for="ex-pause">Pausar la animación</label>
+      </figure>
+
       <div class="steps">
         <article class="step">
           <div class="step-head"><span class="mono">01</span><h3>Capturar</h3></div>
@@ -326,6 +401,18 @@
         </figure>
       </div>
       <p class="note">Interfaz del prototipo, probada con el plano y las imágenes de un proyecto real. Próximo paso: prueba en obra. Los nombres de archivo del cliente, las coordenadas de la obra y las cifras están difuminados.</p>
+      <p class="alert-open"><a class="btn btn-outline" id="alert-open" href="../assets/img/screen-alerts-1200.webp" target="_blank" rel="noopener">Ver una alerta de ejemplo</a></p>
+      <dialog class="alert-dialog" id="alert-dialog" aria-labelledby="alert-dialog-title">
+        <div class="alert-dialog-head">
+          <p id="alert-dialog-title">Alerta de avance por correo</p>
+          <form method="dialog"><button class="btn btn-outline btn-small" type="submit">Cerrar</button></form>
+        </div>
+        <picture>
+          <source type="image/avif" srcset="../assets/img/screen-alerts-1200.avif">
+          <img src="../assets/img/screen-alerts-1200.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Avisos del prototipo de excavación en curso, con las coordenadas difuminadas.">
+        </picture>
+        <p class="note">Interfaz del prototipo, probada con el plano y las imágenes de un proyecto real. Próximo paso: prueba en obra. Los nombres de archivo del cliente, las coordenadas de la obra y las cifras están difuminados.</p>
+      </dialog>
 
       <div class="status-cols">
         <div>
@@ -425,6 +512,7 @@
         <p class="sec-lead">Tres años de programas, competiciones y desarrollo, cada paso con su fuente.</p>
       </div>
 
+
       <div class="ms-highlights">
         <figure class="ms-photo">
           <picture>
@@ -462,17 +550,17 @@
           </picture>
           <figcaption class="mono">Invitados en Polar Bear Pitching · Oulu · 27 feb 2025</figcaption>
         </figure>
-        <figure class="g-wide">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/circular-buildings-en-480.avif 480w, ../assets/img/circular-buildings-en-800.avif 800w, ../assets/img/circular-buildings-en-1080.avif 1080w" sizes="(min-width: 960px) 40vw, 100vw">
-            <img src="../assets/img/circular-buildings-en-800.webp" srcset="../assets/img/circular-buildings-en-480.webp 480w, ../assets/img/circular-buildings-en-800.webp 800w, ../assets/img/circular-buildings-en-1080.webp 1080w" sizes="(min-width: 960px) 40vw, 100vw" width="2000" height="1125" loading="lazy" decoding="async" alt="Anuncio: formamos parte del Circular Buildings Innovation Challenge, junto con Helsinki, Espoo y Vantaa.">
-          </picture>
-          <figcaption class="mono">Circular Buildings Innovation Challenge · Helsinki, Espoo, Vantaa · 2025</figcaption>
-        </figure>
       </div>
 
       <h3 class="ms-sub">Cronología</h3>
       <ol class="timeline">
+        <li>
+          <time class="mono">Nov 2026</time>
+          <div>
+            <h3>AIREX 2026 PropTech Competition · Bakú</h3>
+            <p>Invitada a presentar en la AIREX 2026 PropTech Competition en Bakú el 6 de noviembre.</p>
+          </div>
+        </li>
         <li>
           <time class="mono">Nov 2026</time>
           <div>
@@ -485,14 +573,14 @@
           <time class="mono">Sep 2026</time>
           <div>
             <h3>Finland Global Startup Accelerator · Plug and Play y la ciudad de Tampere</h3>
-            <p>Preseleccionada para el programa de crecimiento de 10 semanas; presentó ante el jurado en el Selection Day, el 9 de septiembre.</p>
+            <p>Preseleccionada para presentar al programa de crecimiento de 10 semanas, encargado por la ciudad de Tampere, y presentó ante el jurado en el Selection Day, el 9 de septiembre.</p>
           </div>
         </li>
         <li>
           <time class="mono">May 2026</time>
           <div>
             <h3>VINCI Energies · Startup Connect</h3>
-            <p>Tras una primera revisión, VINCI Energies mostró interés en WorkGuardAI y nos invitó a presentar candidatura a su reto 2026 “Expertise meets AI”. Candidatura presentada.</p>
+            <p>VINCI Energies mostró interés tras una primera revisión y presentamos candidatura a su reto 2026 “Expertise meets AI”.</p>
           </div>
         </li>
         <li>
@@ -507,7 +595,7 @@
           <time class="mono">Dic 2025</time>
           <div>
             <h3>MVP terminado</h3>
-            <p>El motor principal se construyó con un socio de desarrollo, con financiación del Baltic Impact Accelerator.</p>
+            <p>El motor principal se construyó con un socio de desarrollo, con financiación del Baltic Impact Accelerator. Construido con las aportaciones de un jefe de obra de un contratista de infraestructuras y probado en un plano de proyecto real.</p>
           </div>
         </li>
         <li>
@@ -519,11 +607,10 @@
           </div>
         </li>
         <li>
-          <time class="mono">Sep 2025</time>
+          <time class="mono">Oct 2025</time>
           <div>
             <h3>Circular Buildings Innovation Challenge · Helsinki, Espoo, Vantaa</h3>
-            <p>Seleccionada por las tres ciudades entre varios candidatos para desarrollar prácticas de construcción más sostenibles en la región de Helsinki.</p>
-            <a href="https://www.linkedin.com/posts/workguardai_circulareconomy-innovation-sustainablecities-activity-7368658654012669952-Crxp" rel="noopener" target="_blank">Anuncio en LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(se abre en una pestaña nueva)</span></a>
+            <p>Participó en el reto de innovación conjunto de las tres ciudades y presentó una oferta en su licitación.</p>
           </div>
         </li>
         <li>
@@ -593,30 +680,134 @@
     </div>
   </section>
 
-  <!-- 7. Team -->
-  <section class="section section-alt" id="team" aria-labelledby="team-title">
+  <!-- 7. News (from src/news.json) -->
+  <section class="section section-alt" id="news" aria-labelledby="news-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">06 · Equipo</p>
+        <p class="sec-index mono">06 · Noticias</p>
+        <h2 id="news-title">Últimas noticias</h2>
+      </div>
+      <ol class="news-list">
+        <li id="meout-2026">
+          <time class="mono" datetime="2026-11-25">25–26 nov 2026</time>
+          <h3>MeOut Summit Pitch Marathon, Budapest</h3>
+          <p>Seleccionada como una de las 20 startups, entre unas 200 candidaturas, para presentar en el escenario del Pitch Marathon el 25–26 de noviembre, ante un jurado de inversores. Destacada en EU-Startups.</p>
+          <a href="https://www.eu-startups.com/2026/10/meout-summit-2026-meet-the-pitch-marathon-contestants/" rel="noopener" target="_blank">Artículo en EU-Startups <span aria-hidden="true">↗</span><span class="visually-hidden">(se abre en una pestaña nueva)</span></a>
+        </li>
+        <li id="airex-2026">
+          <time class="mono" datetime="2026-11-06">6 nov 2026</time>
+          <h3>AIREX 2026 PropTech Competition, Bakú</h3>
+          <p>Invitada a presentar en la AIREX 2026 PropTech Competition en Bakú el 6 de noviembre. El fondo de premios es de 15 000 EUR.</p>
+          <a href="https://airex.az/" rel="noopener" target="_blank">Fuente oficial <span aria-hidden="true">↗</span><span class="visually-hidden">(se abre en una pestaña nueva)</span></a>
+        </li>
+        <li id="tampere-accelerator-2026">
+          <time class="mono" datetime="2026-09-09">9 sept 2026</time>
+          <h3>Finland Global Startup Accelerator</h3>
+          <p>Preseleccionada para presentar al programa de crecimiento de 10 semanas, encargado por la ciudad de Tampere, y presentó ante el jurado en el Selection Day, el 9 de septiembre.</p>
+        </li>
+      </ol>
+      <p class="news-more"><a class="link-arrow" href="../es/news/">Todas las noticias <span aria-hidden="true">→</span></a> <a class="link-arrow" href="../es/?interest=updates#work-form">Siga nuestro progreso <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- 8. Team -->
+  <section class="section" id="team" aria-labelledby="team-title">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">07 · Equipo</p>
         <h2 id="team-title">Equipo</h2>
       </div>
       <ul class="team">
         <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-endrit-kola-192.avif 1x, ../assets/img/team-endrit-kola-384.avif 2x"><img src="../assets/img/team-endrit-kola-192.webp" srcset="../assets/img/team-endrit-kola-192.webp 1x, ../assets/img/team-endrit-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Endrit Kola"></picture><span class="name">Endrit Kola</span><span class="role mono">Fundador y CEO</span><a href="https://www.linkedin.com/in/endritkola/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(se abre en una pestaña nueva)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-maiju-karhu-192.avif 1x, ../assets/img/team-maiju-karhu-384.avif 2x"><img src="../assets/img/team-maiju-karhu-192.webp" srcset="../assets/img/team-maiju-karhu-192.webp 1x, ../assets/img/team-maiju-karhu-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><span class="name">Maiju Karhu</span><span class="role mono">Cofundadora y responsable técnica</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(se abre en una pestaña nueva)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-larissa-chaves-192.avif 1x, ../assets/img/team-larissa-chaves-384.avif 2x"><img src="../assets/img/team-larissa-chaves-192.webp" srcset="../assets/img/team-larissa-chaves-192.webp 1x, ../assets/img/team-larissa-chaves-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><span class="name">Larissa Chaves</span><span class="role mono">Ingeniería de software</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(se abre en una pestaña nueva)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-pratham-srivastava-192.avif 1x, ../assets/img/team-pratham-srivastava-384.avif 2x"><img src="../assets/img/team-pratham-srivastava-192.webp" srcset="../assets/img/team-pratham-srivastava-192.webp 1x, ../assets/img/team-pratham-srivastava-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><span class="name">Pratham Srivastava</span><span class="role mono">Desarrollador full stack</span></li>
+        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-maiju-karhu-192.avif 1x, ../assets/img/team-maiju-karhu-384.avif 2x"><img src="../assets/img/team-maiju-karhu-192.webp" srcset="../assets/img/team-maiju-karhu-192.webp 1x, ../assets/img/team-maiju-karhu-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><span class="name">Maiju Karhu</span><span class="role mono">Asesora de startups</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(se abre en una pestaña nueva)</span></a></li>
+        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-larissa-chaves-192.avif 1x, ../assets/img/team-larissa-chaves-384.avif 2x"><img src="../assets/img/team-larissa-chaves-192.webp" srcset="../assets/img/team-larissa-chaves-192.webp 1x, ../assets/img/team-larissa-chaves-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><span class="name">Larissa Chaves</span><span class="role mono">Colaboradora técnica</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(se abre en una pestaña nueva)</span></a></li>
+        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-pratham-srivastava-192.avif 1x, ../assets/img/team-pratham-srivastava-384.avif 2x"><img src="../assets/img/team-pratham-srivastava-192.webp" srcset="../assets/img/team-pratham-srivastava-192.webp 1x, ../assets/img/team-pratham-srivastava-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><span class="name">Pratham Srivastava</span><span class="role mono">Colaborador de programación</span></li>
         <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-altin-kola-192.avif 1x, ../assets/img/team-altin-kola-384.avif 2x"><img src="../assets/img/team-altin-kola-192.webp" srcset="../assets/img/team-altin-kola-192.webp 1x, ../assets/img/team-altin-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Altin Kola"></picture><span class="name">Altin Kola</span><span class="role mono">Asesor de obra e infraestructura</span></li>
         <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-ergis-topi-192.avif 1x, ../assets/img/team-ergis-topi-384.avif 2x"><img src="../assets/img/team-ergis-topi-192.webp" srcset="../assets/img/team-ergis-topi-192.webp 1x, ../assets/img/team-ergis-topi-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Ergis Topi"></picture><span class="name">Ergis Topi</span><span class="role mono">Asesor de gestión de obra</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- 8. Pilot call + partner -->
+  <!-- 9. FAQ -->
+  <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">08 · FAQ</p>
+        <h2 id="faq-title">Preguntas frecuentes</h2>
+      </div>
+      <div class="faq">
+        <details><summary>¿Qué precisión tiene?</summary><p>Aún no lo sabemos, porque no se ha medido en una obra activa. Para eso sirve el piloto: comparamos las profundidades estimadas con sus propias mediciones y le entregamos los resultados en un informe escrito.</p></details>
+        <details><summary>¿Qué pasa con la privacidad y las personas que aparecen en cámara?</summary><p>El prototipo estima la profundidad del terreno en puntos del plano. No identifica ni sigue a personas. Qué cámaras se usan, hacia dónde apuntan, quién puede ver las fotos y cuánto tiempo se conservan se acuerda en el acuerdo piloto por escrito antes de tomar ninguna foto.</p></details>
+        <details><summary>¿Qué necesitan de una obra piloto?</summary><p>Un plano DWG de la obra y acceso a las cámaras de la obra, o alguien que pueda tomar fotos en las coordenadas del plano.</p></details>
+        <details><summary>¿Qué no hace todavía?</summary><p>No se ha probado en una obra activa. LiDAR no forma parte del producto; lo estamos explorando, junto con el GPS de la cámara, para lograr mayor precisión.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Work with us: each card opens the one form with its interest preselected -->
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">09 · Trabaje con nosotros</p>
+        <h2 id="work-title">Trabaje con nosotros</h2>
+      </div>
+      <ul class="who">
+        <li><h3>Clientes</h3><p>Equipos de movimiento de tierras e infraestructuras con un plano DWG que quieren probar la medición del progreso en una obra real.</p><a class="link-arrow" href="../es/?interest=pilot#work-form">Reservar una llamada piloto <span aria-hidden="true">→</span></a></li>
+        <li><h3>Universidades, grupos de investigación y centros</h3><p>Colaboraciones de investigación y aprendizaje: estudiantes e investigadores trabajan con un prototipo real; el alcance, el uso de datos y la propiedad intelectual se acuerdan primero por escrito.</p><a class="link-arrow" href="../es/?interest=research#work-form">Hablemos de una colaboración <span aria-hidden="true">→</span></a></li>
+        <li><h3>Eventos</h3><p>¿Organiza un evento o asistirá a uno en el que estaremos? Díganos cuál.</p><a class="link-arrow" id="event-cta-link" href="../es/?interest=event&amp;event=AIREX%2C%20Baku#work-form"><span id="event-cta" data-none="Hable con nosotros">Encuéntrenos en AIREX, Bakú</span> <span aria-hidden="true">→</span></a></li>
+        <li><h3>Prensa, pódcast y ponencias</h3><p>Los datos, las fotos y el contacto están en la página de prensa. <a href="../es/press/">Prensa y ponencias</a></p><a class="link-arrow" href="../es/?interest=press#work-form">Contacte con nosotros <span aria-hidden="true">→</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Events (from src/news.json). The script hides a row once its event has ended. -->
+  <section class="section section-alt" id="events" aria-labelledby="events-title">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">10 · Eventos</p>
+        <h2 id="events-title">Encuéntrenos en</h2>
+      </div>
+      <ul class="events">
+        <li id="event-airex-2026" data-end="2026-11-06">
+          <time class="mono" datetime="2026-11-04">4–6 nov 2026</time>
+          <div>
+            <h3>AIREX, Bakú</h3>
+            <p>Invitada a presentar en AIREX, Bakú</p>
+            <div class="share"><span class="mono">Compartir</span>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fworkguardai.com%2Fes%2F%23event-airex-2026" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden">(se abre en una pestaña nueva)</span></a>
+            <a href="https://wa.me/?text=Invitada%20a%20presentar%20en%20AIREX%2C%20Bak%C3%BA%20https%3A%2F%2Fworkguardai.com%2Fes%2F%23event-airex-2026" rel="noopener" target="_blank">WhatsApp<span class="visually-hidden">(se abre en una pestaña nueva)</span></a>
+            <a href="mailto:?subject=Invitada%20a%20presentar%20en%20AIREX%2C%20Bak%C3%BA&amp;body=https%3A%2F%2Fworkguardai.com%2Fes%2F%23event-airex-2026">Correo</a>
+            <a href="https://workguardai.com/es/#event-airex-2026" data-copy="Enlace copiado">Copiar enlace</a>
+            <button type="button" class="share-native" data-share-title="Invitada a presentar en AIREX, Bakú" data-share-url="https://workguardai.com/es/#event-airex-2026" hidden>Compartir…</button>
+          </div>
+          </div>
+          <a class="btn btn-outline btn-small" href="../es/?interest=event&amp;event=AIREX%2C%20Baku#work-form">Solicitar una reunión</a>
+        </li>
+        <li id="event-meout-2026" data-end="2026-11-26">
+          <time class="mono" datetime="2026-11-25">25–26 nov 2026</time>
+          <div>
+            <h3>MeOut Summit, Budapest</h3>
+            <p>Presentamos en el escenario del MeOut Summit, Budapest</p>
+            <div class="share"><span class="mono">Compartir</span>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fworkguardai.com%2Fes%2F%23event-meout-2026" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden">(se abre en una pestaña nueva)</span></a>
+            <a href="https://wa.me/?text=Presentamos%20en%20el%20escenario%20del%20MeOut%20Summit%2C%20Budapest%20https%3A%2F%2Fworkguardai.com%2Fes%2F%23event-meout-2026" rel="noopener" target="_blank">WhatsApp<span class="visually-hidden">(se abre en una pestaña nueva)</span></a>
+            <a href="mailto:?subject=Presentamos%20en%20el%20escenario%20del%20MeOut%20Summit%2C%20Budapest&amp;body=https%3A%2F%2Fworkguardai.com%2Fes%2F%23event-meout-2026">Correo</a>
+            <a href="https://workguardai.com/es/#event-meout-2026" data-copy="Enlace copiado">Copiar enlace</a>
+            <button type="button" class="share-native" data-share-title="Presentamos en el escenario del MeOut Summit, Budapest" data-share-url="https://workguardai.com/es/#event-meout-2026" hidden>Compartir…</button>
+          </div>
+          </div>
+          <a class="btn btn-outline btn-small" href="../es/?interest=event&amp;event=MeOut%20Summit%2C%20Budapest#work-form">Solicitar una reunión</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 11. Pilot call + partner -->
   <section class="section" id="pilot" aria-labelledby="pilot-title">
     <div class="container pilot-grid">
       <div>
         <div class="sec-head">
-          <p class="sec-index mono">07 · Piloto</p>
+          <p class="sec-index mono">11 · Piloto</p>
           <h2 id="pilot-title">Reserve una llamada piloto.</h2>
           <p class="sec-lead">Buscamos la primera obra en curso. Si gestiona trabajos de movimiento de tierras o infraestructura y tiene los planos DWG, basta una llamada breve para ver si encaja un piloto.</p>
         </div>
@@ -636,15 +827,27 @@
         </div>
       </div>
 
-      <form class="form" id="pilot-form" aria-labelledby="pilot-title" method="POST" action="https://formspree.io/f/xgaoynap"
-            data-sending="Enviando…" data-success="Gracias. Su solicitud se ha enviado. Le responderemos por correo." data-error="No se pudo enviar la solicitud. Inténtelo de nuevo o escriba a ek@workguardai.com.">
-        <input type="hidden" name="_subject" value="Solicitud de llamada piloto (es)">
+      <form class="form" id="work-form" aria-labelledby="work-title" method="POST" action="https://formspree.io/f/xgaoynap"
+            data-sending="Enviando…" data-success="Gracias. Su solicitud se ha enviado. Le responderemos por correo." data-success-updates="Gracias. Le escribiremos cuando haya novedades." data-error="No se pudo enviar la solicitud. Inténtelo de nuevo o escriba a ek@workguardai.com.">
+        <input type="hidden" name="_subject" value="WorkGuardAI: Pilot project">
         <input type="hidden" name="page_language" value="es">
         <div class="hp" aria-hidden="true"><label>Leave empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
-        <div class="field"><label for="f-name">Nombre</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
-        <div class="field"><label for="f-company">Empresa</label><input id="f-company" name="company" type="text" autocomplete="organization" required></div>
-        <div class="field"><label for="f-role">Cargo</label><input id="f-role" name="role" type="text" autocomplete="organization-title"></div>
-        <div class="field">
+        <div class="field field-full">
+          <label for="f-interest">¿De qué se trata?</label>
+          <select id="f-interest" name="interest">
+            <option value="Pilot project" data-key="pilot">Proyecto piloto</option>
+            <option value="Research or education collaboration" data-key="research">Colaboración de investigación o educación</option>
+            <option value="Meet us at an event" data-key="event">Encuéntrenos en un evento</option>
+            <option value="Press, podcast or speaking" data-key="press">Prensa, pódcast o ponencia</option>
+            <option value="Investment or partnership" data-key="invest">Inversión o colaboración empresarial</option>
+            <option value="Updates" data-key="updates">Novedades</option>
+          </select>
+        </div>
+        <div class="field" data-for="pilot research event press invest"><label for="f-name">Nombre</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field" data-for="pilot research event press invest"><label for="f-org">Organización</label><input id="f-org" name="organisation" type="text" autocomplete="organization"></div>
+        <div class="field" data-for="pilot research event press invest"><label for="f-role">Cargo</label><input id="f-role" name="role" type="text" autocomplete="organization-title"></div>
+        <div class="field" data-for="event"><label for="f-event">Evento</label><input id="f-event" name="event_name" type="text"></div>
+        <div class="field" data-for="pilot">
           <label for="f-site">Tipo de obra</label>
           <select id="f-site" name="site_type">
             <option value="">Elija una opción</option>
@@ -655,19 +858,25 @@
             <option value="Other infrastructure">Otra infraestructura</option>
           </select>
         </div>
-        <fieldset class="field field-full">
+        <fieldset class="field field-full" data-for="pilot">
           <legend>¿Tiene planos DWG de la obra?</legend>
           <div class="radios">
             <label><input type="radio" name="has_dwg" value="yes"> Sí</label>
             <label><input type="radio" name="has_dwg" value="no"> No</label>
           </div>
         </fieldset>
+        <div class="field field-full" data-for="research"><label for="f-explore">¿Qué le gustaría explorar?</label><textarea id="f-explore" name="explore"></textarea></div>
+        <div class="field field-full" data-for="research"><label for="f-timeline">Plazos</label><input id="f-timeline" name="timeline" type="text"></div>
         <div class="field field-full"><label for="f-email">Correo electrónico</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-        <div class="field field-full"><label for="f-msg">Mensaje <span class="opt">(opcional)</span></label><textarea id="f-msg" name="message"></textarea></div>
+        <div class="field field-full" data-for="pilot research event press invest"><label for="f-msg">Mensaje <span class="opt">(opcional)</span></label><textarea id="f-msg" name="message"></textarea></div>
+        <div class="field-full" data-for="updates">
+          <label class="consent"><input type="checkbox" id="f-consent" name="consent" value="Agreed to receive email updates"> <span>Acepto recibir novedades por correo sobre el progreso de WorkGuardAI.</span></label>
+          <p class="note">Para darse de baja, responda a cualquier correo nuestro.</p>
+        </div>
         <p class="form-status" role="status" aria-live="polite" hidden></p>
         <div class="form-foot">
           <button class="btn btn-primary" type="submit">Enviar solicitud</button>
-          <p>Usamos estos datos solo para responder a su solicitud. El formulario se envía a través de Formspree. <a href="../es/privacy/">Aviso de privacidad</a></p>
+          <p>Usamos estos datos para responderle y solo enviamos novedades si las solicita. El formulario se entrega a través de Formspree. <a href="../es/privacy/">Aviso de privacidad</a></p>
         </div>
       </form>
     </div>
@@ -687,6 +896,9 @@
           <li><a href="mailto:ek@workguardai.com">ek@workguardai.com</a></li>
           <li><a href="https://www.linkedin.com/company/workguardai" rel="noopener" target="_blank">LinkedIn</a></li>
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
+          <li><a href="#work">Trabaje con nosotros</a></li>
+          <li><a href="../es/news/">Noticias</a></li>
+          <li><a href="../es/press/">Prensa y ponencias</a></li>
           <li><a href="../es/privacy/">Aviso de privacidad</a></li>
         </ul>
       </div>

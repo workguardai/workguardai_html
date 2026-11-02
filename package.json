@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "images": "node scripts/images.mjs",
+    "test": "node scripts/check.mjs",
     "serve": "npx --yes serve@14.2.4 -l 4321 ."
   },
   "devDependencies": {

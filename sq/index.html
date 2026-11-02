@@ -7,6 +7,18 @@
 <title>WorkGuardAI: ecuria e punimeve të dheut, e matur nga plani juaj DWG</title>
 <meta name="description" content="WorkGuardAI lexon planin DWG që e keni tashmë dhe mat ecurinë e punimeve të dheut dhe të infrastrukturës nga foto të zakonshme të kantierit, pikë pas pike. Prototip funksional; kërkojmë kantierin e parë pilot.">
 <meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WorkGuardAI">
+<meta property="og:title" content="WorkGuardAI: ecuria e punimeve të dheut, e matur nga plani juaj DWG">
+<meta property="og:description" content="WorkGuardAI lexon planin DWG që e keni tashmë dhe mat ecurinë e punimeve të dheut dhe të infrastrukturës nga foto të zakonshme të kantierit, pikë pas pike. Prototip funksional; kërkojmë kantierin e parë pilot.">
+<meta property="og:url" content="https://workguardai.com/sq/">
+<meta property="og:image" content="https://workguardai.com/assets/img/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WorkGuardAI: ecuria e punimeve të dheut, e matur nga plani juaj DWG">
+<meta name="twitter:description" content="WorkGuardAI lexon planin DWG që e keni tashmë dhe mat ecurinë e punimeve të dheut dhe të infrastrukturës nga foto të zakonshme të kantierit, pikë pas pike. Prototip funksional; kërkojmë kantierin e parë pilot.">
+<meta name="twitter:image" content="https://workguardai.com/assets/img/og-default.jpg">
 <meta name="theme-color" content="#fbfaf7">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="../assets/img/favicon-48.png">
@@ -36,6 +48,8 @@
       <a href="#prototype">Prototipi</a>
       <a href="#milestones">Arritjet</a>
       <a href="#about">Rreth nesh</a>
+      <a href="#news">Lajme</a>
+      <a href="#faq">Pyetje</a>
     </nav>
     <div class="header-end">
       <nav class="lang" aria-label="Gjuha">
@@ -64,7 +78,8 @@
           <a class="link-arrow" href="#partner">Bëhu partner <span aria-hidden="true">→</span></a>
         </div>
         <p class="hero-meta mono"><span>Lindur në Finlandë</span><span>Punojmë në gjithë Evropën</span><span>Themeluar në 2024</span></p>
-        <a class="hero-event" href="#milestones"><span class="mono">25–26 nëntor 2026</span> Prezantim në skenë në MeOut Summit, Budapest <span aria-hidden="true">→</span></a>
+        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>4–6 nëntor 2026</span> <span data-event-label>I ftuar të prezantojë në AIREX, Baku</span> <span aria-hidden="true">→</span></a>
+        <script type="application/json" id="upcoming-events">[{"end":"2026-11-06","tag":"4–6 nëntor 2026","label":"I ftuar të prezantojë në AIREX, Baku","cta":"Na takoni në AIREX, Baku","meet":"../sq/?interest=event&event=AIREX%2C%20Baku#work-form"},{"end":"2026-11-26","tag":"25–26 nëntor 2026","label":"Prezantim në skenë në MeOut Summit, Budapest","cta":"Na takoni në MeOut Summit, Budapest","meet":"../sq/?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
       </div>
 
       <figure class="survey">
@@ -117,6 +132,66 @@
         <p class="sec-index mono">01 · Si funksionon</p>
         <h2 id="how-title">Nga plani DWG dhe foto të zakonshme te ecuria në çdo pikë.</h2>
       </div>
+      <figure class="explainer">
+        <figcaption class="mono">Ilustrim i konceptit</figcaption>
+        <input class="ex-toggle" type="checkbox" id="ex-pause">
+        <ol class="ex-steps">
+          <li class="ex-step">
+            <svg viewBox="0 0 160 110" aria-hidden="true">
+              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
+              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
+              <line x1="22" y1="44" x2="22" y2="18" stroke="#5f6880" stroke-width="2"/>
+              <rect x="14" y="9" width="18" height="11" rx="2" fill="#0f1b3d"/>
+              <g class="ex-in1">
+                <polygon points="30,16 72,76 92,76" fill="#5255e0" opacity=".2"/>
+                <circle cx="82" cy="76" r="4" fill="#5255e0"/>
+              </g>
+            </svg>
+            <p class="ex-title"><span class="mono">01</span> Fotografo</p>
+            <p>Një foto në një pikë të planit</p>
+          </li>
+          <li class="ex-step">
+            <svg viewBox="0 0 160 110" aria-hidden="true">
+              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
+              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
+              <circle cx="82" cy="76" r="4" fill="#5255e0"/>
+              <g class="ex-in2">
+                <path d="M82 44V72M76 44H88M76 52H82M76 60H82M76 68H82" fill="none" stroke="#17845a" stroke-width="2"/>
+              </g>
+            </svg>
+            <p class="ex-title"><span class="mono">02</span> Analizo</p>
+            <p>Thellësia vlerësohet nga fotoja</p>
+          </li>
+          <li class="ex-step">
+            <svg viewBox="0 0 160 110" aria-hidden="true">
+              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
+              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
+              <g class="ex-in3">
+                <path d="M0 44H46L66 98H94L114 44H160" fill="none" stroke="#5255e0" stroke-width="2" stroke-dasharray="5 4"/>
+                <path d="M46 44L58 76H102L114 44" fill="none" stroke="#17845a" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M80 78V96M76 82L80 78L84 82M76 92L80 96L84 92" fill="none" stroke="#0f1b3d" stroke-width="1.5"/>
+              </g>
+            </svg>
+            <p class="ex-title"><span class="mono">03</span> Krahaso</p>
+            <p>Thellësia e vlerësuar kundrejt asaj të planifikuar</p>
+          </li>
+          <li class="ex-step">
+            <svg viewBox="0 0 160 110" aria-hidden="true">
+              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
+              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
+              <circle cx="82" cy="76" r="4" fill="#9a5f00"/>
+              <g class="ex-in4">
+                <rect x="50" y="8" width="60" height="38" rx="3" fill="#fbf1e1" stroke="#9a5f00" stroke-width="1.5"/>
+                <path d="M50 11L80 30L110 11" fill="none" stroke="#9a5f00" stroke-width="1.5"/>
+              </g>
+            </svg>
+            <p class="ex-title"><span class="mono">04</span> Vepro</p>
+            <p>Njoftim me email me koordinatat dhe thellësitë</p>
+          </li>
+        </ol>
+        <label class="ex-pause mono" for="ex-pause">Ndalo animacionin</label>
+      </figure>
+
       <div class="steps">
         <article class="step">
           <div class="step-head"><span class="mono">01</span><h3>Fotografo</h3></div>
@@ -326,6 +401,18 @@
         </figure>
       </div>
       <p class="note">Ndërfaqja e prototipit, e testuar me planin dhe fotot e një projekti real. Hapi tjetër: testi në terren. Emrat e skedarëve të klientit, koordinatat e kantierit dhe shifrat janë të turbulluara.</p>
+      <p class="alert-open"><a class="btn btn-outline" id="alert-open" href="../assets/img/screen-alerts-1200.webp" target="_blank" rel="noopener">Shihni një njoftim shembull</a></p>
+      <dialog class="alert-dialog" id="alert-dialog" aria-labelledby="alert-dialog-title">
+        <div class="alert-dialog-head">
+          <p id="alert-dialog-title">Njoftim ecurie me email</p>
+          <form method="dialog"><button class="btn btn-outline btn-small" type="submit">Mbyll</button></form>
+        </div>
+        <picture>
+          <source type="image/avif" srcset="../assets/img/screen-alerts-1200.avif">
+          <img src="../assets/img/screen-alerts-1200.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Njoftimet e prototipit për gërmim në vazhdim, me koordinatat të turbulluara.">
+        </picture>
+        <p class="note">Ndërfaqja e prototipit, e testuar me planin dhe fotot e një projekti real. Hapi tjetër: testi në terren. Emrat e skedarëve të klientit, koordinatat e kantierit dhe shifrat janë të turbulluara.</p>
+      </dialog>
 
       <div class="status-cols">
         <div>
@@ -425,6 +512,7 @@
         <p class="sec-lead">Tre vite programesh, garash dhe ndërtimi, çdo hap i shënuar me burimin e tij.</p>
       </div>
 
+
       <div class="ms-highlights">
         <figure class="ms-photo">
           <picture>
@@ -462,17 +550,17 @@
           </picture>
           <figcaption class="mono">Të ftuar në Polar Bear Pitching · Oulu · 27 shkurt 2025</figcaption>
         </figure>
-        <figure class="g-wide">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/circular-buildings-en-480.avif 480w, ../assets/img/circular-buildings-en-800.avif 800w, ../assets/img/circular-buildings-en-1080.avif 1080w" sizes="(min-width: 960px) 40vw, 100vw">
-            <img src="../assets/img/circular-buildings-en-800.webp" srcset="../assets/img/circular-buildings-en-480.webp 480w, ../assets/img/circular-buildings-en-800.webp 800w, ../assets/img/circular-buildings-en-1080.webp 1080w" sizes="(min-width: 960px) 40vw, 100vw" width="2000" height="1125" loading="lazy" decoding="async" alt="Njoftim: jemi pjesë e Circular Buildings Innovation Challenge, së bashku me Helsinkin, Espoon dhe Vantaan.">
-          </picture>
-          <figcaption class="mono">Circular Buildings Innovation Challenge · Helsinki, Espoo, Vantaa · 2025</figcaption>
-        </figure>
       </div>
 
       <h3 class="ms-sub">Kronologjia</h3>
       <ol class="timeline">
+        <li>
+          <time class="mono">Nëntor 2026</time>
+          <div>
+            <h3>AIREX 2026 PropTech Competition · Baku</h3>
+            <p>I ftuar të prezantojë në AIREX 2026 PropTech Competition në Baku më 6 nëntor.</p>
+          </div>
+        </li>
         <li>
           <time class="mono">Nëntor 2026</time>
           <div>
@@ -485,14 +573,14 @@
           <time class="mono">Shtator 2026</time>
           <div>
             <h3>Finland Global Startup Accelerator · Plug and Play dhe Qyteti i Tamperes</h3>
-            <p>Në listën e ngushtë për programin 10-javor të rritjes; prezantoi para panelit të përzgjedhjes në Selection Day, më 9 shtator.</p>
+            <p>Në listën e ngushtë për të prezantuar për programin 10-javor të rritjes, të porositur nga Qyteti i Tamperes, dhe prezantoi para panelit të përzgjedhjes në Selection Day, më 9 shtator.</p>
           </div>
         </li>
         <li>
           <time class="mono">Maj 2026</time>
           <div>
             <h3>VINCI Energies · Startup Connect</h3>
-            <p>Pas një shqyrtimi fillestar, VINCI Energies shprehu interes për WorkGuardAI dhe na ftoi të aplikojmë në sfidën e vitit 2026 “Expertise meets AI”. Aplikimi u dorëzua.</p>
+            <p>VINCI Energies shprehu interes pas një shqyrtimi fillestar dhe ne aplikuam në sfidën e saj të vitit 2026 “Expertise meets AI”.</p>
           </div>
         </li>
         <li>
@@ -507,7 +595,7 @@
           <time class="mono">Dhjetor 2025</time>
           <div>
             <h3>MVP e përfunduar</h3>
-            <p>Motori bazë u ndërtua me një partner zhvillimi, i financuar përmes Baltic Impact Accelerator.</p>
+            <p>Motori bazë u ndërtua me një partner zhvillimi, i financuar përmes Baltic Impact Accelerator. U ndërtua me kontributin e një menaxheri kantieri te një kontraktor infrastrukture dhe u testua në një plan real projekti.</p>
           </div>
         </li>
         <li>
@@ -519,11 +607,10 @@
           </div>
         </li>
         <li>
-          <time class="mono">Shtator 2025</time>
+          <time class="mono">Tetor 2025</time>
           <div>
             <h3>Circular Buildings Innovation Challenge · Helsinki, Espoo, Vantaa</h3>
-            <p>I përzgjedhur nga tre qytetet mes ofertuesve konkurrues, për të zhvilluar praktika ndërtimi më të qëndrueshme në rajonin e Helsinkit.</p>
-            <a href="https://www.linkedin.com/posts/workguardai_circulareconomy-innovation-sustainablecities-activity-7368658654012669952-Crxp" rel="noopener" target="_blank">Njoftimi në LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a>
+            <p>Mori pjesë në sfidën e përbashkët të inovacionit të tre qyteteve dhe dorëzoi ofertë në tenderin e tyre.</p>
           </div>
         </li>
         <li>
@@ -593,30 +680,134 @@
     </div>
   </section>
 
-  <!-- 7. Team -->
-  <section class="section section-alt" id="team" aria-labelledby="team-title">
+  <!-- 7. News (from src/news.json) -->
+  <section class="section section-alt" id="news" aria-labelledby="news-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">06 · Ekipi</p>
+        <p class="sec-index mono">06 · Lajme</p>
+        <h2 id="news-title">Lajmet e fundit</h2>
+      </div>
+      <ol class="news-list">
+        <li id="meout-2026">
+          <time class="mono" datetime="2026-11-25">25–26 nëntor 2026</time>
+          <h3>MeOut Summit Pitch Marathon, Budapest</h3>
+          <p>I përzgjedhur si një nga 20 startupet, nga rreth 200 aplikime, për të prezantuar në skenë në Pitch Marathon më 25–26 nëntor, para një paneli investitorësh. I prezantuar në EU-Startups.</p>
+          <a href="https://www.eu-startups.com/2026/10/meout-summit-2026-meet-the-pitch-marathon-contestants/" rel="noopener" target="_blank">Artikulli në EU-Startups <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a>
+        </li>
+        <li id="airex-2026">
+          <time class="mono" datetime="2026-11-06">6 nëntor 2026</time>
+          <h3>AIREX 2026 PropTech Competition, Baku</h3>
+          <p>I ftuar të prezantojë në AIREX 2026 PropTech Competition në Baku më 6 nëntor. Fondi i çmimeve është 15 000 EUR.</p>
+          <a href="https://airex.az/" rel="noopener" target="_blank">Burimi zyrtar <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a>
+        </li>
+        <li id="tampere-accelerator-2026">
+          <time class="mono" datetime="2026-09-09">9 shtator 2026</time>
+          <h3>Finland Global Startup Accelerator</h3>
+          <p>Në listën e ngushtë për të prezantuar për programin 10-javor të rritjes, të porositur nga Qyteti i Tamperes, dhe prezantoi para panelit të përzgjedhjes në Selection Day, më 9 shtator.</p>
+        </li>
+      </ol>
+      <p class="news-more"><a class="link-arrow" href="../sq/news/">Të gjitha lajmet <span aria-hidden="true">→</span></a> <a class="link-arrow" href="../sq/?interest=updates#work-form">Ndiqni përparimin tonë <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- 8. Team -->
+  <section class="section" id="team" aria-labelledby="team-title">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">07 · Ekipi</p>
         <h2 id="team-title">Ekipi</h2>
       </div>
       <ul class="team">
         <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-endrit-kola-192.avif 1x, ../assets/img/team-endrit-kola-384.avif 2x"><img src="../assets/img/team-endrit-kola-192.webp" srcset="../assets/img/team-endrit-kola-192.webp 1x, ../assets/img/team-endrit-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Endrit Kola"></picture><span class="name">Endrit Kola</span><span class="role mono">Themelues dhe CEO</span><a href="https://www.linkedin.com/in/endritkola/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-maiju-karhu-192.avif 1x, ../assets/img/team-maiju-karhu-384.avif 2x"><img src="../assets/img/team-maiju-karhu-192.webp" srcset="../assets/img/team-maiju-karhu-192.webp 1x, ../assets/img/team-maiju-karhu-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><span class="name">Maiju Karhu</span><span class="role mono">Bashkëthemeluese dhe drejtuese teknike</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-larissa-chaves-192.avif 1x, ../assets/img/team-larissa-chaves-384.avif 2x"><img src="../assets/img/team-larissa-chaves-192.webp" srcset="../assets/img/team-larissa-chaves-192.webp 1x, ../assets/img/team-larissa-chaves-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><span class="name">Larissa Chaves</span><span class="role mono">Inxhinieri softueri</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-pratham-srivastava-192.avif 1x, ../assets/img/team-pratham-srivastava-384.avif 2x"><img src="../assets/img/team-pratham-srivastava-192.webp" srcset="../assets/img/team-pratham-srivastava-192.webp 1x, ../assets/img/team-pratham-srivastava-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><span class="name">Pratham Srivastava</span><span class="role mono">Zhvillues full stack</span></li>
+        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-maiju-karhu-192.avif 1x, ../assets/img/team-maiju-karhu-384.avif 2x"><img src="../assets/img/team-maiju-karhu-192.webp" srcset="../assets/img/team-maiju-karhu-192.webp 1x, ../assets/img/team-maiju-karhu-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><span class="name">Maiju Karhu</span><span class="role mono">Këshilltare për startup</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a></li>
+        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-larissa-chaves-192.avif 1x, ../assets/img/team-larissa-chaves-384.avif 2x"><img src="../assets/img/team-larissa-chaves-192.webp" srcset="../assets/img/team-larissa-chaves-192.webp 1x, ../assets/img/team-larissa-chaves-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><span class="name">Larissa Chaves</span><span class="role mono">Kontribuese teknike</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a></li>
+        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-pratham-srivastava-192.avif 1x, ../assets/img/team-pratham-srivastava-384.avif 2x"><img src="../assets/img/team-pratham-srivastava-192.webp" srcset="../assets/img/team-pratham-srivastava-192.webp 1x, ../assets/img/team-pratham-srivastava-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><span class="name">Pratham Srivastava</span><span class="role mono">Kontribues në programim</span></li>
         <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-altin-kola-192.avif 1x, ../assets/img/team-altin-kola-384.avif 2x"><img src="../assets/img/team-altin-kola-192.webp" srcset="../assets/img/team-altin-kola-192.webp 1x, ../assets/img/team-altin-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Altin Kola"></picture><span class="name">Altin Kola</span><span class="role mono">Këshilltar për terrenin dhe infrastrukturën</span></li>
         <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-ergis-topi-192.avif 1x, ../assets/img/team-ergis-topi-384.avif 2x"><img src="../assets/img/team-ergis-topi-192.webp" srcset="../assets/img/team-ergis-topi-192.webp 1x, ../assets/img/team-ergis-topi-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Ergis Topi"></picture><span class="name">Ergis Topi</span><span class="role mono">Këshilltar për menaxhimin e kantierit</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- 8. Pilot call + partner -->
+  <!-- 9. FAQ -->
+  <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">08 · Pyetje</p>
+        <h2 id="faq-title">Pyetje të shpeshta</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Sa i saktë është?</summary><p>Ende nuk e dimë, sepse nuk është matur në një kantier aktiv. Për këtë shërben piloti: i krahasojmë thellësitë e vlerësuara me matjet tuaja dhe ju japim rezultatet në një raport me shkrim.</p></details>
+        <details><summary>Po privatësia dhe njerëzit që shfaqen në kamera?</summary><p>Prototipi vlerëson thellësinë e tokës në pikat e planit. Ai nuk identifikon dhe nuk ndjek njerëz. Cilat kamera përdoren, ku drejtohen, kush i sheh fotot dhe sa kohë ruhen bien dakord në marrëveshjen e shkruar të pilotit, përpara se të bëhet ndonjë foto.</p></details>
+        <details><summary>Çfarë ju nevojitet nga një kantier pilot?</summary><p>Një plan DWG të kantierit dhe qasje te kamerat e kantierit, ose dikë që mund të bëjë foto në koordinatat e planit.</p></details>
+        <details><summary>Çfarë nuk bën ende?</summary><p>Nuk është testuar në një kantier aktiv. LiDAR nuk është pjesë e produktit; po e eksplorojmë, së bashku me GPS-in e kamerës, për saktësi më të lartë.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Work with us: each card opens the one form with its interest preselected -->
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">09 · Punoni me ne</p>
+        <h2 id="work-title">Punoni me ne</h2>
+      </div>
+      <ul class="who">
+        <li><h3>Klientë</h3><p>Ekipe të punimeve të tokës dhe infrastrukturës me një plan DWG që duan të testojnë matjen e përparimit në një kantier real.</p><a class="link-arrow" href="../sq/?interest=pilot#work-form">Rezervo një telefonatë pilot <span aria-hidden="true">→</span></a></li>
+        <li><h3>Universitete, grupe kërkimore dhe qendra</h3><p>Bashkëpunime kërkimore dhe mësimore: studentë dhe kërkues që punojnë me një prototip real; fushëveprimi, përdorimi i të dhënave dhe pronësia intelektuale bien dakord fillimisht me shkrim.</p><a class="link-arrow" href="../sq/?interest=research#work-form">Të flasim për një bashkëpunim <span aria-hidden="true">→</span></a></li>
+        <li><h3>Evente</h3><p>Po organizoni një event, ose do të merrni pjesë në një ku do të jemi? Na tregoni cilin.</p><a class="link-arrow" id="event-cta-link" href="../sq/?interest=event&amp;event=AIREX%2C%20Baku#work-form"><span id="event-cta" data-none="Na kontaktoni">Na takoni në AIREX, Baku</span> <span aria-hidden="true">→</span></a></li>
+        <li><h3>Media, podkaste dhe fjalime</h3><p>Faktet, fotot dhe kontaktet janë në faqen për mediat. <a href="../sq/press/">Media dhe fjalime</a></p><a class="link-arrow" href="../sq/?interest=press#work-form">Na kontaktoni <span aria-hidden="true">→</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Events (from src/news.json). The script hides a row once its event has ended. -->
+  <section class="section section-alt" id="events" aria-labelledby="events-title">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">10 · Evente</p>
+        <h2 id="events-title">Na takoni në</h2>
+      </div>
+      <ul class="events">
+        <li id="event-airex-2026" data-end="2026-11-06">
+          <time class="mono" datetime="2026-11-04">4–6 nëntor 2026</time>
+          <div>
+            <h3>AIREX, Baku</h3>
+            <p>I ftuar të prezantojë në AIREX, Baku</p>
+            <div class="share"><span class="mono">Shpërndani</span>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fworkguardai.com%2Fsq%2F%23event-airex-2026" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden">(hapet në skedë të re)</span></a>
+            <a href="https://wa.me/?text=I%20ftuar%20t%C3%AB%20prezantoj%C3%AB%20n%C3%AB%20AIREX%2C%20Baku%20https%3A%2F%2Fworkguardai.com%2Fsq%2F%23event-airex-2026" rel="noopener" target="_blank">WhatsApp<span class="visually-hidden">(hapet në skedë të re)</span></a>
+            <a href="mailto:?subject=I%20ftuar%20t%C3%AB%20prezantoj%C3%AB%20n%C3%AB%20AIREX%2C%20Baku&amp;body=https%3A%2F%2Fworkguardai.com%2Fsq%2F%23event-airex-2026">Email</a>
+            <a href="https://workguardai.com/sq/#event-airex-2026" data-copy="Lidhja u kopjua">Kopjo lidhjen</a>
+            <button type="button" class="share-native" data-share-title="I ftuar të prezantojë në AIREX, Baku" data-share-url="https://workguardai.com/sq/#event-airex-2026" hidden>Shpërndani…</button>
+          </div>
+          </div>
+          <a class="btn btn-outline btn-small" href="../sq/?interest=event&amp;event=AIREX%2C%20Baku#work-form">Kërkoni një takim</a>
+        </li>
+        <li id="event-meout-2026" data-end="2026-11-26">
+          <time class="mono" datetime="2026-11-25">25–26 nëntor 2026</time>
+          <div>
+            <h3>MeOut Summit, Budapest</h3>
+            <p>Prezantim në skenë në MeOut Summit, Budapest</p>
+            <div class="share"><span class="mono">Shpërndani</span>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fworkguardai.com%2Fsq%2F%23event-meout-2026" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden">(hapet në skedë të re)</span></a>
+            <a href="https://wa.me/?text=Prezantim%20n%C3%AB%20sken%C3%AB%20n%C3%AB%20MeOut%20Summit%2C%20Budapest%20https%3A%2F%2Fworkguardai.com%2Fsq%2F%23event-meout-2026" rel="noopener" target="_blank">WhatsApp<span class="visually-hidden">(hapet në skedë të re)</span></a>
+            <a href="mailto:?subject=Prezantim%20n%C3%AB%20sken%C3%AB%20n%C3%AB%20MeOut%20Summit%2C%20Budapest&amp;body=https%3A%2F%2Fworkguardai.com%2Fsq%2F%23event-meout-2026">Email</a>
+            <a href="https://workguardai.com/sq/#event-meout-2026" data-copy="Lidhja u kopjua">Kopjo lidhjen</a>
+            <button type="button" class="share-native" data-share-title="Prezantim në skenë në MeOut Summit, Budapest" data-share-url="https://workguardai.com/sq/#event-meout-2026" hidden>Shpërndani…</button>
+          </div>
+          </div>
+          <a class="btn btn-outline btn-small" href="../sq/?interest=event&amp;event=MeOut%20Summit%2C%20Budapest#work-form">Kërkoni një takim</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 11. Pilot call + partner -->
   <section class="section" id="pilot" aria-labelledby="pilot-title">
     <div class="container pilot-grid">
       <div>
         <div class="sec-head">
-          <p class="sec-index mono">07 · Pilot</p>
+          <p class="sec-index mono">11 · Pilot</p>
           <h2 id="pilot-title">Rezervo një telefonatë pilot.</h2>
           <p class="sec-lead">Kërkojmë kantierin e parë aktiv. Nëse kryeni punime dheu ose infrastrukture dhe keni planet DWG për to, mjafton një telefonatë e shkurtër për të parë nëse një pilot është i përshtatshëm.</p>
         </div>
@@ -636,15 +827,27 @@
         </div>
       </div>
 
-      <form class="form" id="pilot-form" aria-labelledby="pilot-title" method="POST" action="https://formspree.io/f/xgaoynap"
-            data-sending="Po dërgohet…" data-success="Faleminderit. Kërkesa juaj u dërgua. Do t'ju përgjigjemi me email." data-error="Kërkesa nuk u dërgua. Provoni përsëri ose shkruani te ek@workguardai.com.">
-        <input type="hidden" name="_subject" value="Kërkesë për telefonatë pilot (sq)">
+      <form class="form" id="work-form" aria-labelledby="work-title" method="POST" action="https://formspree.io/f/xgaoynap"
+            data-sending="Po dërgohet…" data-success="Faleminderit. Kërkesa juaj u dërgua. Do t'ju përgjigjemi me email." data-success-updates="Faleminderit. Do të na dëgjoni kur të ketë lajme." data-error="Kërkesa nuk u dërgua. Provoni përsëri ose shkruani te ek@workguardai.com.">
+        <input type="hidden" name="_subject" value="WorkGuardAI: Pilot project">
         <input type="hidden" name="page_language" value="sq">
         <div class="hp" aria-hidden="true"><label>Leave empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
-        <div class="field"><label for="f-name">Emri</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
-        <div class="field"><label for="f-company">Kompania</label><input id="f-company" name="company" type="text" autocomplete="organization" required></div>
-        <div class="field"><label for="f-role">Pozicioni</label><input id="f-role" name="role" type="text" autocomplete="organization-title"></div>
-        <div class="field">
+        <div class="field field-full">
+          <label for="f-interest">Për çfarë bëhet fjalë?</label>
+          <select id="f-interest" name="interest">
+            <option value="Pilot project" data-key="pilot">Projekt pilot</option>
+            <option value="Research or education collaboration" data-key="research">Bashkëpunim kërkimor ose arsimor</option>
+            <option value="Meet us at an event" data-key="event">Na takoni në një event</option>
+            <option value="Press, podcast or speaking" data-key="press">Media, podkast ose fjalim</option>
+            <option value="Investment or partnership" data-key="invest">Investim ose partneritet</option>
+            <option value="Updates" data-key="updates">Përditësime</option>
+          </select>
+        </div>
+        <div class="field" data-for="pilot research event press invest"><label for="f-name">Emri</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field" data-for="pilot research event press invest"><label for="f-org">Organizata</label><input id="f-org" name="organisation" type="text" autocomplete="organization"></div>
+        <div class="field" data-for="pilot research event press invest"><label for="f-role">Pozicioni</label><input id="f-role" name="role" type="text" autocomplete="organization-title"></div>
+        <div class="field" data-for="event"><label for="f-event">Eventi</label><input id="f-event" name="event_name" type="text"></div>
+        <div class="field" data-for="pilot">
           <label for="f-site">Lloji i kantierit</label>
           <select id="f-site" name="site_type">
             <option value="">Zgjidhni një</option>
@@ -655,19 +858,25 @@
             <option value="Other infrastructure">Infrastrukturë tjetër</option>
           </select>
         </div>
-        <fieldset class="field field-full">
+        <fieldset class="field field-full" data-for="pilot">
           <legend>A keni plane DWG për të?</legend>
           <div class="radios">
             <label><input type="radio" name="has_dwg" value="yes"> Po</label>
             <label><input type="radio" name="has_dwg" value="no"> Jo</label>
           </div>
         </fieldset>
+        <div class="field field-full" data-for="research"><label for="f-explore">Çfarë dëshironi të eksploroni?</label><textarea id="f-explore" name="explore"></textarea></div>
+        <div class="field field-full" data-for="research"><label for="f-timeline">Afati kohor</label><input id="f-timeline" name="timeline" type="text"></div>
         <div class="field field-full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-        <div class="field field-full"><label for="f-msg">Mesazhi <span class="opt">(opsional)</span></label><textarea id="f-msg" name="message"></textarea></div>
+        <div class="field field-full" data-for="pilot research event press invest"><label for="f-msg">Mesazhi <span class="opt">(opsional)</span></label><textarea id="f-msg" name="message"></textarea></div>
+        <div class="field-full" data-for="updates">
+          <label class="consent"><input type="checkbox" id="f-consent" name="consent" value="Agreed to receive email updates"> <span>Pranoj të marr përditësime me email për përparimin e WorkGuardAI.</span></label>
+          <p class="note">Për t'u çregjistruar, përgjigjuni cilitdo email-i nga ne.</p>
+        </div>
         <p class="form-status" role="status" aria-live="polite" hidden></p>
         <div class="form-foot">
           <button class="btn btn-primary" type="submit">Dërgo kërkesën</button>
-          <p>Këto të dhëna i përdorim vetëm për t'iu përgjigjur kërkesës suaj. Formulari dërgohet përmes Formspree. <a href="../sq/privacy/">Njoftimi i privatësisë</a></p>
+          <p>I përdorim këto të dhëna për t'ju përgjigjur, dhe për të dërguar përditësime vetëm nëse i kërkoni. Formulari dërgohet përmes Formspree. <a href="../sq/privacy/">Njoftimi i privatësisë</a></p>
         </div>
       </form>
     </div>
@@ -687,6 +896,9 @@
           <li><a href="mailto:ek@workguardai.com">ek@workguardai.com</a></li>
           <li><a href="https://www.linkedin.com/company/workguardai" rel="noopener" target="_blank">LinkedIn</a></li>
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
+          <li><a href="#work">Punoni me ne</a></li>
+          <li><a href="../sq/news/">Lajme</a></li>
+          <li><a href="../sq/press/">Media dhe fjalime</a></li>
           <li><a href="../sq/privacy/">Njoftimi i privatësisë</a></li>
         </ul>
       </div>
