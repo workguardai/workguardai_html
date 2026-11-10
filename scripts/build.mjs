@@ -13,7 +13,6 @@ const PAGES = [
   { template: await readFile('src/privacy.html', 'utf8'), slug: 'privacy/', title: 'privacy.title', description: 'privacy.metaDesc' },
   { template: await readFile('src/news.html', 'utf8'), slug: 'news/', title: 'news.title', description: 'news.metaDesc' },
   { template: await readFile('src/press.html', 'utf8'), slug: 'press/', title: 'press.title', description: 'press.metaDesc' },
-  { template: await readFile('src/vision.html', 'utf8'), slug: 'vision/', title: 'vpage.title', description: 'vpage.metaDesc' },
   ...news.filter((n) => n.article).map((item) => ({ template: articleTemplate, slug: `news/${item.id}/`, item })),
 ];
 const LANGS = config.languages;
@@ -31,8 +30,8 @@ const urlOf = (lang, slug = '') => `${config.baseUrl}/${pathOf(lang)}${slug}`;
 
 // Shared blocks, inserted with {{@name}} before the text keys are filled in.
 const PARTIALS = {
-  visionDevices: await readFile('src/partials/vision-devices.html', 'utf8'),
-  visionFeatures: await readFile('src/partials/vision-features.html', 'utf8'),
+  productDevices: await readFile('src/partials/product-devices.html', 'utf8'),
+  productFeatures: await readFile('src/partials/product-features.html', 'utf8'),
 };
 const usedKeys = new Set([...PAGES.map(({ template }) => template), ...Object.values(PARTIALS)].flatMap((template) => [...template.matchAll(/\{\{([^@}][^}]*)\}\}/g)].map((m) => m[1])));
 let problems = 0;
@@ -179,8 +178,6 @@ for (const lang of LANGS) {
       pageDescription: esc(pageDescription),
       og: [...og, ...twitter].join('\n'),
       press: `${base}${pathOf(lang)}press/`,
-      visionPage: `${base}${pathOf(lang)}vision/`,
-      ...PARTIALS,
       eventList: upcoming.map((n) => eventRow(n, lang, home, t)).join('\n'),
       eventMeet: esc(events[0]?.meet ?? `${home}?interest=event#work-form`),
       articleTitle: item ? esc(item.title[lang]) : '',
@@ -194,7 +191,7 @@ for (const lang of LANGS) {
       formTodo: formReady ? '' : ' <span class="todo">[TODO: Formspree form ID in site.config.json]</span>',
     };
 
-    let html = template
+    let html = template.replace(/\{\{@(\w+)\}\}/g, (tag, k) => PARTIALS[k] ?? tag)
       // Review notes stay in the source files, not on the public pages.
       .replace(/[ \t]*<!-- TODO[\s\S]*?-->\n?/g, '')
       .replace(/\{\{@(\w+)\}\}/g, (_, k) => {
