@@ -408,35 +408,44 @@
           <h3>{{proto.nextH}}</h3>
           <ul class="status-list">
             <li><span class="chip">{{proto.chipNext}}</span><span>{{proto.next1}}</span></li>
-            <li><span class="chip">{{proto.chipExploring}}</span><span>{{proto.next2}}</span></li>
-            <li><span class="chip">{{proto.chipPlanned}}</span><span>{{proto.next3}}</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. Product vision (concept). Mockups: src/partials/vision-devices.html, ideas: src/partials/vision-features.html -->
-  <section class="section pv" id="vision" aria-labelledby="vision-title">
-    <svg class="pv-facets" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <defs>
-        <linearGradient id="pv-f1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7B6CFF" stop-opacity=".35"/><stop offset="1" stop-color="#8EEBFF" stop-opacity=".05"/></linearGradient>
-        <linearGradient id="pv-f2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8EEBFF" stop-opacity=".22"/><stop offset="1" stop-color="#7B6CFF" stop-opacity=".02"/></linearGradient>
-      </defs>
-      <polygon points="1010,40 1110,140 1010,300 910,140" fill="url(#pv-f1)" stroke="rgba(217,210,247,.18)"/>
-      <polygon points="1010,40 1110,140 1010,160" fill="url(#pv-f2)"/>
-      <polygon points="120,520 170,570 120,650 70,570" fill="url(#pv-f2)" stroke="rgba(217,210,247,.14)"/>
-      <polygon points="1130,420 1160,450 1130,500 1100,450" fill="url(#pv-f1)" stroke="rgba(217,210,247,.12)"/>
-    </svg>
+  <!-- 4. What you get: only what the app does. Mockups: src/partials/product-devices.html, list: src/partials/product-features.html -->
+  <section class="section" id="product" aria-labelledby="product-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">03 · {{vis.index}}</p>
-        <h2 id="vision-title">{{vis.h2}}</h2>
-        <p class="sec-lead">{{vis.lead}}</p>
+        <p class="sec-index mono">03 · {{prod.index}}</p>
+        <h2 id="product-title">{{prod.h2}}</h2>
+        <p class="sec-lead">{{prod.lead}}</p>
       </div>
-{{@visionDevices}}
-{{@visionFeatures}}
-      <p class="pv-more"><a class="link-arrow" href="{{@visionPage}}">{{vis.more}} <span aria-hidden="true">→</span></a></p>
+{{@productDevices}}
+{{@productFeatures}}
+      <p class="pd-delivery">{{prod.delivery}}</p>
+
+      <!-- Vision: ideas that are not in the product, kept apart from what customers get today -->
+      <div class="pd-vision">
+        <div class="pd-vision-head">
+          <p class="chip">{{vis.chip}}</p>
+          <h3>{{vis.h}}</h3>
+          <p>{{vis.lead}}</p>
+          <p class="pd-vision-link"><a class="link-arrow" href="{{@conceptPage}}">{{vis.more}} <span aria-hidden="true">→</span></a></p>
+        </div>
+        <ul>
+          <li><strong>{{vis.f12t}}</strong><p>{{vis.f12d}}</p></li>
+          <li><strong>{{vis.f4t}}</strong><p>{{vis.f4d}}</p></li>
+          <li><strong>{{vis.f5t}}</strong><p>{{vis.f5d}}</p></li>
+          <li><strong>{{vis.f8t}}</strong><p>{{vis.f8d}}</p></li>
+          <li><strong>{{vis.f10t}}</strong><p>{{vis.f10d}}</p></li>
+          <li><strong>{{vis.f11t}}</strong><p>{{vis.f11d}}</p></li>
+          <li><strong>{{vis.f6t}}</strong><p>{{vis.f6d}}</p></li>
+          <li><strong>{{vis.lidT}}</strong><p>{{vis.lidD}}</p></li>
+        </ul>
+        <p class="pd-fine">{{vis.safetyNote}}</p>
+      </div>
     </div>
   </section>
 
@@ -856,7 +865,6 @@
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
           <li><a href="#work">{{work.h2}}</a></li>
           <li><a href="{{@newsPage}}">{{nav.news}}</a></li>
-          <li><a href="{{@visionPage}}">{{vis.index}}</a></li>
           <li><a href="{{@press}}">{{press.link}}</a></li>
           <li><a href="{{@privacy}}">{{privacy.link}}</a></li>
         </ul>

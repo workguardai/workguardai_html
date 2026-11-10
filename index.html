@@ -260,7 +260,7 @@
           <p>Each point shows its status by colour, an overall progress bar sums up the site, and email alerts report the coordinates with current and planned depth.</p>
         </article>
       </div>
-      <p class="note">Illustrative concept with sample data. Working prototype; field test pending. Exploring next: camera GPS and LiDAR for higher precision.</p>
+      <p class="note">Illustrative concept with sample data. Working prototype; field test pending.</p>
 
       <div class="field">
         <div class="field-head">
@@ -429,166 +429,162 @@
           <h3>What comes next</h3>
           <ul class="status-list">
             <li><span class="chip">Next</span><span>A field test on a live site, with a contractor or infrastructure owner, comparing the estimated depths with surveyed measurements.</span></li>
-            <li><span class="chip">Exploring</span><span>Camera GPS combined with LiDAR, to place photos and measure depth more precisely.</span></li>
-            <li><span class="chip">Planned</span><span>Integrations with the tools site teams already use.</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. Product vision (concept). Mockups: src/partials/vision-devices.html, ideas: src/partials/vision-features.html -->
-  <section class="section pv" id="vision" aria-labelledby="vision-title">
-    <svg class="pv-facets" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <defs>
-        <linearGradient id="pv-f1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7B6CFF" stop-opacity=".35"/><stop offset="1" stop-color="#8EEBFF" stop-opacity=".05"/></linearGradient>
-        <linearGradient id="pv-f2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8EEBFF" stop-opacity=".22"/><stop offset="1" stop-color="#7B6CFF" stop-opacity=".02"/></linearGradient>
-      </defs>
-      <polygon points="1010,40 1110,140 1010,300 910,140" fill="url(#pv-f1)" stroke="rgba(217,210,247,.18)"/>
-      <polygon points="1010,40 1110,140 1010,160" fill="url(#pv-f2)"/>
-      <polygon points="120,520 170,570 120,650 70,570" fill="url(#pv-f2)" stroke="rgba(217,210,247,.14)"/>
-      <polygon points="1130,420 1160,450 1130,500 1100,450" fill="url(#pv-f1)" stroke="rgba(217,210,247,.12)"/>
-    </svg>
+  <!-- 4. What you get: only what the app does. Mockups: src/partials/product-devices.html, list: src/partials/product-features.html -->
+  <section class="section" id="product" aria-labelledby="product-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">03 · Product vision</p>
-        <h2 id="vision-title">Where WorkGuardAI is heading: progress, measurement and safety on one plan.</h2>
-        <p class="sec-lead">A concept preview of the platform we are designing, built around the same idea as today's prototype: the DWG plan and ordinary site photos. The screens show the vision, not finished features.</p>
+        <p class="sec-index mono">03 · What you get</p>
+        <h2 id="product-title">One view of the site against the plan, from ordinary photos.</h2>
+        <p class="sec-lead">Your DWG plan, your site photos and the depth estimated from them come together in one dashboard. Your team sees progress at every point and gets an alert when a point needs a look.</p>
       </div>
-        <!-- Product vision: laptop dashboard and phone app. Concept only; every number is a placeholder. -->
-        <figure class="pv-stage">
-          <figcaption class="pv-tags"><span class="pv-chip">Concept preview</span><span class="pv-note mono">Illustrative data</span></figcaption>
-          <div class="pv-devices">
+        <!-- What you get: the dashboard and the phone, showing only what the app does. Numbers are sample data. -->
+        <figure class="pd-stage">
+          <div class="pd-devices">
 
-            <!-- Laptop dashboard -->
-            <div class="pv-laptop" role="img" aria-label="Concept of a laptop dashboard with illustrative data: the site plan as a coordinate map with points coloured by progress and one deviation, overall progress at 62 percent, work done versus remaining in cubic metres, three deviation alerts, and a cost summary linking measured work to an invoice draft.">
-              <div class="pv-screen">
-                <div class="pv-bar"><span class="pv-dots"><i></i><i></i><i></i></span><span>WorkGuardAI · Site 01</span><span class="mono">Updated 10:42</span></div>
-                <div class="pv-dash">
-                  <div class="pv-panel pv-map">
-                    <p class="pv-h">Site plan · coordinate map</p>
-                    <svg viewBox="0 0 400 240">
-                      <defs>
-                        <linearGradient id="pv-plan" x1="0" x2="1"><stop offset="0" stop-color="#8EEBFF"/><stop offset="1" stop-color="#7B6CFF"/></linearGradient>
-                      </defs>
-                      <g stroke="rgba(217,210,247,.12)" stroke-width="1">
-                        <path d="M40 0V240M100 0V240M160 0V240M220 0V240M280 0V240M340 0V240"/>
-                        <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
-                      </g>
-                      <g fill="#B9B2E6" font-family="JetBrains Mono, monospace" font-size="9">
-                        <text x="66" y="14">B</text><text x="126" y="14">C</text><text x="186" y="14">D</text><text x="246" y="14">E</text><text x="306" y="14">F</text>
-                      </g>
-                      <path d="M20 200 C 80 190, 110 120, 170 118 S 260 70, 380 52" fill="none" stroke="url(#pv-plan)" stroke-width="2" stroke-dasharray="5 4"/>
-                      <g stroke="#0E0B2B" stroke-width="2">
-                        <circle cx="30" cy="198" r="6" fill="#5CF2B0"/><circle cx="66" cy="186" r="6" fill="#5CF2B0"/>
-                        <circle cx="98" cy="160" r="6" fill="#5CF2B0"/><circle cx="128" cy="130" r="6" fill="#5CF2B0"/>
-                        <circle cx="170" cy="118" r="7" fill="#8EEBFF"/><circle cx="206" cy="110" r="6" fill="#8EEBFF"/>
-                        <circle cx="242" cy="94" r="6" fill="#FFB86B"/><circle cx="280" cy="80" r="6" fill="#8EEBFF"/>
-                        <circle cx="318" cy="68" r="6" fill="none" stroke="#D9D2F7"/><circle cx="356" cy="58" r="6" fill="none" stroke="#D9D2F7"/>
-                      </g>
-                      <circle class="pv-ping" cx="242" cy="94" r="6" fill="none" stroke="#FFB86B" stroke-width="1.5"/>
-                      <g font-family="JetBrains Mono, monospace" font-size="9" fill="#F4F2FF">
-                        <rect x="150" y="132" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(142,235,255,.5)"/>
-                        <text x="157" y="143">D·04</text>
-                        <rect x="222" y="104" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(255,184,107,.6)"/>
-                        <text x="229" y="115">D·07</text>
-                      </g>
-                    </svg>
-                    <p class="pv-legend"><span><i style="background:#5CF2B0"></i>Complete</span><span><i style="background:#8EEBFF"></i>In progress</span><span><i class="pv-ring"></i>Not started</span><span><i style="background:#FFB86B"></i>Deviation</span></p>
+            <!-- Laptop: the dashboard -->
+            <div class="pd-laptop" role="img" aria-label="The WorkGuardAI dashboard with sample data: the DWG plan as a coordinate map with points coloured not started, in progress and complete, overall progress at 62 percent, point D·04 with planned depth 2.40 metres, estimated depth 1.49 metres and 62 percent progress, and a list of notifications.">
+              <div class="pd-lid">
+                <div class="pd-screen">
+                  <div class="pd-bar">
+                    <img src="assets/img/logo.png" alt="" width="433" height="71">
+                    <span>Site 01</span>
+                    <span class="mono">Last camera photo 10:42</span>
                   </div>
-                  <div class="pv-panel pv-overall">
-                    <p class="pv-h">Overall progress</p>
-                    <p class="pv-big">62%</p>
-                    <div class="pv-meter"><span style="width:62%"></span></div>
-                  </div>
-                  <div class="pv-panel pv-split">
-                    <p class="pv-h">Work done vs remaining</p>
-                    <p class="pv-row"><span>Done</span><b>4,820 m³</b></p>
-                    <div class="pv-meter"><span style="width:62%"></span></div>
-                    <p class="pv-row"><span>Remaining</span><b>2,960 m³</b></p>
-                    <div class="pv-meter pv-meter-rem"><span style="width:38%"></span></div>
-                  </div>
-                  <div class="pv-panel pv-alerts">
-                    <p class="pv-h">Deviation alerts</p>
-                    <ul>
-                      <li>D·07 · 0.4 m above planned level</li>
-                      <li>B·03 · No new photo for 3 days</li>
-                      <li>F·05 · Possible object in the excavation</li>
-                    </ul>
-                  </div>
-                  <div class="pv-panel pv-cost">
-                    <p class="pv-h">Cost linked to measured work</p>
-                    <p class="pv-row"><span>Measured this month</span><b>1,240 m³</b></p>
-                    <p class="pv-row"><span>At contract rates</span><b>€38,400</b></p>
-                    <p class="pv-invoice"><span>Invoice draft</span><span class="pv-pill">Ready for review</span></p>
+                  <div class="pd-dash">
+                    <div class="pd-panel pd-map">
+                      <p class="pd-h">DWG plan · coordinate map</p>
+                      <svg viewBox="0 0 400 230">
+                        <g stroke="#ece9e1" stroke-width="1">
+                          <path d="M40 0V230M100 0V230M160 0V230M220 0V230M280 0V230M340 0V230"/>
+                          <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
+                        </g>
+                        <g fill="#5f6880" font-family="JetBrains Mono, monospace" font-size="9">
+                          <text x="67" y="14">B</text><text x="127" y="14">C</text><text x="187" y="14">D</text><text x="247" y="14">E</text><text x="307" y="14">F</text>
+                        </g>
+                        <path d="M20 196 C 80 186, 110 118, 170 116 S 260 70, 380 52" fill="none" stroke="#5255e0" stroke-width="1.5" stroke-dasharray="5 4"/>
+                        <g stroke="#fff" stroke-width="2">
+                          <circle cx="30" cy="194" r="6" fill="#17845a"/><circle cx="66" cy="182" r="6" fill="#17845a"/>
+                          <circle cx="98" cy="156" r="6" fill="#17845a"/><circle cx="128" cy="128" r="6" fill="#17845a"/>
+                          <circle cx="170" cy="116" r="7.5" fill="#5255e0"/><circle cx="206" cy="108" r="6" fill="#5255e0"/>
+                          <circle cx="242" cy="94" r="6" fill="#5255e0"/><circle cx="280" cy="80" r="6" fill="#5255e0"/>
+                          <circle cx="318" cy="68" r="6" fill="#fff" stroke="#85806f" stroke-width="1.5"/><circle cx="356" cy="58" r="6" fill="#fff" stroke="#85806f" stroke-width="1.5"/>
+                        </g>
+                        <circle cx="170" cy="116" r="12" fill="none" stroke="#5255e0" stroke-width="1"/>
+                        <g font-family="JetBrains Mono, monospace" font-size="9">
+                          <rect x="146" y="134" width="48" height="17" rx="2" fill="#0f1b3d"/>
+                          <text x="154" y="146" fill="#fff">D·04</text>
+                        </g>
+                      </svg>
+                      <p class="pd-legend"><span><i class="pd-not"></i>Not started &lt;10%</span><span><i style="background:#5255e0"></i>In progress</span><span><i style="background:#17845a"></i>Complete &gt;90%</span></p>
+                    </div>
+                    <div class="pd-panel pd-overall">
+                      <p class="pd-h">Overall progress</p>
+                      <p class="pd-big">62%</p>
+                      <div class="pd-meter"><span style="width:62%"></span></div>
+                    </div>
+                    <div class="pd-panel pd-point">
+                      <p class="pd-h">Point D·04</p>
+                      <p class="pd-row"><span>Planned depth</span><b>−2.40 m</b></p>
+                      <p class="pd-row"><span>Estimated depth</span><b>−1.49 m</b></p>
+                      <p class="pd-row"><span>Progress</span><b class="pd-prog">62%</b></p>
+                    </div>
+                    <div class="pd-panel pd-notifs">
+                      <p class="pd-h">Notifications</p>
+                      <ul>
+                        <li><i style="background:#5255e0"></i><span>D·04 · Excavation in progress</span><time class="mono">10:42</time></li>
+                        <li><i style="background:#17845a"></i><span>B·02 · Excavation complete</span><time class="mono">06:42</time></li>
+                        <li><i style="background:#9a5f00"></i><span>D·07 · Email alert sent</span><time class="mono">06:42</time></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="pv-base" aria-hidden="true"></div>
+              <div class="pd-deck" aria-hidden="true"></div>
             </div>
 
-            <!-- Phone app -->
-            <div class="pv-phone" role="img" aria-label="Concept of a phone app with illustrative data: a deviation notification at point D·07, a site photo pinned to point D·04 on the plan, and progress at that point of 62 percent, with planned and estimated depth.">
-              <div class="pv-phone-screen">
-                <div class="pv-notif"><b>Deviation flagged</b><span>D·07 · 0.4 m above planned level</span></div>
-                <svg class="pv-photo" viewBox="0 0 216 150">
-                  <defs>
-                    <linearGradient id="pv-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2370"/><stop offset="1" stop-color="#4B3FA0"/></linearGradient>
-                    <linearGradient id="pv-soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A7A6A"/><stop offset="1" stop-color="#4F4338"/></linearGradient>
-                  </defs>
-                  <rect width="216" height="150" fill="url(#pv-sky)"/>
-                  <path d="M0 70H62L84 124H140L160 70H216V150H0Z" fill="url(#pv-soil)"/>
-                  <path d="M62 70L84 124H140L160 70" fill="none" stroke="#C9B9A6" stroke-width="2"/>
-                  <path d="M0 70H62L78 108H146L160 70H216" fill="none" stroke="#8EEBFF" stroke-width="1.5" stroke-dasharray="4 3"/>
-                  <g stroke="rgba(244,242,255,.25)"><path d="M54 0V150M108 0V150M162 0V150M0 50H216M0 100H216"/></g>
-                  <path d="M112 112c0-9 7-16 16-16s16 7 16 16c0 12-16 26-16 26s-16-14-16-26z" transform="translate(-16 -34)" fill="#5CF2B0" stroke="#0E0B2B" stroke-width="2"/>
-                  <circle cx="112" cy="78" r="5" fill="#0E0B2B"/>
-                  <rect x="128" y="64" width="56" height="18" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(92,242,176,.6)"/>
-                  <text x="135" y="77" fill="#F4F2FF" font-family="JetBrains Mono, monospace" font-size="10">D·04</text>
+            <!-- Phone: the email alert and an upload at a plan coordinate -->
+            <div class="pd-phone" role="img" aria-label="WorkGuardAI on a phone with sample data: an email alert for point D·07 giving the current depth of 1.10 metres and the planned depth of 2.40 metres, and a site photo being uploaded at plan coordinates X and Y for point D·04.">
+              <div class="pd-phone-screen">
+                <div class="pd-mail">
+                  <p class="pd-mail-from"><b>WorkGuardAI</b><span class="mono">10:42</span></p>
+                  <p class="pd-mail-subject">Alert · D·07</p>
+                  <p class="pd-row"><span>Current depth</span><b>−1.10 m</b></p>
+                  <p class="pd-row"><span>Planned depth</span><b>−2.40 m</b></p>
+                </div>
+                <p class="pd-h">Upload photo</p>
+                <svg class="pd-photo" viewBox="0 0 216 132">
+                  <rect width="216" height="132" fill="#d9d3c6"/>
+                  <path d="M0 52H58L80 110H136L158 52H216V132H0Z" fill="#b8ab90"/>
+                  <path d="M58 52L80 110H136L158 52" fill="none" stroke="#8f8268" stroke-width="2"/>
+                  <path d="M0 52H58L74 92H142L158 52H216" fill="none" stroke="#5255e0" stroke-width="1.5" stroke-dasharray="4 3"/>
                 </svg>
-                <p class="pv-h">Photo at D·04 · 10:42</p>
-                <p class="pv-row"><span>Progress at this point</span><b class="pv-mint">62%</b></p>
-                <div class="pv-meter"><span style="width:62%"></span></div>
-                <p class="pv-row pv-small"><span>Planned depth</span><b>−2.40 m</b></p>
-                <p class="pv-row pv-small"><span>Estimated depth</span><b>−1.49 m</b></p>
+                <div class="pd-fields">
+                  <span class="pd-field"><small>X</small>6 120.0</span>
+                  <span class="pd-field"><small>Y</small>4 048.5</span>
+                </div>
+                <span class="pd-button">Upload · D·04</span>
               </div>
             </div>
           </div>
+          <figcaption class="pd-caption mono">Sample data</figcaption>
         </figure>
 
-        <!-- Product vision: feature ideas in three groups. Wording stays at "designed to", "can help", "the idea is". -->
-        <div class="pv-groups">
-          <div class="pv-group">
-            <h3>Progress on the plan</h3>
+        <!-- What you get: only what the app does today, said plainly. -->
+        <div class="pd-groups">
+          <div class="pd-group">
+            <h3><span class="mono">01</span> Progress on the plan</h3>
             <ul>
-              <li><strong>The plan as a coordinate map</strong><p>The idea is that the DWG plan becomes a map of points, each with its planned depth or level.</p></li>
-              <li><strong>Photos tied to a place</strong><p>Designed so every photo, from a phone, a fixed camera or a drone, belongs to a coordinate on the plan.</p></li>
-              <li><strong>Progress and deviation alerts</strong><p>Designed to show progress at each point and for the whole site, and to alert the team when work moves away from the plan.</p></li>
-              <li><strong>Cost linked to measured work</strong><p>The idea is to link measured quantities to contract rates, so invoicing can follow the work actually done.</p></li>
+              <li><strong>Your DWG plan as a map</strong><p>The plan you already have becomes a grid of points, each with its planned depth.</p></li>
+              <li><strong>Progress at every point</strong><p>Each point shows the estimated depth against the planned depth, coloured not started, in progress or complete.</p></li>
+              <li><strong>One figure for the site</strong><p>An overall progress bar sums up the whole site at a glance.</p></li>
             </ul>
           </div>
-          <div class="pv-group">
-            <h3>Measure and connect</h3>
+          <div class="pd-group">
+            <h3><span class="mono">02</span> Photos without extra work</h3>
             <ul>
-              <li><strong>Soil and rock volumes</strong><p>Designed to estimate how much soil and rock has been excavated and how much remains, from the same photos.</p></li>
-              <li><strong>BIM and supplier data</strong><p>The idea is to bring in BIM models and supplier data, so the plan, deliveries and progress can be compared in one place.</p></li>
-              <li><strong>Cameras, drones and connectivity</strong><p>Designed to work with fixed site cameras, drone flights and the mobile connection a site already has.</p></li>
+              <li><strong>Fixed site cameras</strong><p>Cameras on site send a photo automatically every four hours.</p></li>
+              <li><strong>Uploads by coordinate</strong><p>Your team adds photos from a phone, camera or drone at a coordinate on the plan.</p></li>
+              <li><strong>Depth from each photo</strong><p>An AI depth model estimates the excavation depth in metres from every photo.</p></li>
             </ul>
           </div>
-          <div class="pv-group">
-            <h3>Safety and assets</h3>
+          <div class="pd-group">
+            <h3><span class="mono">03</span> Know when to act</h3>
             <ul>
-              <li><strong>Machine and worker safety</strong><p>The idea is to flag when a person is inside a machine's working zone, without identifying who it is.</p></li>
-              <li><strong>Unidentified objects when digging</strong><p>Designed to flag unexpected objects in an excavation, so the team can stop and check.</p></li>
-              <li><strong>Utility cable checks</strong><p>Can help compare the dig with utility plans, as a reminder to check for cables and pipes before work continues.</p></li>
-              <li><strong>Structure condition monitoring</strong><p>The idea is to follow changes in structures such as dam walls over time, from repeated photos.</p></li>
+              <li><strong>Email alerts</strong><p>Alerts give the coordinates with the current and planned depth, so the right person can check the right place.</p></li>
+              <li><strong>Notifications by point</strong><p>The dashboard lists what changed and where, point by point.</p></li>
+              <li><strong>A written results report</strong><p>In a pilot we check in every week and compare the results with your own measurements.</p></li>
             </ul>
           </div>
         </div>
-        <p class="pv-delivery">We deliver the software and help implement it on site: set-up, connectivity and testing.</p>
-        <p class="pv-fine">The safety ideas are concepts. They do not replace site safety procedures or utility location services.</p>
 
-      <p class="pv-more"><a class="link-arrow" href="vision/">See all concept screens <span aria-hidden="true">→</span></a></p>
+      <p class="pd-delivery">We deliver the software and help implement it on site: set-up, connectivity and testing.</p>
+
+      <!-- Vision: ideas that are not in the product, kept apart from what customers get today -->
+      <div class="pd-vision">
+        <div class="pd-vision-head">
+          <p class="chip">Vision</p>
+          <h3>Where the platform is heading</h3>
+          <p>The same plan and photos open the way to more. These ideas are on our roadmap.</p>
+          <p class="pd-vision-link"><a class="link-arrow" href="concept/">See all concept screens <span aria-hidden="true">→</span></a></p>
+        </div>
+        <ul>
+          <li><strong>Look-ahead scheduling</strong><p>The idea is to turn measured progress into a forecast finish and suggested next steps, each waiting for approval.</p></li>
+          <li><strong>Cost linked to measured work</strong><p>The idea is to link measured quantities to contract rates, so invoicing can follow the work actually done.</p></li>
+          <li><strong>Soil and rock volumes</strong><p>Designed to estimate how much soil and rock has been excavated and how much remains, from the same photos.</p></li>
+          <li><strong>Machine and worker safety</strong><p>The idea is to flag when a person is inside a machine's working zone, without identifying who it is.</p></li>
+          <li><strong>Utility cable checks</strong><p>Can help compare the dig with utility plans, as a reminder to check for cables and pipes before work continues.</p></li>
+          <li><strong>Structure condition monitoring</strong><p>The idea is to follow changes in structures such as dam walls over time, from repeated photos.</p></li>
+          <li><strong>BIM and supplier data</strong><p>The idea is to bring in BIM models and supplier data, so the plan, deliveries and progress can be compared in one place.</p></li>
+          <li><strong>Higher precision</strong><p>Camera GPS combined with LiDAR, to place photos and measure depth more precisely.</p></li>
+        </ul>
+        <p class="pd-fine">The safety ideas are concepts. They do not replace site safety procedures or utility location services.</p>
+      </div>
     </div>
   </section>
 
@@ -713,7 +709,7 @@
           <time class="mono">Nov 2026</time>
           <div>
             <h3>AIREX 2026 PropTech Competition · Baku</h3>
-            <p>Invited to pitch at the AIREX 2026 PropTech Competition in Baku on 6 November.</p>
+            <p>Pitched at the AIREX 2026 PropTech Competition in Baku on 6 November, to a jury of investors and ecosystem representatives.</p>
           </div>
         </li>
         <li>
@@ -852,7 +848,7 @@
         <li id="airex-2026">
           <time class="mono" datetime="2026-11-06">6 Nov 2026</time>
           <h3>AIREX 2026 PropTech Competition, Baku</h3>
-          <p>Invited to pitch at the AIREX 2026 PropTech Competition in Baku on 6 November. The prize pool is EUR 15,000.</p>
+          <p>Pitched at the AIREX 2026 PropTech Competition in Baku on 6 November, to a jury of investors and ecosystem representatives.</p>
           <a href="https://airex.az/" rel="noopener" target="_blank">Official source <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
         </li>
         <li id="tampere-accelerator-2026">
@@ -894,7 +890,7 @@
         <details><summary>How accurate is it?</summary><p>We do not know yet, because it has not been measured on a live site. That is what the pilot is for: we compare the estimated depths with your own measurements and give you the results in a written report.</p></details>
         <details><summary>What about privacy and people on camera?</summary><p>The prototype estimates the depth of the ground at points on the plan. It does not identify or track people. Which cameras are used, where they point, who can see the photos and how long they are kept are agreed in the written pilot agreement before any photos are taken.</p></details>
         <details><summary>What do you need from a pilot site?</summary><p>A DWG plan of the site, and access to site cameras or someone who can take photos at plan coordinates.</p></details>
-        <details><summary>What does it not do yet?</summary><p>It has not been tested on an active site. LiDAR is not in the product; we are exploring it, together with camera GPS, for higher precision.</p></details>
+        <details><summary>Has it been tested on a live site?</summary><p>Not yet. The prototype works on a real project's DWG plan and imagery. A pilot is the first test on a live site, and we compare the results with your own measurements.</p></details>
       </div>
     </div>
   </section>
@@ -1038,7 +1034,6 @@
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
           <li><a href="#work">Work with us</a></li>
           <li><a href="news/">News</a></li>
-          <li><a href="vision/">Product vision</a></li>
           <li><a href="press/">Press and speaking</a></li>
           <li><a href="privacy/">Privacy notice</a></li>
         </ul>

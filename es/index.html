@@ -260,7 +260,7 @@
           <p>Cada punto muestra su estado por color, una barra de avance general resume la obra y las alertas por correo indican las coordenadas con la profundidad actual y la prevista.</p>
         </article>
       </div>
-      <p class="note">Concepto ilustrativo con datos de ejemplo. Prototipo funcional; prueba en obra pendiente. Exploramos a continuación: GPS de cámara y LiDAR para mayor precisión.</p>
+      <p class="note">Concepto ilustrativo con datos de ejemplo. Prototipo funcional; prueba en obra pendiente.</p>
 
       <div class="field">
         <div class="field-head">
@@ -429,166 +429,162 @@
           <h3>Qué viene después</h3>
           <ul class="status-list">
             <li><span class="chip">Siguiente</span><span>Una prueba en una obra en curso, con un contratista o un propietario de infraestructura, comparando las profundidades estimadas con mediciones topográficas.</span></li>
-            <li><span class="chip">En estudio</span><span>GPS de cámara combinado con LiDAR, para situar las fotos y medir la profundidad con más precisión.</span></li>
-            <li><span class="chip">Previsto</span><span>Integraciones con las herramientas que ya usan los equipos de obra.</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. Product vision (concept). Mockups: src/partials/vision-devices.html, ideas: src/partials/vision-features.html -->
-  <section class="section pv" id="vision" aria-labelledby="vision-title">
-    <svg class="pv-facets" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <defs>
-        <linearGradient id="pv-f1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7B6CFF" stop-opacity=".35"/><stop offset="1" stop-color="#8EEBFF" stop-opacity=".05"/></linearGradient>
-        <linearGradient id="pv-f2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8EEBFF" stop-opacity=".22"/><stop offset="1" stop-color="#7B6CFF" stop-opacity=".02"/></linearGradient>
-      </defs>
-      <polygon points="1010,40 1110,140 1010,300 910,140" fill="url(#pv-f1)" stroke="rgba(217,210,247,.18)"/>
-      <polygon points="1010,40 1110,140 1010,160" fill="url(#pv-f2)"/>
-      <polygon points="120,520 170,570 120,650 70,570" fill="url(#pv-f2)" stroke="rgba(217,210,247,.14)"/>
-      <polygon points="1130,420 1160,450 1130,500 1100,450" fill="url(#pv-f1)" stroke="rgba(217,210,247,.12)"/>
-    </svg>
+  <!-- 4. What you get: only what the app does. Mockups: src/partials/product-devices.html, list: src/partials/product-features.html -->
+  <section class="section" id="product" aria-labelledby="product-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">03 · Visión del producto</p>
-        <h2 id="vision-title">Hacia dónde va WorkGuardAI: progreso, medición y seguridad en un solo plano.</h2>
-        <p class="sec-lead">Un avance conceptual de la plataforma que estamos diseñando, basada en la misma idea que el prototipo actual: el plano DWG y fotos normales de la obra. Las pantallas muestran la visión, no funciones terminadas.</p>
+        <p class="sec-index mono">03 · Qué obtiene</p>
+        <h2 id="product-title">Una sola vista de la obra frente al plano, a partir de fotos normales.</h2>
+        <p class="sec-lead">Su plano DWG, las fotos de la obra y la profundidad estimada a partir de ellas se reúnen en un solo panel. Su equipo ve el progreso en cada punto y recibe un aviso cuando un punto necesita revisión.</p>
       </div>
-        <!-- Product vision: laptop dashboard and phone app. Concept only; every number is a placeholder. -->
-        <figure class="pv-stage">
-          <figcaption class="pv-tags"><span class="pv-chip">Avance conceptual</span><span class="pv-note mono">Datos ilustrativos</span></figcaption>
-          <div class="pv-devices">
+        <!-- What you get: the dashboard and the phone, showing only what the app does. Numbers are sample data. -->
+        <figure class="pd-stage">
+          <div class="pd-devices">
 
-            <!-- Laptop dashboard -->
-            <div class="pv-laptop" role="img" aria-label="Concepto de un panel en un portátil con datos ilustrativos: el plano de la obra como mapa de coordenadas con puntos coloreados según el progreso y una desviación, progreso general del 62 por ciento, trabajo hecho frente a pendiente en metros cúbicos, tres alertas de desviación y un resumen de costes que vincula el trabajo medido con un borrador de factura.">
-              <div class="pv-screen">
-                <div class="pv-bar"><span class="pv-dots"><i></i><i></i><i></i></span><span>WorkGuardAI · Obra 01</span><span class="mono">Actualizado 10:42</span></div>
-                <div class="pv-dash">
-                  <div class="pv-panel pv-map">
-                    <p class="pv-h">Plano de obra · mapa de coordenadas</p>
-                    <svg viewBox="0 0 400 240">
-                      <defs>
-                        <linearGradient id="pv-plan" x1="0" x2="1"><stop offset="0" stop-color="#8EEBFF"/><stop offset="1" stop-color="#7B6CFF"/></linearGradient>
-                      </defs>
-                      <g stroke="rgba(217,210,247,.12)" stroke-width="1">
-                        <path d="M40 0V240M100 0V240M160 0V240M220 0V240M280 0V240M340 0V240"/>
-                        <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
-                      </g>
-                      <g fill="#B9B2E6" font-family="JetBrains Mono, monospace" font-size="9">
-                        <text x="66" y="14">B</text><text x="126" y="14">C</text><text x="186" y="14">D</text><text x="246" y="14">E</text><text x="306" y="14">F</text>
-                      </g>
-                      <path d="M20 200 C 80 190, 110 120, 170 118 S 260 70, 380 52" fill="none" stroke="url(#pv-plan)" stroke-width="2" stroke-dasharray="5 4"/>
-                      <g stroke="#0E0B2B" stroke-width="2">
-                        <circle cx="30" cy="198" r="6" fill="#5CF2B0"/><circle cx="66" cy="186" r="6" fill="#5CF2B0"/>
-                        <circle cx="98" cy="160" r="6" fill="#5CF2B0"/><circle cx="128" cy="130" r="6" fill="#5CF2B0"/>
-                        <circle cx="170" cy="118" r="7" fill="#8EEBFF"/><circle cx="206" cy="110" r="6" fill="#8EEBFF"/>
-                        <circle cx="242" cy="94" r="6" fill="#FFB86B"/><circle cx="280" cy="80" r="6" fill="#8EEBFF"/>
-                        <circle cx="318" cy="68" r="6" fill="none" stroke="#D9D2F7"/><circle cx="356" cy="58" r="6" fill="none" stroke="#D9D2F7"/>
-                      </g>
-                      <circle class="pv-ping" cx="242" cy="94" r="6" fill="none" stroke="#FFB86B" stroke-width="1.5"/>
-                      <g font-family="JetBrains Mono, monospace" font-size="9" fill="#F4F2FF">
-                        <rect x="150" y="132" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(142,235,255,.5)"/>
-                        <text x="157" y="143">D·04</text>
-                        <rect x="222" y="104" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(255,184,107,.6)"/>
-                        <text x="229" y="115">D·07</text>
-                      </g>
-                    </svg>
-                    <p class="pv-legend"><span><i style="background:#5CF2B0"></i>Completado</span><span><i style="background:#8EEBFF"></i>En curso</span><span><i class="pv-ring"></i>Sin empezar</span><span><i style="background:#FFB86B"></i>Desviación</span></p>
+            <!-- Laptop: the dashboard -->
+            <div class="pd-laptop" role="img" aria-label="El panel de WorkGuardAI con datos de ejemplo: el plano DWG como mapa de coordenadas con puntos coloreados sin empezar, en curso y completados, progreso general del 62 por ciento, el punto D·04 con profundidad planificada de 2,40 metros, profundidad estimada de 1,49 metros y un 62 por ciento de progreso, y una lista de notificaciones.">
+              <div class="pd-lid">
+                <div class="pd-screen">
+                  <div class="pd-bar">
+                    <img src="../assets/img/logo.png" alt="" width="433" height="71">
+                    <span>Obra 01</span>
+                    <span class="mono">Última foto de cámara 10:42</span>
                   </div>
-                  <div class="pv-panel pv-overall">
-                    <p class="pv-h">Progreso general</p>
-                    <p class="pv-big">62%</p>
-                    <div class="pv-meter"><span style="width:62%"></span></div>
-                  </div>
-                  <div class="pv-panel pv-split">
-                    <p class="pv-h">Hecho frente a pendiente</p>
-                    <p class="pv-row"><span>Hecho</span><b>4,820 m³</b></p>
-                    <div class="pv-meter"><span style="width:62%"></span></div>
-                    <p class="pv-row"><span>Pendiente</span><b>2,960 m³</b></p>
-                    <div class="pv-meter pv-meter-rem"><span style="width:38%"></span></div>
-                  </div>
-                  <div class="pv-panel pv-alerts">
-                    <p class="pv-h">Alertas de desviación</p>
-                    <ul>
-                      <li>D·07 · 0,4 m por encima de la cota planificada</li>
-                      <li>B·03 · Sin fotos nuevas en 3 días</li>
-                      <li>F·05 · Posible objeto en la excavación</li>
-                    </ul>
-                  </div>
-                  <div class="pv-panel pv-cost">
-                    <p class="pv-h">Coste del trabajo medido</p>
-                    <p class="pv-row"><span>Medido este mes</span><b>1,240 m³</b></p>
-                    <p class="pv-row"><span>A precios de contrato</span><b>€38,400</b></p>
-                    <p class="pv-invoice"><span>Borrador de factura</span><span class="pv-pill">Listo para revisar</span></p>
+                  <div class="pd-dash">
+                    <div class="pd-panel pd-map">
+                      <p class="pd-h">Plano DWG · mapa de coordenadas</p>
+                      <svg viewBox="0 0 400 230">
+                        <g stroke="#ece9e1" stroke-width="1">
+                          <path d="M40 0V230M100 0V230M160 0V230M220 0V230M280 0V230M340 0V230"/>
+                          <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
+                        </g>
+                        <g fill="#5f6880" font-family="JetBrains Mono, monospace" font-size="9">
+                          <text x="67" y="14">B</text><text x="127" y="14">C</text><text x="187" y="14">D</text><text x="247" y="14">E</text><text x="307" y="14">F</text>
+                        </g>
+                        <path d="M20 196 C 80 186, 110 118, 170 116 S 260 70, 380 52" fill="none" stroke="#5255e0" stroke-width="1.5" stroke-dasharray="5 4"/>
+                        <g stroke="#fff" stroke-width="2">
+                          <circle cx="30" cy="194" r="6" fill="#17845a"/><circle cx="66" cy="182" r="6" fill="#17845a"/>
+                          <circle cx="98" cy="156" r="6" fill="#17845a"/><circle cx="128" cy="128" r="6" fill="#17845a"/>
+                          <circle cx="170" cy="116" r="7.5" fill="#5255e0"/><circle cx="206" cy="108" r="6" fill="#5255e0"/>
+                          <circle cx="242" cy="94" r="6" fill="#5255e0"/><circle cx="280" cy="80" r="6" fill="#5255e0"/>
+                          <circle cx="318" cy="68" r="6" fill="#fff" stroke="#85806f" stroke-width="1.5"/><circle cx="356" cy="58" r="6" fill="#fff" stroke="#85806f" stroke-width="1.5"/>
+                        </g>
+                        <circle cx="170" cy="116" r="12" fill="none" stroke="#5255e0" stroke-width="1"/>
+                        <g font-family="JetBrains Mono, monospace" font-size="9">
+                          <rect x="146" y="134" width="48" height="17" rx="2" fill="#0f1b3d"/>
+                          <text x="154" y="146" fill="#fff">D·04</text>
+                        </g>
+                      </svg>
+                      <p class="pd-legend"><span><i class="pd-not"></i>Sin empezar &lt;10%</span><span><i style="background:#5255e0"></i>En curso</span><span><i style="background:#17845a"></i>Completado &gt;90%</span></p>
+                    </div>
+                    <div class="pd-panel pd-overall">
+                      <p class="pd-h">Progreso general</p>
+                      <p class="pd-big">62%</p>
+                      <div class="pd-meter"><span style="width:62%"></span></div>
+                    </div>
+                    <div class="pd-panel pd-point">
+                      <p class="pd-h">Punto D·04</p>
+                      <p class="pd-row"><span>Profundidad planificada</span><b>−2.40 m</b></p>
+                      <p class="pd-row"><span>Profundidad estimada</span><b>−1.49 m</b></p>
+                      <p class="pd-row"><span>Progreso</span><b class="pd-prog">62%</b></p>
+                    </div>
+                    <div class="pd-panel pd-notifs">
+                      <p class="pd-h">Notificaciones</p>
+                      <ul>
+                        <li><i style="background:#5255e0"></i><span>D·04 · Excavación en curso</span><time class="mono">10:42</time></li>
+                        <li><i style="background:#17845a"></i><span>B·02 · Excavación completada</span><time class="mono">06:42</time></li>
+                        <li><i style="background:#9a5f00"></i><span>D·07 · Alerta por correo enviada</span><time class="mono">06:42</time></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="pv-base" aria-hidden="true"></div>
+              <div class="pd-deck" aria-hidden="true"></div>
             </div>
 
-            <!-- Phone app -->
-            <div class="pv-phone" role="img" aria-label="Concepto de una app móvil con datos ilustrativos: una notificación de desviación en el punto D·07, una foto de la obra vinculada al punto D·04 del plano y un progreso del 62 por ciento en ese punto, con la profundidad planificada y la estimada.">
-              <div class="pv-phone-screen">
-                <div class="pv-notif"><b>Desviación señalada</b><span>D·07 · 0,4 m por encima de la cota planificada</span></div>
-                <svg class="pv-photo" viewBox="0 0 216 150">
-                  <defs>
-                    <linearGradient id="pv-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2370"/><stop offset="1" stop-color="#4B3FA0"/></linearGradient>
-                    <linearGradient id="pv-soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A7A6A"/><stop offset="1" stop-color="#4F4338"/></linearGradient>
-                  </defs>
-                  <rect width="216" height="150" fill="url(#pv-sky)"/>
-                  <path d="M0 70H62L84 124H140L160 70H216V150H0Z" fill="url(#pv-soil)"/>
-                  <path d="M62 70L84 124H140L160 70" fill="none" stroke="#C9B9A6" stroke-width="2"/>
-                  <path d="M0 70H62L78 108H146L160 70H216" fill="none" stroke="#8EEBFF" stroke-width="1.5" stroke-dasharray="4 3"/>
-                  <g stroke="rgba(244,242,255,.25)"><path d="M54 0V150M108 0V150M162 0V150M0 50H216M0 100H216"/></g>
-                  <path d="M112 112c0-9 7-16 16-16s16 7 16 16c0 12-16 26-16 26s-16-14-16-26z" transform="translate(-16 -34)" fill="#5CF2B0" stroke="#0E0B2B" stroke-width="2"/>
-                  <circle cx="112" cy="78" r="5" fill="#0E0B2B"/>
-                  <rect x="128" y="64" width="56" height="18" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(92,242,176,.6)"/>
-                  <text x="135" y="77" fill="#F4F2FF" font-family="JetBrains Mono, monospace" font-size="10">D·04</text>
+            <!-- Phone: the email alert and an upload at a plan coordinate -->
+            <div class="pd-phone" role="img" aria-label="WorkGuardAI en un móvil con datos de ejemplo: una alerta por correo del punto D·07 con la profundidad actual de 1,10 metros y la planificada de 2,40 metros, y una foto de la obra que se sube en las coordenadas X e Y del plano para el punto D·04.">
+              <div class="pd-phone-screen">
+                <div class="pd-mail">
+                  <p class="pd-mail-from"><b>WorkGuardAI</b><span class="mono">10:42</span></p>
+                  <p class="pd-mail-subject">Alerta · D·07</p>
+                  <p class="pd-row"><span>Profundidad actual</span><b>−1.10 m</b></p>
+                  <p class="pd-row"><span>Profundidad planificada</span><b>−2.40 m</b></p>
+                </div>
+                <p class="pd-h">Subir foto</p>
+                <svg class="pd-photo" viewBox="0 0 216 132">
+                  <rect width="216" height="132" fill="#d9d3c6"/>
+                  <path d="M0 52H58L80 110H136L158 52H216V132H0Z" fill="#b8ab90"/>
+                  <path d="M58 52L80 110H136L158 52" fill="none" stroke="#8f8268" stroke-width="2"/>
+                  <path d="M0 52H58L74 92H142L158 52H216" fill="none" stroke="#5255e0" stroke-width="1.5" stroke-dasharray="4 3"/>
                 </svg>
-                <p class="pv-h">Foto en D·04 · 10:42</p>
-                <p class="pv-row"><span>Progreso en este punto</span><b class="pv-mint">62%</b></p>
-                <div class="pv-meter"><span style="width:62%"></span></div>
-                <p class="pv-row pv-small"><span>Profundidad planificada</span><b>−2.40 m</b></p>
-                <p class="pv-row pv-small"><span>Profundidad estimada</span><b>−1.49 m</b></p>
+                <div class="pd-fields">
+                  <span class="pd-field"><small>X</small>6 120.0</span>
+                  <span class="pd-field"><small>Y</small>4 048.5</span>
+                </div>
+                <span class="pd-button">Subir · D·04</span>
               </div>
             </div>
           </div>
+          <figcaption class="pd-caption mono">Datos de ejemplo</figcaption>
         </figure>
 
-        <!-- Product vision: feature ideas in three groups. Wording stays at "designed to", "can help", "the idea is". -->
-        <div class="pv-groups">
-          <div class="pv-group">
-            <h3>Progreso sobre el plano</h3>
+        <!-- What you get: only what the app does today, said plainly. -->
+        <div class="pd-groups">
+          <div class="pd-group">
+            <h3><span class="mono">01</span> Progreso sobre el plano</h3>
             <ul>
-              <li><strong>El plano como mapa de coordenadas</strong><p>La idea es que el plano DWG se convierta en un mapa de puntos, cada uno con su profundidad o cota planificada.</p></li>
-              <li><strong>Fotos vinculadas a un lugar</strong><p>Diseñado para que cada foto, del móvil, de una cámara fija o de un dron, pertenezca a una coordenada del plano.</p></li>
-              <li><strong>Progreso y alertas de desviación</strong><p>Diseñado para mostrar el progreso en cada punto y en toda la obra, y avisar al equipo cuando el trabajo se aparta del plano.</p></li>
-              <li><strong>Coste vinculado al trabajo medido</strong><p>La idea es vincular las cantidades medidas con los precios del contrato, para que la facturación siga el trabajo realmente hecho.</p></li>
+              <li><strong>Su plano DWG como mapa</strong><p>El plano que ya tiene se convierte en una cuadrícula de puntos, cada uno con su profundidad planificada.</p></li>
+              <li><strong>Progreso en cada punto</strong><p>Cada punto muestra la profundidad estimada frente a la planificada, en color sin empezar, en curso o completado.</p></li>
+              <li><strong>Una cifra para toda la obra</strong><p>Una barra de progreso general resume toda la obra de un vistazo.</p></li>
             </ul>
           </div>
-          <div class="pv-group">
-            <h3>Medir y conectar</h3>
+          <div class="pd-group">
+            <h3><span class="mono">02</span> Fotos sin trabajo extra</h3>
             <ul>
-              <li><strong>Volúmenes de tierra y roca</strong><p>Diseñado para estimar, a partir de las mismas fotos, cuánta tierra y roca se ha excavado y cuánta queda.</p></li>
-              <li><strong>BIM y datos de proveedores</strong><p>La idea es incorporar modelos BIM y datos de proveedores, para comparar el plano, las entregas y el progreso en un solo lugar.</p></li>
-              <li><strong>Cámaras, drones y conectividad</strong><p>Diseñado para funcionar con cámaras fijas, vuelos de dron y la conexión móvil que la obra ya tiene.</p></li>
+              <li><strong>Cámaras fijas en la obra</strong><p>Las cámaras de la obra envían una foto automáticamente cada cuatro horas.</p></li>
+              <li><strong>Subida por coordenada</strong><p>Su equipo añade fotos desde el móvil, una cámara o un dron en una coordenada del plano.</p></li>
+              <li><strong>Profundidad de cada foto</strong><p>Un modelo de IA de profundidad estima la profundidad de excavación en metros a partir de cada foto.</p></li>
             </ul>
           </div>
-          <div class="pv-group">
-            <h3>Seguridad y activos</h3>
+          <div class="pd-group">
+            <h3><span class="mono">03</span> Sepa cuándo actuar</h3>
             <ul>
-              <li><strong>Seguridad de máquinas y trabajadores</strong><p>La idea es avisar cuando una persona está dentro de la zona de trabajo de una máquina, sin identificar quién es.</p></li>
-              <li><strong>Objetos no identificados al excavar</strong><p>Diseñado para avisar de objetos inesperados en una excavación, para que el equipo pueda parar y comprobar.</p></li>
-              <li><strong>Comprobación de cables y redes</strong><p>Puede ayudar a comparar la excavación con los planos de redes, como recordatorio para comprobar cables y tuberías antes de continuar.</p></li>
-              <li><strong>Seguimiento del estado de estructuras</strong><p>La idea es seguir los cambios en estructuras como los muros de presas a lo largo del tiempo, a partir de fotos repetidas.</p></li>
+              <li><strong>Alertas por correo</strong><p>Las alertas dan las coordenadas con la profundidad actual y la planificada, para que la persona adecuada revise el lugar adecuado.</p></li>
+              <li><strong>Notificaciones por punto</strong><p>El panel muestra qué ha cambiado y dónde, punto por punto.</p></li>
+              <li><strong>Un informe escrito de resultados</strong><p>En un piloto hacemos seguimiento cada semana y comparamos los resultados con sus propias mediciones.</p></li>
             </ul>
           </div>
         </div>
-        <p class="pv-delivery">Entregamos el software y ayudamos a implantarlo en la obra: configuración, conectividad y pruebas.</p>
-        <p class="pv-fine">Las ideas de seguridad son conceptos. No sustituyen los procedimientos de seguridad de la obra ni los servicios de localización de redes.</p>
 
-      <p class="pv-more"><a class="link-arrow" href="../es/vision/">Ver todas las pantallas conceptuales <span aria-hidden="true">→</span></a></p>
+      <p class="pd-delivery">Entregamos el software y ayudamos a implantarlo en la obra: configuración, conectividad y pruebas.</p>
+
+      <!-- Vision: ideas that are not in the product, kept apart from what customers get today -->
+      <div class="pd-vision">
+        <div class="pd-vision-head">
+          <p class="chip">Visión</p>
+          <h3>Hacia dónde va la plataforma</h3>
+          <p>El mismo plano y las mismas fotos abren la puerta a más. Estas ideas están en nuestra hoja de ruta.</p>
+          <p class="pd-vision-link"><a class="link-arrow" href="../es/concept/">Ver todas las pantallas conceptuales <span aria-hidden="true">→</span></a></p>
+        </div>
+        <ul>
+          <li><strong>Planificación a corto plazo</strong><p>La idea es convertir el progreso medido en una previsión de finalización y en pasos sugeridos, cada uno pendiente de aprobación.</p></li>
+          <li><strong>Coste vinculado al trabajo medido</strong><p>La idea es vincular las cantidades medidas con los precios del contrato, para que la facturación siga el trabajo realmente hecho.</p></li>
+          <li><strong>Volúmenes de tierra y roca</strong><p>Diseñado para estimar, a partir de las mismas fotos, cuánta tierra y roca se ha excavado y cuánta queda.</p></li>
+          <li><strong>Seguridad de máquinas y trabajadores</strong><p>La idea es avisar cuando una persona está dentro de la zona de trabajo de una máquina, sin identificar quién es.</p></li>
+          <li><strong>Comprobación de cables y redes</strong><p>Puede ayudar a comparar la excavación con los planos de redes, como recordatorio para comprobar cables y tuberías antes de continuar.</p></li>
+          <li><strong>Seguimiento del estado de estructuras</strong><p>La idea es seguir los cambios en estructuras como los muros de presas a lo largo del tiempo, a partir de fotos repetidas.</p></li>
+          <li><strong>BIM y datos de proveedores</strong><p>La idea es incorporar modelos BIM y datos de proveedores, para comparar el plano, las entregas y el progreso en un solo lugar.</p></li>
+          <li><strong>Mayor precisión</strong><p>GPS de cámara combinado con LiDAR, para situar las fotos y medir la profundidad con más precisión.</p></li>
+        </ul>
+        <p class="pd-fine">Las ideas de seguridad son conceptos. No sustituyen los procedimientos de seguridad de la obra ni los servicios de localización de redes.</p>
+      </div>
     </div>
   </section>
 
@@ -713,7 +709,7 @@
           <time class="mono">Nov 2026</time>
           <div>
             <h3>AIREX 2026 PropTech Competition · Bakú</h3>
-            <p>Invitada a presentar en la AIREX 2026 PropTech Competition en Bakú el 6 de noviembre.</p>
+            <p>Presentó en la AIREX 2026 PropTech Competition en Bakú el 6 de noviembre, ante un jurado de inversores y representantes del ecosistema.</p>
           </div>
         </li>
         <li>
@@ -852,7 +848,7 @@
         <li id="airex-2026">
           <time class="mono" datetime="2026-11-06">6 nov 2026</time>
           <h3>AIREX 2026 PropTech Competition, Bakú</h3>
-          <p>Invitada a presentar en la AIREX 2026 PropTech Competition en Bakú el 6 de noviembre. El fondo de premios es de 15 000 EUR.</p>
+          <p>Presentó en la AIREX 2026 PropTech Competition en Bakú el 6 de noviembre, ante un jurado de inversores y representantes del ecosistema.</p>
           <a href="https://airex.az/" rel="noopener" target="_blank">Fuente oficial <span aria-hidden="true">↗</span><span class="visually-hidden">(se abre en una pestaña nueva)</span></a>
         </li>
         <li id="tampere-accelerator-2026">
@@ -894,7 +890,7 @@
         <details><summary>¿Qué precisión tiene?</summary><p>Aún no lo sabemos, porque no se ha medido en una obra activa. Para eso sirve el piloto: comparamos las profundidades estimadas con sus propias mediciones y le entregamos los resultados en un informe escrito.</p></details>
         <details><summary>¿Qué pasa con la privacidad y las personas que aparecen en cámara?</summary><p>El prototipo estima la profundidad del terreno en puntos del plano. No identifica ni sigue a personas. Qué cámaras se usan, hacia dónde apuntan, quién puede ver las fotos y cuánto tiempo se conservan se acuerda en el acuerdo piloto por escrito antes de tomar ninguna foto.</p></details>
         <details><summary>¿Qué necesitan de una obra piloto?</summary><p>Un plano DWG de la obra y acceso a las cámaras de la obra, o alguien que pueda tomar fotos en las coordenadas del plano.</p></details>
-        <details><summary>¿Qué no hace todavía?</summary><p>No se ha probado en una obra activa. LiDAR no forma parte del producto; lo estamos explorando, junto con el GPS de la cámara, para lograr mayor precisión.</p></details>
+        <details><summary>¿Se ha probado en una obra activa?</summary><p>Todavía no. El prototipo funciona con el plano DWG y las imágenes de un proyecto real. Un piloto es la primera prueba en una obra activa, y comparamos los resultados con sus propias mediciones.</p></details>
       </div>
     </div>
   </section>
@@ -1038,7 +1034,6 @@
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
           <li><a href="#work">Trabaje con nosotros</a></li>
           <li><a href="../es/news/">Noticias</a></li>
-          <li><a href="../es/vision/">Visión del producto</a></li>
           <li><a href="../es/press/">Prensa y ponencias</a></li>
           <li><a href="../es/privacy/">Aviso de privacidad</a></li>
         </ul>

@@ -260,7 +260,7 @@
           <p>Jokainen piste näyttää tilansa värillä, kokonaisedistymispalkki kokoaa työmaan tilanteen, ja sähköpostihälytykset kertovat koordinaatit sekä nykyisen ja suunnitellun syvyyden.</p>
         </article>
       </div>
-      <p class="note">Havainnollistava konsepti esimerkkidatalla. Toimiva prototyyppi; kenttätesti tulossa. Selvitämme seuraavaksi: kameran GPS ja LiDAR tarkkuuden parantamiseksi.</p>
+      <p class="note">Havainnollistava konsepti esimerkkidatalla. Toimiva prototyyppi; kenttätesti tulossa.</p>
 
       <div class="field">
         <div class="field-head">
@@ -429,166 +429,162 @@
           <h3>Mitä seuraavaksi</h3>
           <ul class="status-list">
             <li><span class="chip">Seuraavaksi</span><span>Kenttätesti käynnissä olevalla työmaalla urakoitsijan tai infran omistajan kanssa: arvioituja syvyyksiä verrataan mitattuihin.</span></li>
-            <li><span class="chip">Selvitteillä</span><span>Kameran GPS yhdistettynä LiDARiin, jotta kuvat voidaan paikantaa ja syvyys mitata tarkemmin.</span></li>
-            <li><span class="chip">Suunnitteilla</span><span>Integraatiot työkaluihin, joita työmaan tiimit jo käyttävät.</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. Product vision (concept). Mockups: src/partials/vision-devices.html, ideas: src/partials/vision-features.html -->
-  <section class="section pv" id="vision" aria-labelledby="vision-title">
-    <svg class="pv-facets" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <defs>
-        <linearGradient id="pv-f1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7B6CFF" stop-opacity=".35"/><stop offset="1" stop-color="#8EEBFF" stop-opacity=".05"/></linearGradient>
-        <linearGradient id="pv-f2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8EEBFF" stop-opacity=".22"/><stop offset="1" stop-color="#7B6CFF" stop-opacity=".02"/></linearGradient>
-      </defs>
-      <polygon points="1010,40 1110,140 1010,300 910,140" fill="url(#pv-f1)" stroke="rgba(217,210,247,.18)"/>
-      <polygon points="1010,40 1110,140 1010,160" fill="url(#pv-f2)"/>
-      <polygon points="120,520 170,570 120,650 70,570" fill="url(#pv-f2)" stroke="rgba(217,210,247,.14)"/>
-      <polygon points="1130,420 1160,450 1130,500 1100,450" fill="url(#pv-f1)" stroke="rgba(217,210,247,.12)"/>
-    </svg>
+  <!-- 4. What you get: only what the app does. Mockups: src/partials/product-devices.html, list: src/partials/product-features.html -->
+  <section class="section" id="product" aria-labelledby="product-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">03 · Tuotevisio</p>
-        <h2 id="vision-title">Mihin WorkGuardAI on menossa: edistyminen, mittaus ja turvallisuus yhdellä suunnitelmalla.</h2>
-        <p class="sec-lead">Konseptikuva suunnittelemastamme alustasta, joka perustuu samaan ajatukseen kuin nykyinen prototyyppi: DWG-suunnitelmaan ja tavallisiin työmaakuviin. Näkymät esittävät vision, eivät valmiita ominaisuuksia.</p>
+        <p class="sec-index mono">03 · Mitä saat</p>
+        <h2 id="product-title">Yksi näkymä työmaahan suunnitelmaa vasten, tavallisista kuvista.</h2>
+        <p class="sec-lead">DWG-suunnitelmanne, työmaakuvat ja niistä arvioitu syvyys kootaan yhteen näkymään. Tiimi näkee edistymisen jokaisessa pisteessä ja saa hälytyksen, kun pistettä pitää katsoa.</p>
       </div>
-        <!-- Product vision: laptop dashboard and phone app. Concept only; every number is a placeholder. -->
-        <figure class="pv-stage">
-          <figcaption class="pv-tags"><span class="pv-chip">Konseptiesikatselu</span><span class="pv-note mono">Havainnollistavaa dataa</span></figcaption>
-          <div class="pv-devices">
+        <!-- What you get: the dashboard and the phone, showing only what the app does. Numbers are sample data. -->
+        <figure class="pd-stage">
+          <div class="pd-devices">
 
-            <!-- Laptop dashboard -->
-            <div class="pv-laptop" role="img" aria-label="Konsepti kannettavan koontinäkymästä havainnollistavalla datalla: työmaan suunnitelma koordinaattikarttana, jonka pisteet on väritetty edistymisen mukaan ja yksi poikkeama, kokonaisedistyminen 62 prosenttia, tehty ja jäljellä oleva työ kuutiometreinä, kolme poikkeamahälytystä sekä kustannusyhteenveto, joka yhdistää mitatun työn laskuluonnokseen.">
-              <div class="pv-screen">
-                <div class="pv-bar"><span class="pv-dots"><i></i><i></i><i></i></span><span>WorkGuardAI · Työmaa 01</span><span class="mono">Päivitetty 10:42</span></div>
-                <div class="pv-dash">
-                  <div class="pv-panel pv-map">
-                    <p class="pv-h">Työmaasuunnitelma · koordinaattikartta</p>
-                    <svg viewBox="0 0 400 240">
-                      <defs>
-                        <linearGradient id="pv-plan" x1="0" x2="1"><stop offset="0" stop-color="#8EEBFF"/><stop offset="1" stop-color="#7B6CFF"/></linearGradient>
-                      </defs>
-                      <g stroke="rgba(217,210,247,.12)" stroke-width="1">
-                        <path d="M40 0V240M100 0V240M160 0V240M220 0V240M280 0V240M340 0V240"/>
-                        <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
-                      </g>
-                      <g fill="#B9B2E6" font-family="JetBrains Mono, monospace" font-size="9">
-                        <text x="66" y="14">B</text><text x="126" y="14">C</text><text x="186" y="14">D</text><text x="246" y="14">E</text><text x="306" y="14">F</text>
-                      </g>
-                      <path d="M20 200 C 80 190, 110 120, 170 118 S 260 70, 380 52" fill="none" stroke="url(#pv-plan)" stroke-width="2" stroke-dasharray="5 4"/>
-                      <g stroke="#0E0B2B" stroke-width="2">
-                        <circle cx="30" cy="198" r="6" fill="#5CF2B0"/><circle cx="66" cy="186" r="6" fill="#5CF2B0"/>
-                        <circle cx="98" cy="160" r="6" fill="#5CF2B0"/><circle cx="128" cy="130" r="6" fill="#5CF2B0"/>
-                        <circle cx="170" cy="118" r="7" fill="#8EEBFF"/><circle cx="206" cy="110" r="6" fill="#8EEBFF"/>
-                        <circle cx="242" cy="94" r="6" fill="#FFB86B"/><circle cx="280" cy="80" r="6" fill="#8EEBFF"/>
-                        <circle cx="318" cy="68" r="6" fill="none" stroke="#D9D2F7"/><circle cx="356" cy="58" r="6" fill="none" stroke="#D9D2F7"/>
-                      </g>
-                      <circle class="pv-ping" cx="242" cy="94" r="6" fill="none" stroke="#FFB86B" stroke-width="1.5"/>
-                      <g font-family="JetBrains Mono, monospace" font-size="9" fill="#F4F2FF">
-                        <rect x="150" y="132" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(142,235,255,.5)"/>
-                        <text x="157" y="143">D·04</text>
-                        <rect x="222" y="104" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(255,184,107,.6)"/>
-                        <text x="229" y="115">D·07</text>
-                      </g>
-                    </svg>
-                    <p class="pv-legend"><span><i style="background:#5CF2B0"></i>Valmis</span><span><i style="background:#8EEBFF"></i>Käynnissä</span><span><i class="pv-ring"></i>Ei aloitettu</span><span><i style="background:#FFB86B"></i>Poikkeama</span></p>
+            <!-- Laptop: the dashboard -->
+            <div class="pd-laptop" role="img" aria-label="WorkGuardAI-näkymä esimerkkidatalla: DWG-suunnitelma koordinaattikarttana, jonka pisteet on väritetty ei aloitettu, käynnissä ja valmis, kokonaisedistyminen 62 prosenttia, piste D·04, jonka suunniteltu syvyys on 2,40 metriä, arvioitu syvyys 1,49 metriä ja edistyminen 62 prosenttia, sekä ilmoitusluettelo.">
+              <div class="pd-lid">
+                <div class="pd-screen">
+                  <div class="pd-bar">
+                    <img src="../assets/img/logo.png" alt="" width="433" height="71">
+                    <span>Työmaa 01</span>
+                    <span class="mono">Viimeisin kamerakuva 10:42</span>
                   </div>
-                  <div class="pv-panel pv-overall">
-                    <p class="pv-h">Kokonaisedistyminen</p>
-                    <p class="pv-big">62%</p>
-                    <div class="pv-meter"><span style="width:62%"></span></div>
-                  </div>
-                  <div class="pv-panel pv-split">
-                    <p class="pv-h">Tehty vs. jäljellä</p>
-                    <p class="pv-row"><span>Tehty</span><b>4,820 m³</b></p>
-                    <div class="pv-meter"><span style="width:62%"></span></div>
-                    <p class="pv-row"><span>Jäljellä</span><b>2,960 m³</b></p>
-                    <div class="pv-meter pv-meter-rem"><span style="width:38%"></span></div>
-                  </div>
-                  <div class="pv-panel pv-alerts">
-                    <p class="pv-h">Poikkeamahälytykset</p>
-                    <ul>
-                      <li>D·07 · 0,4 m suunnitellun koron yläpuolella</li>
-                      <li>B·03 · Ei uutta kuvaa 3 päivään</li>
-                      <li>F·05 · Mahdollinen kohde kaivannossa</li>
-                    </ul>
-                  </div>
-                  <div class="pv-panel pv-cost">
-                    <p class="pv-h">Mitatun työn kustannukset</p>
-                    <p class="pv-row"><span>Mitattu tässä kuussa</span><b>1,240 m³</b></p>
-                    <p class="pv-row"><span>Sopimushinnoin</span><b>€38,400</b></p>
-                    <p class="pv-invoice"><span>Laskuluonnos</span><span class="pv-pill">Valmis tarkistettavaksi</span></p>
+                  <div class="pd-dash">
+                    <div class="pd-panel pd-map">
+                      <p class="pd-h">DWG-suunnitelma · koordinaattikartta</p>
+                      <svg viewBox="0 0 400 230">
+                        <g stroke="#ece9e1" stroke-width="1">
+                          <path d="M40 0V230M100 0V230M160 0V230M220 0V230M280 0V230M340 0V230"/>
+                          <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
+                        </g>
+                        <g fill="#5f6880" font-family="JetBrains Mono, monospace" font-size="9">
+                          <text x="67" y="14">B</text><text x="127" y="14">C</text><text x="187" y="14">D</text><text x="247" y="14">E</text><text x="307" y="14">F</text>
+                        </g>
+                        <path d="M20 196 C 80 186, 110 118, 170 116 S 260 70, 380 52" fill="none" stroke="#5255e0" stroke-width="1.5" stroke-dasharray="5 4"/>
+                        <g stroke="#fff" stroke-width="2">
+                          <circle cx="30" cy="194" r="6" fill="#17845a"/><circle cx="66" cy="182" r="6" fill="#17845a"/>
+                          <circle cx="98" cy="156" r="6" fill="#17845a"/><circle cx="128" cy="128" r="6" fill="#17845a"/>
+                          <circle cx="170" cy="116" r="7.5" fill="#5255e0"/><circle cx="206" cy="108" r="6" fill="#5255e0"/>
+                          <circle cx="242" cy="94" r="6" fill="#5255e0"/><circle cx="280" cy="80" r="6" fill="#5255e0"/>
+                          <circle cx="318" cy="68" r="6" fill="#fff" stroke="#85806f" stroke-width="1.5"/><circle cx="356" cy="58" r="6" fill="#fff" stroke="#85806f" stroke-width="1.5"/>
+                        </g>
+                        <circle cx="170" cy="116" r="12" fill="none" stroke="#5255e0" stroke-width="1"/>
+                        <g font-family="JetBrains Mono, monospace" font-size="9">
+                          <rect x="146" y="134" width="48" height="17" rx="2" fill="#0f1b3d"/>
+                          <text x="154" y="146" fill="#fff">D·04</text>
+                        </g>
+                      </svg>
+                      <p class="pd-legend"><span><i class="pd-not"></i>Ei aloitettu &lt;10%</span><span><i style="background:#5255e0"></i>Käynnissä</span><span><i style="background:#17845a"></i>Valmis &gt;90%</span></p>
+                    </div>
+                    <div class="pd-panel pd-overall">
+                      <p class="pd-h">Kokonaisedistyminen</p>
+                      <p class="pd-big">62%</p>
+                      <div class="pd-meter"><span style="width:62%"></span></div>
+                    </div>
+                    <div class="pd-panel pd-point">
+                      <p class="pd-h">Piste D·04</p>
+                      <p class="pd-row"><span>Suunniteltu syvyys</span><b>−2.40 m</b></p>
+                      <p class="pd-row"><span>Arvioitu syvyys</span><b>−1.49 m</b></p>
+                      <p class="pd-row"><span>Edistyminen</span><b class="pd-prog">62%</b></p>
+                    </div>
+                    <div class="pd-panel pd-notifs">
+                      <p class="pd-h">Ilmoitukset</p>
+                      <ul>
+                        <li><i style="background:#5255e0"></i><span>D·04 · Kaivu käynnissä</span><time class="mono">10:42</time></li>
+                        <li><i style="background:#17845a"></i><span>B·02 · Kaivu valmis</span><time class="mono">06:42</time></li>
+                        <li><i style="background:#9a5f00"></i><span>D·07 · Sähköpostihälytys lähetetty</span><time class="mono">06:42</time></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="pv-base" aria-hidden="true"></div>
+              <div class="pd-deck" aria-hidden="true"></div>
             </div>
 
-            <!-- Phone app -->
-            <div class="pv-phone" role="img" aria-label="Konsepti puhelinsovelluksesta havainnollistavalla datalla: poikkeamailmoitus pisteessä D·07, työmaakuva kiinnitettynä suunnitelman pisteeseen D·04 sekä pisteen edistyminen 62 prosenttia suunnitellun ja arvioidun syvyyden kanssa.">
-              <div class="pv-phone-screen">
-                <div class="pv-notif"><b>Poikkeama havaittu</b><span>D·07 · 0,4 m suunnitellun koron yläpuolella</span></div>
-                <svg class="pv-photo" viewBox="0 0 216 150">
-                  <defs>
-                    <linearGradient id="pv-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2370"/><stop offset="1" stop-color="#4B3FA0"/></linearGradient>
-                    <linearGradient id="pv-soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A7A6A"/><stop offset="1" stop-color="#4F4338"/></linearGradient>
-                  </defs>
-                  <rect width="216" height="150" fill="url(#pv-sky)"/>
-                  <path d="M0 70H62L84 124H140L160 70H216V150H0Z" fill="url(#pv-soil)"/>
-                  <path d="M62 70L84 124H140L160 70" fill="none" stroke="#C9B9A6" stroke-width="2"/>
-                  <path d="M0 70H62L78 108H146L160 70H216" fill="none" stroke="#8EEBFF" stroke-width="1.5" stroke-dasharray="4 3"/>
-                  <g stroke="rgba(244,242,255,.25)"><path d="M54 0V150M108 0V150M162 0V150M0 50H216M0 100H216"/></g>
-                  <path d="M112 112c0-9 7-16 16-16s16 7 16 16c0 12-16 26-16 26s-16-14-16-26z" transform="translate(-16 -34)" fill="#5CF2B0" stroke="#0E0B2B" stroke-width="2"/>
-                  <circle cx="112" cy="78" r="5" fill="#0E0B2B"/>
-                  <rect x="128" y="64" width="56" height="18" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(92,242,176,.6)"/>
-                  <text x="135" y="77" fill="#F4F2FF" font-family="JetBrains Mono, monospace" font-size="10">D·04</text>
+            <!-- Phone: the email alert and an upload at a plan coordinate -->
+            <div class="pd-phone" role="img" aria-label="WorkGuardAI puhelimessa esimerkkidatalla: sähköpostihälytys pisteestä D·07, jossa nykyinen syvyys on 1,10 metriä ja suunniteltu 2,40 metriä, sekä työmaakuva, joka ladataan suunnitelman koordinaatteihin X ja Y pisteelle D·04.">
+              <div class="pd-phone-screen">
+                <div class="pd-mail">
+                  <p class="pd-mail-from"><b>WorkGuardAI</b><span class="mono">10:42</span></p>
+                  <p class="pd-mail-subject">Hälytys · D·07</p>
+                  <p class="pd-row"><span>Nykyinen syvyys</span><b>−1.10 m</b></p>
+                  <p class="pd-row"><span>Suunniteltu syvyys</span><b>−2.40 m</b></p>
+                </div>
+                <p class="pd-h">Lataa kuva</p>
+                <svg class="pd-photo" viewBox="0 0 216 132">
+                  <rect width="216" height="132" fill="#d9d3c6"/>
+                  <path d="M0 52H58L80 110H136L158 52H216V132H0Z" fill="#b8ab90"/>
+                  <path d="M58 52L80 110H136L158 52" fill="none" stroke="#8f8268" stroke-width="2"/>
+                  <path d="M0 52H58L74 92H142L158 52H216" fill="none" stroke="#5255e0" stroke-width="1.5" stroke-dasharray="4 3"/>
                 </svg>
-                <p class="pv-h">Kuva pisteessä D·04 · 10:42</p>
-                <p class="pv-row"><span>Edistyminen pisteessä</span><b class="pv-mint">62%</b></p>
-                <div class="pv-meter"><span style="width:62%"></span></div>
-                <p class="pv-row pv-small"><span>Suunniteltu syvyys</span><b>−2.40 m</b></p>
-                <p class="pv-row pv-small"><span>Arvioitu syvyys</span><b>−1.49 m</b></p>
+                <div class="pd-fields">
+                  <span class="pd-field"><small>X</small>6 120.0</span>
+                  <span class="pd-field"><small>Y</small>4 048.5</span>
+                </div>
+                <span class="pd-button">Lataa · D·04</span>
               </div>
             </div>
           </div>
+          <figcaption class="pd-caption mono">Esimerkkidataa</figcaption>
         </figure>
 
-        <!-- Product vision: feature ideas in three groups. Wording stays at "designed to", "can help", "the idea is". -->
-        <div class="pv-groups">
-          <div class="pv-group">
-            <h3>Edistyminen suunnitelmalla</h3>
+        <!-- What you get: only what the app does today, said plainly. -->
+        <div class="pd-groups">
+          <div class="pd-group">
+            <h3><span class="mono">01</span> Edistyminen suunnitelmalla</h3>
             <ul>
-              <li><strong>Suunnitelma koordinaattikarttana</strong><p>Ajatuksena on, että DWG-suunnitelmasta tulee pistekartta, jossa jokaisella pisteellä on suunniteltu syvyys tai korko.</p></li>
-              <li><strong>Kuvat sidottuina paikkaan</strong><p>Suunniteltu niin, että jokainen kuva, puhelimesta, kiinteästä kamerasta tai dronesta, kuuluu suunnitelman koordinaattiin.</p></li>
-              <li><strong>Edistyminen ja poikkeamahälytykset</strong><p>Suunniteltu näyttämään edistyminen jokaisessa pisteessä ja koko työmaalla sekä hälyttämään tiimille, kun työ poikkeaa suunnitelmasta.</p></li>
-              <li><strong>Kustannukset sidottuina mitattuun työhön</strong><p>Ajatuksena on yhdistää mitatut määrät sopimuksen yksikköhintoihin, jotta laskutus voi seurata todella tehtyä työtä.</p></li>
+              <li><strong>DWG-suunnitelmanne karttana</strong><p>Olemassa olevasta suunnitelmasta tulee pisteverkko, jossa jokaisella pisteellä on suunniteltu syvyys.</p></li>
+              <li><strong>Edistyminen jokaisessa pisteessä</strong><p>Jokainen piste näyttää arvioidun syvyyden suunniteltuun verrattuna, väritettynä ei aloitettu, käynnissä tai valmis.</p></li>
+              <li><strong>Yksi luku koko työmaalle</strong><p>Kokonaisedistymisen palkki näyttää koko työmaan yhdellä silmäyksellä.</p></li>
             </ul>
           </div>
-          <div class="pv-group">
-            <h3>Mittaa ja yhdistä</h3>
+          <div class="pd-group">
+            <h3><span class="mono">02</span> Kuvat ilman lisätyötä</h3>
             <ul>
-              <li><strong>Maa- ja kalliomassat</strong><p>Suunniteltu arvioimaan samoista kuvista, kuinka paljon maata ja kalliota on kaivettu ja kuinka paljon on jäljellä.</p></li>
-              <li><strong>BIM- ja toimittajatiedot</strong><p>Ajatuksena on tuoda mukaan BIM-mallit ja toimittajatiedot, jotta suunnitelmaa, toimituksia ja edistymistä voi verrata yhdessä paikassa.</p></li>
-              <li><strong>Kamerat, dronet ja yhteydet</strong><p>Suunniteltu toimimaan kiinteiden työmaakameroiden, dronelentojen ja työmaan olemassa olevan mobiiliyhteyden kanssa.</p></li>
+              <li><strong>Kiinteät työmaakamerat</strong><p>Työmaan kamerat lähettävät kuvan automaattisesti neljän tunnin välein.</p></li>
+              <li><strong>Lataus koordinaatin mukaan</strong><p>Tiimi lisää kuvia puhelimesta, kamerasta tai dronesta suunnitelman koordinaattiin.</p></li>
+              <li><strong>Syvyys jokaisesta kuvasta</strong><p>Tekoälypohjainen syvyysmalli arvioi kaivusyvyyden metreinä jokaisesta kuvasta.</p></li>
             </ul>
           </div>
-          <div class="pv-group">
-            <h3>Turvallisuus ja rakenteet</h3>
+          <div class="pd-group">
+            <h3><span class="mono">03</span> Tiedä, milloin toimia</h3>
             <ul>
-              <li><strong>Koneiden ja työntekijöiden turvallisuus</strong><p>Ajatuksena on ilmoittaa, kun ihminen on koneen työskentelyalueella, tunnistamatta kuka hän on.</p></li>
-              <li><strong>Tunnistamattomat kohteet kaivettaessa</strong><p>Suunniteltu ilmoittamaan odottamattomista kohteista kaivannossa, jotta tiimi voi pysähtyä tarkistamaan.</p></li>
-              <li><strong>Kaapeli- ja johtotarkistukset</strong><p>Voi auttaa vertaamaan kaivua johtokarttoihin muistutuksena tarkistaa kaapelit ja putket ennen kuin työ jatkuu.</p></li>
-              <li><strong>Rakenteiden kunnon seuranta</strong><p>Ajatuksena on seurata rakenteiden, kuten patoseinien, muutoksia ajan mittaan toistuvista kuvista.</p></li>
+              <li><strong>Sähköpostihälytykset</strong><p>Hälytykset kertovat koordinaatit sekä nykyisen ja suunnitellun syvyyden, jotta oikea henkilö voi tarkistaa oikean paikan.</p></li>
+              <li><strong>Ilmoitukset pisteittäin</strong><p>Näkymä listaa, mikä muuttui ja missä, piste pisteeltä.</p></li>
+              <li><strong>Kirjallinen tulosraportti</strong><p>Pilotissa olemme yhteydessä viikoittain ja vertaamme tuloksia omiin mittauksiinne.</p></li>
             </ul>
           </div>
         </div>
-        <p class="pv-delivery">Toimitamme ohjelmiston ja autamme sen käyttöönotossa työmaalla: asennus, yhteydet ja testaus.</p>
-        <p class="pv-fine">Turvallisuusideat ovat konsepteja. Ne eivät korvaa työmaan turvallisuusmenettelyjä eivätkä johtonäyttöjä.</p>
 
-      <p class="pv-more"><a class="link-arrow" href="../fi/vision/">Katso kaikki konseptinäkymät <span aria-hidden="true">→</span></a></p>
+      <p class="pd-delivery">Toimitamme ohjelmiston ja autamme sen käyttöönotossa työmaalla: asennus, yhteydet ja testaus.</p>
+
+      <!-- Vision: ideas that are not in the product, kept apart from what customers get today -->
+      <div class="pd-vision">
+        <div class="pd-vision-head">
+          <p class="chip">Visio</p>
+          <h3>Mihin alusta on menossa</h3>
+          <p>Sama suunnitelma ja samat kuvat avaavat tien useampaan. Nämä ideat ovat tiekartallamme.</p>
+          <p class="pd-vision-link"><a class="link-arrow" href="../fi/concept/">Katso kaikki konseptinäkymät <span aria-hidden="true">→</span></a></p>
+        </div>
+        <ul>
+          <li><strong>Lähiajan aikataulutus</strong><p>Ajatuksena on muuttaa mitattu edistyminen ennusteeksi valmistumisesta ja ehdotetuiksi askeliksi, jotka kukin odottavat hyväksyntää.</p></li>
+          <li><strong>Kustannukset sidottuina mitattuun työhön</strong><p>Ajatuksena on yhdistää mitatut määrät sopimuksen yksikköhintoihin, jotta laskutus voi seurata todella tehtyä työtä.</p></li>
+          <li><strong>Maa- ja kalliomassat</strong><p>Suunniteltu arvioimaan samoista kuvista, kuinka paljon maata ja kalliota on kaivettu ja kuinka paljon on jäljellä.</p></li>
+          <li><strong>Koneiden ja työntekijöiden turvallisuus</strong><p>Ajatuksena on ilmoittaa, kun ihminen on koneen työskentelyalueella, tunnistamatta kuka hän on.</p></li>
+          <li><strong>Kaapeli- ja johtotarkistukset</strong><p>Voi auttaa vertaamaan kaivua johtokarttoihin muistutuksena tarkistaa kaapelit ja putket ennen kuin työ jatkuu.</p></li>
+          <li><strong>Rakenteiden kunnon seuranta</strong><p>Ajatuksena on seurata rakenteiden, kuten patoseinien, muutoksia ajan mittaan toistuvista kuvista.</p></li>
+          <li><strong>BIM- ja toimittajatiedot</strong><p>Ajatuksena on tuoda mukaan BIM-mallit ja toimittajatiedot, jotta suunnitelmaa, toimituksia ja edistymistä voi verrata yhdessä paikassa.</p></li>
+          <li><strong>Parempi tarkkuus</strong><p>Kameran GPS yhdistettynä LiDARiin, jotta kuvat voidaan paikantaa ja syvyys mitata tarkemmin.</p></li>
+        </ul>
+        <p class="pd-fine">Turvallisuusideat ovat konsepteja. Ne eivät korvaa työmaan turvallisuusmenettelyjä eivätkä johtonäyttöjä.</p>
+      </div>
     </div>
   </section>
 
@@ -713,7 +709,7 @@
           <time class="mono">11/2026</time>
           <div>
             <h3>AIREX 2026 PropTech Competition · Baku</h3>
-            <p>Kutsuttu pitchaamaan AIREX 2026 PropTech Competitionissa Bakussa 6. marraskuuta.</p>
+            <p>Pitchasi AIREX 2026 PropTech Competitionissa Bakussa 6. marraskuuta sijoittajista ja ekosysteemin edustajista koostuvalle tuomaristolle.</p>
           </div>
         </li>
         <li>
@@ -852,7 +848,7 @@
         <li id="airex-2026">
           <time class="mono" datetime="2026-11-06">6.11.2026</time>
           <h3>AIREX 2026 PropTech Competition, Baku</h3>
-          <p>Kutsuttu pitchaamaan AIREX 2026 PropTech Competitionissa Bakussa 6. marraskuuta. Palkintopotti on 15 000 euroa.</p>
+          <p>Pitchasi AIREX 2026 PropTech Competitionissa Bakussa 6. marraskuuta sijoittajista ja ekosysteemin edustajista koostuvalle tuomaristolle.</p>
           <a href="https://airex.az/" rel="noopener" target="_blank">Virallinen lähde <span aria-hidden="true">↗</span><span class="visually-hidden">(avautuu uuteen välilehteen)</span></a>
         </li>
         <li id="tampere-accelerator-2026">
@@ -894,7 +890,7 @@
         <details><summary>Kuinka tarkka se on?</summary><p>Emme tiedä vielä, koska tarkkuutta ei ole mitattu käynnissä olevalla työmaalla. Sitä varten pilotti on: vertaamme arvioituja syvyyksiä omiin mittauksiinne ja annamme tulokset kirjallisena raporttina.</p></details>
         <details><summary>Entä yksityisyys ja kamerakuvissa näkyvät ihmiset?</summary><p>Prototyyppi arvioi maan syvyyttä suunnitelman pisteissä. Se ei tunnista eikä seuraa ihmisiä. Käytettävistä kameroista, niiden suuntauksesta, kuvien näkijöistä ja säilytysajasta sovitaan kirjallisessa pilottisopimuksessa ennen kuin yhtään kuvaa otetaan.</p></details>
         <details><summary>Mitä tarvitsette pilottityömaalta?</summary><p>Työmaan DWG-suunnitelman sekä pääsyn työmaakameroihin tai henkilön, joka voi ottaa kuvia suunnitelman koordinaateista.</p></details>
-        <details><summary>Mitä se ei vielä tee?</summary><p>Sitä ei ole testattu käynnissä olevalla työmaalla. LiDAR ei kuulu tuotteeseen; selvitämme sitä yhdessä kameran GPS:n kanssa tarkkuuden parantamiseksi.</p></details>
+        <details><summary>Onko sitä testattu käynnissä olevalla työmaalla?</summary><p>Ei vielä. Prototyyppi toimii todellisen hankkeen DWG-suunnitelmalla ja kuvilla. Pilotti on ensimmäinen testi käynnissä olevalla työmaalla, ja vertaamme tuloksia omiin mittauksiinne.</p></details>
       </div>
     </div>
   </section>
@@ -1038,7 +1034,6 @@
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
           <li><a href="#work">Tee työtä kanssamme</a></li>
           <li><a href="../fi/news/">Uutiset</a></li>
-          <li><a href="../fi/vision/">Tuotevisio</a></li>
           <li><a href="../fi/press/">Media ja puheenvuorot</a></li>
           <li><a href="../fi/privacy/">Tietosuojaseloste</a></li>
         </ul>
