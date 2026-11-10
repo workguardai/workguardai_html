@@ -13,6 +13,7 @@ const PAGES = [
   { template: await readFile('src/privacy.html', 'utf8'), slug: 'privacy/', title: 'privacy.title', description: 'privacy.metaDesc' },
   { template: await readFile('src/news.html', 'utf8'), slug: 'news/', title: 'news.title', description: 'news.metaDesc' },
   { template: await readFile('src/press.html', 'utf8'), slug: 'press/', title: 'press.title', description: 'press.metaDesc' },
+  { template: await readFile('src/concept.html', 'utf8'), slug: 'concept/', title: 'cp.title', description: 'cp.metaDesc' },
   ...news.filter((n) => n.article).map((item) => ({ template: articleTemplate, slug: `news/${item.id}/`, item })),
 ];
 const LANGS = config.languages;
@@ -178,6 +179,7 @@ for (const lang of LANGS) {
       pageDescription: esc(pageDescription),
       og: [...og, ...twitter].join('\n'),
       press: `${base}${pathOf(lang)}press/`,
+      conceptPage: `${base}${pathOf(lang)}concept/`,
       eventList: upcoming.map((n) => eventRow(n, lang, home, t)).join('\n'),
       eventMeet: esc(events[0]?.meet ?? `${home}?interest=event#work-form`),
       articleTitle: item ? esc(item.title[lang]) : '',
