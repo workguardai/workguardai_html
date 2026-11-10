@@ -78,8 +78,8 @@
           <a class="link-arrow" href="#partner">Ryhdy kumppaniksi <span aria-hidden="true">→</span></a>
         </div>
         <p class="hero-meta mono"><span>Syntynyt Suomessa</span><span>Työskentelemme koko Euroopassa</span><span>Perustettu 2024</span></p>
-        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>4.–6.11.2026</span> <span data-event-label>Kutsuttu pitchaamaan AIREX-messuilla Bakussa</span> <span aria-hidden="true">→</span></a>
-        <script type="application/json" id="upcoming-events">[{"end":"2026-11-06","tag":"4.–6.11.2026","label":"Kutsuttu pitchaamaan AIREX-messuilla Bakussa","cta":"Tapaa meidät: AIREX, Baku","meet":"../fi/?interest=event&event=AIREX%2C%20Baku#work-form"},{"end":"2026-11-26","tag":"25.–26.11.2026","label":"Pitchaamme lavalla MeOut Summitissa Budapestissa","cta":"Tapaa meidät: MeOut Summit, Budapest","meet":"../fi/?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
+        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>25.–26.11.2026</span> <span data-event-label>Pitchaamme lavalla MeOut Summitissa Budapestissa</span> <span aria-hidden="true">→</span></a>
+        <script type="application/json" id="upcoming-events">[{"end":"2026-11-26","tag":"25.–26.11.2026","label":"Pitchaamme lavalla MeOut Summitissa Budapestissa","cta":"Tapaa meidät: MeOut Summit, Budapest","meet":"../fi/?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
       </div>
 
       <figure class="survey">
@@ -437,11 +437,166 @@
     </div>
   </section>
 
-  <!-- 4. Who it is for -->
+  <!-- 4. Product vision (concept). Mockups: src/partials/vision-devices.html, ideas: src/partials/vision-features.html -->
+  <section class="section pv" id="vision" aria-labelledby="vision-title">
+    <svg class="pv-facets" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="pv-f1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7B6CFF" stop-opacity=".35"/><stop offset="1" stop-color="#8EEBFF" stop-opacity=".05"/></linearGradient>
+        <linearGradient id="pv-f2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8EEBFF" stop-opacity=".22"/><stop offset="1" stop-color="#7B6CFF" stop-opacity=".02"/></linearGradient>
+      </defs>
+      <polygon points="1010,40 1110,140 1010,300 910,140" fill="url(#pv-f1)" stroke="rgba(217,210,247,.18)"/>
+      <polygon points="1010,40 1110,140 1010,160" fill="url(#pv-f2)"/>
+      <polygon points="120,520 170,570 120,650 70,570" fill="url(#pv-f2)" stroke="rgba(217,210,247,.14)"/>
+      <polygon points="1130,420 1160,450 1130,500 1100,450" fill="url(#pv-f1)" stroke="rgba(217,210,247,.12)"/>
+    </svg>
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">03 · Tuotevisio</p>
+        <h2 id="vision-title">Mihin WorkGuardAI on menossa: edistyminen, mittaus ja turvallisuus yhdellä suunnitelmalla.</h2>
+        <p class="sec-lead">Konseptikuva suunnittelemastamme alustasta, joka perustuu samaan ajatukseen kuin nykyinen prototyyppi: DWG-suunnitelmaan ja tavallisiin työmaakuviin. Näkymät esittävät vision, eivät valmiita ominaisuuksia.</p>
+      </div>
+        <!-- Product vision: laptop dashboard and phone app. Concept only; every number is a placeholder. -->
+        <figure class="pv-stage">
+          <figcaption class="pv-tags"><span class="pv-chip">Konseptiesikatselu</span><span class="pv-note mono">Havainnollistavaa dataa</span></figcaption>
+          <div class="pv-devices">
+
+            <!-- Laptop dashboard -->
+            <div class="pv-laptop" role="img" aria-label="Konsepti kannettavan koontinäkymästä havainnollistavalla datalla: työmaan suunnitelma koordinaattikarttana, jonka pisteet on väritetty edistymisen mukaan ja yksi poikkeama, kokonaisedistyminen 62 prosenttia, tehty ja jäljellä oleva työ kuutiometreinä, kolme poikkeamahälytystä sekä kustannusyhteenveto, joka yhdistää mitatun työn laskuluonnokseen.">
+              <div class="pv-screen">
+                <div class="pv-bar"><span class="pv-dots"><i></i><i></i><i></i></span><span>WorkGuardAI · Työmaa 01</span><span class="mono">Päivitetty 10:42</span></div>
+                <div class="pv-dash">
+                  <div class="pv-panel pv-map">
+                    <p class="pv-h">Työmaasuunnitelma · koordinaattikartta</p>
+                    <svg viewBox="0 0 400 240">
+                      <defs>
+                        <linearGradient id="pv-plan" x1="0" x2="1"><stop offset="0" stop-color="#8EEBFF"/><stop offset="1" stop-color="#7B6CFF"/></linearGradient>
+                      </defs>
+                      <g stroke="rgba(217,210,247,.12)" stroke-width="1">
+                        <path d="M40 0V240M100 0V240M160 0V240M220 0V240M280 0V240M340 0V240"/>
+                        <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
+                      </g>
+                      <g fill="#B9B2E6" font-family="JetBrains Mono, monospace" font-size="9">
+                        <text x="66" y="14">B</text><text x="126" y="14">C</text><text x="186" y="14">D</text><text x="246" y="14">E</text><text x="306" y="14">F</text>
+                      </g>
+                      <path d="M20 200 C 80 190, 110 120, 170 118 S 260 70, 380 52" fill="none" stroke="url(#pv-plan)" stroke-width="2" stroke-dasharray="5 4"/>
+                      <g stroke="#0E0B2B" stroke-width="2">
+                        <circle cx="30" cy="198" r="6" fill="#5CF2B0"/><circle cx="66" cy="186" r="6" fill="#5CF2B0"/>
+                        <circle cx="98" cy="160" r="6" fill="#5CF2B0"/><circle cx="128" cy="130" r="6" fill="#5CF2B0"/>
+                        <circle cx="170" cy="118" r="7" fill="#8EEBFF"/><circle cx="206" cy="110" r="6" fill="#8EEBFF"/>
+                        <circle cx="242" cy="94" r="6" fill="#FFB86B"/><circle cx="280" cy="80" r="6" fill="#8EEBFF"/>
+                        <circle cx="318" cy="68" r="6" fill="none" stroke="#D9D2F7"/><circle cx="356" cy="58" r="6" fill="none" stroke="#D9D2F7"/>
+                      </g>
+                      <circle class="pv-ping" cx="242" cy="94" r="6" fill="none" stroke="#FFB86B" stroke-width="1.5"/>
+                      <g font-family="JetBrains Mono, monospace" font-size="9" fill="#F4F2FF">
+                        <rect x="150" y="132" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(142,235,255,.5)"/>
+                        <text x="157" y="143">D·04</text>
+                        <rect x="222" y="104" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(255,184,107,.6)"/>
+                        <text x="229" y="115">D·07</text>
+                      </g>
+                    </svg>
+                    <p class="pv-legend"><span><i style="background:#5CF2B0"></i>Valmis</span><span><i style="background:#8EEBFF"></i>Käynnissä</span><span><i class="pv-ring"></i>Ei aloitettu</span><span><i style="background:#FFB86B"></i>Poikkeama</span></p>
+                  </div>
+                  <div class="pv-panel pv-overall">
+                    <p class="pv-h">Kokonaisedistyminen</p>
+                    <p class="pv-big">62%</p>
+                    <div class="pv-meter"><span style="width:62%"></span></div>
+                  </div>
+                  <div class="pv-panel pv-split">
+                    <p class="pv-h">Tehty vs. jäljellä</p>
+                    <p class="pv-row"><span>Tehty</span><b>4,820 m³</b></p>
+                    <div class="pv-meter"><span style="width:62%"></span></div>
+                    <p class="pv-row"><span>Jäljellä</span><b>2,960 m³</b></p>
+                    <div class="pv-meter pv-meter-rem"><span style="width:38%"></span></div>
+                  </div>
+                  <div class="pv-panel pv-alerts">
+                    <p class="pv-h">Poikkeamahälytykset</p>
+                    <ul>
+                      <li>D·07 · 0,4 m suunnitellun koron yläpuolella</li>
+                      <li>B·03 · Ei uutta kuvaa 3 päivään</li>
+                      <li>F·05 · Mahdollinen kohde kaivannossa</li>
+                    </ul>
+                  </div>
+                  <div class="pv-panel pv-cost">
+                    <p class="pv-h">Mitatun työn kustannukset</p>
+                    <p class="pv-row"><span>Mitattu tässä kuussa</span><b>1,240 m³</b></p>
+                    <p class="pv-row"><span>Sopimushinnoin</span><b>€38,400</b></p>
+                    <p class="pv-invoice"><span>Laskuluonnos</span><span class="pv-pill">Valmis tarkistettavaksi</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="pv-base" aria-hidden="true"></div>
+            </div>
+
+            <!-- Phone app -->
+            <div class="pv-phone" role="img" aria-label="Konsepti puhelinsovelluksesta havainnollistavalla datalla: poikkeamailmoitus pisteessä D·07, työmaakuva kiinnitettynä suunnitelman pisteeseen D·04 sekä pisteen edistyminen 62 prosenttia suunnitellun ja arvioidun syvyyden kanssa.">
+              <div class="pv-phone-screen">
+                <div class="pv-notif"><b>Poikkeama havaittu</b><span>D·07 · 0,4 m suunnitellun koron yläpuolella</span></div>
+                <svg class="pv-photo" viewBox="0 0 216 150">
+                  <defs>
+                    <linearGradient id="pv-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2370"/><stop offset="1" stop-color="#4B3FA0"/></linearGradient>
+                    <linearGradient id="pv-soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A7A6A"/><stop offset="1" stop-color="#4F4338"/></linearGradient>
+                  </defs>
+                  <rect width="216" height="150" fill="url(#pv-sky)"/>
+                  <path d="M0 70H62L84 124H140L160 70H216V150H0Z" fill="url(#pv-soil)"/>
+                  <path d="M62 70L84 124H140L160 70" fill="none" stroke="#C9B9A6" stroke-width="2"/>
+                  <path d="M0 70H62L78 108H146L160 70H216" fill="none" stroke="#8EEBFF" stroke-width="1.5" stroke-dasharray="4 3"/>
+                  <g stroke="rgba(244,242,255,.25)"><path d="M54 0V150M108 0V150M162 0V150M0 50H216M0 100H216"/></g>
+                  <path d="M112 112c0-9 7-16 16-16s16 7 16 16c0 12-16 26-16 26s-16-14-16-26z" transform="translate(-16 -34)" fill="#5CF2B0" stroke="#0E0B2B" stroke-width="2"/>
+                  <circle cx="112" cy="78" r="5" fill="#0E0B2B"/>
+                  <rect x="128" y="64" width="56" height="18" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(92,242,176,.6)"/>
+                  <text x="135" y="77" fill="#F4F2FF" font-family="JetBrains Mono, monospace" font-size="10">D·04</text>
+                </svg>
+                <p class="pv-h">Kuva pisteessä D·04 · 10:42</p>
+                <p class="pv-row"><span>Edistyminen pisteessä</span><b class="pv-mint">62%</b></p>
+                <div class="pv-meter"><span style="width:62%"></span></div>
+                <p class="pv-row pv-small"><span>Suunniteltu syvyys</span><b>−2.40 m</b></p>
+                <p class="pv-row pv-small"><span>Arvioitu syvyys</span><b>−1.49 m</b></p>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <!-- Product vision: feature ideas in three groups. Wording stays at "designed to", "can help", "the idea is". -->
+        <div class="pv-groups">
+          <div class="pv-group">
+            <h3>Edistyminen suunnitelmalla</h3>
+            <ul>
+              <li><strong>Suunnitelma koordinaattikarttana</strong><p>Ajatuksena on, että DWG-suunnitelmasta tulee pistekartta, jossa jokaisella pisteellä on suunniteltu syvyys tai korko.</p></li>
+              <li><strong>Kuvat sidottuina paikkaan</strong><p>Suunniteltu niin, että jokainen kuva, puhelimesta, kiinteästä kamerasta tai dronesta, kuuluu suunnitelman koordinaattiin.</p></li>
+              <li><strong>Edistyminen ja poikkeamahälytykset</strong><p>Suunniteltu näyttämään edistyminen jokaisessa pisteessä ja koko työmaalla sekä hälyttämään tiimille, kun työ poikkeaa suunnitelmasta.</p></li>
+              <li><strong>Kustannukset sidottuina mitattuun työhön</strong><p>Ajatuksena on yhdistää mitatut määrät sopimuksen yksikköhintoihin, jotta laskutus voi seurata todella tehtyä työtä.</p></li>
+            </ul>
+          </div>
+          <div class="pv-group">
+            <h3>Mittaa ja yhdistä</h3>
+            <ul>
+              <li><strong>Maa- ja kalliomassat</strong><p>Suunniteltu arvioimaan samoista kuvista, kuinka paljon maata ja kalliota on kaivettu ja kuinka paljon on jäljellä.</p></li>
+              <li><strong>BIM- ja toimittajatiedot</strong><p>Ajatuksena on tuoda mukaan BIM-mallit ja toimittajatiedot, jotta suunnitelmaa, toimituksia ja edistymistä voi verrata yhdessä paikassa.</p></li>
+              <li><strong>Kamerat, dronet ja yhteydet</strong><p>Suunniteltu toimimaan kiinteiden työmaakameroiden, dronelentojen ja työmaan olemassa olevan mobiiliyhteyden kanssa.</p></li>
+            </ul>
+          </div>
+          <div class="pv-group">
+            <h3>Turvallisuus ja rakenteet</h3>
+            <ul>
+              <li><strong>Koneiden ja työntekijöiden turvallisuus</strong><p>Ajatuksena on ilmoittaa, kun ihminen on koneen työskentelyalueella, tunnistamatta kuka hän on.</p></li>
+              <li><strong>Tunnistamattomat kohteet kaivettaessa</strong><p>Suunniteltu ilmoittamaan odottamattomista kohteista kaivannossa, jotta tiimi voi pysähtyä tarkistamaan.</p></li>
+              <li><strong>Kaapeli- ja johtotarkistukset</strong><p>Voi auttaa vertaamaan kaivua johtokarttoihin muistutuksena tarkistaa kaapelit ja putket ennen kuin työ jatkuu.</p></li>
+              <li><strong>Rakenteiden kunnon seuranta</strong><p>Ajatuksena on seurata rakenteiden, kuten patoseinien, muutoksia ajan mittaan toistuvista kuvista.</p></li>
+            </ul>
+          </div>
+        </div>
+        <p class="pv-delivery">Toimitamme ohjelmiston ja autamme sen käyttöönotossa työmaalla: asennus, yhteydet ja testaus.</p>
+        <p class="pv-fine">Turvallisuusideat ovat konsepteja. Ne eivät korvaa työmaan turvallisuusmenettelyjä eivätkä johtonäyttöjä.</p>
+
+      <p class="pv-more"><a class="link-arrow" href="../fi/vision/">Katso kaikki konseptinäkymät <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- 5. Who it is for -->
   <section class="section" id="for" aria-labelledby="for-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">03 · Kenelle</p>
+        <p class="sec-index mono">04 · Kenelle</p>
         <h2 id="for-title">Niille, jotka rakentavat ja omistavat maarakennuskohteet.</h2>
       </div>
       <div class="audience">
@@ -469,7 +624,7 @@
     <div class="container about-grid">
       <div>
         <div class="sec-head">
-          <p class="sec-index mono">04 · Meistä</p>
+          <p class="sec-index mono">05 · Meistä</p>
           <h2 id="about-title">Syntynyt Suomessa, työskentelee koko Euroopassa.</h2>
           <p class="sec-lead">WorkGuardAI perustettiin Suomessa 30.7.2024. Tiimi työskentelee eri puolilla Eurooppaa, lähellä niitä urakoitsijoita ja julkisia tilaajia, jotka tuotetta käyttäisivät.</p>
         </div>
@@ -507,7 +662,7 @@
   <section class="section" id="milestones" aria-labelledby="ms-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">05 · Virstanpylväät</p>
+        <p class="sec-index mono">06 · Virstanpylväät</p>
         <h2 id="ms-title">Esihautomon ideasta toimivaksi prototyypiksi – ja Euroopan pitch-lavoille.</h2>
         <p class="sec-lead">Kolme vuotta ohjelmia, kilpailuja ja rakentamista, jokainen askel lähteineen.</p>
       </div>
@@ -684,7 +839,7 @@
   <section class="section section-alt" id="news" aria-labelledby="news-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">06 · Uutiset</p>
+        <p class="sec-index mono">07 · Uutiset</p>
         <h2 id="news-title">Viimeisimmät uutiset</h2>
       </div>
       <ol class="news-list">
@@ -714,7 +869,7 @@
   <section class="section" id="team" aria-labelledby="team-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">07 · Tiimi</p>
+        <p class="sec-index mono">08 · Tiimi</p>
         <h2 id="team-title">Tiimi</h2>
       </div>
       <ul class="team">
@@ -732,7 +887,7 @@
   <section class="section section-alt" id="faq" aria-labelledby="faq-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">08 · UKK</p>
+        <p class="sec-index mono">09 · UKK</p>
         <h2 id="faq-title">Usein kysytyt kysymykset</h2>
       </div>
       <div class="faq">
@@ -748,13 +903,13 @@
   <section class="section" id="work" aria-labelledby="work-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">09 · Tee työtä kanssamme</p>
+        <p class="sec-index mono">10 · Tee työtä kanssamme</p>
         <h2 id="work-title">Tee työtä kanssamme</h2>
       </div>
       <ul class="who">
         <li><h3>Asiakkaat</h3><p>Maanrakennus- ja infratiimit, joilla on DWG-suunnitelma ja jotka haluavat testata edistymisen mittausta oikealla työmaalla.</p><a class="link-arrow" href="../fi/?interest=pilot#work-form">Varaa pilottipuhelu <span aria-hidden="true">→</span></a></li>
         <li><h3>Yliopistot, tutkimusryhmät ja keskittymät</h3><p>Tutkimus- ja oppimisyhteistyö: opiskelijat ja tutkijat työskentelevät oikean prototyypin kanssa; laajuudesta, datan käytöstä ja IP-oikeuksista sovitaan ensin kirjallisesti.</p><a class="link-arrow" href="../fi/?interest=research#work-form">Keskustellaan yhteistyöstä <span aria-hidden="true">→</span></a></li>
-        <li><h3>Tapahtumat</h3><p>Järjestätkö tapahtumaa tai osallistutko samaan tapahtumaan kuin me? Kerro, mihin.</p><a class="link-arrow" id="event-cta-link" href="../fi/?interest=event&amp;event=AIREX%2C%20Baku#work-form"><span id="event-cta" data-none="Ota yhteyttä">Tapaa meidät: AIREX, Baku</span> <span aria-hidden="true">→</span></a></li>
+        <li><h3>Tapahtumat</h3><p>Järjestätkö tapahtumaa tai osallistutko samaan tapahtumaan kuin me? Kerro, mihin.</p><a class="link-arrow" id="event-cta-link" href="../fi/?interest=event&amp;event=MeOut%20Summit%2C%20Budapest#work-form"><span id="event-cta" data-none="Ota yhteyttä">Tapaa meidät: MeOut Summit, Budapest</span> <span aria-hidden="true">→</span></a></li>
         <li><h3>Media, podcastit ja puheenvuorot</h3><p>Faktat, kuvat ja yhteystiedot ovat mediasivulla. <a href="../fi/press/">Media ja puheenvuorot</a></p><a class="link-arrow" href="../fi/?interest=press#work-form">Ota yhteyttä <span aria-hidden="true">→</span></a></li>
       </ul>
     </div>
@@ -764,25 +919,10 @@
   <section class="section section-alt" id="events" aria-labelledby="events-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">10 · Tapahtumat</p>
+        <p class="sec-index mono">11 · Tapahtumat</p>
         <h2 id="events-title">Tapaa meidät</h2>
       </div>
       <ul class="events">
-        <li id="event-airex-2026" data-end="2026-11-06">
-          <time class="mono" datetime="2026-11-04">4.–6.11.2026</time>
-          <div>
-            <h3>AIREX, Baku</h3>
-            <p>Kutsuttu pitchaamaan AIREX-messuilla Bakussa</p>
-            <div class="share"><span class="mono">Jaa</span>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fworkguardai.com%2Ffi%2F%23event-airex-2026" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden">(avautuu uuteen välilehteen)</span></a>
-            <a href="https://wa.me/?text=Kutsuttu%20pitchaamaan%20AIREX-messuilla%20Bakussa%20https%3A%2F%2Fworkguardai.com%2Ffi%2F%23event-airex-2026" rel="noopener" target="_blank">WhatsApp<span class="visually-hidden">(avautuu uuteen välilehteen)</span></a>
-            <a href="mailto:?subject=Kutsuttu%20pitchaamaan%20AIREX-messuilla%20Bakussa&amp;body=https%3A%2F%2Fworkguardai.com%2Ffi%2F%23event-airex-2026">Sähköposti</a>
-            <a href="https://workguardai.com/fi/#event-airex-2026" data-copy="Linkki kopioitu">Kopioi linkki</a>
-            <button type="button" class="share-native" data-share-title="Kutsuttu pitchaamaan AIREX-messuilla Bakussa" data-share-url="https://workguardai.com/fi/#event-airex-2026" hidden>Jaa…</button>
-          </div>
-          </div>
-          <a class="btn btn-outline btn-small" href="../fi/?interest=event&amp;event=AIREX%2C%20Baku#work-form">Pyydä tapaamista</a>
-        </li>
         <li id="event-meout-2026" data-end="2026-11-26">
           <time class="mono" datetime="2026-11-25">25.–26.11.2026</time>
           <div>
@@ -807,7 +947,7 @@
     <div class="container pilot-grid">
       <div>
         <div class="sec-head">
-          <p class="sec-index mono">11 · Pilotti</p>
+          <p class="sec-index mono">12 · Pilotti</p>
           <h2 id="pilot-title">Varaa pilottipuhelu.</h2>
           <p class="sec-lead">Etsimme ensimmäistä käynnissä olevaa työmaata. Jos teette maarakennus- tai infratöitä ja teillä on niihin DWG-suunnitelmat, lyhyt puhelu riittää selvittämään, sopiiko pilotti.</p>
         </div>
@@ -898,6 +1038,7 @@
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
           <li><a href="#work">Tee työtä kanssamme</a></li>
           <li><a href="../fi/news/">Uutiset</a></li>
+          <li><a href="../fi/vision/">Tuotevisio</a></li>
           <li><a href="../fi/press/">Media ja puheenvuorot</a></li>
           <li><a href="../fi/privacy/">Tietosuojaseloste</a></li>
         </ul>

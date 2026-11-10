@@ -1,0 +1,100 @@
+        <!-- Product vision: laptop dashboard and phone app. Concept only; every number is a placeholder. -->
+        <figure class="pv-stage">
+          <figcaption class="pv-tags"><span class="pv-chip">{{vis.concept}}</span><span class="pv-note mono">{{vis.illustrative}}</span></figcaption>
+          <div class="pv-devices">
+
+            <!-- Laptop dashboard -->
+            <div class="pv-laptop" role="img" aria-label="{{vis.laptopAlt}}">
+              <div class="pv-screen">
+                <div class="pv-bar"><span class="pv-dots"><i></i><i></i><i></i></span><span>WorkGuardAI · {{m.site}} 01</span><span class="mono">{{m.updated}} 10:42</span></div>
+                <div class="pv-dash">
+                  <div class="pv-panel pv-map">
+                    <p class="pv-h">{{m.map}}</p>
+                    <svg viewBox="0 0 400 240">
+                      <defs>
+                        <linearGradient id="pv-plan" x1="0" x2="1"><stop offset="0" stop-color="#8EEBFF"/><stop offset="1" stop-color="#7B6CFF"/></linearGradient>
+                      </defs>
+                      <g stroke="rgba(217,210,247,.12)" stroke-width="1">
+                        <path d="M40 0V240M100 0V240M160 0V240M220 0V240M280 0V240M340 0V240"/>
+                        <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
+                      </g>
+                      <g fill="#B9B2E6" font-family="JetBrains Mono, monospace" font-size="9">
+                        <text x="66" y="14">B</text><text x="126" y="14">C</text><text x="186" y="14">D</text><text x="246" y="14">E</text><text x="306" y="14">F</text>
+                      </g>
+                      <path d="M20 200 C 80 190, 110 120, 170 118 S 260 70, 380 52" fill="none" stroke="url(#pv-plan)" stroke-width="2" stroke-dasharray="5 4"/>
+                      <g stroke="#0E0B2B" stroke-width="2">
+                        <circle cx="30" cy="198" r="6" fill="#5CF2B0"/><circle cx="66" cy="186" r="6" fill="#5CF2B0"/>
+                        <circle cx="98" cy="160" r="6" fill="#5CF2B0"/><circle cx="128" cy="130" r="6" fill="#5CF2B0"/>
+                        <circle cx="170" cy="118" r="7" fill="#8EEBFF"/><circle cx="206" cy="110" r="6" fill="#8EEBFF"/>
+                        <circle cx="242" cy="94" r="6" fill="#FFB86B"/><circle cx="280" cy="80" r="6" fill="#8EEBFF"/>
+                        <circle cx="318" cy="68" r="6" fill="none" stroke="#D9D2F7"/><circle cx="356" cy="58" r="6" fill="none" stroke="#D9D2F7"/>
+                      </g>
+                      <circle class="pv-ping" cx="242" cy="94" r="6" fill="none" stroke="#FFB86B" stroke-width="1.5"/>
+                      <g font-family="JetBrains Mono, monospace" font-size="9" fill="#F4F2FF">
+                        <rect x="150" y="132" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(142,235,255,.5)"/>
+                        <text x="157" y="143">D·04</text>
+                        <rect x="222" y="104" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(255,184,107,.6)"/>
+                        <text x="229" y="115">D·07</text>
+                      </g>
+                    </svg>
+                    <p class="pv-legend"><span><i style="background:#5CF2B0"></i>{{m.lDone}}</span><span><i style="background:#8EEBFF"></i>{{m.lProg}}</span><span><i class="pv-ring"></i>{{m.lNot}}</span><span><i style="background:#FFB86B"></i>{{m.lDev}}</span></p>
+                  </div>
+                  <div class="pv-panel pv-overall">
+                    <p class="pv-h">{{m.overall}}</p>
+                    <p class="pv-big">62%</p>
+                    <div class="pv-meter"><span style="width:62%"></span></div>
+                  </div>
+                  <div class="pv-panel pv-split">
+                    <p class="pv-h">{{m.doneRem}}</p>
+                    <p class="pv-row"><span>{{m.done}}</span><b>4,820 m³</b></p>
+                    <div class="pv-meter"><span style="width:62%"></span></div>
+                    <p class="pv-row"><span>{{m.remaining}}</span><b>2,960 m³</b></p>
+                    <div class="pv-meter pv-meter-rem"><span style="width:38%"></span></div>
+                  </div>
+                  <div class="pv-panel pv-alerts">
+                    <p class="pv-h">{{m.alerts}}</p>
+                    <ul>
+                      <li>{{m.a1}}</li>
+                      <li>{{m.a2}}</li>
+                      <li>{{m.a3}}</li>
+                    </ul>
+                  </div>
+                  <div class="pv-panel pv-cost">
+                    <p class="pv-h">{{m.cost}}</p>
+                    <p class="pv-row"><span>{{m.measured}}</span><b>1,240 m³</b></p>
+                    <p class="pv-row"><span>{{m.rate}}</span><b>€38,400</b></p>
+                    <p class="pv-invoice"><span>{{m.invoice}}</span><span class="pv-pill">{{m.review}}</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="pv-base" aria-hidden="true"></div>
+            </div>
+
+            <!-- Phone app -->
+            <div class="pv-phone" role="img" aria-label="{{vis.phoneAlt}}">
+              <div class="pv-phone-screen">
+                <div class="pv-notif"><b>{{m.notifT}}</b><span>{{m.a1}}</span></div>
+                <svg class="pv-photo" viewBox="0 0 216 150">
+                  <defs>
+                    <linearGradient id="pv-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2370"/><stop offset="1" stop-color="#4B3FA0"/></linearGradient>
+                    <linearGradient id="pv-soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A7A6A"/><stop offset="1" stop-color="#4F4338"/></linearGradient>
+                  </defs>
+                  <rect width="216" height="150" fill="url(#pv-sky)"/>
+                  <path d="M0 70H62L84 124H140L160 70H216V150H0Z" fill="url(#pv-soil)"/>
+                  <path d="M62 70L84 124H140L160 70" fill="none" stroke="#C9B9A6" stroke-width="2"/>
+                  <path d="M0 70H62L78 108H146L160 70H216" fill="none" stroke="#8EEBFF" stroke-width="1.5" stroke-dasharray="4 3"/>
+                  <g stroke="rgba(244,242,255,.25)"><path d="M54 0V150M108 0V150M162 0V150M0 50H216M0 100H216"/></g>
+                  <path d="M112 112c0-9 7-16 16-16s16 7 16 16c0 12-16 26-16 26s-16-14-16-26z" transform="translate(-16 -34)" fill="#5CF2B0" stroke="#0E0B2B" stroke-width="2"/>
+                  <circle cx="112" cy="78" r="5" fill="#0E0B2B"/>
+                  <rect x="128" y="64" width="56" height="18" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(92,242,176,.6)"/>
+                  <text x="135" y="77" fill="#F4F2FF" font-family="JetBrains Mono, monospace" font-size="10">D·04</text>
+                </svg>
+                <p class="pv-h">{{m.photo}} · 10:42</p>
+                <p class="pv-row"><span>{{m.atPoint}}</span><b class="pv-mint">62%</b></p>
+                <div class="pv-meter"><span style="width:62%"></span></div>
+                <p class="pv-row pv-small"><span>{{m.planned}}</span><b>−2.40 m</b></p>
+                <p class="pv-row pv-small"><span>{{m.estimated}}</span><b>−1.49 m</b></p>
+              </div>
+            </div>
+          </div>
+        </figure>

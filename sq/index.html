@@ -78,8 +78,8 @@
           <a class="link-arrow" href="#partner">Bëhu partner <span aria-hidden="true">→</span></a>
         </div>
         <p class="hero-meta mono"><span>Lindur në Finlandë</span><span>Punojmë në gjithë Evropën</span><span>Themeluar në 2024</span></p>
-        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>4–6 nëntor 2026</span> <span data-event-label>I ftuar të prezantojë në AIREX, Baku</span> <span aria-hidden="true">→</span></a>
-        <script type="application/json" id="upcoming-events">[{"end":"2026-11-06","tag":"4–6 nëntor 2026","label":"I ftuar të prezantojë në AIREX, Baku","cta":"Na takoni në AIREX, Baku","meet":"../sq/?interest=event&event=AIREX%2C%20Baku#work-form"},{"end":"2026-11-26","tag":"25–26 nëntor 2026","label":"Prezantim në skenë në MeOut Summit, Budapest","cta":"Na takoni në MeOut Summit, Budapest","meet":"../sq/?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
+        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>25–26 nëntor 2026</span> <span data-event-label>Prezantim në skenë në MeOut Summit, Budapest</span> <span aria-hidden="true">→</span></a>
+        <script type="application/json" id="upcoming-events">[{"end":"2026-11-26","tag":"25–26 nëntor 2026","label":"Prezantim në skenë në MeOut Summit, Budapest","cta":"Na takoni në MeOut Summit, Budapest","meet":"../sq/?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
       </div>
 
       <figure class="survey">
@@ -437,11 +437,166 @@
     </div>
   </section>
 
-  <!-- 4. Who it is for -->
+  <!-- 4. Product vision (concept). Mockups: src/partials/vision-devices.html, ideas: src/partials/vision-features.html -->
+  <section class="section pv" id="vision" aria-labelledby="vision-title">
+    <svg class="pv-facets" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="pv-f1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7B6CFF" stop-opacity=".35"/><stop offset="1" stop-color="#8EEBFF" stop-opacity=".05"/></linearGradient>
+        <linearGradient id="pv-f2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8EEBFF" stop-opacity=".22"/><stop offset="1" stop-color="#7B6CFF" stop-opacity=".02"/></linearGradient>
+      </defs>
+      <polygon points="1010,40 1110,140 1010,300 910,140" fill="url(#pv-f1)" stroke="rgba(217,210,247,.18)"/>
+      <polygon points="1010,40 1110,140 1010,160" fill="url(#pv-f2)"/>
+      <polygon points="120,520 170,570 120,650 70,570" fill="url(#pv-f2)" stroke="rgba(217,210,247,.14)"/>
+      <polygon points="1130,420 1160,450 1130,500 1100,450" fill="url(#pv-f1)" stroke="rgba(217,210,247,.12)"/>
+    </svg>
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">03 · Vizioni i produktit</p>
+        <h2 id="vision-title">Ku po shkon WorkGuardAI: përparimi, matjet dhe siguria në një plan.</h2>
+        <p class="sec-lead">Një paraqitje konceptuale e platformës që po projektojmë, e ndërtuar mbi të njëjtën ide si prototipi i sotëm: plani DWG dhe foto të zakonshme të kantierit. Ekranet tregojnë vizionin, jo funksione të përfunduara.</p>
+      </div>
+        <!-- Product vision: laptop dashboard and phone app. Concept only; every number is a placeholder. -->
+        <figure class="pv-stage">
+          <figcaption class="pv-tags"><span class="pv-chip">Paraqitje konceptuale</span><span class="pv-note mono">Të dhëna ilustruese</span></figcaption>
+          <div class="pv-devices">
+
+            <!-- Laptop dashboard -->
+            <div class="pv-laptop" role="img" aria-label="Koncept i një paneli në laptop me të dhëna ilustruese: plani i kantierit si hartë koordinatash me pika të ngjyrosura sipas përparimit dhe një devijim, përparimi i përgjithshëm 62 për qind, puna e kryer kundrejt asaj që mbetet në metra kubikë, tre njoftime devijimi dhe një përmbledhje kostosh që lidh punën e matur me një draft fature.">
+              <div class="pv-screen">
+                <div class="pv-bar"><span class="pv-dots"><i></i><i></i><i></i></span><span>WorkGuardAI · Kantieri 01</span><span class="mono">Përditësuar 10:42</span></div>
+                <div class="pv-dash">
+                  <div class="pv-panel pv-map">
+                    <p class="pv-h">Plani i kantierit · harta e koordinatave</p>
+                    <svg viewBox="0 0 400 240">
+                      <defs>
+                        <linearGradient id="pv-plan" x1="0" x2="1"><stop offset="0" stop-color="#8EEBFF"/><stop offset="1" stop-color="#7B6CFF"/></linearGradient>
+                      </defs>
+                      <g stroke="rgba(217,210,247,.12)" stroke-width="1">
+                        <path d="M40 0V240M100 0V240M160 0V240M220 0V240M280 0V240M340 0V240"/>
+                        <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
+                      </g>
+                      <g fill="#B9B2E6" font-family="JetBrains Mono, monospace" font-size="9">
+                        <text x="66" y="14">B</text><text x="126" y="14">C</text><text x="186" y="14">D</text><text x="246" y="14">E</text><text x="306" y="14">F</text>
+                      </g>
+                      <path d="M20 200 C 80 190, 110 120, 170 118 S 260 70, 380 52" fill="none" stroke="url(#pv-plan)" stroke-width="2" stroke-dasharray="5 4"/>
+                      <g stroke="#0E0B2B" stroke-width="2">
+                        <circle cx="30" cy="198" r="6" fill="#5CF2B0"/><circle cx="66" cy="186" r="6" fill="#5CF2B0"/>
+                        <circle cx="98" cy="160" r="6" fill="#5CF2B0"/><circle cx="128" cy="130" r="6" fill="#5CF2B0"/>
+                        <circle cx="170" cy="118" r="7" fill="#8EEBFF"/><circle cx="206" cy="110" r="6" fill="#8EEBFF"/>
+                        <circle cx="242" cy="94" r="6" fill="#FFB86B"/><circle cx="280" cy="80" r="6" fill="#8EEBFF"/>
+                        <circle cx="318" cy="68" r="6" fill="none" stroke="#D9D2F7"/><circle cx="356" cy="58" r="6" fill="none" stroke="#D9D2F7"/>
+                      </g>
+                      <circle class="pv-ping" cx="242" cy="94" r="6" fill="none" stroke="#FFB86B" stroke-width="1.5"/>
+                      <g font-family="JetBrains Mono, monospace" font-size="9" fill="#F4F2FF">
+                        <rect x="150" y="132" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(142,235,255,.5)"/>
+                        <text x="157" y="143">D·04</text>
+                        <rect x="222" y="104" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(255,184,107,.6)"/>
+                        <text x="229" y="115">D·07</text>
+                      </g>
+                    </svg>
+                    <p class="pv-legend"><span><i style="background:#5CF2B0"></i>Përfunduar</span><span><i style="background:#8EEBFF"></i>Në proces</span><span><i class="pv-ring"></i>Pa filluar</span><span><i style="background:#FFB86B"></i>Devijim</span></p>
+                  </div>
+                  <div class="pv-panel pv-overall">
+                    <p class="pv-h">Përparimi i përgjithshëm</p>
+                    <p class="pv-big">62%</p>
+                    <div class="pv-meter"><span style="width:62%"></span></div>
+                  </div>
+                  <div class="pv-panel pv-split">
+                    <p class="pv-h">Puna e kryer kundrejt asaj që mbetet</p>
+                    <p class="pv-row"><span>Kryer</span><b>4,820 m³</b></p>
+                    <div class="pv-meter"><span style="width:62%"></span></div>
+                    <p class="pv-row"><span>Mbetet</span><b>2,960 m³</b></p>
+                    <div class="pv-meter pv-meter-rem"><span style="width:38%"></span></div>
+                  </div>
+                  <div class="pv-panel pv-alerts">
+                    <p class="pv-h">Njoftime devijimi</p>
+                    <ul>
+                      <li>D·07 · 0,4 m mbi kuotën e planifikuar</li>
+                      <li>B·03 · Asnjë foto e re prej 3 ditësh</li>
+                      <li>F·05 · Objekt i mundshëm në gërmim</li>
+                    </ul>
+                  </div>
+                  <div class="pv-panel pv-cost">
+                    <p class="pv-h">Kosto e lidhur me punën e matur</p>
+                    <p class="pv-row"><span>Matur këtë muaj</span><b>1,240 m³</b></p>
+                    <p class="pv-row"><span>Me tarifat e kontratës</span><b>€38,400</b></p>
+                    <p class="pv-invoice"><span>Draft fature</span><span class="pv-pill">Gati për rishikim</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="pv-base" aria-hidden="true"></div>
+            </div>
+
+            <!-- Phone app -->
+            <div class="pv-phone" role="img" aria-label="Koncept i një aplikacioni në telefon me të dhëna ilustruese: një njoftim devijimi në pikën D·07, një foto kantieri e lidhur me pikën D·04 në plan dhe përparimi në atë pikë 62 për qind, me thellësinë e planifikuar dhe të vlerësuar.">
+              <div class="pv-phone-screen">
+                <div class="pv-notif"><b>Devijim i sinjalizuar</b><span>D·07 · 0,4 m mbi kuotën e planifikuar</span></div>
+                <svg class="pv-photo" viewBox="0 0 216 150">
+                  <defs>
+                    <linearGradient id="pv-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2370"/><stop offset="1" stop-color="#4B3FA0"/></linearGradient>
+                    <linearGradient id="pv-soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A7A6A"/><stop offset="1" stop-color="#4F4338"/></linearGradient>
+                  </defs>
+                  <rect width="216" height="150" fill="url(#pv-sky)"/>
+                  <path d="M0 70H62L84 124H140L160 70H216V150H0Z" fill="url(#pv-soil)"/>
+                  <path d="M62 70L84 124H140L160 70" fill="none" stroke="#C9B9A6" stroke-width="2"/>
+                  <path d="M0 70H62L78 108H146L160 70H216" fill="none" stroke="#8EEBFF" stroke-width="1.5" stroke-dasharray="4 3"/>
+                  <g stroke="rgba(244,242,255,.25)"><path d="M54 0V150M108 0V150M162 0V150M0 50H216M0 100H216"/></g>
+                  <path d="M112 112c0-9 7-16 16-16s16 7 16 16c0 12-16 26-16 26s-16-14-16-26z" transform="translate(-16 -34)" fill="#5CF2B0" stroke="#0E0B2B" stroke-width="2"/>
+                  <circle cx="112" cy="78" r="5" fill="#0E0B2B"/>
+                  <rect x="128" y="64" width="56" height="18" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(92,242,176,.6)"/>
+                  <text x="135" y="77" fill="#F4F2FF" font-family="JetBrains Mono, monospace" font-size="10">D·04</text>
+                </svg>
+                <p class="pv-h">Foto në D·04 · 10:42</p>
+                <p class="pv-row"><span>Përparimi në këtë pikë</span><b class="pv-mint">62%</b></p>
+                <div class="pv-meter"><span style="width:62%"></span></div>
+                <p class="pv-row pv-small"><span>Thellësia e planifikuar</span><b>−2.40 m</b></p>
+                <p class="pv-row pv-small"><span>Thellësia e vlerësuar</span><b>−1.49 m</b></p>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <!-- Product vision: feature ideas in three groups. Wording stays at "designed to", "can help", "the idea is". -->
+        <div class="pv-groups">
+          <div class="pv-group">
+            <h3>Përparimi në plan</h3>
+            <ul>
+              <li><strong>Plani si hartë koordinatash</strong><p>Ideja është që plani DWG të bëhet një hartë pikash, secila me thellësinë ose kuotën e planifikuar.</p></li>
+              <li><strong>Foto të lidhura me një vend</strong><p>Projektuar që çdo foto, nga telefoni, kamera fikse apo droni, t'i përkasë një koordinate në plan.</p></li>
+              <li><strong>Përparimi dhe njoftimet për devijime</strong><p>Projektuar për të treguar përparimin në çdo pikë dhe për gjithë kantierin, dhe për të njoftuar ekipin kur puna largohet nga plani.</p></li>
+              <li><strong>Kosto e lidhur me punën e matur</strong><p>Ideja është të lidhen sasitë e matura me tarifat e kontratës, që faturimi të ndjekë punën e kryer realisht.</p></li>
+            </ul>
+          </div>
+          <div class="pv-group">
+            <h3>Matni dhe lidhni</h3>
+            <ul>
+              <li><strong>Vëllimet e dheut dhe shkëmbit</strong><p>Projektuar për të vlerësuar sa dhé dhe shkëmb është gërmuar dhe sa mbetet, nga të njëjtat foto.</p></li>
+              <li><strong>BIM dhe të dhënat e furnitorëve</strong><p>Ideja është të sillen modelet BIM dhe të dhënat e furnitorëve, që plani, dërgesat dhe përparimi të krahasohen në një vend.</p></li>
+              <li><strong>Kamera, drone dhe lidhje</strong><p>Projektuar të punojë me kamerat fikse të kantierit, fluturimet me dron dhe lidhjen celulare që kantieri ka tashmë.</p></li>
+            </ul>
+          </div>
+          <div class="pv-group">
+            <h3>Siguria dhe asetet</h3>
+            <ul>
+              <li><strong>Siguria e makinerive dhe e punëtorëve</strong><p>Ideja është të sinjalizohet kur një person ndodhet brenda zonës së punës së një makinerie, pa e identifikuar se kush është.</p></li>
+              <li><strong>Objekte të paidentifikuara gjatë gërmimit</strong><p>Projektuar për të sinjalizuar objekte të papritura në gërmim, që ekipi të ndalojë dhe të kontrollojë.</p></li>
+              <li><strong>Kontrolli i kabllove dhe tubacioneve</strong><p>Mund të ndihmojë të krahasohet gërmimi me planet e rrjeteve, si kujtesë për të kontrolluar kabllot dhe tubat para se puna të vazhdojë.</p></li>
+              <li><strong>Monitorimi i gjendjes së strukturave</strong><p>Ideja është të ndiqen ndryshimet në struktura si muret e digave me kalimin e kohës, nga foto të përsëritura.</p></li>
+            </ul>
+          </div>
+        </div>
+        <p class="pv-delivery">Ne ofrojmë softuerin dhe ndihmojmë ta zbatoni në kantier: konfigurimi, lidhja dhe testimi.</p>
+        <p class="pv-fine">Idetë për sigurinë janë koncepte. Ato nuk zëvendësojnë procedurat e sigurisë në kantier ose shërbimet e lokalizimit të rrjeteve nëntokësore.</p>
+
+      <p class="pv-more"><a class="link-arrow" href="../sq/vision/">Shihni të gjitha ekranet konceptuale <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- 5. Who it is for -->
   <section class="section" id="for" aria-labelledby="for-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">03 · Për kë është</p>
+        <p class="sec-index mono">04 · Për kë është</p>
         <h2 id="for-title">Për ata që ndërtojnë dhe zotërojnë punimet e dheut.</h2>
       </div>
       <div class="audience">
@@ -469,7 +624,7 @@
     <div class="container about-grid">
       <div>
         <div class="sec-head">
-          <p class="sec-index mono">04 · Rreth nesh</p>
+          <p class="sec-index mono">05 · Rreth nesh</p>
           <h2 id="about-title">Lindur në Finlandë, duke punuar në gjithë Evropën.</h2>
           <p class="sec-lead">WorkGuardAI u themelua në Finlandë më 30 korrik 2024. Ekipi punon në gjithë Evropën, pranë sipërmarrësve dhe investitorëve publikë që do ta përdornin produktin.</p>
         </div>
@@ -507,7 +662,7 @@
   <section class="section" id="milestones" aria-labelledby="ms-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">05 · Arritjet</p>
+        <p class="sec-index mono">06 · Arritjet</p>
         <h2 id="ms-title">Nga një ide në para-inkubator te një prototip funksional, e deri te skenat e prezantimeve në Evropë.</h2>
         <p class="sec-lead">Tre vite programesh, garash dhe ndërtimi, çdo hap i shënuar me burimin e tij.</p>
       </div>
@@ -684,7 +839,7 @@
   <section class="section section-alt" id="news" aria-labelledby="news-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">06 · Lajme</p>
+        <p class="sec-index mono">07 · Lajme</p>
         <h2 id="news-title">Lajmet e fundit</h2>
       </div>
       <ol class="news-list">
@@ -714,7 +869,7 @@
   <section class="section" id="team" aria-labelledby="team-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">07 · Ekipi</p>
+        <p class="sec-index mono">08 · Ekipi</p>
         <h2 id="team-title">Ekipi</h2>
       </div>
       <ul class="team">
@@ -732,7 +887,7 @@
   <section class="section section-alt" id="faq" aria-labelledby="faq-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">08 · Pyetje</p>
+        <p class="sec-index mono">09 · Pyetje</p>
         <h2 id="faq-title">Pyetje të shpeshta</h2>
       </div>
       <div class="faq">
@@ -748,13 +903,13 @@
   <section class="section" id="work" aria-labelledby="work-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">09 · Punoni me ne</p>
+        <p class="sec-index mono">10 · Punoni me ne</p>
         <h2 id="work-title">Punoni me ne</h2>
       </div>
       <ul class="who">
         <li><h3>Klientë</h3><p>Ekipe të punimeve të tokës dhe infrastrukturës me një plan DWG që duan të testojnë matjen e përparimit në një kantier real.</p><a class="link-arrow" href="../sq/?interest=pilot#work-form">Rezervo një telefonatë pilot <span aria-hidden="true">→</span></a></li>
         <li><h3>Universitete, grupe kërkimore dhe qendra</h3><p>Bashkëpunime kërkimore dhe mësimore: studentë dhe kërkues që punojnë me një prototip real; fushëveprimi, përdorimi i të dhënave dhe pronësia intelektuale bien dakord fillimisht me shkrim.</p><a class="link-arrow" href="../sq/?interest=research#work-form">Të flasim për një bashkëpunim <span aria-hidden="true">→</span></a></li>
-        <li><h3>Evente</h3><p>Po organizoni një event, ose do të merrni pjesë në një ku do të jemi? Na tregoni cilin.</p><a class="link-arrow" id="event-cta-link" href="../sq/?interest=event&amp;event=AIREX%2C%20Baku#work-form"><span id="event-cta" data-none="Na kontaktoni">Na takoni në AIREX, Baku</span> <span aria-hidden="true">→</span></a></li>
+        <li><h3>Evente</h3><p>Po organizoni një event, ose do të merrni pjesë në një ku do të jemi? Na tregoni cilin.</p><a class="link-arrow" id="event-cta-link" href="../sq/?interest=event&amp;event=MeOut%20Summit%2C%20Budapest#work-form"><span id="event-cta" data-none="Na kontaktoni">Na takoni në MeOut Summit, Budapest</span> <span aria-hidden="true">→</span></a></li>
         <li><h3>Media, podkaste dhe fjalime</h3><p>Faktet, fotot dhe kontaktet janë në faqen për mediat. <a href="../sq/press/">Media dhe fjalime</a></p><a class="link-arrow" href="../sq/?interest=press#work-form">Na kontaktoni <span aria-hidden="true">→</span></a></li>
       </ul>
     </div>
@@ -764,25 +919,10 @@
   <section class="section section-alt" id="events" aria-labelledby="events-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">10 · Evente</p>
+        <p class="sec-index mono">11 · Evente</p>
         <h2 id="events-title">Na takoni në</h2>
       </div>
       <ul class="events">
-        <li id="event-airex-2026" data-end="2026-11-06">
-          <time class="mono" datetime="2026-11-04">4–6 nëntor 2026</time>
-          <div>
-            <h3>AIREX, Baku</h3>
-            <p>I ftuar të prezantojë në AIREX, Baku</p>
-            <div class="share"><span class="mono">Shpërndani</span>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fworkguardai.com%2Fsq%2F%23event-airex-2026" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden">(hapet në skedë të re)</span></a>
-            <a href="https://wa.me/?text=I%20ftuar%20t%C3%AB%20prezantoj%C3%AB%20n%C3%AB%20AIREX%2C%20Baku%20https%3A%2F%2Fworkguardai.com%2Fsq%2F%23event-airex-2026" rel="noopener" target="_blank">WhatsApp<span class="visually-hidden">(hapet në skedë të re)</span></a>
-            <a href="mailto:?subject=I%20ftuar%20t%C3%AB%20prezantoj%C3%AB%20n%C3%AB%20AIREX%2C%20Baku&amp;body=https%3A%2F%2Fworkguardai.com%2Fsq%2F%23event-airex-2026">Email</a>
-            <a href="https://workguardai.com/sq/#event-airex-2026" data-copy="Lidhja u kopjua">Kopjo lidhjen</a>
-            <button type="button" class="share-native" data-share-title="I ftuar të prezantojë në AIREX, Baku" data-share-url="https://workguardai.com/sq/#event-airex-2026" hidden>Shpërndani…</button>
-          </div>
-          </div>
-          <a class="btn btn-outline btn-small" href="../sq/?interest=event&amp;event=AIREX%2C%20Baku#work-form">Kërkoni një takim</a>
-        </li>
         <li id="event-meout-2026" data-end="2026-11-26">
           <time class="mono" datetime="2026-11-25">25–26 nëntor 2026</time>
           <div>
@@ -807,7 +947,7 @@
     <div class="container pilot-grid">
       <div>
         <div class="sec-head">
-          <p class="sec-index mono">11 · Pilot</p>
+          <p class="sec-index mono">12 · Pilot</p>
           <h2 id="pilot-title">Rezervo një telefonatë pilot.</h2>
           <p class="sec-lead">Kërkojmë kantierin e parë aktiv. Nëse kryeni punime dheu ose infrastrukture dhe keni planet DWG për to, mjafton një telefonatë e shkurtër për të parë nëse një pilot është i përshtatshëm.</p>
         </div>
@@ -898,6 +1038,7 @@
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
           <li><a href="#work">Punoni me ne</a></li>
           <li><a href="../sq/news/">Lajme</a></li>
+          <li><a href="../sq/vision/">Vizioni i produktit</a></li>
           <li><a href="../sq/press/">Media dhe fjalime</a></li>
           <li><a href="../sq/privacy/">Njoftimi i privatësisë</a></li>
         </ul>
