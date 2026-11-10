@@ -78,8 +78,8 @@
           <a class="link-arrow" href="#partner">Partner with us <span aria-hidden="true">→</span></a>
         </div>
         <p class="hero-meta mono"><span>Born in Finland</span><span>Working across Europe</span><span>Founded 2024</span></p>
-        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>4–6 Nov 2026</span> <span data-event-label>Invited to pitch at AIREX, Baku</span> <span aria-hidden="true">→</span></a>
-        <script type="application/json" id="upcoming-events">[{"end":"2026-11-06","tag":"4–6 Nov 2026","label":"Invited to pitch at AIREX, Baku","cta":"Meet us at AIREX, Baku","meet":"./?interest=event&event=AIREX%2C%20Baku#work-form"},{"end":"2026-11-26","tag":"25–26 Nov 2026","label":"Pitching on stage at MeOut Summit, Budapest","cta":"Meet us at MeOut Summit, Budapest","meet":"./?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
+        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>25–26 Nov 2026</span> <span data-event-label>Pitching on stage at MeOut Summit, Budapest</span> <span aria-hidden="true">→</span></a>
+        <script type="application/json" id="upcoming-events">[{"end":"2026-11-26","tag":"25–26 Nov 2026","label":"Pitching on stage at MeOut Summit, Budapest","cta":"Meet us at MeOut Summit, Budapest","meet":"./?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
       </div>
 
       <figure class="survey">
@@ -437,11 +437,166 @@
     </div>
   </section>
 
-  <!-- 4. Who it is for -->
+  <!-- 4. Product vision (concept). Mockups: src/partials/vision-devices.html, ideas: src/partials/vision-features.html -->
+  <section class="section pv" id="vision" aria-labelledby="vision-title">
+    <svg class="pv-facets" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="pv-f1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7B6CFF" stop-opacity=".35"/><stop offset="1" stop-color="#8EEBFF" stop-opacity=".05"/></linearGradient>
+        <linearGradient id="pv-f2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8EEBFF" stop-opacity=".22"/><stop offset="1" stop-color="#7B6CFF" stop-opacity=".02"/></linearGradient>
+      </defs>
+      <polygon points="1010,40 1110,140 1010,300 910,140" fill="url(#pv-f1)" stroke="rgba(217,210,247,.18)"/>
+      <polygon points="1010,40 1110,140 1010,160" fill="url(#pv-f2)"/>
+      <polygon points="120,520 170,570 120,650 70,570" fill="url(#pv-f2)" stroke="rgba(217,210,247,.14)"/>
+      <polygon points="1130,420 1160,450 1130,500 1100,450" fill="url(#pv-f1)" stroke="rgba(217,210,247,.12)"/>
+    </svg>
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">03 · Product vision</p>
+        <h2 id="vision-title">Where WorkGuardAI is heading: progress, measurement and safety on one plan.</h2>
+        <p class="sec-lead">A concept preview of the platform we are designing, built around the same idea as today's prototype: the DWG plan and ordinary site photos. The screens show the vision, not finished features.</p>
+      </div>
+        <!-- Product vision: laptop dashboard and phone app. Concept only; every number is a placeholder. -->
+        <figure class="pv-stage">
+          <figcaption class="pv-tags"><span class="pv-chip">Concept preview</span><span class="pv-note mono">Illustrative data</span></figcaption>
+          <div class="pv-devices">
+
+            <!-- Laptop dashboard -->
+            <div class="pv-laptop" role="img" aria-label="Concept of a laptop dashboard with illustrative data: the site plan as a coordinate map with points coloured by progress and one deviation, overall progress at 62 percent, work done versus remaining in cubic metres, three deviation alerts, and a cost summary linking measured work to an invoice draft.">
+              <div class="pv-screen">
+                <div class="pv-bar"><span class="pv-dots"><i></i><i></i><i></i></span><span>WorkGuardAI · Site 01</span><span class="mono">Updated 10:42</span></div>
+                <div class="pv-dash">
+                  <div class="pv-panel pv-map">
+                    <p class="pv-h">Site plan · coordinate map</p>
+                    <svg viewBox="0 0 400 240">
+                      <defs>
+                        <linearGradient id="pv-plan" x1="0" x2="1"><stop offset="0" stop-color="#8EEBFF"/><stop offset="1" stop-color="#7B6CFF"/></linearGradient>
+                      </defs>
+                      <g stroke="rgba(217,210,247,.12)" stroke-width="1">
+                        <path d="M40 0V240M100 0V240M160 0V240M220 0V240M280 0V240M340 0V240"/>
+                        <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
+                      </g>
+                      <g fill="#B9B2E6" font-family="JetBrains Mono, monospace" font-size="9">
+                        <text x="66" y="14">B</text><text x="126" y="14">C</text><text x="186" y="14">D</text><text x="246" y="14">E</text><text x="306" y="14">F</text>
+                      </g>
+                      <path d="M20 200 C 80 190, 110 120, 170 118 S 260 70, 380 52" fill="none" stroke="url(#pv-plan)" stroke-width="2" stroke-dasharray="5 4"/>
+                      <g stroke="#0E0B2B" stroke-width="2">
+                        <circle cx="30" cy="198" r="6" fill="#5CF2B0"/><circle cx="66" cy="186" r="6" fill="#5CF2B0"/>
+                        <circle cx="98" cy="160" r="6" fill="#5CF2B0"/><circle cx="128" cy="130" r="6" fill="#5CF2B0"/>
+                        <circle cx="170" cy="118" r="7" fill="#8EEBFF"/><circle cx="206" cy="110" r="6" fill="#8EEBFF"/>
+                        <circle cx="242" cy="94" r="6" fill="#FFB86B"/><circle cx="280" cy="80" r="6" fill="#8EEBFF"/>
+                        <circle cx="318" cy="68" r="6" fill="none" stroke="#D9D2F7"/><circle cx="356" cy="58" r="6" fill="none" stroke="#D9D2F7"/>
+                      </g>
+                      <circle class="pv-ping" cx="242" cy="94" r="6" fill="none" stroke="#FFB86B" stroke-width="1.5"/>
+                      <g font-family="JetBrains Mono, monospace" font-size="9" fill="#F4F2FF">
+                        <rect x="150" y="132" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(142,235,255,.5)"/>
+                        <text x="157" y="143">D·04</text>
+                        <rect x="222" y="104" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(255,184,107,.6)"/>
+                        <text x="229" y="115">D·07</text>
+                      </g>
+                    </svg>
+                    <p class="pv-legend"><span><i style="background:#5CF2B0"></i>Complete</span><span><i style="background:#8EEBFF"></i>In progress</span><span><i class="pv-ring"></i>Not started</span><span><i style="background:#FFB86B"></i>Deviation</span></p>
+                  </div>
+                  <div class="pv-panel pv-overall">
+                    <p class="pv-h">Overall progress</p>
+                    <p class="pv-big">62%</p>
+                    <div class="pv-meter"><span style="width:62%"></span></div>
+                  </div>
+                  <div class="pv-panel pv-split">
+                    <p class="pv-h">Work done vs remaining</p>
+                    <p class="pv-row"><span>Done</span><b>4,820 m³</b></p>
+                    <div class="pv-meter"><span style="width:62%"></span></div>
+                    <p class="pv-row"><span>Remaining</span><b>2,960 m³</b></p>
+                    <div class="pv-meter pv-meter-rem"><span style="width:38%"></span></div>
+                  </div>
+                  <div class="pv-panel pv-alerts">
+                    <p class="pv-h">Deviation alerts</p>
+                    <ul>
+                      <li>D·07 · 0.4 m above planned level</li>
+                      <li>B·03 · No new photo for 3 days</li>
+                      <li>F·05 · Possible object in the excavation</li>
+                    </ul>
+                  </div>
+                  <div class="pv-panel pv-cost">
+                    <p class="pv-h">Cost linked to measured work</p>
+                    <p class="pv-row"><span>Measured this month</span><b>1,240 m³</b></p>
+                    <p class="pv-row"><span>At contract rates</span><b>€38,400</b></p>
+                    <p class="pv-invoice"><span>Invoice draft</span><span class="pv-pill">Ready for review</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="pv-base" aria-hidden="true"></div>
+            </div>
+
+            <!-- Phone app -->
+            <div class="pv-phone" role="img" aria-label="Concept of a phone app with illustrative data: a deviation notification at point D·07, a site photo pinned to point D·04 on the plan, and progress at that point of 62 percent, with planned and estimated depth.">
+              <div class="pv-phone-screen">
+                <div class="pv-notif"><b>Deviation flagged</b><span>D·07 · 0.4 m above planned level</span></div>
+                <svg class="pv-photo" viewBox="0 0 216 150">
+                  <defs>
+                    <linearGradient id="pv-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2370"/><stop offset="1" stop-color="#4B3FA0"/></linearGradient>
+                    <linearGradient id="pv-soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A7A6A"/><stop offset="1" stop-color="#4F4338"/></linearGradient>
+                  </defs>
+                  <rect width="216" height="150" fill="url(#pv-sky)"/>
+                  <path d="M0 70H62L84 124H140L160 70H216V150H0Z" fill="url(#pv-soil)"/>
+                  <path d="M62 70L84 124H140L160 70" fill="none" stroke="#C9B9A6" stroke-width="2"/>
+                  <path d="M0 70H62L78 108H146L160 70H216" fill="none" stroke="#8EEBFF" stroke-width="1.5" stroke-dasharray="4 3"/>
+                  <g stroke="rgba(244,242,255,.25)"><path d="M54 0V150M108 0V150M162 0V150M0 50H216M0 100H216"/></g>
+                  <path d="M112 112c0-9 7-16 16-16s16 7 16 16c0 12-16 26-16 26s-16-14-16-26z" transform="translate(-16 -34)" fill="#5CF2B0" stroke="#0E0B2B" stroke-width="2"/>
+                  <circle cx="112" cy="78" r="5" fill="#0E0B2B"/>
+                  <rect x="128" y="64" width="56" height="18" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(92,242,176,.6)"/>
+                  <text x="135" y="77" fill="#F4F2FF" font-family="JetBrains Mono, monospace" font-size="10">D·04</text>
+                </svg>
+                <p class="pv-h">Photo at D·04 · 10:42</p>
+                <p class="pv-row"><span>Progress at this point</span><b class="pv-mint">62%</b></p>
+                <div class="pv-meter"><span style="width:62%"></span></div>
+                <p class="pv-row pv-small"><span>Planned depth</span><b>−2.40 m</b></p>
+                <p class="pv-row pv-small"><span>Estimated depth</span><b>−1.49 m</b></p>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <!-- Product vision: feature ideas in three groups. Wording stays at "designed to", "can help", "the idea is". -->
+        <div class="pv-groups">
+          <div class="pv-group">
+            <h3>Progress on the plan</h3>
+            <ul>
+              <li><strong>The plan as a coordinate map</strong><p>The idea is that the DWG plan becomes a map of points, each with its planned depth or level.</p></li>
+              <li><strong>Photos tied to a place</strong><p>Designed so every photo, from a phone, a fixed camera or a drone, belongs to a coordinate on the plan.</p></li>
+              <li><strong>Progress and deviation alerts</strong><p>Designed to show progress at each point and for the whole site, and to alert the team when work moves away from the plan.</p></li>
+              <li><strong>Cost linked to measured work</strong><p>The idea is to link measured quantities to contract rates, so invoicing can follow the work actually done.</p></li>
+            </ul>
+          </div>
+          <div class="pv-group">
+            <h3>Measure and connect</h3>
+            <ul>
+              <li><strong>Soil and rock volumes</strong><p>Designed to estimate how much soil and rock has been excavated and how much remains, from the same photos.</p></li>
+              <li><strong>BIM and supplier data</strong><p>The idea is to bring in BIM models and supplier data, so the plan, deliveries and progress can be compared in one place.</p></li>
+              <li><strong>Cameras, drones and connectivity</strong><p>Designed to work with fixed site cameras, drone flights and the mobile connection a site already has.</p></li>
+            </ul>
+          </div>
+          <div class="pv-group">
+            <h3>Safety and assets</h3>
+            <ul>
+              <li><strong>Machine and worker safety</strong><p>The idea is to flag when a person is inside a machine's working zone, without identifying who it is.</p></li>
+              <li><strong>Unidentified objects when digging</strong><p>Designed to flag unexpected objects in an excavation, so the team can stop and check.</p></li>
+              <li><strong>Utility cable checks</strong><p>Can help compare the dig with utility plans, as a reminder to check for cables and pipes before work continues.</p></li>
+              <li><strong>Structure condition monitoring</strong><p>The idea is to follow changes in structures such as dam walls over time, from repeated photos.</p></li>
+            </ul>
+          </div>
+        </div>
+        <p class="pv-delivery">We deliver the software and help implement it on site: set-up, connectivity and testing.</p>
+        <p class="pv-fine">The safety ideas are concepts. They do not replace site safety procedures or utility location services.</p>
+
+      <p class="pv-more"><a class="link-arrow" href="vision/">See all concept screens <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- 5. Who it is for -->
   <section class="section" id="for" aria-labelledby="for-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">03 · Who it is for</p>
+        <p class="sec-index mono">04 · Who it is for</p>
         <h2 id="for-title">For the people who build and own the groundwork.</h2>
       </div>
       <div class="audience">
@@ -469,7 +624,7 @@
     <div class="container about-grid">
       <div>
         <div class="sec-head">
-          <p class="sec-index mono">04 · About</p>
+          <p class="sec-index mono">05 · About</p>
           <h2 id="about-title">Born in Finland, working across Europe.</h2>
           <p class="sec-lead">WorkGuardAI was founded in Finland on 30 July 2024. The team works across Europe, close to the contractors and public owners who would use the product.</p>
         </div>
@@ -507,7 +662,7 @@
   <section class="section" id="milestones" aria-labelledby="ms-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">05 · Milestones</p>
+        <p class="sec-index mono">06 · Milestones</p>
         <h2 id="ms-title">From a pre-incubator idea to a working prototype, and onto Europe's pitch stages.</h2>
         <p class="sec-lead">Three years of programmes, competitions and building, each step recorded with its source.</p>
       </div>
@@ -684,7 +839,7 @@
   <section class="section section-alt" id="news" aria-labelledby="news-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">06 · News</p>
+        <p class="sec-index mono">07 · News</p>
         <h2 id="news-title">Latest news</h2>
       </div>
       <ol class="news-list">
@@ -714,7 +869,7 @@
   <section class="section" id="team" aria-labelledby="team-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">07 · Team</p>
+        <p class="sec-index mono">08 · Team</p>
         <h2 id="team-title">Team</h2>
       </div>
       <ul class="team">
@@ -732,7 +887,7 @@
   <section class="section section-alt" id="faq" aria-labelledby="faq-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">08 · FAQ</p>
+        <p class="sec-index mono">09 · FAQ</p>
         <h2 id="faq-title">Frequently asked questions</h2>
       </div>
       <div class="faq">
@@ -748,13 +903,13 @@
   <section class="section" id="work" aria-labelledby="work-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">09 · Work with us</p>
+        <p class="sec-index mono">10 · Work with us</p>
         <h2 id="work-title">Work with us</h2>
       </div>
       <ul class="who">
         <li><h3>Customers</h3><p>Groundwork and infrastructure teams with a DWG plan who want to test progress measurement on a real site.</p><a class="link-arrow" href="./?interest=pilot#work-form">Book a pilot call <span aria-hidden="true">→</span></a></li>
         <li><h3>Universities, research groups and hubs</h3><p>Research and learning collaborations: students and researchers working with a real prototype; scope, data use and IP are agreed in writing first.</p><a class="link-arrow" href="./?interest=research#work-form">Talk about a collaboration <span aria-hidden="true">→</span></a></li>
-        <li><h3>Events</h3><p>Organising an event, or attending one we will be at? Tell us which one.</p><a class="link-arrow" id="event-cta-link" href="./?interest=event&amp;event=AIREX%2C%20Baku#work-form"><span id="event-cta" data-none="Talk to us">Meet us at AIREX, Baku</span> <span aria-hidden="true">→</span></a></li>
+        <li><h3>Events</h3><p>Organising an event, or attending one we will be at? Tell us which one.</p><a class="link-arrow" id="event-cta-link" href="./?interest=event&amp;event=MeOut%20Summit%2C%20Budapest#work-form"><span id="event-cta" data-none="Talk to us">Meet us at MeOut Summit, Budapest</span> <span aria-hidden="true">→</span></a></li>
         <li><h3>Press, podcasts and speaking</h3><p>Facts, photos and contact details are on the press page. <a href="press/">Press and speaking</a></p><a class="link-arrow" href="./?interest=press#work-form">Get in touch <span aria-hidden="true">→</span></a></li>
       </ul>
     </div>
@@ -764,25 +919,10 @@
   <section class="section section-alt" id="events" aria-labelledby="events-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">10 · Events</p>
+        <p class="sec-index mono">11 · Events</p>
         <h2 id="events-title">Meet us at</h2>
       </div>
       <ul class="events">
-        <li id="event-airex-2026" data-end="2026-11-06">
-          <time class="mono" datetime="2026-11-04">4–6 Nov 2026</time>
-          <div>
-            <h3>AIREX, Baku</h3>
-            <p>Invited to pitch at AIREX, Baku</p>
-            <div class="share"><span class="mono">Share</span>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fworkguardai.com%2F%23event-airex-2026" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden">(opens in a new tab)</span></a>
-            <a href="https://wa.me/?text=Invited%20to%20pitch%20at%20AIREX%2C%20Baku%20https%3A%2F%2Fworkguardai.com%2F%23event-airex-2026" rel="noopener" target="_blank">WhatsApp<span class="visually-hidden">(opens in a new tab)</span></a>
-            <a href="mailto:?subject=Invited%20to%20pitch%20at%20AIREX%2C%20Baku&amp;body=https%3A%2F%2Fworkguardai.com%2F%23event-airex-2026">Email</a>
-            <a href="https://workguardai.com/#event-airex-2026" data-copy="Link copied">Copy link</a>
-            <button type="button" class="share-native" data-share-title="Invited to pitch at AIREX, Baku" data-share-url="https://workguardai.com/#event-airex-2026" hidden>Share…</button>
-          </div>
-          </div>
-          <a class="btn btn-outline btn-small" href="./?interest=event&amp;event=AIREX%2C%20Baku#work-form">Request a meeting</a>
-        </li>
         <li id="event-meout-2026" data-end="2026-11-26">
           <time class="mono" datetime="2026-11-25">25–26 Nov 2026</time>
           <div>
@@ -807,7 +947,7 @@
     <div class="container pilot-grid">
       <div>
         <div class="sec-head">
-          <p class="sec-index mono">11 · Pilot</p>
+          <p class="sec-index mono">12 · Pilot</p>
           <h2 id="pilot-title">Book a pilot call.</h2>
           <p class="sec-lead">We are looking for the first live site. If you run groundwork or infrastructure work and have DWG plans for it, a short call is enough to see whether a pilot fits.</p>
         </div>
@@ -898,6 +1038,7 @@
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
           <li><a href="#work">Work with us</a></li>
           <li><a href="news/">News</a></li>
+          <li><a href="vision/">Product vision</a></li>
           <li><a href="press/">Press and speaking</a></li>
           <li><a href="privacy/">Privacy notice</a></li>
         </ul>

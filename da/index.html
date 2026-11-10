@@ -78,8 +78,8 @@
           <a class="link-arrow" href="#partner">Bliv partner <span aria-hidden="true">→</span></a>
         </div>
         <p class="hero-meta mono"><span>Født i Finland</span><span>Arbejder i hele Europa</span><span>Grundlagt 2024</span></p>
-        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>4.–6. nov. 2026</span> <span data-event-label>Inviteret til at pitche på AIREX, Baku</span> <span aria-hidden="true">→</span></a>
-        <script type="application/json" id="upcoming-events">[{"end":"2026-11-06","tag":"4.–6. nov. 2026","label":"Inviteret til at pitche på AIREX, Baku","cta":"Mød os på AIREX, Baku","meet":"../da/?interest=event&event=AIREX%2C%20Baku#work-form"},{"end":"2026-11-26","tag":"25.–26. nov. 2026","label":"Pitcher på scenen ved MeOut Summit, Budapest","cta":"Mød os på MeOut Summit, Budapest","meet":"../da/?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
+        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>25.–26. nov. 2026</span> <span data-event-label>Pitcher på scenen ved MeOut Summit, Budapest</span> <span aria-hidden="true">→</span></a>
+        <script type="application/json" id="upcoming-events">[{"end":"2026-11-26","tag":"25.–26. nov. 2026","label":"Pitcher på scenen ved MeOut Summit, Budapest","cta":"Mød os på MeOut Summit, Budapest","meet":"../da/?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
       </div>
 
       <figure class="survey">
@@ -437,11 +437,166 @@
     </div>
   </section>
 
-  <!-- 4. Who it is for -->
+  <!-- 4. Product vision (concept). Mockups: src/partials/vision-devices.html, ideas: src/partials/vision-features.html -->
+  <section class="section pv" id="vision" aria-labelledby="vision-title">
+    <svg class="pv-facets" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="pv-f1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7B6CFF" stop-opacity=".35"/><stop offset="1" stop-color="#8EEBFF" stop-opacity=".05"/></linearGradient>
+        <linearGradient id="pv-f2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8EEBFF" stop-opacity=".22"/><stop offset="1" stop-color="#7B6CFF" stop-opacity=".02"/></linearGradient>
+      </defs>
+      <polygon points="1010,40 1110,140 1010,300 910,140" fill="url(#pv-f1)" stroke="rgba(217,210,247,.18)"/>
+      <polygon points="1010,40 1110,140 1010,160" fill="url(#pv-f2)"/>
+      <polygon points="120,520 170,570 120,650 70,570" fill="url(#pv-f2)" stroke="rgba(217,210,247,.14)"/>
+      <polygon points="1130,420 1160,450 1130,500 1100,450" fill="url(#pv-f1)" stroke="rgba(217,210,247,.12)"/>
+    </svg>
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">03 · Produktvision</p>
+        <h2 id="vision-title">Hvor WorkGuardAI er på vej hen: fremdrift, måling og sikkerhed på én tegning.</h2>
+        <p class="sec-lead">En konceptvisning af den platform, vi designer, bygget på samme idé som dagens prototype: DWG-tegningen og almindelige fotos fra byggepladsen. Skærmbillederne viser visionen, ikke færdige funktioner.</p>
+      </div>
+        <!-- Product vision: laptop dashboard and phone app. Concept only; every number is a placeholder. -->
+        <figure class="pv-stage">
+          <figcaption class="pv-tags"><span class="pv-chip">Konceptvisning</span><span class="pv-note mono">Illustrative data</span></figcaption>
+          <div class="pv-devices">
+
+            <!-- Laptop dashboard -->
+            <div class="pv-laptop" role="img" aria-label="Koncept for et dashboard på en bærbar med illustrative data: byggepladsens tegning som et koordinatkort med punkter farvet efter fremdrift og én afvigelse, samlet fremdrift på 62 procent, udført arbejde mod resterende i kubikmeter, tre afvigelsesadvarsler og en omkostningsoversigt, der kobler målt arbejde til et fakturaudkast.">
+              <div class="pv-screen">
+                <div class="pv-bar"><span class="pv-dots"><i></i><i></i><i></i></span><span>WorkGuardAI · Plads 01</span><span class="mono">Opdateret 10:42</span></div>
+                <div class="pv-dash">
+                  <div class="pv-panel pv-map">
+                    <p class="pv-h">Pladstegning · koordinatkort</p>
+                    <svg viewBox="0 0 400 240">
+                      <defs>
+                        <linearGradient id="pv-plan" x1="0" x2="1"><stop offset="0" stop-color="#8EEBFF"/><stop offset="1" stop-color="#7B6CFF"/></linearGradient>
+                      </defs>
+                      <g stroke="rgba(217,210,247,.12)" stroke-width="1">
+                        <path d="M40 0V240M100 0V240M160 0V240M220 0V240M280 0V240M340 0V240"/>
+                        <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
+                      </g>
+                      <g fill="#B9B2E6" font-family="JetBrains Mono, monospace" font-size="9">
+                        <text x="66" y="14">B</text><text x="126" y="14">C</text><text x="186" y="14">D</text><text x="246" y="14">E</text><text x="306" y="14">F</text>
+                      </g>
+                      <path d="M20 200 C 80 190, 110 120, 170 118 S 260 70, 380 52" fill="none" stroke="url(#pv-plan)" stroke-width="2" stroke-dasharray="5 4"/>
+                      <g stroke="#0E0B2B" stroke-width="2">
+                        <circle cx="30" cy="198" r="6" fill="#5CF2B0"/><circle cx="66" cy="186" r="6" fill="#5CF2B0"/>
+                        <circle cx="98" cy="160" r="6" fill="#5CF2B0"/><circle cx="128" cy="130" r="6" fill="#5CF2B0"/>
+                        <circle cx="170" cy="118" r="7" fill="#8EEBFF"/><circle cx="206" cy="110" r="6" fill="#8EEBFF"/>
+                        <circle cx="242" cy="94" r="6" fill="#FFB86B"/><circle cx="280" cy="80" r="6" fill="#8EEBFF"/>
+                        <circle cx="318" cy="68" r="6" fill="none" stroke="#D9D2F7"/><circle cx="356" cy="58" r="6" fill="none" stroke="#D9D2F7"/>
+                      </g>
+                      <circle class="pv-ping" cx="242" cy="94" r="6" fill="none" stroke="#FFB86B" stroke-width="1.5"/>
+                      <g font-family="JetBrains Mono, monospace" font-size="9" fill="#F4F2FF">
+                        <rect x="150" y="132" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(142,235,255,.5)"/>
+                        <text x="157" y="143">D·04</text>
+                        <rect x="222" y="104" width="46" height="16" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(255,184,107,.6)"/>
+                        <text x="229" y="115">D·07</text>
+                      </g>
+                    </svg>
+                    <p class="pv-legend"><span><i style="background:#5CF2B0"></i>Færdig</span><span><i style="background:#8EEBFF"></i>I gang</span><span><i class="pv-ring"></i>Ikke startet</span><span><i style="background:#FFB86B"></i>Afvigelse</span></p>
+                  </div>
+                  <div class="pv-panel pv-overall">
+                    <p class="pv-h">Samlet fremdrift</p>
+                    <p class="pv-big">62%</p>
+                    <div class="pv-meter"><span style="width:62%"></span></div>
+                  </div>
+                  <div class="pv-panel pv-split">
+                    <p class="pv-h">Udført mod resterende</p>
+                    <p class="pv-row"><span>Udført</span><b>4,820 m³</b></p>
+                    <div class="pv-meter"><span style="width:62%"></span></div>
+                    <p class="pv-row"><span>Resterende</span><b>2,960 m³</b></p>
+                    <div class="pv-meter pv-meter-rem"><span style="width:38%"></span></div>
+                  </div>
+                  <div class="pv-panel pv-alerts">
+                    <p class="pv-h">Afvigelsesadvarsler</p>
+                    <ul>
+                      <li>D·07 · 0,4 m over planlagt kote</li>
+                      <li>B·03 · Intet nyt foto i 3 dage</li>
+                      <li>F·05 · Mulig genstand i udgravningen</li>
+                    </ul>
+                  </div>
+                  <div class="pv-panel pv-cost">
+                    <p class="pv-h">Omkostninger for målt arbejde</p>
+                    <p class="pv-row"><span>Målt denne måned</span><b>1,240 m³</b></p>
+                    <p class="pv-row"><span>Til kontraktpriser</span><b>€38,400</b></p>
+                    <p class="pv-invoice"><span>Fakturaudkast</span><span class="pv-pill">Klar til gennemsyn</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="pv-base" aria-hidden="true"></div>
+            </div>
+
+            <!-- Phone app -->
+            <div class="pv-phone" role="img" aria-label="Koncept for en telefonapp med illustrative data: en afvigelsesbesked ved punkt D·07, et foto fra pladsen knyttet til punkt D·04 på tegningen og fremdrift ved punktet på 62 procent med planlagt og estimeret dybde.">
+              <div class="pv-phone-screen">
+                <div class="pv-notif"><b>Afvigelse markeret</b><span>D·07 · 0,4 m over planlagt kote</span></div>
+                <svg class="pv-photo" viewBox="0 0 216 150">
+                  <defs>
+                    <linearGradient id="pv-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2370"/><stop offset="1" stop-color="#4B3FA0"/></linearGradient>
+                    <linearGradient id="pv-soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A7A6A"/><stop offset="1" stop-color="#4F4338"/></linearGradient>
+                  </defs>
+                  <rect width="216" height="150" fill="url(#pv-sky)"/>
+                  <path d="M0 70H62L84 124H140L160 70H216V150H0Z" fill="url(#pv-soil)"/>
+                  <path d="M62 70L84 124H140L160 70" fill="none" stroke="#C9B9A6" stroke-width="2"/>
+                  <path d="M0 70H62L78 108H146L160 70H216" fill="none" stroke="#8EEBFF" stroke-width="1.5" stroke-dasharray="4 3"/>
+                  <g stroke="rgba(244,242,255,.25)"><path d="M54 0V150M108 0V150M162 0V150M0 50H216M0 100H216"/></g>
+                  <path d="M112 112c0-9 7-16 16-16s16 7 16 16c0 12-16 26-16 26s-16-14-16-26z" transform="translate(-16 -34)" fill="#5CF2B0" stroke="#0E0B2B" stroke-width="2"/>
+                  <circle cx="112" cy="78" r="5" fill="#0E0B2B"/>
+                  <rect x="128" y="64" width="56" height="18" rx="3" fill="rgba(14,11,43,.85)" stroke="rgba(92,242,176,.6)"/>
+                  <text x="135" y="77" fill="#F4F2FF" font-family="JetBrains Mono, monospace" font-size="10">D·04</text>
+                </svg>
+                <p class="pv-h">Foto ved D·04 · 10:42</p>
+                <p class="pv-row"><span>Fremdrift ved punktet</span><b class="pv-mint">62%</b></p>
+                <div class="pv-meter"><span style="width:62%"></span></div>
+                <p class="pv-row pv-small"><span>Planlagt dybde</span><b>−2.40 m</b></p>
+                <p class="pv-row pv-small"><span>Estimeret dybde</span><b>−1.49 m</b></p>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <!-- Product vision: feature ideas in three groups. Wording stays at "designed to", "can help", "the idea is". -->
+        <div class="pv-groups">
+          <div class="pv-group">
+            <h3>Fremdrift på tegningen</h3>
+            <ul>
+              <li><strong>Tegningen som koordinatkort</strong><p>Idéen er, at DWG-tegningen bliver et kort over punkter, hver med sin planlagte dybde eller kote.</p></li>
+              <li><strong>Fotos knyttet til et sted</strong><p>Designet sådan, at hvert foto, fra telefon, fast kamera eller drone, hører til et koordinat på tegningen.</p></li>
+              <li><strong>Fremdrift og afvigelsesadvarsler</strong><p>Designet til at vise fremdriften ved hvert punkt og for hele pladsen og advare teamet, når arbejdet afviger fra tegningen.</p></li>
+              <li><strong>Omkostninger koblet til målt arbejde</strong><p>Idéen er at koble målte mængder til kontraktpriser, så faktureringen kan følge det arbejde, der faktisk er udført.</p></li>
+            </ul>
+          </div>
+          <div class="pv-group">
+            <h3>Mål og forbind</h3>
+            <ul>
+              <li><strong>Mængder af jord og klippe</strong><p>Designet til at estimere, hvor meget jord og klippe der er udgravet, og hvor meget der mangler, ud fra de samme fotos.</p></li>
+              <li><strong>BIM- og leverandørdata</strong><p>Idéen er at hente BIM-modeller og leverandørdata ind, så tegning, leverancer og fremdrift kan sammenlignes ét sted.</p></li>
+              <li><strong>Kameraer, droner og forbindelse</strong><p>Designet til at fungere med faste kameraer, droneflyvninger og den mobilforbindelse, pladsen allerede har.</p></li>
+            </ul>
+          </div>
+          <div class="pv-group">
+            <h3>Sikkerhed og anlæg</h3>
+            <ul>
+              <li><strong>Sikkerhed for maskiner og medarbejdere</strong><p>Idéen er at markere, når en person er inden for en maskines arbejdsområde, uden at identificere personen.</p></li>
+              <li><strong>Ukendte genstande under gravning</strong><p>Designet til at markere uventede genstande i en udgravning, så teamet kan stoppe og tjekke.</p></li>
+              <li><strong>Tjek af kabler og ledninger</strong><p>Kan hjælpe med at sammenligne udgravningen med ledningsplaner som en påmindelse om at tjekke for kabler og rør, før arbejdet fortsætter.</p></li>
+              <li><strong>Overvågning af konstruktioners tilstand</strong><p>Idéen er at følge ændringer i konstruktioner som dæmningsvægge over tid ud fra gentagne fotos.</p></li>
+            </ul>
+          </div>
+        </div>
+        <p class="pv-delivery">Vi leverer softwaren og hjælper med at implementere den på pladsen: opsætning, forbindelse og test.</p>
+        <p class="pv-fine">Sikkerhedsidéerne er koncepter. De erstatter ikke pladsens sikkerhedsprocedurer eller ledningsoplysning.</p>
+
+      <p class="pv-more"><a class="link-arrow" href="../da/vision/">Se alle konceptskærmbilleder <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- 5. Who it is for -->
   <section class="section" id="for" aria-labelledby="for-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">03 · Hvem det er til</p>
+        <p class="sec-index mono">04 · Hvem det er til</p>
         <h2 id="for-title">Til dem, der bygger og ejer anlægsarbejdet.</h2>
       </div>
       <div class="audience">
@@ -469,7 +624,7 @@
     <div class="container about-grid">
       <div>
         <div class="sec-head">
-          <p class="sec-index mono">04 · Om os</p>
+          <p class="sec-index mono">05 · Om os</p>
           <h2 id="about-title">Født i Finland, arbejder i hele Europa.</h2>
           <p class="sec-lead">WorkGuardAI blev grundlagt i Finland den 30. juli 2024. Holdet arbejder i hele Europa, tæt på de entreprenører og offentlige bygherrer, der skal bruge produktet.</p>
         </div>
@@ -507,7 +662,7 @@
   <section class="section" id="milestones" aria-labelledby="ms-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">05 · Milepæle</p>
+        <p class="sec-index mono">06 · Milepæle</p>
         <h2 id="ms-title">Fra en idé i en præinkubator til en fungerende prototype – og ud på Europas pitchscener.</h2>
         <p class="sec-lead">Tre år med programmer, konkurrencer og udvikling, hvert skridt med kilde.</p>
       </div>
@@ -684,7 +839,7 @@
   <section class="section section-alt" id="news" aria-labelledby="news-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">06 · Nyheder</p>
+        <p class="sec-index mono">07 · Nyheder</p>
         <h2 id="news-title">Seneste nyt</h2>
       </div>
       <ol class="news-list">
@@ -714,7 +869,7 @@
   <section class="section" id="team" aria-labelledby="team-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">07 · Team</p>
+        <p class="sec-index mono">08 · Team</p>
         <h2 id="team-title">Team</h2>
       </div>
       <ul class="team">
@@ -732,7 +887,7 @@
   <section class="section section-alt" id="faq" aria-labelledby="faq-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">08 · FAQ</p>
+        <p class="sec-index mono">09 · FAQ</p>
         <h2 id="faq-title">Ofte stillede spørgsmål</h2>
       </div>
       <div class="faq">
@@ -748,13 +903,13 @@
   <section class="section" id="work" aria-labelledby="work-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">09 · Arbejd med os</p>
+        <p class="sec-index mono">10 · Arbejd med os</p>
         <h2 id="work-title">Arbejd med os</h2>
       </div>
       <ul class="who">
         <li><h3>Kunder</h3><p>Jord- og anlægsteams med en DWG-tegning, der vil teste fremdriftsmåling på en rigtig byggeplads.</p><a class="link-arrow" href="../da/?interest=pilot#work-form">Book et pilotopkald <span aria-hidden="true">→</span></a></li>
         <li><h3>Universiteter, forskningsgrupper og hubs</h3><p>Forsknings- og læringssamarbejder: studerende og forskere arbejder med en rigtig prototype; omfang, databrug og IP aftales først skriftligt.</p><a class="link-arrow" href="../da/?interest=research#work-form">Tal om et samarbejde <span aria-hidden="true">→</span></a></li>
-        <li><h3>Begivenheder</h3><p>Arrangerer du en begivenhed, eller deltager du i en, vi også er med på? Fortæl os hvilken.</p><a class="link-arrow" id="event-cta-link" href="../da/?interest=event&amp;event=AIREX%2C%20Baku#work-form"><span id="event-cta" data-none="Tal med os">Mød os på AIREX, Baku</span> <span aria-hidden="true">→</span></a></li>
+        <li><h3>Begivenheder</h3><p>Arrangerer du en begivenhed, eller deltager du i en, vi også er med på? Fortæl os hvilken.</p><a class="link-arrow" id="event-cta-link" href="../da/?interest=event&amp;event=MeOut%20Summit%2C%20Budapest#work-form"><span id="event-cta" data-none="Tal med os">Mød os på MeOut Summit, Budapest</span> <span aria-hidden="true">→</span></a></li>
         <li><h3>Presse, podcasts og foredrag</h3><p>Fakta, fotos og kontaktoplysninger findes på pressesiden. <a href="../da/press/">Presse og foredrag</a></p><a class="link-arrow" href="../da/?interest=press#work-form">Kontakt os <span aria-hidden="true">→</span></a></li>
       </ul>
     </div>
@@ -764,25 +919,10 @@
   <section class="section section-alt" id="events" aria-labelledby="events-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">10 · Begivenheder</p>
+        <p class="sec-index mono">11 · Begivenheder</p>
         <h2 id="events-title">Mød os på</h2>
       </div>
       <ul class="events">
-        <li id="event-airex-2026" data-end="2026-11-06">
-          <time class="mono" datetime="2026-11-04">4.–6. nov. 2026</time>
-          <div>
-            <h3>AIREX, Baku</h3>
-            <p>Inviteret til at pitche på AIREX, Baku</p>
-            <div class="share"><span class="mono">Del</span>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fworkguardai.com%2Fda%2F%23event-airex-2026" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden">(åbner i en ny fane)</span></a>
-            <a href="https://wa.me/?text=Inviteret%20til%20at%20pitche%20p%C3%A5%20AIREX%2C%20Baku%20https%3A%2F%2Fworkguardai.com%2Fda%2F%23event-airex-2026" rel="noopener" target="_blank">WhatsApp<span class="visually-hidden">(åbner i en ny fane)</span></a>
-            <a href="mailto:?subject=Inviteret%20til%20at%20pitche%20p%C3%A5%20AIREX%2C%20Baku&amp;body=https%3A%2F%2Fworkguardai.com%2Fda%2F%23event-airex-2026">E-mail</a>
-            <a href="https://workguardai.com/da/#event-airex-2026" data-copy="Link kopieret">Kopiér link</a>
-            <button type="button" class="share-native" data-share-title="Inviteret til at pitche på AIREX, Baku" data-share-url="https://workguardai.com/da/#event-airex-2026" hidden>Del…</button>
-          </div>
-          </div>
-          <a class="btn btn-outline btn-small" href="../da/?interest=event&amp;event=AIREX%2C%20Baku#work-form">Bed om et møde</a>
-        </li>
         <li id="event-meout-2026" data-end="2026-11-26">
           <time class="mono" datetime="2026-11-25">25.–26. nov. 2026</time>
           <div>
@@ -807,7 +947,7 @@
     <div class="container pilot-grid">
       <div>
         <div class="sec-head">
-          <p class="sec-index mono">11 · Pilot</p>
+          <p class="sec-index mono">12 · Pilot</p>
           <h2 id="pilot-title">Book et pilotopkald.</h2>
           <p class="sec-lead">Vi søger den første aktive byggeplads. Hvis I udfører jord- eller anlægsarbejde og har DWG-tegninger til det, er et kort opkald nok til at se, om en pilot passer.</p>
         </div>
@@ -898,6 +1038,7 @@
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
           <li><a href="#work">Arbejd med os</a></li>
           <li><a href="../da/news/">Nyheder</a></li>
+          <li><a href="../da/vision/">Produktvision</a></li>
           <li><a href="../da/press/">Presse og foredrag</a></li>
           <li><a href="../da/privacy/">Privatlivspolitik</a></li>
         </ul>

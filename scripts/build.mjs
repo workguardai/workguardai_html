@@ -13,6 +13,7 @@ const PAGES = [
   { template: await readFile('src/privacy.html', 'utf8'), slug: 'privacy/', title: 'privacy.title', description: 'privacy.metaDesc' },
   { template: await readFile('src/news.html', 'utf8'), slug: 'news/', title: 'news.title', description: 'news.metaDesc' },
   { template: await readFile('src/press.html', 'utf8'), slug: 'press/', title: 'press.title', description: 'press.metaDesc' },
+  { template: await readFile('src/vision.html', 'utf8'), slug: 'vision/', title: 'vpage.title', description: 'vpage.metaDesc' },
   ...news.filter((n) => n.article).map((item) => ({ template: articleTemplate, slug: `news/${item.id}/`, item })),
 ];
 const LANGS = config.languages;
@@ -28,7 +29,12 @@ const pathOf = (lang) => (lang === 'en' ? '' : `${lang}/`);
 const indexable = (lang) => (dicts[lang]._meta?.status ?? 'source') !== 'needs native review';
 const urlOf = (lang, slug = '') => `${config.baseUrl}/${pathOf(lang)}${slug}`;
 
-const usedKeys = new Set(PAGES.flatMap(({ template }) => [...template.matchAll(/\{\{([^@}][^}]*)\}\}/g)].map((m) => m[1])));
+// Shared blocks, inserted with {{@name}} before the text keys are filled in.
+const PARTIALS = {
+  visionDevices: await readFile('src/partials/vision-devices.html', 'utf8'),
+  visionFeatures: await readFile('src/partials/vision-features.html', 'utf8'),
+};
+const usedKeys = new Set([...PAGES.map(({ template }) => template), ...Object.values(PARTIALS)].flatMap((template) => [...template.matchAll(/\{\{([^@}][^}]*)\}\}/g)].map((m) => m[1])));
 let problems = 0;
 
 // Every news text must exist in every language.
@@ -173,6 +179,8 @@ for (const lang of LANGS) {
       pageDescription: esc(pageDescription),
       og: [...og, ...twitter].join('\n'),
       press: `${base}${pathOf(lang)}press/`,
+      visionPage: `${base}${pathOf(lang)}vision/`,
+      ...PARTIALS,
       eventList: upcoming.map((n) => eventRow(n, lang, home, t)).join('\n'),
       eventMeet: esc(events[0]?.meet ?? `${home}?interest=event#work-form`),
       articleTitle: item ? esc(item.title[lang]) : '',

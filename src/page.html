@@ -416,11 +416,35 @@
     </div>
   </section>
 
-  <!-- 4. Who it is for -->
+  <!-- 4. Product vision (concept). Mockups: src/partials/vision-devices.html, ideas: src/partials/vision-features.html -->
+  <section class="section pv" id="vision" aria-labelledby="vision-title">
+    <svg class="pv-facets" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="pv-f1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7B6CFF" stop-opacity=".35"/><stop offset="1" stop-color="#8EEBFF" stop-opacity=".05"/></linearGradient>
+        <linearGradient id="pv-f2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8EEBFF" stop-opacity=".22"/><stop offset="1" stop-color="#7B6CFF" stop-opacity=".02"/></linearGradient>
+      </defs>
+      <polygon points="1010,40 1110,140 1010,300 910,140" fill="url(#pv-f1)" stroke="rgba(217,210,247,.18)"/>
+      <polygon points="1010,40 1110,140 1010,160" fill="url(#pv-f2)"/>
+      <polygon points="120,520 170,570 120,650 70,570" fill="url(#pv-f2)" stroke="rgba(217,210,247,.14)"/>
+      <polygon points="1130,420 1160,450 1130,500 1100,450" fill="url(#pv-f1)" stroke="rgba(217,210,247,.12)"/>
+    </svg>
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-index mono">03 · {{vis.index}}</p>
+        <h2 id="vision-title">{{vis.h2}}</h2>
+        <p class="sec-lead">{{vis.lead}}</p>
+      </div>
+{{@visionDevices}}
+{{@visionFeatures}}
+      <p class="pv-more"><a class="link-arrow" href="{{@visionPage}}">{{vis.more}} <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- 5. Who it is for -->
   <section class="section" id="for" aria-labelledby="for-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">03 · {{for.index}}</p>
+        <p class="sec-index mono">04 · {{for.index}}</p>
         <h2 id="for-title">{{for.h2}}</h2>
       </div>
       <div class="audience">
@@ -448,7 +472,7 @@
     <div class="container about-grid">
       <div>
         <div class="sec-head">
-          <p class="sec-index mono">04 · {{about.index}}</p>
+          <p class="sec-index mono">05 · {{about.index}}</p>
           <h2 id="about-title">{{about.h2}}</h2>
           <p class="sec-lead">{{about.lead}}</p>
         </div>
@@ -486,7 +510,7 @@
   <section class="section" id="milestones" aria-labelledby="ms-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">05 · {{ms.index}}</p>
+        <p class="sec-index mono">06 · {{ms.index}}</p>
         <h2 id="ms-title">{{ms.h2}}</h2>
         <p class="sec-lead">{{ms.lead}}</p>
       </div>
@@ -663,7 +687,7 @@
   <section class="section section-alt" id="news" aria-labelledby="news-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">06 · {{news.index}}</p>
+        <p class="sec-index mono">07 · {{news.index}}</p>
         <h2 id="news-title">{{news.h2}}</h2>
       </div>
       <ol class="news-list">
@@ -677,7 +701,7 @@
   <section class="section" id="team" aria-labelledby="team-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">07 · {{team.index}}</p>
+        <p class="sec-index mono">08 · {{team.index}}</p>
         <h2 id="team-title">{{team.h2}}</h2>
       </div>
       <ul class="team">
@@ -695,7 +719,7 @@
   <section class="section section-alt" id="faq" aria-labelledby="faq-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">08 · {{faq.index}}</p>
+        <p class="sec-index mono">09 · {{faq.index}}</p>
         <h2 id="faq-title">{{faq.h2}}</h2>
       </div>
       <div class="faq">
@@ -711,7 +735,7 @@
   <section class="section" id="work" aria-labelledby="work-title">
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">09 · {{work.index}}</p>
+        <p class="sec-index mono">10 · {{work.index}}</p>
         <h2 id="work-title">{{work.h2}}</h2>
       </div>
       <ul class="who">
@@ -727,7 +751,7 @@
   <section class="section section-alt" id="events" aria-labelledby="events-title"{{@eventHidden}}>
     <div class="container">
       <div class="sec-head">
-        <p class="sec-index mono">10 · {{ev.index}}</p>
+        <p class="sec-index mono">11 · {{ev.index}}</p>
         <h2 id="events-title">{{ev.h2}}</h2>
       </div>
       <ul class="events">
@@ -741,7 +765,7 @@
     <div class="container pilot-grid">
       <div>
         <div class="sec-head">
-          <p class="sec-index mono">11 · {{pilot.index}}</p>
+          <p class="sec-index mono">12 · {{pilot.index}}</p>
           <h2 id="pilot-title">{{pilot.h2}}</h2>
           <p class="sec-lead">{{pilot.lead}}</p>
         </div>
@@ -832,6 +856,7 @@
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
           <li><a href="#work">{{work.h2}}</a></li>
           <li><a href="{{@newsPage}}">{{nav.news}}</a></li>
+          <li><a href="{{@visionPage}}">{{vis.index}}</a></li>
           <li><a href="{{@press}}">{{press.link}}</a></li>
           <li><a href="{{@privacy}}">{{privacy.link}}</a></li>
         </ul>
