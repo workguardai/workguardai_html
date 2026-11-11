@@ -830,6 +830,41 @@ h1, h2, h3 { font-weight: 700; }
 .x-photo img { width: 100%; height: auto; border-radius: 32px; box-shadow: 0 40px 80px -40px rgba(5, 3, 20, .9); }
 .x-photo figcaption { margin-top: var(--s-3); color: var(--on-dark-2); }
 
+/* 6b. AIREX 2026 gallery: wide main photo, masonry columns, small lightbox */
+.x-gallery { margin-top: var(--s-9); }
+.x-gallery h3 { font: 700 clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem)/1.1 var(--font-head); letter-spacing: -0.025em; }
+.x-gal-feature { margin-top: var(--s-6); }
+.x-gal-open { display: block; border-radius: 32px; }
+.x-gal { list-style: none; margin: var(--s-7) 0 0; padding: 0; columns: 1; column-gap: var(--s-5); }
+@media (min-width: 600px) { .x-gal { columns: 2; } }
+@media (min-width: 960px) { .x-gal { columns: 3; } }
+.x-gal li { break-inside: avoid; margin-bottom: var(--s-6); }
+.x-gal figure { margin: 0; }
+.x-gal .x-gal-open { border-radius: 20px; }
+.x-gal img { display: block; width: 100%; height: auto; border-radius: 20px; box-shadow: 0 30px 60px -36px rgba(5, 3, 20, .9); }
+.x-gal figcaption { margin-top: var(--s-3); font-size: var(--fs-small); color: var(--on-dark-2); }
+.x-gal-open:focus-visible { outline: 3px solid var(--ice); outline-offset: 4px; }
+.x-gal-thanks { margin-top: var(--s-5); max-width: 40rem; color: var(--on-dark-2); }
+.x-lightbox { width: min(100% - 2 * var(--gutter), 1400px); max-width: none; max-height: none; margin: auto; padding: 56px 0 0; border: 0; background: transparent; color: var(--on-dark); overflow: visible; }
+.x-lightbox::backdrop { background: rgba(14, 11, 43, .94); }
+.x-lightbox figure { margin: 0; text-align: center; }
+.x-lightbox img { display: block; margin: 0 auto; width: auto; height: auto; max-width: 100%; max-height: calc(100vh - 170px); border-radius: 20px; }
+.x-lightbox figcaption { margin-top: var(--s-4); color: var(--on-dark-2); }
+.x-lb-count { color: var(--ice); margin-right: var(--s-2); }
+.x-lb-btn { position: absolute; display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 1px solid rgba(244, 242, 255, .35); border-radius: 50%; background: rgba(14, 11, 43, .7); color: var(--on-dark); cursor: pointer; }
+.x-lb-btn:hover { background: var(--night-3); }
+.x-lb-btn:focus-visible { outline: 3px solid var(--ice); outline-offset: 3px; }
+.x-lb-btn svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.x-lb-close { top: 0; right: 0; }
+.x-lb-prev, .x-lb-next { top: calc(50% - 24px); }
+.x-lb-prev { left: 8px; }
+.x-lb-next { right: 8px; }
+@media (max-width: 599px) {
+  .x-lb-prev, .x-lb-next { top: 0; }
+  .x-lb-prev { left: 0; }
+  .x-lb-next { left: 60px; right: auto; }
+}
+
 /* 7. Team: portraits in circles, no boxes */
 .x-team { list-style: none; margin: var(--s-8) 0 0; padding: 0; display: grid; gap: var(--s-7) var(--s-5); grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 720px) { .x-team { grid-template-columns: repeat(3, 1fr); } }
