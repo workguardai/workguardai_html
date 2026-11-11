@@ -4,24 +4,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WorkGuardAI: maarakennustöiden edistyminen mitattuna DWG-suunnitelmasta</title>
-<meta name="description" content="WorkGuardAI lukee DWG-suunnitelman, joka teillä jo on, ja mittaa maarakennus- ja infratöiden edistymistä tavallisista työmaakuvista sijainti kerrallaan. Toimiva prototyyppi – etsimme ensimmäistä pilottityömaata.">
+<title>WorkGuardAI: edistyminen suunnitelmalla tavallisista työmaakuvista</title>
+<meta name="description" content="WorkGuardAI arvioi rakentamisen edistymistä suunnitelmaa vasten tavallisista työmaakuvista ja näyttää sen piste pisteeltä. Toimiva prototyyppi, kenttätesti seuraavaksi.">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="WorkGuardAI">
-<meta property="og:title" content="WorkGuardAI: maarakennustöiden edistyminen mitattuna DWG-suunnitelmasta">
-<meta property="og:description" content="WorkGuardAI lukee DWG-suunnitelman, joka teillä jo on, ja mittaa maarakennus- ja infratöiden edistymistä tavallisista työmaakuvista sijainti kerrallaan. Toimiva prototyyppi – etsimme ensimmäistä pilottityömaata.">
+<meta property="og:title" content="WorkGuardAI: edistyminen suunnitelmalla tavallisista työmaakuvista">
+<meta property="og:description" content="WorkGuardAI arvioi rakentamisen edistymistä suunnitelmaa vasten tavallisista työmaakuvista ja näyttää sen piste pisteeltä. Toimiva prototyyppi, kenttätesti seuraavaksi.">
 <meta property="og:url" content="https://workguardai.com/fi/">
 <meta property="og:image" content="https://workguardai.com/assets/img/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="WorkGuardAI: maarakennustöiden edistyminen mitattuna DWG-suunnitelmasta">
-<meta name="twitter:description" content="WorkGuardAI lukee DWG-suunnitelman, joka teillä jo on, ja mittaa maarakennus- ja infratöiden edistymistä tavallisista työmaakuvista sijainti kerrallaan. Toimiva prototyyppi – etsimme ensimmäistä pilottityömaata.">
+<meta name="twitter:title" content="WorkGuardAI: edistyminen suunnitelmalla tavallisista työmaakuvista">
+<meta name="twitter:description" content="WorkGuardAI arvioi rakentamisen edistymistä suunnitelmaa vasten tavallisista työmaakuvista ja näyttää sen piste pisteeltä. Toimiva prototyyppi, kenttätesti seuraavaksi.">
 <meta name="twitter:image" content="https://workguardai.com/assets/img/og-default.jpg">
-<meta name="theme-color" content="#fbfaf7">
+<meta name="theme-color" content="#0E0B2B">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="../assets/img/favicon-48.png">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
 <link rel="canonical" href="https://workguardai.com/fi/">
 <link rel="alternate" hreflang="en" href="https://workguardai.com/">
@@ -30,26 +30,21 @@
 <link rel="alternate" hreflang="fi" href="https://workguardai.com/fi/">
 <link rel="alternate" hreflang="es" href="https://workguardai.com/es/">
 <link rel="alternate" hreflang="x-default" href="https://workguardai.com/">
-<link rel="preload" href="../assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" type="image/avif" imagesrcset="../assets/img/hero-excavation-480.avif 480w, ../assets/img/hero-excavation-800.avif 800w, ../assets/img/hero-excavation-1080.avif 1080w" imagesizes="(min-width: 1280px) 500px, (min-width: 960px) 44vw, (min-width: 768px) 560px, 100vw">
 <link rel="stylesheet" href="../assets/css/site.css">
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">Siirry sisältöön</a>
 
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="../fi/" aria-label="WorkGuardAI etusivu">
-      <img src="../assets/img/logo.png" alt="WorkGuardAI" width="433" height="71">
-    </a>
+    <a class="brand" href="../fi/" aria-label="WorkGuardAI etusivu"><i aria-hidden="true"></i>WorkGuardAI</a>
     <nav class="nav" aria-label="Osiot">
       <a href="#how">Näin se toimii</a>
-      <a href="#prototype">Prototyyppi</a>
+      <a href="#formats">Suunnitelmaformaatit</a>
       <a href="#milestones">Virstanpylväät</a>
-      <a href="#about">Meistä</a>
-      <a href="#news">Uutiset</a>
-      <a href="#faq">UKK</a>
+      <a href="#team">Tiimi</a>
     </nav>
     <div class="header-end">
       <nav class="lang" aria-label="Kieli">
@@ -59,908 +54,355 @@
         <a href="../fi/" hreflang="fi" lang="fi" title="Suomi" aria-current="true">FI</a>
         <a href="../es/" hreflang="es" lang="es" title="Español">ES</a>
       </nav>
-      <a class="btn btn-primary btn-small header-cta" href="#pilot">Varaa pilottipuhelu</a>
+      <a class="btn btn-light btn-small header-cta" href="#contact">Varaa puhelu</a>
     </div>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- 1. Hero -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="container hero-grid">
+  <!-- 1. Hero (dark) -->
+  <section class="x-hero x-dark" aria-labelledby="hero-title">
+    <div class="x-shapes" aria-hidden="true">
+      <svg class="x-d1" viewBox="0 0 560 560">
+        <path d="M300 20 540 260 300 500 60 260Z" fill="#7B6CFF" opacity=".22"/>
+        <path d="M300 20 540 260 300 260Z" fill="#8EEBFF" opacity=".16"/>
+        <path d="M420 300 520 400 420 500 320 400Z" fill="#5CF2B0" opacity=".2"/>
+        <circle cx="150" cy="120" r="64" fill="none" stroke="#8EEBFF" stroke-opacity=".35" stroke-width="1.5"/>
+        <circle cx="150" cy="120" r="100" fill="none" stroke="#8EEBFF" stroke-opacity=".14"/>
+      </svg>
+      <svg class="x-d2" viewBox="0 0 420 420"><path d="M210 20 400 210 210 400 20 210Z" fill="#7B6CFF" opacity=".18"/></svg>
+    </div>
+    <div class="container x-hero-grid">
       <div>
-        <p class="stage mono"><span>Toimiva prototyyppi <b>/</b> Seuraavaksi kenttätesti</span></p>
-        <h1 id="hero-title">DWG-suunnitelmasta mitattuun edistymiseen.</h1>
-        <p class="lead">WorkGuardAI lukee DWG-suunnitelman, joka teillä jo on, ja mittaa maarakennustöiden edistymistä tavallisista työmaakuvista sijainti kerrallaan. Prototyyppi toimii todellisen hankkeen suunnitelmalla ja kuvilla. Nyt etsimme ensimmäistä pilottityömaata.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#pilot">Varaa pilottipuhelu</a>
-          <a class="link-arrow" href="#partner">Ryhdy kumppaniksi <span aria-hidden="true">→</span></a>
+        <p class="x-status x-label">Toimiva prototyyppi · Seuraavaksi kenttätesti</p>
+        <h1 id="hero-title">Edistyminen suunnitelmalla, <span class="x-grad">tavallisista kuvista.</span></h1>
+        <p class="x-lead">WorkGuardAI arvioi, kuinka pitkällä työ on suunnitelmaan nähden, kuvista joita tiiminne jo ottaa, ja näyttää sen kartalla piste pisteeltä.</p>
+        <div class="x-actions">
+          <a class="btn btn-light" href="#contact">Varaa puhelu <span aria-hidden="true">→</span></a>
+          
         </div>
-        <p class="hero-meta mono"><span>Syntynyt Suomessa</span><span>Työskentelemme koko Euroopassa</span><span>Perustettu 2024</span></p>
-        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>25.–26.11.2026</span> <span data-event-label>Pitchaamme lavalla MeOut Summitissa Budapestissa</span> <span aria-hidden="true">→</span></a>
-        <script type="application/json" id="upcoming-events">[{"end":"2026-11-26","tag":"25.–26.11.2026","label":"Pitchaamme lavalla MeOut Summitissa Budapestissa","cta":"Tapaa meidät: MeOut Summit, Budapest","meet":"../fi/?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
+      </div>
+<!-- Hero mockups: laptop plan view and phone alert. Sample data only. -->
+    <div class="x-stage reveal">
+      <!-- Laptop: plan view with dashed planned and solid estimated lines, and a 58% progress ring -->
+      <div class="laptop">
+        <div class="lid">
+          <div class="screen">
+            <svg viewBox="0 0 640 400" role="img" aria-label="Kannettava, jossa työmaasuunnitelma esimerkkidatalla: edistymisrengas 58 prosentissa, katkoviivat suunnitellulle kaivulle, yhtenäinen viiva arvioidulle edistymiselle sekä pisteet C1–C6 tilan mukaan väritettyinä, C4 jäljessä.">
+              <rect width="640" height="400" fill="#F6FAFF"/>
+              <rect width="640" height="36" fill="#fff"/>
+              <path d="M0 36H640" stroke="#C9DDF0"/>
+              <path d="M24 18 30 12 36 18 30 24Z" fill="#5446C9"/>
+              <text x="46" y="22" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="12" fill="#1B1650">WorkGuardAI</text>
+              <text x="150" y="22" font-family="Inter, sans-serif" font-size="11" fill="#4A4F7A">Suunnitelma · Alue C</text>
+              <text x="616" y="22" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#4A4F7A" letter-spacing=".6">ESIMERKKIDATAA</text>
+              <g transform="translate(176 0)">
+                <!-- plan grid -->
+                <g stroke="#E4F1FD" stroke-width="1">
+                  <path d="M60 50V400M120 50V400M180 50V400M240 50V400M300 50V400M360 50V400M420 50V400"/>
+                  <path d="M14 90H470M14 150H470M14 210H470M14 270H470M14 330H470"/>
+                </g>
+                <!-- planned (dashed) and estimated (solid) -->
+                <path d="M40 330 C 110 320, 140 250, 200 230 S 300 150, 420 110" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6"/>
+                <path d="M40 350 C 110 340, 140 290, 200 268 S 300 200, 420 168" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6" opacity=".45"/>
+                <path class="est-line" d="M40 330 C 110 320, 140 250, 200 230 S 262 186, 290 172" fill="none" stroke="#17845A" stroke-width="4" stroke-linecap="round"/>
+                <g font-family="JetBrains Mono, monospace" font-size="9" fill="#1B1650">
+                  <circle cx="62" cy="324" r="7" fill="#17845A" stroke="#fff" stroke-width="2"/><text x="56" y="306">C1</text>
+                  <circle cx="132" cy="290" r="7" fill="#17845A" stroke="#fff" stroke-width="2"/><text x="126" y="272">C2</text>
+                  <circle cx="200" cy="230" r="7" fill="#17845A" stroke="#fff" stroke-width="2"/><text x="194" y="212">C3</text>
+                  <circle class="pulse" cx="262" cy="190" r="7" fill="none" stroke="#E08A2E" stroke-width="2"/>
+                  <circle cx="262" cy="190" r="7" fill="#E08A2E" stroke="#fff" stroke-width="2"/><text x="256" y="172">C4</text>
+                  <circle cx="334" cy="150" r="7" fill="#fff" stroke="#5446C9" stroke-width="2"/><text x="328" y="132">C5</text>
+                  <circle cx="404" cy="116" r="7" fill="#fff" stroke="#5446C9" stroke-width="2"/><text x="398" y="98">C6</text>
+                </g>
+                <!-- legend -->
+                <g font-family="Inter, sans-serif" font-size="10" fill="#4A4F7A">
+                  <path d="M40 372H62" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="6 4"/><text x="68" y="375">Suunniteltu</text>
+                  <path d="M128 372H150" stroke="#17845A" stroke-width="4" stroke-linecap="round"/><text x="156" y="375">Arvioitu</text>
+                </g>
+              </g>
+              <!-- progress panel, left -->
+              <rect x="0" y="36" width="190" height="364" fill="#fff"/>
+              <path d="M190 36V400" stroke="#C9DDF0"/>
+              <text x="22" y="66" font-family="JetBrains Mono, monospace" font-size="9" fill="#4A4F7A" letter-spacing=".6">EDISTYMINEN</text>
+              <g transform="translate(95 136)">
+                <circle r="44" fill="none" stroke="#E4F1FD" stroke-width="11"/>
+                <circle class="ring-fill" r="44" fill="none" stroke="#17845A" stroke-width="11" stroke-linecap="round" stroke-dasharray="276.5" stroke-dashoffset="116" transform="rotate(-90)"/>
+                <text y="9" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="26" fill="#1B1650">58%</text>
+              </g>
+              <path d="M22 208H168" stroke="#E4F1FD"/>
+              <g font-family="Inter, sans-serif" font-size="11" fill="#1B1650">
+                <circle cx="28" cy="230" r="4" fill="#17845A"/><text x="40" y="234">Valmis</text><text x="168" y="234" text-anchor="end">3</text>
+                <circle cx="28" cy="254" r="4" fill="#E08A2E"/><text x="40" y="258">Jäljessä</text><text x="168" y="258" text-anchor="end">1</text>
+                <circle cx="28" cy="278" r="4" fill="#fff" stroke="#5446C9" stroke-width="1.5"/><text x="40" y="282">Ei aloitettu</text><text x="168" y="282" text-anchor="end">2</text>
+              </g>
+              <path d="M22 302H168" stroke="#E4F1FD"/>
+              <text x="22" y="326" font-family="JetBrains Mono, monospace" font-size="9" fill="#4A4F7A" letter-spacing=".6">VIIMEISIN KUVA</text>
+              <text x="22" y="346" font-family="Inter, sans-serif" font-size="11" fill="#1B1650">C4 · tänään 10:42</text>
+            </svg>
+          </div>
+        </div>
+        <div class="base" aria-hidden="true"></div>
       </div>
 
-      <figure class="survey">
-        <div class="survey-frame">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/hero-excavation-480.avif 480w, ../assets/img/hero-excavation-800.avif 800w, ../assets/img/hero-excavation-1080.avif 1080w" sizes="(min-width: 1280px) 500px, (min-width: 960px) 44vw, (min-width: 768px) 560px, 100vw">
-            <source type="image/webp" srcset="../assets/img/hero-excavation-480.webp 480w, ../assets/img/hero-excavation-800.webp 800w, ../assets/img/hero-excavation-1080.webp 1080w" sizes="(min-width: 1280px) 500px, (min-width: 960px) 44vw, (min-width: 768px) 560px, 100vw">
-            <img src="../assets/img/hero-excavation-800.webp" width="1080" height="1080" alt="Avoin kaivanto, jossa on viisto maaluiska ja hiekkainen pohja." fetchpriority="high">
-          </picture>
-          <svg class="survey-grid" viewBox="0 0 300 300" aria-hidden="true">
-            <g class="g">
-              <path d="M50 0V300M100 0V300M150 0V300M200 0V300M250 0V300"/>
-              <path d="M0 50H300M0 100H300M0 150H300M0 200H300M0 250H300"/>
+      <!-- Phone: the alert -->
+      <div class="phone float">
+        <div class="screen">
+          <svg viewBox="0 0 220 420" role="img" aria-label="Puhelin, jossa hälytys esimerkkidatalla: piste C4 on jäljessä, 1,2 metriä suunnitellusta 2,4 metristä, pisteen C4 työmaakuva ja rengas 50 prosentissa.">
+            <rect width="220" height="420" fill="#F6FAFF"/>
+            <rect x="80" y="10" width="60" height="16" rx="8" fill="#0b0920"/>
+            <text x="20" y="22" font-family="Inter, sans-serif" font-weight="600" font-size="11" fill="#1B1650">9:41</text>
+            <!-- notification -->
+            <rect x="12" y="40" width="196" height="92" rx="18" fill="#fff" stroke="#C9DDF0"/>
+            <path d="M30 60 36 54 42 60 36 66Z" fill="#5446C9"/>
+            <text x="50" y="64" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#4A4F7A" letter-spacing=".5">WORKGUARDAI · NYT</text>
+            <text x="24" y="88" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="12.5" fill="#1B1650">Piste C4 on jäljessä</text>
+            <text x="24" y="110" font-family="Inter, sans-serif" font-size="11" fill="#4A4F7A">1,2 m / 2,4 m suunnitellusta</text>
+            <!-- photo tied to C4 -->
+            <g transform="translate(12 148)">
+              <rect width="196" height="140" rx="16" fill="#B9D7EF"/>
+              <path d="M0 70H54L76 120H124L146 70H196V140H0Z" fill="#A08C70"/>
+              <path d="M54 70L76 120H124L146 70" fill="none" stroke="#7E6C55" stroke-width="2"/>
+              <path d="M0 70H54L70 104H130L146 70H196" fill="none" stroke="#5446C9" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <rect x="12" y="12" width="40" height="20" rx="10" fill="#1B1650"/>
+              <text x="32" y="26" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#fff">C4</text>
             </g>
-            <!-- Plan lines (top edge and toe of the cut) with plan points -->
-            <path d="M0 20 L62 30 L125 50 L187 59 L250 67 L300 74" fill="none" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
-            <path d="M0 80 L50 87 L112 125 L156 156 L212 172 L275 162 L300 158" fill="none" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
-            <g>
-              <circle class="pt" cx="62" cy="30" r="3"/><circle class="pt" cx="125" cy="50" r="3"/>
-              <circle class="pt" cx="187" cy="59" r="3"/><circle class="pt" cx="250" cy="67" r="3"/>
-              <circle class="pt" cx="50" cy="87" r="3"/><circle class="pt" cx="112" cy="125" r="3"/>
-              <circle class="pt" cx="156" cy="156" r="3"/><circle class="pt" cx="212" cy="172" r="3"/>
-              <circle class="pt" cx="275" cy="162" r="3"/>
-              <circle class="pulse" cx="156" cy="156" r="3"/>
+            <!-- point progress -->
+            <g transform="translate(52 344)">
+              <circle r="26" fill="none" stroke="#E4F1FD" stroke-width="7"/>
+              <circle class="ring-fill" r="26" fill="none" stroke="#E08A2E" stroke-width="7" stroke-linecap="round" stroke-dasharray="163" stroke-dashoffset="81.5" transform="rotate(-90)"/>
+              <text y="5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" fill="#1B1650">50%</text>
             </g>
-            <g class="tag">
-              <path d="M156 160 L160 196" stroke="#fff" stroke-width="1" vector-effect="non-scaling-stroke"/>
-              <rect x="160" y="196" width="110" height="24" rx="1.5"/>
-              <text x="165" y="206">D·04 SUUNNITELMAPISTE</text>
-              <text x="165" y="215">SYVYYS ARVIOITU</text>
-            </g>
-            <g>
-              <text x="23" y="10">A</text><text x="73" y="10">B</text><text x="123" y="10">C</text>
-              <text x="173" y="10">D</text><text x="223" y="10">E</text><text x="273" y="10">F</text>
-              <text x="3" y="29">01</text><text x="3" y="79">02</text><text x="3" y="129">03</text>
-              <text x="3" y="179">04</text><text x="3" y="229">05</text><text x="3" y="279">06</text>
-            </g>
+            <text x="86" y="338" font-family="Inter, sans-serif" font-size="10" fill="#4A4F7A">Arvioitu syvyys</text>
+            <text x="86" y="356" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" fill="#1B1650">1.2 m / 2.4 m</text>
+            <text x="20" y="400" font-family="JetBrains Mono, monospace" font-size="8" fill="#4A4F7A" letter-spacing=".6">ESIMERKKIDATAA</text>
           </svg>
         </div>
-        <div class="survey-axis mono" aria-hidden="true"><span>X →</span><span>RUUDUKKO</span><span>SUUNNITELMALINJA - - -</span></div>
-        <figcaption>Havainnollistava kerros kaivantokuvan päällä. Paikallinen ruudukko, ei todellisia työmaan koordinaatteja.</figcaption>
-      </figure>
+      </div>
+      <p class="sample">Esimerkkidataa</p>
+    </div>
+
     </div>
   </section>
 
-  <!-- 2. How it works -->
-  <section class="section hiw" id="how" aria-labelledby="how-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">01 · Näin se toimii</p>
-        <h2 id="how-title">DWG-suunnitelmasta ja tavallisista kuvista edistymiseen jokaisessa sijainnissa.</h2>
-      </div>
-      <figure class="explainer">
-        <figcaption class="mono">Havainnekuva konseptista</figcaption>
-        <input class="ex-toggle" type="checkbox" id="ex-pause">
-        <ol class="ex-steps">
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <line x1="22" y1="44" x2="22" y2="18" stroke="#5f6880" stroke-width="2"/>
-              <rect x="14" y="9" width="18" height="11" rx="2" fill="#0f1b3d"/>
-              <g class="ex-in1">
-                <polygon points="30,16 72,76 92,76" fill="#5255e0" opacity=".2"/>
-                <circle cx="82" cy="76" r="4" fill="#5255e0"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">01</span> Kuvaa</p>
-            <p>Valokuva suunnitelman pisteestä</p>
-          </li>
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <circle cx="82" cy="76" r="4" fill="#5255e0"/>
-              <g class="ex-in2">
-                <path d="M82 44V72M76 44H88M76 52H82M76 60H82M76 68H82" fill="none" stroke="#17845a" stroke-width="2"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">02</span> Analysoi</p>
-            <p>Syvyys arvioidaan kuvasta</p>
-          </li>
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <g class="ex-in3">
-                <path d="M0 44H46L66 98H94L114 44H160" fill="none" stroke="#5255e0" stroke-width="2" stroke-dasharray="5 4"/>
-                <path d="M46 44L58 76H102L114 44" fill="none" stroke="#17845a" stroke-width="3" stroke-linejoin="round"/>
-                <path d="M80 78V96M76 82L80 78L84 82M76 92L80 96L84 92" fill="none" stroke="#0f1b3d" stroke-width="1.5"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">03</span> Vertaa</p>
-            <p>Arvioitu syvyys suhteessa suunniteltuun</p>
-          </li>
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <circle cx="82" cy="76" r="4" fill="#9a5f00"/>
-              <g class="ex-in4">
-                <rect x="50" y="8" width="60" height="38" rx="3" fill="#fbf1e1" stroke="#9a5f00" stroke-width="1.5"/>
-                <path d="M50 11L80 30L110 11" fill="none" stroke="#9a5f00" stroke-width="1.5"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">04</span> Toimi</p>
-            <p>Sähköpostihälytys, jossa koordinaatit ja syvyydet</p>
-          </li>
+  <!-- 2. Problem (light) -->
+  <section class="x-section" id="problem" aria-labelledby="problem-title">
+    <div class="container x-split">
+      <div>
+        <p class="x-label x-kicker">Ongelma</p>
+        <h2 id="problem-title">Edistymistä tarkistetaan yhä kiertämällä työmaata.</h2>
+        <p class="x-intro">Joku lähtee paikalle, mittaa käsin ja kirjoittaa tulokset raporttiin. Kun raportti luetaan, työ on jo edennyt.</p>
+        <ol class="x-points">
+          <li class="reveal"><span class="x-dot" aria-hidden="true"></span><div><h3>Kierrä ja mittaa</h3><p>Edistymisen tarkistaminen tarkoittaa jokaisen pisteen käymistä mittanauhan tai vaaituskojeen kanssa.</p></div></li>
+          <li class="reveal"><span class="x-dot" aria-hidden="true"></span><div><h3>Kirjaa ylös</h3><p>Tulokset kopioidaan käsin taulukoihin ja raportteihin.</p></div></li>
+          <li class="reveal"><span class="x-dot x-dot-warn" aria-hidden="true"></span><div><h3>Tieto tulee myöhään</h3><p>Kun osuus jää jälkeen, voi kestää päiviä ennen kuin kukaan tietää.</p></div></li>
         </ol>
-        <label class="ex-pause mono" for="ex-pause">Keskeytä animaatio</label>
-      </figure>
+      </div>
+      <svg class="x-rings reveal" viewBox="0 0 420 420" role="img" aria-label="Kaavio: työmaan kiertäminen ja käsin mittaaminen johtavat raporttiin, joka valmistuu päiviä myöhemmin.">
+        <circle cx="210" cy="210" r="190" fill="none" stroke="#C9DDF0" stroke-width="1.5"/>
+        <circle cx="210" cy="210" r="190" fill="none" stroke="#5446C9" stroke-width="3" stroke-dasharray="70 1124" stroke-linecap="round" transform="rotate(-100 210 210)"/>
+        <circle cx="210" cy="210" r="135" fill="none" stroke="#C9DDF0" stroke-width="1.5"/>
+        <circle cx="210" cy="210" r="135" fill="none" stroke="#7BD3F7" stroke-width="3" stroke-dasharray="60 788" stroke-linecap="round" transform="rotate(10 210 210)"/>
+        <circle cx="210" cy="210" r="80" fill="#E4F1FD"/>
+        <circle cx="210" cy="210" r="80" fill="none" stroke="#E08A2E" stroke-width="3" stroke-dasharray="6 7"/>
+        <g font-family="JetBrains Mono, monospace" font-size="12" letter-spacing=".08em" fill="#1B1650" text-anchor="middle">
+          <text x="210" y="14">KIERRÄ TYÖMAA</text>
+          <text x="210" y="70">MITTAA KÄSIN</text>
+          <text x="210" y="205" fill="#9a5f00">RAPORTTI</text>
+          <text x="210" y="225" fill="#9a5f00">PÄIVIÄ MYÖHEMMIN</text>
+        </g>
+      </svg>
+    </div>
+  </section>
 
-      <div class="steps">
-        <article class="step">
-          <div class="step-head"><span class="mono">01</span><h3>Kuvaa</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="Drooni ja kamerat kuvaavat kaivantoa">
-            <path d="M0 120H70L85 148H155L170 120H240V170H0Z" fill="#e3dccb"/>
-            <path d="M0 120H70L85 148H155L170 120H240" fill="none" stroke="#b9ae95" stroke-width="2"/>
-            <polygon class="beam" points="120,42 84,146 156,146" fill="#5255e0"/>
-            <g class="drone">
-              <rect x="106" y="30" width="28" height="9" rx="4" fill="#0f1b3d"/>
-              <line class="rotor" x1="96" y1="27" x2="116" y2="27" stroke="#5f6880" stroke-width="2" stroke-linecap="round"/>
-              <line class="rotor" x1="124" y1="27" x2="144" y2="27" stroke="#5f6880" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="120" cy="42" r="3" fill="#5255e0"/>
+  <!-- 3. How it works (light): Photo, Your plan, Progress on the map -->
+  <section class="x-section x-section-2" id="how" aria-labelledby="how-title">
+    <span id="product" class="x-anchor" aria-hidden="true"></span>
+    <div class="container">
+      <p class="x-label x-kicker">Näin se toimii</p>
+      <h2 id="how-title">Kuvasta edistymiseen suunnitelmalla.</h2>
+      <p class="x-intro">Tiimi ottaa kuvia kuten ennenkin. WorkGuardAI liittää jokaisen kuvan suunnitelman pisteeseen ja arvioi, kuinka pitkällä työ on.</p>
+<!-- How it works: Photo, Your plan, Progress on the map. -->
+    <div class="steps">
+      <svg class="connector" viewBox="0 0 1000 2" preserveAspectRatio="none" aria-hidden="true"><path d="M0 1H1000" stroke="#5446C9" stroke-width="2" stroke-dasharray="6 8"/></svg>
+      <div class="step reveal">
+        <span class="num">01</span>
+        <h3>Kuva</h3>
+        <p>Työmaakamera, puhelin tai drone ottaa tavallisen kuvan.</p>
+        <figure>
+          <svg viewBox="0 0 320 200" role="img" aria-label="Tavallinen puhelimella otettu kuva kaivannosta.">
+            <rect width="320" height="200" rx="28" fill="#fff" stroke="#C9DDF0"/><rect x="1" y="1" width="318" height="99" rx="27" fill="#E4F1FD"/>
+            <path d="M0 100H86L118 168H202L234 100H320V172Q320 200 292 200H28Q0 200 0 172Z" fill="#A08C70"/>
+            <path d="M86 100L118 168H202L234 100" fill="none" stroke="#7E6C55" stroke-width="2.5"/>
+            <circle cx="268" cy="44" r="18" fill="#fff" stroke="#C9DDF0"/>
+            <circle cx="268" cy="44" r="7" fill="#5446C9"/>
+          </svg>
+        </figure>
+      </div>
+      <div class="step reveal">
+        <span class="num">02</span>
+        <h3>Suunnitelmanne</h3>
+        <p>Kuva liitetään DWG-suunnitelman koordinaattiin suunnitellun syvyyden viereen.</p>
+        <figure>
+          <svg viewBox="0 0 320 200" role="img" aria-label="DWG-suunnitelma koordinaattiverkkona, jossa yksi kuva on kiinnitetty pisteeseen C4.">
+            <rect width="320" height="200" rx="28" fill="#fff" stroke="#C9DDF0"/>
+            <g stroke="#E4F1FD"><path d="M64 0V200M128 0V200M192 0V200M256 0V200M0 50H320M0 100H320M0 150H320"/></g>
+            <path d="M30 170 C 90 160, 120 110, 170 100 S 250 60, 296 46" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6"/>
+            <circle cx="170" cy="100" r="9" fill="#5446C9" stroke="#fff" stroke-width="3"/>
+            <rect x="184" y="112" width="74" height="26" rx="13" fill="#1B1650"/>
+            <text x="221" y="129" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#fff">C4 · 2.4 m</text>
+          </svg>
+        </figure>
+      </div>
+      <div class="step reveal">
+        <span class="num">03</span>
+        <h3>Edistyminen kartalla</h3>
+        <p>Arvioitua syvyyttä verrataan suunnitelmaan piste pisteeltä, ja hälytys tulee, kun piste jää jälkeen.</p>
+        <figure>
+          <svg viewBox="0 0 320 200" role="img" aria-label="Suunnitelma, jossa yhtenäinen viiva näyttää arvioidun edistymisen katkoviivalla merkityn suunnitelman päällä, ja edistymisrengas 58 prosentissa.">
+            <rect width="320" height="200" rx="28" fill="#fff" stroke="#C9DDF0"/>
+            <path d="M30 170 C 90 160, 120 110, 170 100 S 250 60, 296 46" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6"/>
+            <path class="est-line" d="M30 170 C 90 160, 120 110, 170 100" fill="none" stroke="#17845A" stroke-width="4" stroke-linecap="round"/>
+            <g transform="translate(250 140)">
+              <circle r="30" fill="none" stroke="#E4F1FD" stroke-width="8"/>
+              <circle class="ring-fill" r="30" fill="none" stroke="#17845A" stroke-width="8" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="79" transform="rotate(-90)"/>
+              <text y="6" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16" fill="#1B1650">58%</text>
             </g>
-            <line x1="28" y1="120" x2="28" y2="80" stroke="#5f6880" stroke-width="2"/>
-            <rect x="19" y="70" width="18" height="11" rx="2" fill="#0f1b3d"/>
-            <circle class="blink" cx="33" cy="73" r="1.8" fill="#e05252"/>
-            <line x1="210" y1="120" x2="210" y2="100" stroke="#5f6880" stroke-width="2"/>
-            <circle cx="210" cy="95" r="5" fill="#5255e0"/>
-            <circle class="ring" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
-            <circle class="ring" style="animation-delay:1.2s" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
           </svg>
-          <p>Kuvia työmaan kiinteistä kameroista automaattisesti neljän tunnin välein, tai puhelimella, kameralla tai droonilla suunnitelman koordinaateissa ladattuina.</p>
-        </article>
-        <article class="step">
-          <div class="step-head"><span class="mono">02</span><h3>Analysoi</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="DWG-suunnitelman pisteet ja uudesta kuvasta arvioitu syvyys">
-            <g id="hiw-dots"></g>
-            <g class="chg"><rect x="98" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="114" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="130" y="138" width="10" height="8" rx="1.5" fill="#17845a"/></g>
-            <rect x="28" y="40" width="184" height="26" rx="3" fill="#e6f3ec" stroke="#17845a"/>
-            <text x="120" y="57" text-anchor="middle" fill="#17845a" font-size="12" font-weight="600" font-family="Inter, sans-serif">Syvyys arvioitu</text>
-          </svg>
-          <p>Avoimen lähdekoodin tekoälymalli (Depth Anything V2) arvioi kaivannon syvyyden metreinä jokaisesta kuvasta sen suunnitelmakoordinaatissa.</p>
-        </article>
-        <article class="step">
-          <div class="step-head"><span class="mono">03</span><h3>Vertaa</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="Havaittu kaivanto verrattuna suunniteltuun DWG-profiiliin, 62 prosenttia valmis (esimerkkidata)">
-            <text x="120" y="32" text-anchor="middle" fill="#0f1b3d" font-size="26" font-weight="600" font-family="Outfit, sans-serif">62%</text>
-            <text x="120" y="50" text-anchor="middle" fill="#5f6880" font-size="11" font-family="Inter, sans-serif">valmis (esimerkkidata)</text>
-            <path d="M16 70H70L84 132H156L170 70H224" fill="none" stroke="#5255e0" stroke-width="2.5" stroke-dasharray="6 5"/>
-            <path class="draw" d="M16 70H70L82 108.5H158L170 70H224" fill="none" stroke="#17845a" stroke-width="3" stroke-linejoin="round"/>
-            <line x1="14" y1="154" x2="32" y2="154" stroke="#5255e0" stroke-width="2.5" stroke-dasharray="5 4"/>
-            <text x="37" y="158" fill="#3e4a66" font-size="10" font-family="Inter, sans-serif">Suunnitelma</text>
-            <line x1="112" y1="154" x2="130" y2="154" stroke="#17845a" stroke-width="3"/>
-            <text x="135" y="158" fill="#3e4a66" font-size="10" font-family="Inter, sans-serif">Havaittu työmaalla</text>
-          </svg>
-          <p>Arvioitua syvyyttä verrataan DWG-suunnitelman mukaiseen syvyyteen, jolloin saadaan edistyminen suunnitelman jokaisessa pisteessä.</p>
-        </article>
-        <article class="step">
-          <div class="step-head"><span class="mono">04</span><h3>Toimi</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="Näkymä, jossa näkyy edistyminen ja hälytys, kun työ poikkeaa suunnitelmasta (esimerkkidata)">
-            <rect x="12" y="10" width="216" height="150" rx="4" fill="#ffffff" stroke="#cdc8bb"/>
-            <text x="24" y="30" fill="#5f6880" font-size="10" font-family="Inter, sans-serif">Työmaan edistyminen</text>
-            <text x="216" y="30" text-anchor="end" fill="#17845a" font-size="11" font-weight="700" font-family="Inter, sans-serif">62%</text>
-            <rect x="24" y="38" width="192" height="8" rx="4" fill="#e4e1d8"/>
-            <rect class="fillbar" x="24" y="38" width="119" height="8" rx="4" fill="#17845a"/>
-            <line x1="24" y1="118" x2="216" y2="118" stroke="#e4e1d8"/>
-            <polyline points="24,114 70,100 116,82 162,64 208,50" fill="none" stroke="#5255e0" stroke-width="2" stroke-dasharray="5 4"/>
-            <polyline class="draw" points="24,114 70,103 116,90 162,78" fill="none" stroke="#17845a" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle class="adot" cx="162" cy="78" r="3.5" fill="#17845a"/>
-            <g class="alert">
-              <rect x="24" y="126" width="192" height="26" rx="3" fill="#fbf1e1" stroke="#9a5f00"/>
-              <circle class="adot" cx="40" cy="139" r="3.5" fill="#9a5f00"/>
-              <text x="52" y="143" fill="#9a5f00" font-size="10" font-family="Inter, sans-serif">Poikkeama ilmoitettu vastaavalle</text>
-            </g>
-          </svg>
-          <p>Jokainen piste näyttää tilansa värillä, kokonaisedistymispalkki kokoaa työmaan tilanteen, ja sähköpostihälytykset kertovat koordinaatit sekä nykyisen ja suunnitellun syvyyden.</p>
-        </article>
+        </figure>
       </div>
-      <p class="note">Havainnollistava konsepti esimerkkidatalla. Toimiva prototyyppi; kenttätesti tulossa.</p>
+    </div>
 
-      <div class="field">
-        <div class="field-head">
-          <h3>Työmaalta</h3>
-          <p>Tavallisia työmaakuvia, kuten niitä, joita prototyyppi mittaa: puhelimella tai droonilla, päivällä ja yöllä.</p>
-        </div>
-        <div class="field-grid">
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/field-cut-480.avif 480w, ../assets/img/field-cut-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/field-cut-480.webp" srcset="../assets/img/field-cut-480.webp 480w, ../assets/img/field-cut-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Viisto kaivannon seinä ja hiekkainen pohja.">
-            </picture>
-            <figcaption class="mono">Kaivanto · päivä</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/field-floor-480.avif 480w, ../assets/img/field-floor-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/field-floor-480.webp" srcset="../assets/img/field-floor-480.webp 480w, ../assets/img/field-floor-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Kaivannon pohja, jossa on seisovaa vettä ja pitkä varjo.">
-            </picture>
-            <figcaption class="mono">Kaivannon pohja · päivä</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/field-shoring-480.avif 480w, ../assets/img/field-shoring-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/field-shoring-480.webp" srcset="../assets/img/field-shoring-480.webp 480w, ../assets/img/field-shoring-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Syvä kaivanto teräksisine tuentoineen, valaistuna yöllä.">
-            </picture>
-            <figcaption class="mono">Tuettu kaivanto · yö</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/field-drone-480.avif 480w, ../assets/img/field-drone-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/field-drone-480.webp" srcset="../assets/img/field-drone-480.webp 480w, ../assets/img/field-drone-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Drooninohjaimen näyttö, jossa näkyy ilmakuva kuvaustestin aikana.">
-            </picture>
-            <figcaption class="mono">Kuvaustesti · Espoo</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/field-urban-compactor-480.avif 480w, ../assets/img/field-urban-compactor-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/field-urban-compactor-480.webp" srcset="../assets/img/field-urban-compactor-480.webp 480w, ../assets/img/field-urban-compactor-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Kaupunkityömaa hämärässä, tärylevy ja suojapuomit.">
-            </picture>
-            <figcaption class="mono">Kaupunkityömaa · hämärä</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/field-urban-materials-480.avif 480w, ../assets/img/field-urban-materials-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/field-urban-materials-480.webp" srcset="../assets/img/field-urban-materials-480.webp 480w, ../assets/img/field-urban-materials-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Rakennusmateriaaleja ja puomeja kaupunkityömaalla hämärässä.">
-            </picture>
-            <figcaption class="mono">Työmaan materiaalit · hämärä</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/excavation-day-01-480.avif 480w, ../assets/img/excavation-day-01-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/excavation-day-01-480.webp" srcset="../assets/img/excavation-day-01-480.webp 480w, ../assets/img/excavation-day-01-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Laaja avoin kaivanto, jossa seisovaa vettä, kerrostalojen vieressä.">
-            </picture>
-            <figcaption class="mono">Avoin kaivanto · päivä</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/urban-site-dusk-wide-480.avif 480w, ../assets/img/urban-site-dusk-wide-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/urban-site-dusk-wide-480.webp" srcset="../assets/img/urban-site-dusk-wide-480.webp 480w, ../assets/img/urban-site-dusk-wide-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Laaja kuva kaupunkityömaasta hämärässä: puomeja, tärylevy ja hotelli työmaa-aidan takana.">
-            </picture>
-            <figcaption class="mono">Kaupunkityömaa, laaja kuva · hämärä</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/shored-excavation-night-01-480.avif 480w, ../assets/img/shored-excavation-night-01-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/shored-excavation-night-01-480.webp" srcset="../assets/img/shored-excavation-night-01-480.webp 480w, ../assets/img/shored-excavation-night-01-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Tuettu kaivanto kaupungin kadun varressa yöllä, taustalla nosturi.">
-            </picture>
-            <figcaption class="mono">Tuenta kadun varressa · yö</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/urban-site-dusk-01-480.avif 480w, ../assets/img/urban-site-dusk-01-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/urban-site-dusk-01-480.webp" srcset="../assets/img/urban-site-dusk-01-480.webp 480w, ../assets/img/urban-site-dusk-01-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Torninosturin jalusta ja kuvioitu kiveys kaupunkityömaalla hämärässä.">
-            </picture>
-            <figcaption class="mono">Nosturi ja kiveys · hämärä</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/urban-site-dusk-03-480.avif 480w, ../assets/img/urban-site-dusk-03-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/urban-site-dusk-03-480.webp" srcset="../assets/img/urban-site-dusk-03-480.webp 480w, ../assets/img/urban-site-dusk-03-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Raivattu maa koneiden jäljillä kaupunkityömaalla hämärässä.">
-            </picture>
-            <figcaption class="mono">Raivattu maa · hämärä</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/urban-site-dusk-06-480.avif 480w, ../assets/img/urban-site-dusk-06-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/urban-site-dusk-06-480.webp" srcset="../assets/img/urban-site-dusk-06-480.webp 480w, ../assets/img/urban-site-dusk-06-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Rakennustöitä kadun varressa ja nosturi hämärässä.">
-            </picture>
-            <figcaption class="mono">Katutyöt · hämärä</figcaption>
-          </figure>
-        </div>
-      </div>
+      <p class="x-sample">Esimerkkidataa</p>
+      <p class="x-more"><a class="x-link" href="../fi/concept/">Katso kaikki konseptinäkymät <span aria-hidden="true">→</span></a></p>
     </div>
   </section>
 
-  <!-- 3. The prototype -->
-  <section class="section section-alt" id="prototype" aria-labelledby="proto-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">02 · Prototyyppi</p>
-        <h2 id="proto-title">Rakennettu todellisen hankkeen suunnitelman ja kuvien päälle.</h2>
-        <p class="sec-lead">Prototyyppiä on esitelty todellisella DWG-tiedostolla ja todellisilla työmaakuvilla. Se ei ole vielä ollut käytössä käynnissä olevalla työmaalla. Ensimmäinen kenttätesti on seuraava vaihe.</p>
-      </div>
-      <div class="screens">
-        <figure class="screen">
-          <div class="screen-frame screen-shot">
-            <a href="../assets/img/screen-upload-1200.webp" target="_blank" rel="noopener">
-            <picture>
-              <source type="image/avif" srcset="../assets/img/screen-upload-640.avif 640w, ../assets/img/screen-upload-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
-              <img src="../assets/img/screen-upload-640.webp" srcset="../assets/img/screen-upload-640.webp 640w, ../assets/img/screen-upload-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="Prototyypin näkymä kuvien lataamiseen suunnitelman koordinaattiin, X- ja Y-kenttineen.">
-            </picture>
-            </a>
-          </div>
-          <figcaption><span>Lataus koordinaatin mukaan</span><span class="mono">NÄKYMÄ 1</span></figcaption>
-        </figure>
-        <figure class="screen">
-          <div class="screen-frame screen-shot">
-            <a href="../assets/img/screen-map-1200.webp" target="_blank" rel="noopener">
-            <picture>
-              <source type="image/avif" srcset="../assets/img/screen-map-640.avif 640w, ../assets/img/screen-map-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
-              <img src="../assets/img/screen-map-640.webp" srcset="../assets/img/screen-map-640.webp 640w, ../assets/img/screen-map-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="Prototyypin näkymä, jossa DWG-suunnitelma näkyy koordinaattipisteiden karttana. Tiedostonimi ja edistymisluku on sumennettu.">
-            </picture>
-            </a>
-          </div>
-          <figcaption><span>DWG-koordinaattikartta</span><span class="mono">NÄKYMÄ 2</span></figcaption>
-        </figure>
-        <figure class="screen">
-          <div class="screen-frame screen-shot">
-            <a href="../assets/img/screen-alerts-1200.webp" target="_blank" rel="noopener">
-            <picture>
-              <source type="image/avif" srcset="../assets/img/screen-alerts-640.avif 640w, ../assets/img/screen-alerts-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
-              <img src="../assets/img/screen-alerts-640.webp" srcset="../assets/img/screen-alerts-640.webp 640w, ../assets/img/screen-alerts-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="Prototyypin ilmoitukset käynnissä olevasta kaivuusta, koordinaatit sumennettuina.">
-            </picture>
-            </a>
-          </div>
-          <figcaption><span>Edistymishälytys sähköpostiin</span><span class="mono">NÄKYMÄ 3</span></figcaption>
-        </figure>
-      </div>
-      <p class="note">Prototyypin käyttöliittymä, testattu todellisen hankkeen suunnitelmalla ja kuvilla. Seuraavaksi kenttätesti. Asiakkaan tiedostonimet, työmaan koordinaatit ja luvut on sumennettu.</p>
-      <p class="alert-open"><a class="btn btn-outline" id="alert-open" href="../assets/img/screen-alerts-1200.webp" target="_blank" rel="noopener">Katso esimerkkihälytys</a></p>
-      <dialog class="alert-dialog" id="alert-dialog" aria-labelledby="alert-dialog-title">
-        <div class="alert-dialog-head">
-          <p id="alert-dialog-title">Edistymishälytys sähköpostiin</p>
-          <form method="dialog"><button class="btn btn-outline btn-small" type="submit">Sulje</button></form>
-        </div>
-        <picture>
-          <source type="image/avif" srcset="../assets/img/screen-alerts-1200.avif">
-          <img src="../assets/img/screen-alerts-1200.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Prototyypin ilmoitukset käynnissä olevasta kaivuusta, koordinaatit sumennettuina.">
-        </picture>
-        <p class="note">Prototyypin käyttöliittymä, testattu todellisen hankkeen suunnitelmalla ja kuvilla. Seuraavaksi kenttätesti. Asiakkaan tiedostonimet, työmaan koordinaatit ja luvut on sumennettu.</p>
-      </dialog>
-
-      <div class="status-cols">
-        <div>
-          <h3>Mitä se tekee nyt</h3>
-          <ul class="status-list status-today">
-            <li><span>Lukee DWG-suunnitelman ja muuttaa sen suunnitelmapisteiden ruudukoksi, jossa jokaisella pisteellä on suunniteltu syvyys.</span></li>
-            <li><span>Arvioi kaivannon syvyyden jokaisesta kuvasta avoimen lähdekoodin tekoälymallilla (Depth Anything V2).</span></li>
-            <li><span>Näyttää edistymisen pisteittäin suunniteltuun syvyyteen verrattuna värikoodattuna (ei aloitettu, käynnissä, valmis) sekä kokonaisedistymispalkin.</span></li>
-            <li><span>Ottaa kuvia työmaan kiinteistä kameroista neljän tunnin välein tai käyttää koordinaatin mukaan ladattuja kuvia.</span></li>
-            <li><span>Lähettää sähköpostihälytykset, joissa on koordinaatit sekä nykyinen ja suunniteltu syvyys.</span></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Mitä seuraavaksi</h3>
-          <ul class="status-list">
-            <li><span class="chip">Seuraavaksi</span><span>Kenttätesti käynnissä olevalla työmaalla urakoitsijan tai infran omistajan kanssa: arvioituja syvyyksiä verrataan mitattuihin.</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. What you get: only what the app does. Mockups: src/partials/product-devices.html, list: src/partials/product-features.html -->
-  <section class="section" id="product" aria-labelledby="product-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">03 · Mitä saat</p>
-        <h2 id="product-title">Yksi näkymä työmaahan suunnitelmaa vasten, tavallisista kuvista.</h2>
-        <p class="sec-lead">DWG-suunnitelmanne, työmaakuvat ja niistä arvioitu syvyys kootaan yhteen näkymään. Tiimi näkee edistymisen jokaisessa pisteessä ja saa hälytyksen, kun pistettä pitää katsoa.</p>
-      </div>
-        <!-- What you get: the dashboard and the phone, showing only what the app does. Numbers are sample data. -->
-        <figure class="pd-stage">
-          <div class="pd-devices">
-
-            <!-- Laptop: the dashboard -->
-            <div class="pd-laptop" role="img" aria-label="WorkGuardAI-näkymä esimerkkidatalla: DWG-suunnitelma koordinaattikarttana, jonka pisteet on väritetty ei aloitettu, käynnissä ja valmis, kokonaisedistyminen 62 prosenttia, piste D·04, jonka suunniteltu syvyys on 2,40 metriä, arvioitu syvyys 1,49 metriä ja edistyminen 62 prosenttia, sekä ilmoitusluettelo.">
-              <div class="pd-lid">
-                <div class="pd-screen">
-                  <div class="pd-bar">
-                    <img src="../assets/img/logo.png" alt="" width="433" height="71">
-                    <span>Työmaa 01</span>
-                    <span class="mono">Viimeisin kamerakuva 10:42</span>
-                  </div>
-                  <div class="pd-dash">
-                    <div class="pd-panel pd-map">
-                      <p class="pd-h">DWG-suunnitelma · koordinaattikartta</p>
-                      <svg viewBox="0 0 400 230">
-                        <g stroke="#ece9e1" stroke-width="1">
-                          <path d="M40 0V230M100 0V230M160 0V230M220 0V230M280 0V230M340 0V230"/>
-                          <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
-                        </g>
-                        <g fill="#5f6880" font-family="JetBrains Mono, monospace" font-size="9">
-                          <text x="67" y="14">B</text><text x="127" y="14">C</text><text x="187" y="14">D</text><text x="247" y="14">E</text><text x="307" y="14">F</text>
-                        </g>
-                        <path d="M20 196 C 80 186, 110 118, 170 116 S 260 70, 380 52" fill="none" stroke="#5255e0" stroke-width="1.5" stroke-dasharray="5 4"/>
-                        <g stroke="#fff" stroke-width="2">
-                          <circle cx="30" cy="194" r="6" fill="#17845a"/><circle cx="66" cy="182" r="6" fill="#17845a"/>
-                          <circle cx="98" cy="156" r="6" fill="#17845a"/><circle cx="128" cy="128" r="6" fill="#17845a"/>
-                          <circle cx="170" cy="116" r="7.5" fill="#5255e0"/><circle cx="206" cy="108" r="6" fill="#5255e0"/>
-                          <circle cx="242" cy="94" r="6" fill="#5255e0"/><circle cx="280" cy="80" r="6" fill="#5255e0"/>
-                          <circle cx="318" cy="68" r="6" fill="#fff" stroke="#85806f" stroke-width="1.5"/><circle cx="356" cy="58" r="6" fill="#fff" stroke="#85806f" stroke-width="1.5"/>
-                        </g>
-                        <circle cx="170" cy="116" r="12" fill="none" stroke="#5255e0" stroke-width="1"/>
-                        <g font-family="JetBrains Mono, monospace" font-size="9">
-                          <rect x="146" y="134" width="48" height="17" rx="2" fill="#0f1b3d"/>
-                          <text x="154" y="146" fill="#fff">D·04</text>
-                        </g>
-                      </svg>
-                      <p class="pd-legend"><span><i class="pd-not"></i>Ei aloitettu &lt;10%</span><span><i style="background:#5255e0"></i>Käynnissä</span><span><i style="background:#17845a"></i>Valmis &gt;90%</span></p>
-                    </div>
-                    <div class="pd-panel pd-overall">
-                      <p class="pd-h">Kokonaisedistyminen</p>
-                      <p class="pd-big">62%</p>
-                      <div class="pd-meter"><span style="width:62%"></span></div>
-                    </div>
-                    <div class="pd-panel pd-point">
-                      <p class="pd-h">Piste D·04</p>
-                      <p class="pd-row"><span>Suunniteltu syvyys</span><b>−2.40 m</b></p>
-                      <p class="pd-row"><span>Arvioitu syvyys</span><b>−1.49 m</b></p>
-                      <p class="pd-row"><span>Edistyminen</span><b class="pd-prog">62%</b></p>
-                    </div>
-                    <div class="pd-panel pd-notifs">
-                      <p class="pd-h">Ilmoitukset</p>
-                      <ul>
-                        <li><i style="background:#5255e0"></i><span>D·04 · Kaivu käynnissä</span><time class="mono">10:42</time></li>
-                        <li><i style="background:#17845a"></i><span>B·02 · Kaivu valmis</span><time class="mono">06:42</time></li>
-                        <li><i style="background:#9a5f00"></i><span>D·07 · Sähköpostihälytys lähetetty</span><time class="mono">06:42</time></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="pd-deck" aria-hidden="true"></div>
-            </div>
-
-            <!-- Phone: the email alert and an upload at a plan coordinate -->
-            <div class="pd-phone" role="img" aria-label="WorkGuardAI puhelimessa esimerkkidatalla: sähköpostihälytys pisteestä D·07, jossa nykyinen syvyys on 1,10 metriä ja suunniteltu 2,40 metriä, sekä työmaakuva, joka ladataan suunnitelman koordinaatteihin X ja Y pisteelle D·04.">
-              <div class="pd-phone-screen">
-                <div class="pd-mail">
-                  <p class="pd-mail-from"><b>WorkGuardAI</b><span class="mono">10:42</span></p>
-                  <p class="pd-mail-subject">Hälytys · D·07</p>
-                  <p class="pd-row"><span>Nykyinen syvyys</span><b>−1.10 m</b></p>
-                  <p class="pd-row"><span>Suunniteltu syvyys</span><b>−2.40 m</b></p>
-                </div>
-                <p class="pd-h">Lataa kuva</p>
-                <svg class="pd-photo" viewBox="0 0 216 132">
-                  <rect width="216" height="132" fill="#d9d3c6"/>
-                  <path d="M0 52H58L80 110H136L158 52H216V132H0Z" fill="#b8ab90"/>
-                  <path d="M58 52L80 110H136L158 52" fill="none" stroke="#8f8268" stroke-width="2"/>
-                  <path d="M0 52H58L74 92H142L158 52H216" fill="none" stroke="#5255e0" stroke-width="1.5" stroke-dasharray="4 3"/>
-                </svg>
-                <div class="pd-fields">
-                  <span class="pd-field"><small>X</small>6 120.0</span>
-                  <span class="pd-field"><small>Y</small>4 048.5</span>
-                </div>
-                <span class="pd-button">Lataa · D·04</span>
-              </div>
-            </div>
-          </div>
-          <figcaption class="pd-caption mono">Esimerkkidataa</figcaption>
-        </figure>
-
-        <!-- What you get: only what the app does today, said plainly. -->
-        <div class="pd-groups">
-          <div class="pd-group">
-            <h3><span class="mono">01</span> Edistyminen suunnitelmalla</h3>
-            <ul>
-              <li><strong>DWG-suunnitelmanne karttana</strong><p>Olemassa olevasta suunnitelmasta tulee pisteverkko, jossa jokaisella pisteellä on suunniteltu syvyys.</p></li>
-              <li><strong>Edistyminen jokaisessa pisteessä</strong><p>Jokainen piste näyttää arvioidun syvyyden suunniteltuun verrattuna, väritettynä ei aloitettu, käynnissä tai valmis.</p></li>
-              <li><strong>Yksi luku koko työmaalle</strong><p>Kokonaisedistymisen palkki näyttää koko työmaan yhdellä silmäyksellä.</p></li>
-            </ul>
-          </div>
-          <div class="pd-group">
-            <h3><span class="mono">02</span> Kuvat ilman lisätyötä</h3>
-            <ul>
-              <li><strong>Kiinteät työmaakamerat</strong><p>Työmaan kamerat lähettävät kuvan automaattisesti neljän tunnin välein.</p></li>
-              <li><strong>Lataus koordinaatin mukaan</strong><p>Tiimi lisää kuvia puhelimesta, kamerasta tai dronesta suunnitelman koordinaattiin.</p></li>
-              <li><strong>Syvyys jokaisesta kuvasta</strong><p>Tekoälypohjainen syvyysmalli arvioi kaivusyvyyden metreinä jokaisesta kuvasta.</p></li>
-            </ul>
-          </div>
-          <div class="pd-group">
-            <h3><span class="mono">03</span> Tiedä, milloin toimia</h3>
-            <ul>
-              <li><strong>Sähköpostihälytykset</strong><p>Hälytykset kertovat koordinaatit sekä nykyisen ja suunnitellun syvyyden, jotta oikea henkilö voi tarkistaa oikean paikan.</p></li>
-              <li><strong>Ilmoitukset pisteittäin</strong><p>Näkymä listaa, mikä muuttui ja missä, piste pisteeltä.</p></li>
-              <li><strong>Kirjallinen tulosraportti</strong><p>Pilotissa olemme yhteydessä viikoittain ja vertaamme tuloksia omiin mittauksiinne.</p></li>
-            </ul>
-          </div>
-        </div>
-
-      <p class="pd-delivery">Toimitamme ohjelmiston ja autamme sen käyttöönotossa työmaalla: asennus, yhteydet ja testaus.</p>
-
-      <!-- Vision: ideas that are not in the product, kept apart from what customers get today -->
-      <div class="pd-vision">
-        <div class="pd-vision-head">
-          <p class="chip">Visio</p>
-          <h3>Mihin alusta on menossa</h3>
-          <p>Sama suunnitelma ja samat kuvat avaavat tien useampaan. Nämä ideat ovat tiekartallamme.</p>
-          <p class="pd-vision-link"><a class="link-arrow" href="../fi/concept/">Katso kaikki konseptinäkymät <span aria-hidden="true">→</span></a></p>
-        </div>
-        <ul>
-          <li><strong>Lähiajan aikataulutus</strong><p>Ajatuksena on muuttaa mitattu edistyminen ennusteeksi valmistumisesta ja ehdotetuiksi askeliksi, jotka kukin odottavat hyväksyntää.</p></li>
-          <li><strong>Kustannukset sidottuina mitattuun työhön</strong><p>Ajatuksena on yhdistää mitatut määrät sopimuksen yksikköhintoihin, jotta laskutus voi seurata todella tehtyä työtä.</p></li>
-          <li><strong>Maa- ja kalliomassat</strong><p>Suunniteltu arvioimaan samoista kuvista, kuinka paljon maata ja kalliota on kaivettu ja kuinka paljon on jäljellä.</p></li>
-          <li><strong>Koneiden ja työntekijöiden turvallisuus</strong><p>Ajatuksena on ilmoittaa, kun ihminen on koneen työskentelyalueella, tunnistamatta kuka hän on.</p></li>
-          <li><strong>Kaapeli- ja johtotarkistukset</strong><p>Voi auttaa vertaamaan kaivua johtokarttoihin muistutuksena tarkistaa kaapelit ja putket ennen kuin työ jatkuu.</p></li>
-          <li><strong>Rakenteiden kunnon seuranta</strong><p>Ajatuksena on seurata rakenteiden, kuten patoseinien, muutoksia ajan mittaan toistuvista kuvista.</p></li>
-          <li><strong>BIM- ja toimittajatiedot</strong><p>Ajatuksena on tuoda mukaan BIM-mallit ja toimittajatiedot, jotta suunnitelmaa, toimituksia ja edistymistä voi verrata yhdessä paikassa.</p></li>
-          <li><strong>Parempi tarkkuus</strong><p>Kameran GPS yhdistettynä LiDARiin, jotta kuvat voidaan paikantaa ja syvyys mitata tarkemmin.</p></li>
-        </ul>
-        <p class="pd-fine">Turvallisuusideat ovat konsepteja. Ne eivät korvaa työmaan turvallisuusmenettelyjä eivätkä johtonäyttöjä.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Who it is for -->
-  <section class="section" id="for" aria-labelledby="for-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">04 · Kenelle</p>
-        <h2 id="for-title">Niille, jotka rakentavat ja omistavat maarakennuskohteet.</h2>
-      </div>
-      <div class="audience">
-        <div>
-          <h3>Maarakennus- ja infraurakoitsijat</h3>
-          <p>Teillä on jo DWG-suunnitelma. WorkGuardAI näyttää sen avulla, kuinka pitkälle kaivu- ja maarakennustyöt ovat edenneet kussakin sijainnissa, kuvista, joita tiiminne voi ottaa tavallisella työmaakäynnillä.</p>
-        </div>
-        <div>
-          <h3>Julkiset infran omistajat</h3>
-          <p>Kaupungit ja virastot, jotka tilaavat teitä, verkostoja ja muita julkisia rakennuskohteita, voivat seurata edistymistä sijainneittain hyväksyttyyn suunnitelmaan verrattuna, työmaakuvista mitattuna.</p>
-        </div>
-      </div>
-      <figure class="for-photo">
-        <picture>
-          <source type="image/avif" srcset="../assets/img/site-earthworks-cranes-640.avif 640w, ../assets/img/site-earthworks-cranes-1080.avif 1080w, ../assets/img/site-earthworks-cranes-1600.avif 1600w" sizes="(min-width: 1280px) 1120px, 100vw">
-          <img src="../assets/img/site-earthworks-cranes-1080.webp" srcset="../assets/img/site-earthworks-cranes-640.webp 640w, ../assets/img/site-earthworks-cranes-1080.webp 1080w, ../assets/img/site-earthworks-cranes-1600.webp 1600w" sizes="(min-width: 1280px) 1120px, 100vw" width="1600" height="1000" loading="lazy" decoding="async" alt="Suuri kaupunkityömaa maanrakennusvaiheessa: maakasoja, kaksi kaivinkonetta ja kaksi torninosturia sinistä taivasta vasten, taustalla kerrostaloja.">
-        </picture>
-        <figcaption>Maanrakennus suurella kaupunkityömaalla: juuri sellaista työtä WorkGuardAI on tehty mittaamaan.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- 5. Home base and Europe -->
-  <section class="section section-alt" id="about" aria-labelledby="about-title">
-    <div class="container about-grid">
+  <!-- 4. Plan formats (dark) -->
+  <section class="x-dark x-section" id="formats" aria-labelledby="formats-title">
+    <div class="container x-split">
       <div>
-        <div class="sec-head">
-          <p class="sec-index mono">05 · Meistä</p>
-          <h2 id="about-title">Syntynyt Suomessa, työskentelee koko Euroopassa.</h2>
-          <p class="sec-lead">WorkGuardAI perustettiin Suomessa 30.7.2024. Tiimi työskentelee eri puolilla Eurooppaa, lähellä niitä urakoitsijoita ja julkisia tilaajia, jotka tuotetta käyttäisivät.</p>
-        </div>
-        <ul class="countries" aria-label="Maat, joissa työskentelemme">
-          <li>Suomi <span class="home">· kotipaikka</span></li><li>Tanska</li><li>Espanja</li><li>Portugali</li><li>Albania</li>
+        <p class="x-label x-kicker">Suunnitelmaformaatit</p>
+        <h2 id="formats-title">Suunnitelmanne siinä muodossa kuin se on.</h2>
+        <p class="x-intro">Formaattiriippumaton suunnittelultaan: yksi sisäinen koordinaattimalli ja tuontityökalut. DWG toimii jo; muut formaatit ovat suunnitteilla.</p>
+        <ul class="x-formats">
+          <li><span class="x-fmt">DWG</span><span class="x-pill x-pill-ok">Nyt</span></li>
+          <li><span class="x-fmt">IFC</span><span class="x-pill">Suunnitteilla</span></li>
+          <li><span class="x-fmt">LandXML</span><span class="x-pill">Suunnitteilla</span></li>
+          <li><span class="x-fmt">Pistepilvet</span><span class="x-pill">Suunnitteilla</span></li>
         </ul>
       </div>
-      <div class="about-photos">
-        <figure class="photo">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/about-helsinki-trench-640.avif 640w, ../assets/img/about-helsinki-trench-1080.avif 1080w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
-            <img src="../assets/img/about-helsinki-trench-640.webp" srcset="../assets/img/about-helsinki-trench-640.webp 640w, ../assets/img/about-helsinki-trench-1080.webp 1080w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="1080" height="720" loading="lazy" decoding="async" alt="Endrit Kola kypärässä ja huomioliivissä muistikirja kädessään katukaivannossa Helsingin keskustassa; uusia kaivoja, vesiputkia ja venttiili.">
-          </picture>
-          <figcaption class="mono">Verkostotyömaa · Helsingin keskusta</figcaption>
-        </figure>
-        <figure class="photo">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/site-visit-team-480.avif 480w, ../assets/img/site-visit-team-800.avif 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
-            <img src="../assets/img/site-visit-team-800.webp" srcset="../assets/img/site-visit-team-480.webp 480w, ../assets/img/site-visit-team-800.webp 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="800" height="600" loading="lazy" decoding="async" alt="Kolme hymyilevää henkilöä rakennustyömaalla, yhdellä huomioliivi, jossa lukee Inxhinier (insinööri); taustalla kuorma-auto ja kaivinkone.">
-          </picture>
-          <figcaption class="mono">Työmaan tiimin kanssa · työmaalla</figcaption>
-        </figure>
-        <figure class="photo">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/drone-controller-field-480.avif 480w, ../assets/img/drone-controller-field-800.avif 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
-            <img src="../assets/img/drone-controller-field-800.webp" srcset="../assets/img/drone-controller-field-480.webp 480w, ../assets/img/drone-controller-field-800.webp 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="800" height="1067" loading="lazy" decoding="async" alt="Kädet pitelevät drooninohjainta, jonka näytöllä on kartta, metsätien varressa.">
-          </picture>
-          <figcaption class="mono">Kuvaustesti · Espoo</figcaption>
-        </figure>
-      </div>
+      <svg class="x-hub reveal" viewBox="0 0 440 400" role="img" aria-label="Kaavio: jo tuettu DWG sekä suunnitteilla olevat IFC, LandXML ja pistepilvet tuodaan kaikki yhteen sisäiseen koordinaattimalliin.">
+        <g fill="none" stroke-width="2" stroke-dasharray="6 7">
+          <path d="M80 70 C 150 90, 170 150, 220 200" stroke="#5CF2B0"/>
+          <path d="M360 70 C 290 90, 270 150, 220 200" stroke="#8EEBFF" opacity=".7"/>
+          <path d="M80 330 C 150 310, 170 250, 220 200" stroke="#8EEBFF" opacity=".7"/>
+          <path d="M360 330 C 290 310, 270 250, 220 200" stroke="#8EEBFF" opacity=".7"/>
+        </g>
+        <path d="M220 130 290 200 220 270 150 200Z" fill="#7B6CFF" opacity=".55"/>
+        <path d="M220 130 290 200 220 200Z" fill="#8EEBFF" opacity=".35"/>
+        <g font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">
+          <circle cx="72" cy="66" r="40" fill="#0E0B2B" stroke="#5CF2B0" stroke-width="2"/><text x="72" y="70" fill="#F4F2FF">DWG</text>
+          <circle cx="368" cy="66" r="40" fill="#0E0B2B" stroke="#8EEBFF" stroke-opacity=".6" stroke-width="1.5"/><text x="368" y="70" fill="#C9C3EE">IFC</text>
+          <circle cx="72" cy="334" r="40" fill="#0E0B2B" stroke="#8EEBFF" stroke-opacity=".6" stroke-width="1.5"/><text x="72" y="338" fill="#C9C3EE">LandXML</text>
+          <circle cx="368" cy="334" r="40" fill="#0E0B2B" stroke="#8EEBFF" stroke-opacity=".6" stroke-width="1.5"/><text x="368" y="330" fill="#C9C3EE">Piste-</text><text x="368" y="346" fill="#C9C3EE">pilvi</text>
+        </g>
+      </svg>
     </div>
   </section>
 
-  <!-- 6. Milestones -->
-  <section class="section" id="milestones" aria-labelledby="ms-title">
+  <!-- 5. Milestones (light): arrow timelines -->
+  <section class="x-section" id="milestones" aria-labelledby="ms-title">
+    <span id="news" class="x-anchor" aria-hidden="true"></span>
     <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">06 · Virstanpylväät</p>
-        <h2 id="ms-title">Esihautomon ideasta toimivaksi prototyypiksi – ja Euroopan pitch-lavoille.</h2>
-        <p class="sec-lead">Kolme vuotta ohjelmia, kilpailuja ja rakentamista, jokainen askel lähteineen.</p>
+      <p class="x-label x-kicker">Virstanpylväät</p>
+      <h2 id="ms-title">Ideasta toimivaksi prototyypiksi ja eteenpäin ensimmäisiin pilotteihin.</h2>
+      <h3 class="x-track-h">Tähän mennessä</h3>
+      <ol class="x-track">
+        <li class="reveal"><span class="x-node">Nov 24</span><strong>NEXUS Incubator, Helsinki</strong><span>Suoritti Helsinki Incubatorsin kuuden kuukauden ohjelman.</span></li>
+        <li class="reveal"><span class="x-node">Oct 25</span><strong>Kiertotalot-haaste</strong><span>Helsinki, Espoo ja Vantaa: jatkoon jättämään tarjouksen.</span></li>
+        <li class="reveal"><span class="x-node">Nov 25</span><strong>Helsinki Incubators</strong><span>Slush 2025 -tapahtumassa Helsinki Incubatorsin alumnien joukossa.</span></li>
+        <li class="reveal"><span class="x-node x-node-ok">Dec 25</span><strong>MVP valmis</strong><span>Toimiva prototyyppi, joka lukee DWG-suunnitelman ja arvioi syvyyden kuvista.</span></li>
+        <li class="reveal"><span class="x-node">Feb 26</span><strong>8 000 € ohjelmarahoitusta</strong><span>LUT-yliopiston Baltic Impact Acceleratorista, Interreg Central Baltic, EU:n osarahoittama.</span></li>
+        <li class="reveal"><span class="x-node">May 26</span><strong>VINCI Energies</strong><span>Kiinnostui alustavan arvioinnin jälkeen.</span></li>
+      </ol>
+      <h3 class="x-track-h">Mihin olemme menossa</h3>
+      <ol class="x-track x-track-plan">
+        <li class="reveal"><span class="x-node">Seuraava</span><strong>Kenttätesti</strong><span>Käynnissä olevalla työmaalla, arvioita verrataan mitattuihin arvoihin.</span></li>
+        <li class="reveal"><span class="x-node">2027</span><strong>Ensimmäiset pilotit</strong><span>Suomi ja Pohjoismaat.</span></li>
+        <li class="reveal"><span class="x-node">Sitten</span><strong>Alue ja Eurooppa</strong><span>Kasvu pohjoismaisesta tukikohdasta.</span></li>
+        <li class="reveal"><span class="x-node">2030</span><strong>Globaali toimija</strong><span>Tavoitteemme vuodelle 2030.</span></li>
+      </ol>
+      <p class="x-sample">Suunnitelmia, ei sitoumuksia.</p>
+      <p class="x-more"><a class="x-link" href="../fi/news/">Kaikki uutiset <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- 6. Where we have pitched (dark) -->
+  <section class="x-dark x-section" id="pitched" aria-labelledby="pitched-title">
+    <div class="container x-split x-split-wide">
+      <div>
+        <p class="x-label x-kicker">Lavalla</p>
+        <h2 id="pitched-title">Missä olemme pitchanneet.</h2>
+        <ul class="x-stages">
+          <li id="event-meout-2026">
+            <svg class="x-flag" viewBox="0 0 24 24" aria-hidden="true"><clipPath id="fl-hu"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#fl-hu)"><rect width="24" height="8" fill="#CE2939"/><rect y="8" width="24" height="8" fill="#fff"/><rect y="16" width="24" height="8" fill="#477050"/></g></svg>
+            <div><strong>MeOut Summit · Budapest</strong><span class="x-country">Unkari</span>
+            <p><span data-until="2026-11-26">Valittu yhdeksi 20 startupista pitchaamaan lavalla 25.–26.11.2026.</span><span data-from="2026-11-27" hidden>Pitchasi lavalla Pitch Marathonissa marraskuussa 2026.</span></p></div>
+          </li>
+          <li>
+            <svg class="x-flag" viewBox="0 0 24 24" aria-hidden="true"><clipPath id="fl-az"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#fl-az)"><rect width="24" height="8" fill="#0092BC"/><rect y="8" width="24" height="8" fill="#E4002B"/><rect y="16" width="24" height="8" fill="#00AF66"/><circle cx="11.2" cy="12" r="2.6" fill="#fff"/><circle cx="11.9" cy="12" r="2.1" fill="#E4002B"/><circle cx="14.4" cy="12" r=".9" fill="#fff"/></g></svg>
+            <div><strong>AIREX 2026 · Baku</strong><span class="x-country">Azerbaidžan</span><p>Pitchasi PropTech Competitionissa 6.11.2026.</p></div>
+          </li>
+          <li>
+            <svg class="x-flag" viewBox="0 0 24 24" aria-hidden="true"><clipPath id="fl-fi"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#fl-fi)"><rect width="24" height="24" fill="#fff"/><rect x="6" width="4.4" height="24" fill="#002F6C"/><rect y="9.8" width="24" height="4.4" fill="#002F6C"/></g></svg>
+            <div><strong>Sisu Factory · Helsinki</strong><span class="x-country">Suomi</span><p>Voitti Sauna Pitchingin 24.2.2025.</p></div>
+          </li>
+        </ul>
       </div>
-
-
-      <div class="ms-highlights">
-        <figure class="ms-photo">
+      <div class="x-photos">
+        <figure class="x-photo reveal">
           <picture>
             <source type="image/avif" srcset="../assets/img/sisu-win-480.avif 480w, ../assets/img/sisu-win-800.avif 800w, ../assets/img/sisu-win-1080.avif 1080w" sizes="(min-width: 1024px) 560px, 100vw">
             <img src="../assets/img/sisu-win-800.webp" srcset="../assets/img/sisu-win-480.webp 480w, ../assets/img/sisu-win-800.webp 800w, ../assets/img/sisu-win-1080.webp 1080w" sizes="(min-width: 1024px) 560px, 100vw" width="1080" height="720" loading="lazy" decoding="async" alt="Endrit Kola pitelee Sisu Factoryn todistusta Sauna Pitching -näytön edessä.">
           </picture>
-          <figcaption><span class="mono">Voittaja · 24.2.2025</span>Endrit Kola Sauna Pitching -voiton jälkeen Sisu Factoryssa Helsingissä.</figcaption>
-        </figure>
-        <div class="ms-stats">
-          <div class="ms-stat">
-            <p class="mono ms-label">MeOut Summit · Budapest, Unkari</p>
-            <p class="ms-num">1/20</p>
-            <p>startupista, jotka valittiin noin 200 hakemuksen joukosta pitchaamaan lavalla MeOut Summitin Pitch Marathonissa Budapestissa, Unkarissa, 25.–26.11.2026.</p>
-          </div>
-          <div class="ms-stat">
-            <p class="mono ms-label">Baltic Impact Accelerator</p>
-            <p class="ms-num">8 000 €</p>
-            <p>ohjelmarahoitusta LUT-yliopiston Baltic Impact Acceleratorista (Interreg Central Baltic, EU:n osarahoittama), MVP:n rakentamiseen.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="ms-gallery">
-        <figure class="g-portrait">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/sisu-sauna-certificate-480.avif 480w, ../assets/img/sisu-sauna-certificate-800.avif 800w, ../assets/img/sisu-sauna-certificate-1080.avif 1080w" sizes="(min-width: 960px) 40vw, 100vw">
-            <img src="../assets/img/sisu-sauna-certificate-800.webp" srcset="../assets/img/sisu-sauna-certificate-480.webp 480w, ../assets/img/sisu-sauna-certificate-800.webp 800w, ../assets/img/sisu-sauna-certificate-1080.webp 1080w" sizes="(min-width: 960px) 40vw, 100vw" width="1333" height="2000" loading="lazy" decoding="async" alt="Endrit Kola istuu saunan lauteilla ja pitelee Sisu Factoryn todistusta Sauna Pitchingin voitosta.">
-          </picture>
-          <figcaption class="mono">Sauna Pitchingin voittajatodistus · Helsinki · 24.2.2025</figcaption>
-        </figure>
-        <figure class="g-photo">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/polar-bear-pitching-oulu-480.avif 480w, ../assets/img/polar-bear-pitching-oulu-800.avif 800w, ../assets/img/polar-bear-pitching-oulu-1080.avif 1080w" sizes="(min-width: 960px) 40vw, 100vw">
-            <img src="../assets/img/polar-bear-pitching-oulu-800.webp" srcset="../assets/img/polar-bear-pitching-oulu-480.webp 480w, ../assets/img/polar-bear-pitching-oulu-800.webp 800w, ../assets/img/polar-bear-pitching-oulu-1080.webp 1080w" sizes="(min-width: 960px) 40vw, 100vw" width="1600" height="1200" loading="lazy" decoding="async" alt="WorkGuardAI Polar Bear Pitchingin tapahtumaseinän edessä Oulussa.">
-          </picture>
-          <figcaption class="mono">Vieraina Polar Bear Pitchingissä · Oulu · 27.2.2025</figcaption>
-        </figure>
-      </div>
-
-      <h3 class="ms-sub">Aikajana</h3>
-      <ol class="timeline">
-        <li>
-          <time class="mono">11/2026</time>
-          <div>
-            <h3>AIREX 2026 PropTech Competition · Baku</h3>
-            <p>Pitchasi AIREX 2026 PropTech Competitionissa Bakussa 6. marraskuuta sijoittajista ja ekosysteemin edustajista koostuvalle tuomaristolle.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">11/2026</time>
-          <div>
-            <h3>MeOut Summit · Budapest, Unkari</h3>
-            <p>Valittiin yhdeksi 20 startupista noin 200 hakemuksen joukosta pitchaamaan lavalla Pitch Marathonissa 25.–26.11. sijoittajaraadin edessä. Esillä EU-Startupsissa.</p>
-            <a href="https://www.eu-startups.com/2026/10/meout-summit-2026-meet-the-pitch-marathon-contestants/" rel="noopener" target="_blank">Artikkeli EU-Startupsissa <span aria-hidden="true">↗</span><span class="visually-hidden">(avautuu uuteen välilehteen)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">9/2026</time>
-          <div>
-            <h3>Finland Global Startup Accelerator · Plug and Play ja Tampereen kaupunki</h3>
-            <p>Pääsi jatkoon pitchaamaan 10 viikon kasvuohjelmaan, jonka tilaaja on Tampereen kaupunki, ja pitchasi valintaraadille Selection Dayna 9.9.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">5/2026</time>
-          <div>
-            <h3>VINCI Energies · Startup Connect</h3>
-            <p>VINCI Energies kiinnostui alustavan arvioinnin jälkeen, ja haimme sen vuoden 2026 haasteeseen ”Expertise meets AI”.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">2/2026</time>
-          <div>
-            <h3>Baltic Impact Accelerator · LUT-yliopisto</h3>
-            <p>Suoritimme kuuden kuukauden kiihdyttämön kolmannen ryhmän. Ohjelman rahoittaa Interreg Central Baltic ja osarahoittaa Euroopan unioni; ohjelmarahoitusta 8 000 €.</p>
-            <a href="https://centralbaltic.eu/project/baltic-impact-accelerator/" rel="noopener" target="_blank">Tietoa ohjelmasta <span aria-hidden="true">↗</span><span class="visually-hidden">(avautuu uuteen välilehteen)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">12/2025</time>
-          <div>
-            <h3>MVP valmis</h3>
-            <p>Ydinmoottori rakennettiin yhdessä kehityskumppanin kanssa, Baltic Impact Acceleratorin rahoituksella. Rakennettu infraurakoitsijan työmaapäällikön näkemysten pohjalta ja testattu yhdellä todellisella hankesuunnitelmalla.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">11/2025</time>
-          <div>
-            <h3>Slush · Helsinki</h3>
-            <p>Mukana Slush 2025 -tapahtumassa Helsinki Incubatorsin alumnien joukossa.</p>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7394758461210841088/" rel="noopener" target="_blank">Tiedote LinkedInissä <span aria-hidden="true">↗</span><span class="visually-hidden">(avautuu uuteen välilehteen)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">10/2025</time>
-          <div>
-            <h3>Kiertotalot-innovaatiohaaste · Helsinki, Espoo, Vantaa</h3>
-            <p>Osallistui kolmen kaupungin yhteiseen innovaatiohaasteeseen ja jätti tarjouksen niiden hankinnassa.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">4/2025</time>
-          <div>
-            <h3>PitchBob.io</h3>
-            <p>Esillä Secret Seeds -startupsarjassa.</p>
-            <a href="https://pitchbob.io/secretseeds/revolutionizing-the-construction-industry-how-workguardai-is-leading-the-ai-driven-transformation" rel="noopener" target="_blank">Lue artikkeli <span aria-hidden="true">↗</span><span class="visually-hidden">(avautuu uuteen välilehteen)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">2/2025</time>
-          <div>
-            <h3>Polar Bear Pitching · Oulu</h3>
-            <p>Vieraileva startup Polar Bear Pitchingissä Oulussa 27.2.2025 – palkinto Sauna Pitchingin voitosta.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">2/2025</time>
-          <div>
-            <h3>Sisu Factory · Sauna Pitching</h3>
-            <p>Voitimme Sauna Pitchingin 24.2.2025.</p>
-            <a href="https://www.linkedin.com/posts/sisu-factory_sisufactory-startup-pitching-activity-7300066903111135233-Zzur" rel="noopener" target="_blank">Tiedote LinkedInissä <span aria-hidden="true">↗</span><span class="visually-hidden">(avautuu uuteen välilehteen)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">11/2024</time>
-          <div>
-            <h3>NEXUS Incubator · Helsingin yliopisto</h3>
-            <p>Suoritimme Helsinki Incubatorsin kuuden kuukauden ohjelman: mentorit ja viikoittaiset työpajat liiketoimintamalleista, myynnistä ja pitchaamisesta.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">7/2024</time>
-          <div>
-            <h3>WorkGuardAI perustetaan</h3>
-            <p>Yhtiö perustettiin Suomessa 30.7.2024.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">2023</time>
-          <div>
-            <h3>Compass-esihautomo · Helsinki</h3>
-            <p>Idea syntyi ajoneuvojen etävalvontana. Mentorien palaute ja pitchaaminen kääntivät sen kohti rakennustyömaita.</p>
-          </div>
-        </li>
-      </ol>
-
-      <div class="supported">
-        <div>
-          <p class="mono">TUKIJAT</p>
-          <div class="supported-row">
-            <img src="../assets/img/bia-interreg-acknowledgement.webp" width="456" height="232" loading="lazy" decoding="async" alt="Interreg Central Baltic -ohjelma, Euroopan unionin osarahoittama. Baltic Impact Accelerator.">
-            <p>Suoritetut ohjelmat: Baltic Impact Accelerator (LUT-yliopisto, Interreg Central Baltic) ja NEXUS Incubator (Helsinki Incubators, Helsingin yliopisto).</p>
-          </div>
-        </div>
-        <figure class="cert">
-          <a href="../assets/img/bia-certificate-1200.webp" target="_blank" rel="noopener" aria-label="Avaa todistus (avautuu uuteen välilehteen)">
-            <picture>
-              <source type="image/avif" srcset="../assets/img/bia-certificate-640.avif 640w, ../assets/img/bia-certificate-1200.avif 1200w" sizes="(min-width: 960px) 420px, 100vw">
-              <img src="../assets/img/bia-certificate-640.webp" srcset="../assets/img/bia-certificate-640.webp 640w, ../assets/img/bia-certificate-1200.webp 1200w" sizes="(min-width: 960px) 420px, 100vw" width="1200" height="848" loading="eager" fetchpriority="low" decoding="async" alt="Osallistumistodistus: WorkGuardAI on osallistunut menestyksekkäästi Baltic Impact Acceleratorin kolmanteen ryhmään. Päivätty 18.2.2026.">
-            </picture>
-          </a>
-          <figcaption class="mono">Baltic Impact Accelerator, 3. ryhmä · osallistumistodistus · 18.2.2026</figcaption>
+          <figcaption class="x-label">Voittaja · 24.2.2025</figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- 7. News (from src/news.json) -->
-  <section class="section section-alt" id="news" aria-labelledby="news-title">
+  <!-- 7. Team (light) -->
+  <section class="x-section" id="team" aria-labelledby="team-title">
     <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">07 · Uutiset</p>
-        <h2 id="news-title">Viimeisimmät uutiset</h2>
-      </div>
-      <ol class="news-list">
-        <li id="meout-2026">
-          <time class="mono" datetime="2026-11-25">25.–26.11.2026</time>
-          <h3>MeOut Summit Pitch Marathon, Budapest</h3>
-          <p>Valittiin yhdeksi 20 startupista noin 200 hakemuksen joukosta pitchaamaan lavalla Pitch Marathonissa 25.–26.11. sijoittajaraadin edessä. Esillä EU-Startupsissa.</p>
-          <a href="https://www.eu-startups.com/2026/10/meout-summit-2026-meet-the-pitch-marathon-contestants/" rel="noopener" target="_blank">Artikkeli EU-Startupsissa <span aria-hidden="true">↗</span><span class="visually-hidden">(avautuu uuteen välilehteen)</span></a>
-        </li>
-        <li id="airex-2026">
-          <time class="mono" datetime="2026-11-06">6.11.2026</time>
-          <h3>AIREX 2026 PropTech Competition, Baku</h3>
-          <p>Pitchasi AIREX 2026 PropTech Competitionissa Bakussa 6. marraskuuta sijoittajista ja ekosysteemin edustajista koostuvalle tuomaristolle.</p>
-          <a href="https://airex.az/" rel="noopener" target="_blank">Virallinen lähde <span aria-hidden="true">↗</span><span class="visually-hidden">(avautuu uuteen välilehteen)</span></a>
-        </li>
-        <li id="tampere-accelerator-2026">
-          <time class="mono" datetime="2026-09-09">9.9.2026</time>
-          <h3>Finland Global Startup Accelerator</h3>
-          <p>Pääsi jatkoon pitchaamaan 10 viikon kasvuohjelmaan, jonka tilaaja on Tampereen kaupunki, ja pitchasi valintaraadille Selection Dayna 9.9.</p>
-        </li>
-      </ol>
-      <p class="news-more"><a class="link-arrow" href="../fi/news/">Kaikki uutiset <span aria-hidden="true">→</span></a> <a class="link-arrow" href="../fi/?interest=updates#work-form">Seuraa edistymistämme <span aria-hidden="true">→</span></a></p>
-    </div>
-  </section>
-
-  <!-- 8. Team -->
-  <section class="section" id="team" aria-labelledby="team-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">08 · Tiimi</p>
-        <h2 id="team-title">Tiimi</h2>
-      </div>
-      <ul class="team">
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-endrit-kola-192.avif 1x, ../assets/img/team-endrit-kola-384.avif 2x"><img src="../assets/img/team-endrit-kola-192.webp" srcset="../assets/img/team-endrit-kola-192.webp 1x, ../assets/img/team-endrit-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Endrit Kola"></picture><span class="name">Endrit Kola</span><span class="role mono">Perustaja ja toimitusjohtaja</span><a href="https://www.linkedin.com/in/endritkola/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(avautuu uuteen välilehteen)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-maiju-karhu-192.avif 1x, ../assets/img/team-maiju-karhu-384.avif 2x"><img src="../assets/img/team-maiju-karhu-192.webp" srcset="../assets/img/team-maiju-karhu-192.webp 1x, ../assets/img/team-maiju-karhu-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><span class="name">Maiju Karhu</span><span class="role mono">Startup-neuvonantaja</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(avautuu uuteen välilehteen)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-larissa-chaves-192.avif 1x, ../assets/img/team-larissa-chaves-384.avif 2x"><img src="../assets/img/team-larissa-chaves-192.webp" srcset="../assets/img/team-larissa-chaves-192.webp 1x, ../assets/img/team-larissa-chaves-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><span class="name">Larissa Chaves</span><span class="role mono">Tekninen avustaja</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(avautuu uuteen välilehteen)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-pratham-srivastava-192.avif 1x, ../assets/img/team-pratham-srivastava-384.avif 2x"><img src="../assets/img/team-pratham-srivastava-192.webp" srcset="../assets/img/team-pratham-srivastava-192.webp 1x, ../assets/img/team-pratham-srivastava-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><span class="name">Pratham Srivastava</span><span class="role mono">Ohjelmointiavustaja</span></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-altin-kola-192.avif 1x, ../assets/img/team-altin-kola-384.avif 2x"><img src="../assets/img/team-altin-kola-192.webp" srcset="../assets/img/team-altin-kola-192.webp 1x, ../assets/img/team-altin-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Altin Kola"></picture><span class="name">Altin Kola</span><span class="role mono">Työmaa- ja infraneuvonantaja</span></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-ergis-topi-192.avif 1x, ../assets/img/team-ergis-topi-384.avif 2x"><img src="../assets/img/team-ergis-topi-192.webp" srcset="../assets/img/team-ergis-topi-192.webp 1x, ../assets/img/team-ergis-topi-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Ergis Topi"></picture><span class="name">Ergis Topi</span><span class="role mono">Työmaanjohdon neuvonantaja</span></li>
+      <p class="x-label x-kicker">Tiimi</p>
+      <h2 id="team-title">WorkGuardAI:n takana olevat ihmiset.</h2>
+      <ul class="x-team">
+        <li class="reveal"><picture><source type="image/avif" srcset="../assets/img/team-endrit-kola-192.avif 1x, ../assets/img/team-endrit-kola-384.avif 2x"><img src="../assets/img/team-endrit-kola-192.webp" srcset="../assets/img/team-endrit-kola-192.webp 1x, ../assets/img/team-endrit-kola-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Endrit Kola"></picture><strong>Endrit Kola</strong><span>Perustaja ja toimitusjohtaja</span><a href="https://www.linkedin.com/in/endritkola/" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> (avautuu uuteen välilehteen)</span></a></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="../assets/img/team-maiju-karhu-192.avif 1x, ../assets/img/team-maiju-karhu-384.avif 2x"><img src="../assets/img/team-maiju-karhu-192.webp" srcset="../assets/img/team-maiju-karhu-192.webp 1x, ../assets/img/team-maiju-karhu-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><strong>Maiju Karhu</strong><span>Startup-neuvonantaja</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> (avautuu uuteen välilehteen)</span></a></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="../assets/img/team-larissa-chaves-192.avif 1x, ../assets/img/team-larissa-chaves-384.avif 2x"><img src="../assets/img/team-larissa-chaves-192.webp" srcset="../assets/img/team-larissa-chaves-192.webp 1x, ../assets/img/team-larissa-chaves-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><strong>Larissa Chaves</strong><span>Tekninen avustaja</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> (avautuu uuteen välilehteen)</span></a></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="../assets/img/team-pratham-srivastava-192.avif 1x, ../assets/img/team-pratham-srivastava-384.avif 2x"><img src="../assets/img/team-pratham-srivastava-192.webp" srcset="../assets/img/team-pratham-srivastava-192.webp 1x, ../assets/img/team-pratham-srivastava-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><strong>Pratham Srivastava</strong><span>Ohjelmointiavustaja</span></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="../assets/img/team-altin-kola-192.avif 1x, ../assets/img/team-altin-kola-384.avif 2x"><img src="../assets/img/team-altin-kola-192.webp" srcset="../assets/img/team-altin-kola-192.webp 1x, ../assets/img/team-altin-kola-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Altin Kola"></picture><strong>Altin Kola</strong><span>Työmaa- ja infraneuvonantaja</span></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="../assets/img/team-ergis-topi-192.avif 1x, ../assets/img/team-ergis-topi-384.avif 2x"><img src="../assets/img/team-ergis-topi-192.webp" srcset="../assets/img/team-ergis-topi-192.webp 1x, ../assets/img/team-ergis-topi-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Ergis Topi"></picture><strong>Ergis Topi</strong><span>Työmaanjohdon neuvonantaja</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- 9. FAQ -->
-  <section class="section section-alt" id="faq" aria-labelledby="faq-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">09 · UKK</p>
-        <h2 id="faq-title">Usein kysytyt kysymykset</h2>
-      </div>
-      <div class="faq">
-        <details><summary>Kuinka tarkka se on?</summary><p>Emme tiedä vielä, koska tarkkuutta ei ole mitattu käynnissä olevalla työmaalla. Sitä varten pilotti on: vertaamme arvioituja syvyyksiä omiin mittauksiinne ja annamme tulokset kirjallisena raporttina.</p></details>
-        <details><summary>Entä yksityisyys ja kamerakuvissa näkyvät ihmiset?</summary><p>Prototyyppi arvioi maan syvyyttä suunnitelman pisteissä. Se ei tunnista eikä seuraa ihmisiä. Käytettävistä kameroista, niiden suuntauksesta, kuvien näkijöistä ja säilytysajasta sovitaan kirjallisessa pilottisopimuksessa ennen kuin yhtään kuvaa otetaan.</p></details>
-        <details><summary>Mitä tarvitsette pilottityömaalta?</summary><p>Työmaan DWG-suunnitelman sekä pääsyn työmaakameroihin tai henkilön, joka voi ottaa kuvia suunnitelman koordinaateista.</p></details>
-        <details><summary>Onko sitä testattu käynnissä olevalla työmaalla?</summary><p>Ei vielä. Prototyyppi toimii todellisen hankkeen DWG-suunnitelmalla ja kuvilla. Pilotti on ensimmäinen testi käynnissä olevalla työmaalla, ja vertaamme tuloksia omiin mittauksiinne.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. Work with us: each card opens the one form with its interest preselected -->
-  <section class="section" id="work" aria-labelledby="work-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">10 · Tee työtä kanssamme</p>
-        <h2 id="work-title">Tee työtä kanssamme</h2>
-      </div>
-      <ul class="who">
-        <li><h3>Asiakkaat</h3><p>Maanrakennus- ja infratiimit, joilla on DWG-suunnitelma ja jotka haluavat testata edistymisen mittausta oikealla työmaalla.</p><a class="link-arrow" href="../fi/?interest=pilot#work-form">Varaa pilottipuhelu <span aria-hidden="true">→</span></a></li>
-        <li><h3>Yliopistot, tutkimusryhmät ja keskittymät</h3><p>Tutkimus- ja oppimisyhteistyö: opiskelijat ja tutkijat työskentelevät oikean prototyypin kanssa; laajuudesta, datan käytöstä ja IP-oikeuksista sovitaan ensin kirjallisesti.</p><a class="link-arrow" href="../fi/?interest=research#work-form">Keskustellaan yhteistyöstä <span aria-hidden="true">→</span></a></li>
-        <li><h3>Tapahtumat</h3><p>Järjestätkö tapahtumaa tai osallistutko samaan tapahtumaan kuin me? Kerro, mihin.</p><a class="link-arrow" id="event-cta-link" href="../fi/?interest=event&amp;event=MeOut%20Summit%2C%20Budapest#work-form"><span id="event-cta" data-none="Ota yhteyttä">Tapaa meidät: MeOut Summit, Budapest</span> <span aria-hidden="true">→</span></a></li>
-        <li><h3>Media, podcastit ja puheenvuorot</h3><p>Faktat, kuvat ja yhteystiedot ovat mediasivulla. <a href="../fi/press/">Media ja puheenvuorot</a></p><a class="link-arrow" href="../fi/?interest=press#work-form">Ota yhteyttä <span aria-hidden="true">→</span></a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Events (from src/news.json). The script hides a row once its event has ended. -->
-  <section class="section section-alt" id="events" aria-labelledby="events-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">11 · Tapahtumat</p>
-        <h2 id="events-title">Tapaa meidät</h2>
-      </div>
-      <ul class="events">
-        <li id="event-meout-2026" data-end="2026-11-26">
-          <time class="mono" datetime="2026-11-25">25.–26.11.2026</time>
-          <div>
-            <h3>MeOut Summit, Budapest</h3>
-            <p>Pitchaamme lavalla MeOut Summitissa Budapestissa</p>
-            <div class="share"><span class="mono">Jaa</span>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fworkguardai.com%2Ffi%2F%23event-meout-2026" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden">(avautuu uuteen välilehteen)</span></a>
-            <a href="https://wa.me/?text=Pitchaamme%20lavalla%20MeOut%20Summitissa%20Budapestissa%20https%3A%2F%2Fworkguardai.com%2Ffi%2F%23event-meout-2026" rel="noopener" target="_blank">WhatsApp<span class="visually-hidden">(avautuu uuteen välilehteen)</span></a>
-            <a href="mailto:?subject=Pitchaamme%20lavalla%20MeOut%20Summitissa%20Budapestissa&amp;body=https%3A%2F%2Fworkguardai.com%2Ffi%2F%23event-meout-2026">Sähköposti</a>
-            <a href="https://workguardai.com/fi/#event-meout-2026" data-copy="Linkki kopioitu">Kopioi linkki</a>
-            <button type="button" class="share-native" data-share-title="Pitchaamme lavalla MeOut Summitissa Budapestissa" data-share-url="https://workguardai.com/fi/#event-meout-2026" hidden>Jaa…</button>
-          </div>
-          </div>
-          <a class="btn btn-outline btn-small" href="../fi/?interest=event&amp;event=MeOut%20Summit%2C%20Budapest#work-form">Pyydä tapaamista</a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 11. Pilot call + partner -->
-  <section class="section" id="pilot" aria-labelledby="pilot-title">
-    <div class="container pilot-grid">
+  <!-- 8. Contact (gradient). The one contact form, sent through Formspree. -->
+  <section class="x-cta" id="contact" aria-labelledby="work-title">
+    <span id="pilot" class="x-anchor" aria-hidden="true"></span><span id="work" class="x-anchor" aria-hidden="true"></span>
+    <div class="container x-split x-split-wide">
       <div>
-        <div class="sec-head">
-          <p class="sec-index mono">12 · Pilotti</p>
-          <h2 id="pilot-title">Varaa pilottipuhelu.</h2>
-          <p class="sec-lead">Etsimme ensimmäistä käynnissä olevaa työmaata. Jos teette maarakennus- tai infratöitä ja teillä on niihin DWG-suunnitelmat, lyhyt puhelu riittää selvittämään, sopiiko pilotti.</p>
-        </div>
-        <div class="pilot-how">
-          <h3>Näin pilotti etenee</h3>
-          <ol class="pilot-steps">
-            <li><span class="mono">01</span><div><strong>Lyhyt puhelu</strong><p>Näytämme prototyypin esimerkkihankkeella ja tarkistamme, sopiiko työmaanne: maarakennus- tai infratyö, DWG-suunnitelmat ja joku, joka voi ottaa kuvia.</p></div></li>
-            <li><span class="mono">02</span><div><strong>Kirjallinen laajuus</strong><p>Yksi työmaa, kiinteä jakso ja selkeä tietojenkäsittely, sovittuna lyhyessä pilottisopimuksessa. Lataamme DWG-suunnitelmanne ja luomme tiimillenne käyttöoikeudet.</p></div></li>
-            <li><span class="mono">03</span><div><strong>Kenttätesti ja arviointi</strong><p>Tiiminne ottaa kuvia suunnitelman koordinaateissa. Pidämme yhteyttä viikoittain ja vertaamme tuloksia omiin mittauksiinne. Saatte kirjallisen tulosraportin.</p></div></li>
-          </ol>
-          <p class="pilot-pricing">Piloteista sovitaan työmaa kerrallaan. Hinta määritetään kenttätestin jälkeen sen tulosten perusteella.</p>
-        </div>
-        <div class="partner" id="partner">
-          <h3>Ryhdy kumppaniksi</h3>
-          <p>Teknologia-, mittaus- ja rakennusalan kumppaneille sekä rahoittajille, kaupungeille, yliopistoille ja sijoittajille, jotka tukevat varhaisen vaiheen eurooppalaista rakennusteknologiaa.</p>
-          <a class="link-arrow" href="mailto:ek@workguardai.com?subject=Partnership%20with%20WorkGuardAI">ek@workguardai.com <span aria-hidden="true">→</span></a>
-        </div>
+        <p class="x-label x-kicker">Yhteystiedot</p>
+        <h2 id="work-title">Etsitkö rakennuttajia ja urakoitsijoita työmaahankkeeseen? Jutellaan.</h2>
+        <p class="x-intro">Etsimme ensimmäistä käynnissä olevaa työmaata. Jos teette maarakennus- tai infratöitä ja teillä on niihin DWG-suunnitelmat, lyhyt puhelu riittää selvittämään, sopiiko pilotti.</p>
+        <ol class="x-pilot">
+          <li><span>01</span><div><strong>Lyhyt puhelu</strong><p>Näytämme prototyypin esimerkkihankkeella ja tarkistamme, sopiiko työmaanne: maarakennus- tai infratyö, DWG-suunnitelmat ja joku, joka voi ottaa kuvia.</p></div></li>
+          <li><span>02</span><div><strong>Kirjallinen laajuus</strong><p>Yksi työmaa, kiinteä jakso ja selkeä tietojenkäsittely, sovittuna lyhyessä pilottisopimuksessa. Lataamme DWG-suunnitelmanne ja luomme tiimillenne käyttöoikeudet.</p></div></li>
+          <li><span>03</span><div><strong>Kenttätesti ja arviointi</strong><p>Tiiminne ottaa kuvia suunnitelman koordinaateissa. Pidämme yhteyttä viikoittain ja vertaamme tuloksia omiin mittauksiinne. Saatte kirjallisen tulosraportin.</p></div></li>
+        </ol>
+        <p class="x-mail"><a href="mailto:ek@workguardai.com">ek@workguardai.com</a></p>
       </div>
 
       <form class="form" id="work-form" aria-labelledby="work-title" method="POST" action="https://formspree.io/f/xgaoynap"
@@ -1019,12 +461,12 @@
   </section>
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer x-footer">
   <div class="container">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="../fi/" aria-label="WorkGuardAI etusivu"><img src="../assets/img/logo.png" alt="WorkGuardAI" width="433" height="71" loading="lazy"></a>
-        <p style="margin-top:var(--s-4);max-width:26rem">Maarakennus- ja infratöiden edistyminen mitattuna DWG-suunnitelmasta ja tavallisista työmaakuvista.</p>
+        <a class="brand" href="../fi/" aria-label="WorkGuardAI etusivu"><i aria-hidden="true"></i>WorkGuardAI</a>
+        <p class="x-foot-tag">Maarakennus- ja infratöiden edistyminen arvioituna DWG-suunnitelmasta ja tavallisista työmaakuvista.</p>
       </div>
       <div>
         <p class="foot-label mono">Yhteystiedot</p>
@@ -1032,9 +474,9 @@
           <li><a href="mailto:ek@workguardai.com">ek@workguardai.com</a></li>
           <li><a href="https://www.linkedin.com/company/workguardai" rel="noopener" target="_blank">LinkedIn</a></li>
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
-          <li><a href="#work">Tee työtä kanssamme</a></li>
           <li><a href="../fi/news/">Uutiset</a></li>
           <li><a href="../fi/press/">Media ja puheenvuorot</a></li>
+          <li><a href="../fi/concept/">Visio</a></li>
           <li><a href="../fi/privacy/">Tietosuojaseloste</a></li>
         </ul>
       </div>

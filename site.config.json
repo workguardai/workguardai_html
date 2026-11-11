@@ -1,6 +1,1 @@
-{
-  "baseUrl": "https://workguardai.com",
-  "formspreeId": "xgaoynap",
-  "languages": ["en", "sq", "da", "fi", "es"],
-  "noindex": false
-}
+{"baseUrl": "https://workguardai.com", "formspreeId": "xgaoynap", "languages": ["en", "sq", "da", "fi", "es"], "noindex": false, "deckUrl": ""}

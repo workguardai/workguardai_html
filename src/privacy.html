@@ -7,13 +7,14 @@
 <meta name="description" content="{{privacy.metaDesc}}">
 {{@robots}}
 {{@og}}
-<meta name="theme-color" content="#fbfaf7">
+<meta name="theme-color" content="#0E0B2B">
+<link rel="icon" href="{{@base}}assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="{{@base}}assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="{{@base}}assets/img/favicon-48.png">
 <link rel="apple-touch-icon" href="{{@base}}assets/img/apple-touch-icon.png">
 <link rel="canonical" href="{{@canonical}}">
 {{@alternates}}
-<link rel="preload" href="{{@base}}assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{@base}}assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{@base}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{@base}}assets/css/site.css">
 </head>
@@ -22,14 +23,12 @@
 
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="{{@home}}" aria-label="{{home}}">
-      <img src="{{@base}}assets/img/logo.png" alt="WorkGuardAI" width="433" height="71">
-    </a>
+    <a class="brand" href="{{@home}}" aria-label="{{home}}"><i aria-hidden="true"></i>WorkGuardAI</a>
     <div class="header-end">
       <nav class="lang" aria-label="{{nav.language}}">
 {{@langnav}}
       </nav>
-      <a class="btn btn-primary btn-small header-cta" href="{{@home}}#pilot">{{cta.pilot}}</a>
+      <a class="btn btn-primary btn-small header-cta" href="{{@home}}#contact">{{home.book}}</a>
     </div>
   </div>
 </header>

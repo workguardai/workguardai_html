@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 // How it works, step 2: plan points along the excavation profile.
 (() => {
   const g = document.getElementById('hiw-dots');
@@ -151,4 +153,22 @@ if (navigator.share) {
     if (width > 0) rect.setAttribute('width', (width + 10).toFixed(1));
   };
   document.fonts.ready.then(fit);
+})();
+
+// Scroll-in: reveal blocks as they enter the view.
+(() => {
+  const items = document.querySelectorAll('.reveal');
+  if (!items.length) return;
+  if (!('IntersectionObserver' in window)) { items.forEach((el) => el.classList.add('in')); return; }
+  const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { rootMargin: '0px 0px -10% 0px' });
+  items.forEach((el) => io.observe(el));
+})();
+
+// Dated wording: "Pitching 25–26 Nov" becomes "Pitched" once the event is over.
+(() => {
+  const today = new Date().toISOString().slice(0, 10);
+  document.querySelectorAll('[data-until]').forEach((el) => { el.hidden = today > el.dataset.until; });
+  document.querySelectorAll('[data-from]').forEach((el) => { el.hidden = today < el.dataset.from; });
 })();

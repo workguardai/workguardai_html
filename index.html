@@ -4,24 +4,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WorkGuardAI: measured groundwork progress from your DWG plan</title>
-<meta name="description" content="WorkGuardAI reads the DWG plan you already have and measures groundwork and infrastructure progress from ordinary site photos, location by location. Working prototype, looking for the first pilot site.">
+<title>WorkGuardAI: progress on the plan, from ordinary site photos</title>
+<meta name="description" content="WorkGuardAI estimates construction progress against your plan from ordinary site photos and shows it point by point on the plan. Working prototype, field test next.">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="WorkGuardAI">
-<meta property="og:title" content="WorkGuardAI: measured groundwork progress from your DWG plan">
-<meta property="og:description" content="WorkGuardAI reads the DWG plan you already have and measures groundwork and infrastructure progress from ordinary site photos, location by location. Working prototype, looking for the first pilot site.">
+<meta property="og:title" content="WorkGuardAI: progress on the plan, from ordinary site photos">
+<meta property="og:description" content="WorkGuardAI estimates construction progress against your plan from ordinary site photos and shows it point by point on the plan. Working prototype, field test next.">
 <meta property="og:url" content="https://workguardai.com/">
 <meta property="og:image" content="https://workguardai.com/assets/img/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="WorkGuardAI: measured groundwork progress from your DWG plan">
-<meta name="twitter:description" content="WorkGuardAI reads the DWG plan you already have and measures groundwork and infrastructure progress from ordinary site photos, location by location. Working prototype, looking for the first pilot site.">
+<meta name="twitter:title" content="WorkGuardAI: progress on the plan, from ordinary site photos">
+<meta name="twitter:description" content="WorkGuardAI estimates construction progress against your plan from ordinary site photos and shows it point by point on the plan. Working prototype, field test next.">
 <meta name="twitter:image" content="https://workguardai.com/assets/img/og-default.jpg">
-<meta name="theme-color" content="#fbfaf7">
+<meta name="theme-color" content="#0E0B2B">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="canonical" href="https://workguardai.com/">
 <link rel="alternate" hreflang="en" href="https://workguardai.com/">
@@ -30,26 +30,21 @@
 <link rel="alternate" hreflang="fi" href="https://workguardai.com/fi/">
 <link rel="alternate" hreflang="es" href="https://workguardai.com/es/">
 <link rel="alternate" hreflang="x-default" href="https://workguardai.com/">
-<link rel="preload" href="assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" type="image/avif" imagesrcset="assets/img/hero-excavation-480.avif 480w, assets/img/hero-excavation-800.avif 800w, assets/img/hero-excavation-1080.avif 1080w" imagesizes="(min-width: 1280px) 500px, (min-width: 960px) 44vw, (min-width: 768px) 560px, 100vw">
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="./" aria-label="WorkGuardAI home">
-      <img src="assets/img/logo.png" alt="WorkGuardAI" width="433" height="71">
-    </a>
+    <a class="brand" href="./" aria-label="WorkGuardAI home"><i aria-hidden="true"></i>WorkGuardAI</a>
     <nav class="nav" aria-label="Sections">
       <a href="#how">How it works</a>
-      <a href="#prototype">Prototype</a>
+      <a href="#formats">Plan formats</a>
       <a href="#milestones">Milestones</a>
-      <a href="#about">About</a>
-      <a href="#news">News</a>
-      <a href="#faq">FAQ</a>
+      <a href="#team">Team</a>
     </nav>
     <div class="header-end">
       <nav class="lang" aria-label="Language">
@@ -59,908 +54,355 @@
         <a href="fi/" hreflang="fi" lang="fi" title="Suomi">FI</a>
         <a href="es/" hreflang="es" lang="es" title="Español">ES</a>
       </nav>
-      <a class="btn btn-primary btn-small header-cta" href="#pilot">Book a pilot call</a>
+      <a class="btn btn-light btn-small header-cta" href="#contact">Book a call</a>
     </div>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- 1. Hero -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="container hero-grid">
+  <!-- 1. Hero (dark) -->
+  <section class="x-hero x-dark" aria-labelledby="hero-title">
+    <div class="x-shapes" aria-hidden="true">
+      <svg class="x-d1" viewBox="0 0 560 560">
+        <path d="M300 20 540 260 300 500 60 260Z" fill="#7B6CFF" opacity=".22"/>
+        <path d="M300 20 540 260 300 260Z" fill="#8EEBFF" opacity=".16"/>
+        <path d="M420 300 520 400 420 500 320 400Z" fill="#5CF2B0" opacity=".2"/>
+        <circle cx="150" cy="120" r="64" fill="none" stroke="#8EEBFF" stroke-opacity=".35" stroke-width="1.5"/>
+        <circle cx="150" cy="120" r="100" fill="none" stroke="#8EEBFF" stroke-opacity=".14"/>
+      </svg>
+      <svg class="x-d2" viewBox="0 0 420 420"><path d="M210 20 400 210 210 400 20 210Z" fill="#7B6CFF" opacity=".18"/></svg>
+    </div>
+    <div class="container x-hero-grid">
       <div>
-        <p class="stage mono"><span>Working prototype <b>/</b> Field test next</span></p>
-        <h1 id="hero-title">From DWG plan to measured progress.</h1>
-        <p class="lead">WorkGuardAI reads the DWG plan you already have and measures groundwork progress from ordinary site photos, location by location. The prototype works on a real project's plan and imagery. Now we are looking for the first pilot site.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#pilot">Book a pilot call</a>
-          <a class="link-arrow" href="#partner">Partner with us <span aria-hidden="true">→</span></a>
+        <p class="x-status x-label">Working prototype · Field test next</p>
+        <h1 id="hero-title">Progress on the plan, <span class="x-grad">from ordinary photos.</span></h1>
+        <p class="x-lead">WorkGuardAI estimates how far the work has come against your plan, from photos your team already takes, and shows it point by point on the map.</p>
+        <div class="x-actions">
+          <a class="btn btn-light" href="#contact">Book a call <span aria-hidden="true">→</span></a>
+          
         </div>
-        <p class="hero-meta mono"><span>Born in Finland</span><span>Working across Europe</span><span>Founded 2024</span></p>
-        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>25–26 Nov 2026</span> <span data-event-label>Pitching on stage at MeOut Summit, Budapest</span> <span aria-hidden="true">→</span></a>
-        <script type="application/json" id="upcoming-events">[{"end":"2026-11-26","tag":"25–26 Nov 2026","label":"Pitching on stage at MeOut Summit, Budapest","cta":"Meet us at MeOut Summit, Budapest","meet":"./?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
+      </div>
+<!-- Hero mockups: laptop plan view and phone alert. Sample data only. -->
+    <div class="x-stage reveal">
+      <!-- Laptop: plan view with dashed planned and solid estimated lines, and a 58% progress ring -->
+      <div class="laptop">
+        <div class="lid">
+          <div class="screen">
+            <svg viewBox="0 0 640 400" role="img" aria-label="Laptop showing a site plan with sample data: a progress ring at 58 percent, dashed lines for the planned excavation, a solid line for the estimated progress, and points C1 to C6 coloured by status, with C4 behind plan.">
+              <rect width="640" height="400" fill="#F6FAFF"/>
+              <rect width="640" height="36" fill="#fff"/>
+              <path d="M0 36H640" stroke="#C9DDF0"/>
+              <path d="M24 18 30 12 36 18 30 24Z" fill="#5446C9"/>
+              <text x="46" y="22" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="12" fill="#1B1650">WorkGuardAI</text>
+              <text x="150" y="22" font-family="Inter, sans-serif" font-size="11" fill="#4A4F7A">Site plan · Zone C</text>
+              <text x="616" y="22" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#4A4F7A" letter-spacing=".6">SAMPLE DATA</text>
+              <g transform="translate(176 0)">
+                <!-- plan grid -->
+                <g stroke="#E4F1FD" stroke-width="1">
+                  <path d="M60 50V400M120 50V400M180 50V400M240 50V400M300 50V400M360 50V400M420 50V400"/>
+                  <path d="M14 90H470M14 150H470M14 210H470M14 270H470M14 330H470"/>
+                </g>
+                <!-- planned (dashed) and estimated (solid) -->
+                <path d="M40 330 C 110 320, 140 250, 200 230 S 300 150, 420 110" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6"/>
+                <path d="M40 350 C 110 340, 140 290, 200 268 S 300 200, 420 168" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6" opacity=".45"/>
+                <path class="est-line" d="M40 330 C 110 320, 140 250, 200 230 S 262 186, 290 172" fill="none" stroke="#17845A" stroke-width="4" stroke-linecap="round"/>
+                <g font-family="JetBrains Mono, monospace" font-size="9" fill="#1B1650">
+                  <circle cx="62" cy="324" r="7" fill="#17845A" stroke="#fff" stroke-width="2"/><text x="56" y="306">C1</text>
+                  <circle cx="132" cy="290" r="7" fill="#17845A" stroke="#fff" stroke-width="2"/><text x="126" y="272">C2</text>
+                  <circle cx="200" cy="230" r="7" fill="#17845A" stroke="#fff" stroke-width="2"/><text x="194" y="212">C3</text>
+                  <circle class="pulse" cx="262" cy="190" r="7" fill="none" stroke="#E08A2E" stroke-width="2"/>
+                  <circle cx="262" cy="190" r="7" fill="#E08A2E" stroke="#fff" stroke-width="2"/><text x="256" y="172">C4</text>
+                  <circle cx="334" cy="150" r="7" fill="#fff" stroke="#5446C9" stroke-width="2"/><text x="328" y="132">C5</text>
+                  <circle cx="404" cy="116" r="7" fill="#fff" stroke="#5446C9" stroke-width="2"/><text x="398" y="98">C6</text>
+                </g>
+                <!-- legend -->
+                <g font-family="Inter, sans-serif" font-size="10" fill="#4A4F7A">
+                  <path d="M40 372H62" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="6 4"/><text x="68" y="375">Planned</text>
+                  <path d="M128 372H150" stroke="#17845A" stroke-width="4" stroke-linecap="round"/><text x="156" y="375">Estimated</text>
+                </g>
+              </g>
+              <!-- progress panel, left -->
+              <rect x="0" y="36" width="190" height="364" fill="#fff"/>
+              <path d="M190 36V400" stroke="#C9DDF0"/>
+              <text x="22" y="66" font-family="JetBrains Mono, monospace" font-size="9" fill="#4A4F7A" letter-spacing=".6">SITE PROGRESS</text>
+              <g transform="translate(95 136)">
+                <circle r="44" fill="none" stroke="#E4F1FD" stroke-width="11"/>
+                <circle class="ring-fill" r="44" fill="none" stroke="#17845A" stroke-width="11" stroke-linecap="round" stroke-dasharray="276.5" stroke-dashoffset="116" transform="rotate(-90)"/>
+                <text y="9" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="26" fill="#1B1650">58%</text>
+              </g>
+              <path d="M22 208H168" stroke="#E4F1FD"/>
+              <g font-family="Inter, sans-serif" font-size="11" fill="#1B1650">
+                <circle cx="28" cy="230" r="4" fill="#17845A"/><text x="40" y="234">Complete</text><text x="168" y="234" text-anchor="end">3</text>
+                <circle cx="28" cy="254" r="4" fill="#E08A2E"/><text x="40" y="258">Behind plan</text><text x="168" y="258" text-anchor="end">1</text>
+                <circle cx="28" cy="278" r="4" fill="#fff" stroke="#5446C9" stroke-width="1.5"/><text x="40" y="282">Not started</text><text x="168" y="282" text-anchor="end">2</text>
+              </g>
+              <path d="M22 302H168" stroke="#E4F1FD"/>
+              <text x="22" y="326" font-family="JetBrains Mono, monospace" font-size="9" fill="#4A4F7A" letter-spacing=".6">LAST PHOTO</text>
+              <text x="22" y="346" font-family="Inter, sans-serif" font-size="11" fill="#1B1650">C4 · today 10:42</text>
+            </svg>
+          </div>
+        </div>
+        <div class="base" aria-hidden="true"></div>
       </div>
 
-      <figure class="survey">
-        <div class="survey-frame">
-          <picture>
-            <source type="image/avif" srcset="assets/img/hero-excavation-480.avif 480w, assets/img/hero-excavation-800.avif 800w, assets/img/hero-excavation-1080.avif 1080w" sizes="(min-width: 1280px) 500px, (min-width: 960px) 44vw, (min-width: 768px) 560px, 100vw">
-            <source type="image/webp" srcset="assets/img/hero-excavation-480.webp 480w, assets/img/hero-excavation-800.webp 800w, assets/img/hero-excavation-1080.webp 1080w" sizes="(min-width: 1280px) 500px, (min-width: 960px) 44vw, (min-width: 768px) 560px, 100vw">
-            <img src="assets/img/hero-excavation-800.webp" width="1080" height="1080" alt="Open excavation with a sloped earth wall and a sandy floor." fetchpriority="high">
-          </picture>
-          <svg class="survey-grid" viewBox="0 0 300 300" aria-hidden="true">
-            <g class="g">
-              <path d="M50 0V300M100 0V300M150 0V300M200 0V300M250 0V300"/>
-              <path d="M0 50H300M0 100H300M0 150H300M0 200H300M0 250H300"/>
+      <!-- Phone: the alert -->
+      <div class="phone float">
+        <div class="screen">
+          <svg viewBox="0 0 220 420" role="img" aria-label="Phone showing an alert with sample data: Point C4 is behind plan, 1.2 metres of 2.4 metres planned, with the site photo for point C4 and a ring at 50 percent.">
+            <rect width="220" height="420" fill="#F6FAFF"/>
+            <rect x="80" y="10" width="60" height="16" rx="8" fill="#0b0920"/>
+            <text x="20" y="22" font-family="Inter, sans-serif" font-weight="600" font-size="11" fill="#1B1650">9:41</text>
+            <!-- notification -->
+            <rect x="12" y="40" width="196" height="92" rx="18" fill="#fff" stroke="#C9DDF0"/>
+            <path d="M30 60 36 54 42 60 36 66Z" fill="#5446C9"/>
+            <text x="50" y="64" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#4A4F7A" letter-spacing=".5">WORKGUARDAI · NOW</text>
+            <text x="24" y="88" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="12.5" fill="#1B1650">Point C4 is behind plan</text>
+            <text x="24" y="110" font-family="Inter, sans-serif" font-size="11" fill="#4A4F7A">1.2 m of 2.4 m planned</text>
+            <!-- photo tied to C4 -->
+            <g transform="translate(12 148)">
+              <rect width="196" height="140" rx="16" fill="#B9D7EF"/>
+              <path d="M0 70H54L76 120H124L146 70H196V140H0Z" fill="#A08C70"/>
+              <path d="M54 70L76 120H124L146 70" fill="none" stroke="#7E6C55" stroke-width="2"/>
+              <path d="M0 70H54L70 104H130L146 70H196" fill="none" stroke="#5446C9" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <rect x="12" y="12" width="40" height="20" rx="10" fill="#1B1650"/>
+              <text x="32" y="26" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#fff">C4</text>
             </g>
-            <!-- Plan lines (top edge and toe of the cut) with plan points -->
-            <path d="M0 20 L62 30 L125 50 L187 59 L250 67 L300 74" fill="none" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
-            <path d="M0 80 L50 87 L112 125 L156 156 L212 172 L275 162 L300 158" fill="none" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
-            <g>
-              <circle class="pt" cx="62" cy="30" r="3"/><circle class="pt" cx="125" cy="50" r="3"/>
-              <circle class="pt" cx="187" cy="59" r="3"/><circle class="pt" cx="250" cy="67" r="3"/>
-              <circle class="pt" cx="50" cy="87" r="3"/><circle class="pt" cx="112" cy="125" r="3"/>
-              <circle class="pt" cx="156" cy="156" r="3"/><circle class="pt" cx="212" cy="172" r="3"/>
-              <circle class="pt" cx="275" cy="162" r="3"/>
-              <circle class="pulse" cx="156" cy="156" r="3"/>
+            <!-- point progress -->
+            <g transform="translate(52 344)">
+              <circle r="26" fill="none" stroke="#E4F1FD" stroke-width="7"/>
+              <circle class="ring-fill" r="26" fill="none" stroke="#E08A2E" stroke-width="7" stroke-linecap="round" stroke-dasharray="163" stroke-dashoffset="81.5" transform="rotate(-90)"/>
+              <text y="5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" fill="#1B1650">50%</text>
             </g>
-            <g class="tag">
-              <path d="M156 160 L160 196" stroke="#fff" stroke-width="1" vector-effect="non-scaling-stroke"/>
-              <rect x="160" y="196" width="110" height="24" rx="1.5"/>
-              <text x="165" y="206">D·04 PLAN POINT</text>
-              <text x="165" y="215">DEPTH ESTIMATED</text>
-            </g>
-            <g>
-              <text x="23" y="10">A</text><text x="73" y="10">B</text><text x="123" y="10">C</text>
-              <text x="173" y="10">D</text><text x="223" y="10">E</text><text x="273" y="10">F</text>
-              <text x="3" y="29">01</text><text x="3" y="79">02</text><text x="3" y="129">03</text>
-              <text x="3" y="179">04</text><text x="3" y="229">05</text><text x="3" y="279">06</text>
-            </g>
+            <text x="86" y="338" font-family="Inter, sans-serif" font-size="10" fill="#4A4F7A">Estimated depth</text>
+            <text x="86" y="356" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" fill="#1B1650">1.2 m / 2.4 m</text>
+            <text x="20" y="400" font-family="JetBrains Mono, monospace" font-size="8" fill="#4A4F7A" letter-spacing=".6">SAMPLE DATA</text>
           </svg>
         </div>
-        <div class="survey-axis mono" aria-hidden="true"><span>X →</span><span>LOCAL GRID</span><span>PLAN LINE - - -</span></div>
-        <figcaption>Illustrative overlay on an excavation photo. Local grid, not real site coordinates.</figcaption>
-      </figure>
+      </div>
+      <p class="sample">Sample data</p>
+    </div>
+
     </div>
   </section>
 
-  <!-- 2. How it works -->
-  <section class="section hiw" id="how" aria-labelledby="how-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">01 · How it works</p>
-        <h2 id="how-title">From a DWG plan and ordinary photos to progress at each location.</h2>
-      </div>
-      <figure class="explainer">
-        <figcaption class="mono">Illustration of the concept</figcaption>
-        <input class="ex-toggle" type="checkbox" id="ex-pause">
-        <ol class="ex-steps">
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <line x1="22" y1="44" x2="22" y2="18" stroke="#5f6880" stroke-width="2"/>
-              <rect x="14" y="9" width="18" height="11" rx="2" fill="#0f1b3d"/>
-              <g class="ex-in1">
-                <polygon points="30,16 72,76 92,76" fill="#5255e0" opacity=".2"/>
-                <circle cx="82" cy="76" r="4" fill="#5255e0"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">01</span> Capture</p>
-            <p>A photo at a plan point</p>
-          </li>
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <circle cx="82" cy="76" r="4" fill="#5255e0"/>
-              <g class="ex-in2">
-                <path d="M82 44V72M76 44H88M76 52H82M76 60H82M76 68H82" fill="none" stroke="#17845a" stroke-width="2"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">02</span> Analyse</p>
-            <p>Depth estimated from the photo</p>
-          </li>
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <g class="ex-in3">
-                <path d="M0 44H46L66 98H94L114 44H160" fill="none" stroke="#5255e0" stroke-width="2" stroke-dasharray="5 4"/>
-                <path d="M46 44L58 76H102L114 44" fill="none" stroke="#17845a" stroke-width="3" stroke-linejoin="round"/>
-                <path d="M80 78V96M76 82L80 78L84 82M76 92L80 96L84 92" fill="none" stroke="#0f1b3d" stroke-width="1.5"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">03</span> Compare</p>
-            <p>Estimated depth against planned depth</p>
-          </li>
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <circle cx="82" cy="76" r="4" fill="#9a5f00"/>
-              <g class="ex-in4">
-                <rect x="50" y="8" width="60" height="38" rx="3" fill="#fbf1e1" stroke="#9a5f00" stroke-width="1.5"/>
-                <path d="M50 11L80 30L110 11" fill="none" stroke="#9a5f00" stroke-width="1.5"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">04</span> Act</p>
-            <p>Email alert with coordinates and depths</p>
-          </li>
+  <!-- 2. Problem (light) -->
+  <section class="x-section" id="problem" aria-labelledby="problem-title">
+    <div class="container x-split">
+      <div>
+        <p class="x-label x-kicker">The problem</p>
+        <h2 id="problem-title">Progress is still checked by walking the site.</h2>
+        <p class="x-intro">Someone goes out, measures by hand and types it into a report. By the time the report is read, the work has moved on.</p>
+        <ol class="x-points">
+          <li class="reveal"><span class="x-dot" aria-hidden="true"></span><div><h3>Walk and measure</h3><p>Checking progress means going to each point with a tape or a level.</p></div></li>
+          <li class="reveal"><span class="x-dot" aria-hidden="true"></span><div><h3>Type it up</h3><p>Results are copied into spreadsheets and reports by hand.</p></div></li>
+          <li class="reveal"><span class="x-dot x-dot-warn" aria-hidden="true"></span><div><h3>Find out late</h3><p>When a section falls behind, it can take days before anyone knows.</p></div></li>
         </ol>
-        <label class="ex-pause mono" for="ex-pause">Pause animation</label>
-      </figure>
+      </div>
+      <svg class="x-rings reveal" viewBox="0 0 420 420" role="img" aria-label="Diagram: walking the site and measuring by hand lead to a report that arrives days later.">
+        <circle cx="210" cy="210" r="190" fill="none" stroke="#C9DDF0" stroke-width="1.5"/>
+        <circle cx="210" cy="210" r="190" fill="none" stroke="#5446C9" stroke-width="3" stroke-dasharray="70 1124" stroke-linecap="round" transform="rotate(-100 210 210)"/>
+        <circle cx="210" cy="210" r="135" fill="none" stroke="#C9DDF0" stroke-width="1.5"/>
+        <circle cx="210" cy="210" r="135" fill="none" stroke="#7BD3F7" stroke-width="3" stroke-dasharray="60 788" stroke-linecap="round" transform="rotate(10 210 210)"/>
+        <circle cx="210" cy="210" r="80" fill="#E4F1FD"/>
+        <circle cx="210" cy="210" r="80" fill="none" stroke="#E08A2E" stroke-width="3" stroke-dasharray="6 7"/>
+        <g font-family="JetBrains Mono, monospace" font-size="12" letter-spacing=".08em" fill="#1B1650" text-anchor="middle">
+          <text x="210" y="14">WALK THE SITE</text>
+          <text x="210" y="70">MEASURE BY HAND</text>
+          <text x="210" y="205" fill="#9a5f00">REPORT</text>
+          <text x="210" y="225" fill="#9a5f00">DAYS LATER</text>
+        </g>
+      </svg>
+    </div>
+  </section>
 
-      <div class="steps">
-        <article class="step">
-          <div class="step-head"><span class="mono">01</span><h3>Capture</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="A drone and cameras photographing an excavation">
-            <path d="M0 120H70L85 148H155L170 120H240V170H0Z" fill="#e3dccb"/>
-            <path d="M0 120H70L85 148H155L170 120H240" fill="none" stroke="#b9ae95" stroke-width="2"/>
-            <polygon class="beam" points="120,42 84,146 156,146" fill="#5255e0"/>
-            <g class="drone">
-              <rect x="106" y="30" width="28" height="9" rx="4" fill="#0f1b3d"/>
-              <line class="rotor" x1="96" y1="27" x2="116" y2="27" stroke="#5f6880" stroke-width="2" stroke-linecap="round"/>
-              <line class="rotor" x1="124" y1="27" x2="144" y2="27" stroke="#5f6880" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="120" cy="42" r="3" fill="#5255e0"/>
+  <!-- 3. How it works (light): Photo, Your plan, Progress on the map -->
+  <section class="x-section x-section-2" id="how" aria-labelledby="how-title">
+    <span id="product" class="x-anchor" aria-hidden="true"></span>
+    <div class="container">
+      <p class="x-label x-kicker">How it works</p>
+      <h2 id="how-title">From a photo to progress on the plan.</h2>
+      <p class="x-intro">Your team keeps taking photos as usual. WorkGuardAI ties each one to a point on your plan and estimates how far the work has come.</p>
+<!-- How it works: Photo, Your plan, Progress on the map. -->
+    <div class="steps">
+      <svg class="connector" viewBox="0 0 1000 2" preserveAspectRatio="none" aria-hidden="true"><path d="M0 1H1000" stroke="#5446C9" stroke-width="2" stroke-dasharray="6 8"/></svg>
+      <div class="step reveal">
+        <span class="num">01</span>
+        <h3>Photo</h3>
+        <p>A site camera, a phone or a drone takes an ordinary photo.</p>
+        <figure>
+          <svg viewBox="0 0 320 200" role="img" aria-label="An ordinary site photo of an excavation, taken from a phone.">
+            <rect width="320" height="200" rx="28" fill="#fff" stroke="#C9DDF0"/><rect x="1" y="1" width="318" height="99" rx="27" fill="#E4F1FD"/>
+            <path d="M0 100H86L118 168H202L234 100H320V172Q320 200 292 200H28Q0 200 0 172Z" fill="#A08C70"/>
+            <path d="M86 100L118 168H202L234 100" fill="none" stroke="#7E6C55" stroke-width="2.5"/>
+            <circle cx="268" cy="44" r="18" fill="#fff" stroke="#C9DDF0"/>
+            <circle cx="268" cy="44" r="7" fill="#5446C9"/>
+          </svg>
+        </figure>
+      </div>
+      <div class="step reveal">
+        <span class="num">02</span>
+        <h3>Your plan</h3>
+        <p>The photo is tied to a coordinate on your DWG plan, next to its planned depth.</p>
+        <figure>
+          <svg viewBox="0 0 320 200" role="img" aria-label="A DWG plan drawn as a coordinate grid, with one photo pinned to point C4.">
+            <rect width="320" height="200" rx="28" fill="#fff" stroke="#C9DDF0"/>
+            <g stroke="#E4F1FD"><path d="M64 0V200M128 0V200M192 0V200M256 0V200M0 50H320M0 100H320M0 150H320"/></g>
+            <path d="M30 170 C 90 160, 120 110, 170 100 S 250 60, 296 46" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6"/>
+            <circle cx="170" cy="100" r="9" fill="#5446C9" stroke="#fff" stroke-width="3"/>
+            <rect x="184" y="112" width="74" height="26" rx="13" fill="#1B1650"/>
+            <text x="221" y="129" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#fff">C4 · 2.4 m</text>
+          </svg>
+        </figure>
+      </div>
+      <div class="step reveal">
+        <span class="num">03</span>
+        <h3>Progress on the map</h3>
+        <p>The estimated depth is compared with the plan, point by point, with an alert when a point falls behind.</p>
+        <figure>
+          <svg viewBox="0 0 320 200" role="img" aria-label="The plan with a solid line showing estimated progress over the dashed planned line, and a progress ring at 58 percent.">
+            <rect width="320" height="200" rx="28" fill="#fff" stroke="#C9DDF0"/>
+            <path d="M30 170 C 90 160, 120 110, 170 100 S 250 60, 296 46" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6"/>
+            <path class="est-line" d="M30 170 C 90 160, 120 110, 170 100" fill="none" stroke="#17845A" stroke-width="4" stroke-linecap="round"/>
+            <g transform="translate(250 140)">
+              <circle r="30" fill="none" stroke="#E4F1FD" stroke-width="8"/>
+              <circle class="ring-fill" r="30" fill="none" stroke="#17845A" stroke-width="8" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="79" transform="rotate(-90)"/>
+              <text y="6" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16" fill="#1B1650">58%</text>
             </g>
-            <line x1="28" y1="120" x2="28" y2="80" stroke="#5f6880" stroke-width="2"/>
-            <rect x="19" y="70" width="18" height="11" rx="2" fill="#0f1b3d"/>
-            <circle class="blink" cx="33" cy="73" r="1.8" fill="#e05252"/>
-            <line x1="210" y1="120" x2="210" y2="100" stroke="#5f6880" stroke-width="2"/>
-            <circle cx="210" cy="95" r="5" fill="#5255e0"/>
-            <circle class="ring" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
-            <circle class="ring" style="animation-delay:1.2s" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
           </svg>
-          <p>Photos from fixed site cameras, taken automatically every four hours, or uploaded from a phone, camera or drone at coordinates from your plan.</p>
-        </article>
-        <article class="step">
-          <div class="step-head"><span class="mono">02</span><h3>Analyse</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="Points from the DWG plan, with the depth estimated from a new photo">
-            <g id="hiw-dots"></g>
-            <g class="chg"><rect x="98" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="114" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="130" y="138" width="10" height="8" rx="1.5" fill="#17845a"/></g>
-            <rect x="28" y="40" width="184" height="26" rx="3" fill="#e6f3ec" stroke="#17845a"/>
-            <text x="120" y="57" text-anchor="middle" fill="#17845a" font-size="12" font-weight="600" font-family="Inter, sans-serif">Depth estimated</text>
-          </svg>
-          <p>An open-source AI depth model (Depth Anything V2) estimates the excavation depth in metres from each photo, at its plan coordinate.</p>
-        </article>
-        <article class="step">
-          <div class="step-head"><span class="mono">03</span><h3>Compare</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="Detected excavation compared with the planned DWG profile, 62 percent complete (sample data)">
-            <text x="120" y="32" text-anchor="middle" fill="#0f1b3d" font-size="26" font-weight="600" font-family="Outfit, sans-serif">62%</text>
-            <text x="120" y="50" text-anchor="middle" fill="#5f6880" font-size="11" font-family="Inter, sans-serif">complete (sample data)</text>
-            <path d="M16 70H70L84 132H156L170 70H224" fill="none" stroke="#5255e0" stroke-width="2.5" stroke-dasharray="6 5"/>
-            <path class="draw" d="M16 70H70L82 108.5H158L170 70H224" fill="none" stroke="#17845a" stroke-width="3" stroke-linejoin="round"/>
-            <line x1="14" y1="154" x2="32" y2="154" stroke="#5255e0" stroke-width="2.5" stroke-dasharray="5 4"/>
-            <text x="37" y="158" fill="#3e4a66" font-size="10" font-family="Inter, sans-serif">DWG plan</text>
-            <line x1="112" y1="154" x2="130" y2="154" stroke="#17845a" stroke-width="3"/>
-            <text x="135" y="158" fill="#3e4a66" font-size="10" font-family="Inter, sans-serif">Detected on site</text>
-          </svg>
-          <p>The estimated depth is compared with the planned depth from the DWG, giving progress at each point of the plan.</p>
-        </article>
-        <article class="step">
-          <div class="step-head"><span class="mono">04</span><h3>Act</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="A dashboard showing progress and an alert when work deviates from plan (sample data)">
-            <rect x="12" y="10" width="216" height="150" rx="4" fill="#ffffff" stroke="#cdc8bb"/>
-            <text x="24" y="30" fill="#5f6880" font-size="10" font-family="Inter, sans-serif">Site progress</text>
-            <text x="216" y="30" text-anchor="end" fill="#17845a" font-size="11" font-weight="700" font-family="Inter, sans-serif">62%</text>
-            <rect x="24" y="38" width="192" height="8" rx="4" fill="#e4e1d8"/>
-            <rect class="fillbar" x="24" y="38" width="119" height="8" rx="4" fill="#17845a"/>
-            <line x1="24" y1="118" x2="216" y2="118" stroke="#e4e1d8"/>
-            <polyline points="24,114 70,100 116,82 162,64 208,50" fill="none" stroke="#5255e0" stroke-width="2" stroke-dasharray="5 4"/>
-            <polyline class="draw" points="24,114 70,103 116,90 162,78" fill="none" stroke="#17845a" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle class="adot" cx="162" cy="78" r="3.5" fill="#17845a"/>
-            <g class="alert">
-              <rect x="24" y="126" width="192" height="26" rx="3" fill="#fbf1e1" stroke="#9a5f00"/>
-              <circle class="adot" cx="40" cy="139" r="3.5" fill="#9a5f00"/>
-              <text x="52" y="143" fill="#9a5f00" font-size="10" font-family="Inter, sans-serif">Deviation flagged to manager</text>
-            </g>
-          </svg>
-          <p>Each point shows its status by colour, an overall progress bar sums up the site, and email alerts report the coordinates with current and planned depth.</p>
-        </article>
+        </figure>
       </div>
-      <p class="note">Illustrative concept with sample data. Working prototype; field test pending.</p>
+    </div>
 
-      <div class="field">
-        <div class="field-head">
-          <h3>From the field</h3>
-          <p>Ordinary site photos, like the ones the prototype measures: taken by phone or drone, by day and at night.</p>
-        </div>
-        <div class="field-grid">
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="assets/img/field-cut-480.avif 480w, assets/img/field-cut-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="assets/img/field-cut-480.webp" srcset="assets/img/field-cut-480.webp 480w, assets/img/field-cut-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Sloped excavation wall with a sandy floor.">
-            </picture>
-            <figcaption class="mono">Excavation · day</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="assets/img/field-floor-480.avif 480w, assets/img/field-floor-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="assets/img/field-floor-480.webp" srcset="assets/img/field-floor-480.webp 480w, assets/img/field-floor-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Excavation floor with standing water and a long shadow.">
-            </picture>
-            <figcaption class="mono">Excavation floor · day</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="assets/img/field-shoring-480.avif 480w, assets/img/field-shoring-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="assets/img/field-shoring-480.webp" srcset="assets/img/field-shoring-480.webp 480w, assets/img/field-shoring-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Deep excavation with steel shoring, lit at night.">
-            </picture>
-            <figcaption class="mono">Shored excavation · night</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="assets/img/field-drone-480.avif 480w, assets/img/field-drone-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="assets/img/field-drone-480.webp" srcset="assets/img/field-drone-480.webp 480w, assets/img/field-drone-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Drone controller screen showing an aerial view during a photo capture test.">
-            </picture>
-            <figcaption class="mono">Photo capture test · Espoo</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="assets/img/field-urban-compactor-480.avif 480w, assets/img/field-urban-compactor-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="assets/img/field-urban-compactor-480.webp" srcset="assets/img/field-urban-compactor-480.webp 480w, assets/img/field-urban-compactor-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="City construction site at dusk with a plate compactor and safety barriers.">
-            </picture>
-            <figcaption class="mono">Urban site · dusk</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="assets/img/field-urban-materials-480.avif 480w, assets/img/field-urban-materials-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="assets/img/field-urban-materials-480.webp" srcset="assets/img/field-urban-materials-480.webp 480w, assets/img/field-urban-materials-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Construction materials and barriers staged on an urban site at dusk.">
-            </picture>
-            <figcaption class="mono">Site materials · dusk</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="assets/img/excavation-day-01-480.avif 480w, assets/img/excavation-day-01-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="assets/img/excavation-day-01-480.webp" srcset="assets/img/excavation-day-01-480.webp 480w, assets/img/excavation-day-01-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Wide open excavation with standing water, beside apartment blocks.">
-            </picture>
-            <figcaption class="mono">Open excavation · day</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="assets/img/urban-site-dusk-wide-480.avif 480w, assets/img/urban-site-dusk-wide-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="assets/img/urban-site-dusk-wide-480.webp" srcset="assets/img/urban-site-dusk-wide-480.webp 480w, assets/img/urban-site-dusk-wide-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Wide view of a city construction site at dusk, with barriers, a compactor and a hotel behind the site fence.">
-            </picture>
-            <figcaption class="mono">Urban site, wide view · dusk</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="assets/img/shored-excavation-night-01-480.avif 480w, assets/img/shored-excavation-night-01-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="assets/img/shored-excavation-night-01-480.webp" srcset="assets/img/shored-excavation-night-01-480.webp 480w, assets/img/shored-excavation-night-01-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Shored excavation along a city street at night, with a crane behind.">
-            </picture>
-            <figcaption class="mono">Shoring by the street · night</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="assets/img/urban-site-dusk-01-480.avif 480w, assets/img/urban-site-dusk-01-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="assets/img/urban-site-dusk-01-480.webp" srcset="assets/img/urban-site-dusk-01-480.webp 480w, assets/img/urban-site-dusk-01-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Tower crane base and patterned paving on a city site at dusk.">
-            </picture>
-            <figcaption class="mono">Crane and paving · dusk</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="assets/img/urban-site-dusk-03-480.avif 480w, assets/img/urban-site-dusk-03-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="assets/img/urban-site-dusk-03-480.webp" srcset="assets/img/urban-site-dusk-03-480.webp 480w, assets/img/urban-site-dusk-03-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Cleared ground with machine tracks on an urban site at dusk.">
-            </picture>
-            <figcaption class="mono">Cleared ground · dusk</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="assets/img/urban-site-dusk-06-480.avif 480w, assets/img/urban-site-dusk-06-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="assets/img/urban-site-dusk-06-480.webp" srcset="assets/img/urban-site-dusk-06-480.webp 480w, assets/img/urban-site-dusk-06-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Street-side construction works with a crane at dusk.">
-            </picture>
-            <figcaption class="mono">Street works · dusk</figcaption>
-          </figure>
-        </div>
-      </div>
+      <p class="x-sample">Sample data</p>
+      <p class="x-more"><a class="x-link" href="concept/">See all concept screens <span aria-hidden="true">→</span></a></p>
     </div>
   </section>
 
-  <!-- 3. The prototype -->
-  <section class="section section-alt" id="prototype" aria-labelledby="proto-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">02 · The prototype</p>
-        <h2 id="proto-title">Built on a real project's plan and imagery.</h2>
-        <p class="sec-lead">The prototype has been demonstrated on a real DWG file and real site photos. It has not yet run on a live site. The first field test is the next step.</p>
-      </div>
-      <div class="screens">
-        <figure class="screen">
-          <div class="screen-frame screen-shot">
-            <a href="assets/img/screen-upload-1200.webp" target="_blank" rel="noopener">
-            <picture>
-              <source type="image/avif" srcset="assets/img/screen-upload-640.avif 640w, assets/img/screen-upload-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
-              <img src="assets/img/screen-upload-640.webp" srcset="assets/img/screen-upload-640.webp 640w, assets/img/screen-upload-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="Prototype screen for uploading photos at a plan coordinate, with X and Y fields.">
-            </picture>
-            </a>
-          </div>
-          <figcaption><span>Upload by coordinate</span><span class="mono">SCREEN 1</span></figcaption>
-        </figure>
-        <figure class="screen">
-          <div class="screen-frame screen-shot">
-            <a href="assets/img/screen-map-1200.webp" target="_blank" rel="noopener">
-            <picture>
-              <source type="image/avif" srcset="assets/img/screen-map-640.avif 640w, assets/img/screen-map-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
-              <img src="assets/img/screen-map-640.webp" srcset="assets/img/screen-map-640.webp 640w, assets/img/screen-map-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="Prototype dashboard showing the DWG plan as a map of coordinate points. File name and progress figure blurred.">
-            </picture>
-            </a>
-          </div>
-          <figcaption><span>DWG coordinate map</span><span class="mono">SCREEN 2</span></figcaption>
-        </figure>
-        <figure class="screen">
-          <div class="screen-frame screen-shot">
-            <a href="assets/img/screen-alerts-1200.webp" target="_blank" rel="noopener">
-            <picture>
-              <source type="image/avif" srcset="assets/img/screen-alerts-640.avif 640w, assets/img/screen-alerts-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
-              <img src="assets/img/screen-alerts-640.webp" srcset="assets/img/screen-alerts-640.webp 640w, assets/img/screen-alerts-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="Prototype notifications listing excavation in progress, with coordinates blurred.">
-            </picture>
-            </a>
-          </div>
-          <figcaption><span>Progress alert by email</span><span class="mono">SCREEN 3</span></figcaption>
-        </figure>
-      </div>
-      <p class="note">Prototype interface, tested on a real project's plan and imagery. Field test next. Client file names, site coordinates and figures are blurred.</p>
-      <p class="alert-open"><a class="btn btn-outline" id="alert-open" href="assets/img/screen-alerts-1200.webp" target="_blank" rel="noopener">See a sample alert</a></p>
-      <dialog class="alert-dialog" id="alert-dialog" aria-labelledby="alert-dialog-title">
-        <div class="alert-dialog-head">
-          <p id="alert-dialog-title">Progress alert by email</p>
-          <form method="dialog"><button class="btn btn-outline btn-small" type="submit">Close</button></form>
-        </div>
-        <picture>
-          <source type="image/avif" srcset="assets/img/screen-alerts-1200.avif">
-          <img src="assets/img/screen-alerts-1200.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Prototype notifications listing excavation in progress, with coordinates blurred.">
-        </picture>
-        <p class="note">Prototype interface, tested on a real project's plan and imagery. Field test next. Client file names, site coordinates and figures are blurred.</p>
-      </dialog>
-
-      <div class="status-cols">
-        <div>
-          <h3>What it does today</h3>
-          <ul class="status-list status-today">
-            <li><span>Reads the DWG plan and turns it into a grid of plan points, each with its planned depth.</span></li>
-            <li><span>Estimates excavation depth from each photo with an open-source AI depth model (Depth Anything V2).</span></li>
-            <li><span>Shows progress per point against the planned depth, colour-coded from not started to in progress to complete, with an overall progress bar.</span></li>
-            <li><span>Takes photos from fixed site cameras every four hours, or from photos uploaded by coordinate.</span></li>
-            <li><span>Sends email alerts with the coordinates and the current and planned depth.</span></li>
-          </ul>
-        </div>
-        <div>
-          <h3>What comes next</h3>
-          <ul class="status-list">
-            <li><span class="chip">Next</span><span>A field test on a live site, with a contractor or infrastructure owner, comparing the estimated depths with surveyed measurements.</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. What you get: only what the app does. Mockups: src/partials/product-devices.html, list: src/partials/product-features.html -->
-  <section class="section" id="product" aria-labelledby="product-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">03 · What you get</p>
-        <h2 id="product-title">One view of the site against the plan, from ordinary photos.</h2>
-        <p class="sec-lead">Your DWG plan, your site photos and the depth estimated from them come together in one dashboard. Your team sees progress at every point and gets an alert when a point needs a look.</p>
-      </div>
-        <!-- What you get: the dashboard and the phone, showing only what the app does. Numbers are sample data. -->
-        <figure class="pd-stage">
-          <div class="pd-devices">
-
-            <!-- Laptop: the dashboard -->
-            <div class="pd-laptop" role="img" aria-label="The WorkGuardAI dashboard with sample data: the DWG plan as a coordinate map with points coloured not started, in progress and complete, overall progress at 62 percent, point D·04 with planned depth 2.40 metres, estimated depth 1.49 metres and 62 percent progress, and a list of notifications.">
-              <div class="pd-lid">
-                <div class="pd-screen">
-                  <div class="pd-bar">
-                    <img src="assets/img/logo.png" alt="" width="433" height="71">
-                    <span>Site 01</span>
-                    <span class="mono">Last camera photo 10:42</span>
-                  </div>
-                  <div class="pd-dash">
-                    <div class="pd-panel pd-map">
-                      <p class="pd-h">DWG plan · coordinate map</p>
-                      <svg viewBox="0 0 400 230">
-                        <g stroke="#ece9e1" stroke-width="1">
-                          <path d="M40 0V230M100 0V230M160 0V230M220 0V230M280 0V230M340 0V230"/>
-                          <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
-                        </g>
-                        <g fill="#5f6880" font-family="JetBrains Mono, monospace" font-size="9">
-                          <text x="67" y="14">B</text><text x="127" y="14">C</text><text x="187" y="14">D</text><text x="247" y="14">E</text><text x="307" y="14">F</text>
-                        </g>
-                        <path d="M20 196 C 80 186, 110 118, 170 116 S 260 70, 380 52" fill="none" stroke="#5255e0" stroke-width="1.5" stroke-dasharray="5 4"/>
-                        <g stroke="#fff" stroke-width="2">
-                          <circle cx="30" cy="194" r="6" fill="#17845a"/><circle cx="66" cy="182" r="6" fill="#17845a"/>
-                          <circle cx="98" cy="156" r="6" fill="#17845a"/><circle cx="128" cy="128" r="6" fill="#17845a"/>
-                          <circle cx="170" cy="116" r="7.5" fill="#5255e0"/><circle cx="206" cy="108" r="6" fill="#5255e0"/>
-                          <circle cx="242" cy="94" r="6" fill="#5255e0"/><circle cx="280" cy="80" r="6" fill="#5255e0"/>
-                          <circle cx="318" cy="68" r="6" fill="#fff" stroke="#85806f" stroke-width="1.5"/><circle cx="356" cy="58" r="6" fill="#fff" stroke="#85806f" stroke-width="1.5"/>
-                        </g>
-                        <circle cx="170" cy="116" r="12" fill="none" stroke="#5255e0" stroke-width="1"/>
-                        <g font-family="JetBrains Mono, monospace" font-size="9">
-                          <rect x="146" y="134" width="48" height="17" rx="2" fill="#0f1b3d"/>
-                          <text x="154" y="146" fill="#fff">D·04</text>
-                        </g>
-                      </svg>
-                      <p class="pd-legend"><span><i class="pd-not"></i>Not started &lt;10%</span><span><i style="background:#5255e0"></i>In progress</span><span><i style="background:#17845a"></i>Complete &gt;90%</span></p>
-                    </div>
-                    <div class="pd-panel pd-overall">
-                      <p class="pd-h">Overall progress</p>
-                      <p class="pd-big">62%</p>
-                      <div class="pd-meter"><span style="width:62%"></span></div>
-                    </div>
-                    <div class="pd-panel pd-point">
-                      <p class="pd-h">Point D·04</p>
-                      <p class="pd-row"><span>Planned depth</span><b>−2.40 m</b></p>
-                      <p class="pd-row"><span>Estimated depth</span><b>−1.49 m</b></p>
-                      <p class="pd-row"><span>Progress</span><b class="pd-prog">62%</b></p>
-                    </div>
-                    <div class="pd-panel pd-notifs">
-                      <p class="pd-h">Notifications</p>
-                      <ul>
-                        <li><i style="background:#5255e0"></i><span>D·04 · Excavation in progress</span><time class="mono">10:42</time></li>
-                        <li><i style="background:#17845a"></i><span>B·02 · Excavation complete</span><time class="mono">06:42</time></li>
-                        <li><i style="background:#9a5f00"></i><span>D·07 · Email alert sent</span><time class="mono">06:42</time></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="pd-deck" aria-hidden="true"></div>
-            </div>
-
-            <!-- Phone: the email alert and an upload at a plan coordinate -->
-            <div class="pd-phone" role="img" aria-label="WorkGuardAI on a phone with sample data: an email alert for point D·07 giving the current depth of 1.10 metres and the planned depth of 2.40 metres, and a site photo being uploaded at plan coordinates X and Y for point D·04.">
-              <div class="pd-phone-screen">
-                <div class="pd-mail">
-                  <p class="pd-mail-from"><b>WorkGuardAI</b><span class="mono">10:42</span></p>
-                  <p class="pd-mail-subject">Alert · D·07</p>
-                  <p class="pd-row"><span>Current depth</span><b>−1.10 m</b></p>
-                  <p class="pd-row"><span>Planned depth</span><b>−2.40 m</b></p>
-                </div>
-                <p class="pd-h">Upload photo</p>
-                <svg class="pd-photo" viewBox="0 0 216 132">
-                  <rect width="216" height="132" fill="#d9d3c6"/>
-                  <path d="M0 52H58L80 110H136L158 52H216V132H0Z" fill="#b8ab90"/>
-                  <path d="M58 52L80 110H136L158 52" fill="none" stroke="#8f8268" stroke-width="2"/>
-                  <path d="M0 52H58L74 92H142L158 52H216" fill="none" stroke="#5255e0" stroke-width="1.5" stroke-dasharray="4 3"/>
-                </svg>
-                <div class="pd-fields">
-                  <span class="pd-field"><small>X</small>6 120.0</span>
-                  <span class="pd-field"><small>Y</small>4 048.5</span>
-                </div>
-                <span class="pd-button">Upload · D·04</span>
-              </div>
-            </div>
-          </div>
-          <figcaption class="pd-caption mono">Sample data</figcaption>
-        </figure>
-
-        <!-- What you get: only what the app does today, said plainly. -->
-        <div class="pd-groups">
-          <div class="pd-group">
-            <h3><span class="mono">01</span> Progress on the plan</h3>
-            <ul>
-              <li><strong>Your DWG plan as a map</strong><p>The plan you already have becomes a grid of points, each with its planned depth.</p></li>
-              <li><strong>Progress at every point</strong><p>Each point shows the estimated depth against the planned depth, coloured not started, in progress or complete.</p></li>
-              <li><strong>One figure for the site</strong><p>An overall progress bar sums up the whole site at a glance.</p></li>
-            </ul>
-          </div>
-          <div class="pd-group">
-            <h3><span class="mono">02</span> Photos without extra work</h3>
-            <ul>
-              <li><strong>Fixed site cameras</strong><p>Cameras on site send a photo automatically every four hours.</p></li>
-              <li><strong>Uploads by coordinate</strong><p>Your team adds photos from a phone, camera or drone at a coordinate on the plan.</p></li>
-              <li><strong>Depth from each photo</strong><p>An AI depth model estimates the excavation depth in metres from every photo.</p></li>
-            </ul>
-          </div>
-          <div class="pd-group">
-            <h3><span class="mono">03</span> Know when to act</h3>
-            <ul>
-              <li><strong>Email alerts</strong><p>Alerts give the coordinates with the current and planned depth, so the right person can check the right place.</p></li>
-              <li><strong>Notifications by point</strong><p>The dashboard lists what changed and where, point by point.</p></li>
-              <li><strong>A written results report</strong><p>In a pilot we check in every week and compare the results with your own measurements.</p></li>
-            </ul>
-          </div>
-        </div>
-
-      <p class="pd-delivery">We deliver the software and help implement it on site: set-up, connectivity and testing.</p>
-
-      <!-- Vision: ideas that are not in the product, kept apart from what customers get today -->
-      <div class="pd-vision">
-        <div class="pd-vision-head">
-          <p class="chip">Vision</p>
-          <h3>Where the platform is heading</h3>
-          <p>The same plan and photos open the way to more. These ideas are on our roadmap.</p>
-          <p class="pd-vision-link"><a class="link-arrow" href="concept/">See all concept screens <span aria-hidden="true">→</span></a></p>
-        </div>
-        <ul>
-          <li><strong>Look-ahead scheduling</strong><p>The idea is to turn measured progress into a forecast finish and suggested next steps, each waiting for approval.</p></li>
-          <li><strong>Cost linked to measured work</strong><p>The idea is to link measured quantities to contract rates, so invoicing can follow the work actually done.</p></li>
-          <li><strong>Soil and rock volumes</strong><p>Designed to estimate how much soil and rock has been excavated and how much remains, from the same photos.</p></li>
-          <li><strong>Machine and worker safety</strong><p>The idea is to flag when a person is inside a machine's working zone, without identifying who it is.</p></li>
-          <li><strong>Utility cable checks</strong><p>Can help compare the dig with utility plans, as a reminder to check for cables and pipes before work continues.</p></li>
-          <li><strong>Structure condition monitoring</strong><p>The idea is to follow changes in structures such as dam walls over time, from repeated photos.</p></li>
-          <li><strong>BIM and supplier data</strong><p>The idea is to bring in BIM models and supplier data, so the plan, deliveries and progress can be compared in one place.</p></li>
-          <li><strong>Higher precision</strong><p>Camera GPS combined with LiDAR, to place photos and measure depth more precisely.</p></li>
-        </ul>
-        <p class="pd-fine">The safety ideas are concepts. They do not replace site safety procedures or utility location services.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Who it is for -->
-  <section class="section" id="for" aria-labelledby="for-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">04 · Who it is for</p>
-        <h2 id="for-title">For the people who build and own the groundwork.</h2>
-      </div>
-      <div class="audience">
-        <div>
-          <h3>Groundwork and infrastructure contractors</h3>
-          <p>You already have the DWG plan. WorkGuardAI uses it to show how far excavation and groundwork have come at each location, from photos your team can take on a normal site visit.</p>
-        </div>
-        <div>
-          <h3>Public infrastructure owners</h3>
-          <p>Cities and agencies that commission roads, utilities and public works can follow progress per location against the approved plan, measured from site photos.</p>
-        </div>
-      </div>
-      <figure class="for-photo">
-        <picture>
-          <source type="image/avif" srcset="assets/img/site-earthworks-cranes-640.avif 640w, assets/img/site-earthworks-cranes-1080.avif 1080w, assets/img/site-earthworks-cranes-1600.avif 1600w" sizes="(min-width: 1280px) 1120px, 100vw">
-          <img src="assets/img/site-earthworks-cranes-1080.webp" srcset="assets/img/site-earthworks-cranes-640.webp 640w, assets/img/site-earthworks-cranes-1080.webp 1080w, assets/img/site-earthworks-cranes-1600.webp 1600w" sizes="(min-width: 1280px) 1120px, 100vw" width="1600" height="1000" loading="lazy" decoding="async" alt="Large urban earthworks site with spoil heaps, two excavators and two tower cranes under a blue sky, apartment blocks behind.">
-        </picture>
-        <figcaption>Earthworks on a large urban site: the kind of groundwork WorkGuardAI is built to measure.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- 5. Home base and Europe -->
-  <section class="section section-alt" id="about" aria-labelledby="about-title">
-    <div class="container about-grid">
+  <!-- 4. Plan formats (dark) -->
+  <section class="x-dark x-section" id="formats" aria-labelledby="formats-title">
+    <div class="container x-split">
       <div>
-        <div class="sec-head">
-          <p class="sec-index mono">05 · About</p>
-          <h2 id="about-title">Born in Finland, working across Europe.</h2>
-          <p class="sec-lead">WorkGuardAI was founded in Finland on 30 July 2024. The team works across Europe, close to the contractors and public owners who would use the product.</p>
-        </div>
-        <ul class="countries" aria-label="Countries we work in">
-          <li>Finland <span class="home">· home base</span></li><li>Denmark</li><li>Spain</li><li>Portugal</li><li>Albania</li>
+        <p class="x-label x-kicker">Plan formats</p>
+        <h2 id="formats-title">Your plan, in the format you have.</h2>
+        <p class="x-intro">Format-agnostic by design: one internal coordinate model plus importers. DWG works today; the other formats are planned.</p>
+        <ul class="x-formats">
+          <li><span class="x-fmt">DWG</span><span class="x-pill x-pill-ok">Today</span></li>
+          <li><span class="x-fmt">IFC</span><span class="x-pill">Planned</span></li>
+          <li><span class="x-fmt">LandXML</span><span class="x-pill">Planned</span></li>
+          <li><span class="x-fmt">Point clouds</span><span class="x-pill">Planned</span></li>
         </ul>
       </div>
-      <div class="about-photos">
-        <figure class="photo">
-          <picture>
-            <source type="image/avif" srcset="assets/img/about-helsinki-trench-640.avif 640w, assets/img/about-helsinki-trench-1080.avif 1080w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
-            <img src="assets/img/about-helsinki-trench-640.webp" srcset="assets/img/about-helsinki-trench-640.webp 640w, assets/img/about-helsinki-trench-1080.webp 1080w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="1080" height="720" loading="lazy" decoding="async" alt="Endrit Kola in a hard hat and high-visibility vest, holding a notebook, standing in a street trench in central Helsinki with new manholes, water pipes and a valve.">
-          </picture>
-          <figcaption class="mono">Utility works · central Helsinki</figcaption>
-        </figure>
-        <figure class="photo">
-          <picture>
-            <source type="image/avif" srcset="assets/img/site-visit-team-480.avif 480w, assets/img/site-visit-team-800.avif 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
-            <img src="assets/img/site-visit-team-800.webp" srcset="assets/img/site-visit-team-480.webp 480w, assets/img/site-visit-team-800.webp 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="800" height="600" loading="lazy" decoding="async" alt="Three people smiling on a construction site, one in a high-visibility vest marked Inxhinier (engineer), with a dump truck and an excavator behind them.">
-          </picture>
-          <figcaption class="mono">With the site team · on site</figcaption>
-        </figure>
-        <figure class="photo">
-          <picture>
-            <source type="image/avif" srcset="assets/img/drone-controller-field-480.avif 480w, assets/img/drone-controller-field-800.avif 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
-            <img src="assets/img/drone-controller-field-800.webp" srcset="assets/img/drone-controller-field-480.webp 480w, assets/img/drone-controller-field-800.webp 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="800" height="1067" loading="lazy" decoding="async" alt="Hands holding a drone controller with a map on its screen, beside a forest road.">
-          </picture>
-          <figcaption class="mono">Photo capture test · Espoo</figcaption>
-        </figure>
-      </div>
+      <svg class="x-hub reveal" viewBox="0 0 440 400" role="img" aria-label="Diagram: DWG, supported today, and IFC, LandXML and point clouds, which are planned, all feed one internal coordinate model.">
+        <g fill="none" stroke-width="2" stroke-dasharray="6 7">
+          <path d="M80 70 C 150 90, 170 150, 220 200" stroke="#5CF2B0"/>
+          <path d="M360 70 C 290 90, 270 150, 220 200" stroke="#8EEBFF" opacity=".7"/>
+          <path d="M80 330 C 150 310, 170 250, 220 200" stroke="#8EEBFF" opacity=".7"/>
+          <path d="M360 330 C 290 310, 270 250, 220 200" stroke="#8EEBFF" opacity=".7"/>
+        </g>
+        <path d="M220 130 290 200 220 270 150 200Z" fill="#7B6CFF" opacity=".55"/>
+        <path d="M220 130 290 200 220 200Z" fill="#8EEBFF" opacity=".35"/>
+        <g font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">
+          <circle cx="72" cy="66" r="40" fill="#0E0B2B" stroke="#5CF2B0" stroke-width="2"/><text x="72" y="70" fill="#F4F2FF">DWG</text>
+          <circle cx="368" cy="66" r="40" fill="#0E0B2B" stroke="#8EEBFF" stroke-opacity=".6" stroke-width="1.5"/><text x="368" y="70" fill="#C9C3EE">IFC</text>
+          <circle cx="72" cy="334" r="40" fill="#0E0B2B" stroke="#8EEBFF" stroke-opacity=".6" stroke-width="1.5"/><text x="72" y="338" fill="#C9C3EE">LandXML</text>
+          <circle cx="368" cy="334" r="40" fill="#0E0B2B" stroke="#8EEBFF" stroke-opacity=".6" stroke-width="1.5"/><text x="368" y="330" fill="#C9C3EE">Point</text><text x="368" y="346" fill="#C9C3EE">cloud</text>
+        </g>
+      </svg>
     </div>
   </section>
 
-  <!-- 6. Milestones -->
-  <section class="section" id="milestones" aria-labelledby="ms-title">
+  <!-- 5. Milestones (light): arrow timelines -->
+  <section class="x-section" id="milestones" aria-labelledby="ms-title">
+    <span id="news" class="x-anchor" aria-hidden="true"></span>
     <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">06 · Milestones</p>
-        <h2 id="ms-title">From a pre-incubator idea to a working prototype, and onto Europe's pitch stages.</h2>
-        <p class="sec-lead">Three years of programmes, competitions and building, each step recorded with its source.</p>
+      <p class="x-label x-kicker">Milestones</p>
+      <h2 id="ms-title">From an idea to a working prototype, and on to the first pilots.</h2>
+      <h3 class="x-track-h">So far</h3>
+      <ol class="x-track">
+        <li class="reveal"><span class="x-node">Nov 24</span><strong>NEXUS Incubator, Helsinki</strong><span>Completed the six-month Helsinki Incubators programme.</span></li>
+        <li class="reveal"><span class="x-node">Oct 25</span><strong>Circular Buildings challenge</strong><span>Helsinki, Espoo and Vantaa: shortlisted to submit an offer.</span></li>
+        <li class="reveal"><span class="x-node">Nov 25</span><strong>Helsinki Incubators</strong><span>At Slush 2025 among the Helsinki Incubators alumni.</span></li>
+        <li class="reveal"><span class="x-node x-node-ok">Dec 25</span><strong>MVP completed</strong><span>A working prototype that reads the DWG plan and estimates depth from photos.</span></li>
+        <li class="reveal"><span class="x-node">Feb 26</span><strong>€8,000 in programme funding</strong><span>From LUT University's Baltic Impact Accelerator, Interreg Central Baltic, co-funded by the EU.</span></li>
+        <li class="reveal"><span class="x-node">May 26</span><strong>VINCI Energies</strong><span>Showed interest after an initial review.</span></li>
+      </ol>
+      <h3 class="x-track-h">Where we are heading</h3>
+      <ol class="x-track x-track-plan">
+        <li class="reveal"><span class="x-node">Next</span><strong>Field test</strong><span>On a live site, comparing estimates with surveyed measurements.</span></li>
+        <li class="reveal"><span class="x-node">2027</span><strong>First pilots</strong><span>Finland and the Nordics.</span></li>
+        <li class="reveal"><span class="x-node">Then</span><strong>Region and Europe</strong><span>Growing from the Nordic base.</span></li>
+        <li class="reveal"><span class="x-node">2030</span><strong>Global player</strong><span>Our ambition for 2030.</span></li>
+      </ol>
+      <p class="x-sample">Plans, not commitments.</p>
+      <p class="x-more"><a class="x-link" href="news/">All news <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- 6. Where we have pitched (dark) -->
+  <section class="x-dark x-section" id="pitched" aria-labelledby="pitched-title">
+    <div class="container x-split x-split-wide">
+      <div>
+        <p class="x-label x-kicker">On stage</p>
+        <h2 id="pitched-title">Where we have pitched.</h2>
+        <ul class="x-stages">
+          <li id="event-meout-2026">
+            <svg class="x-flag" viewBox="0 0 24 24" aria-hidden="true"><clipPath id="fl-hu"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#fl-hu)"><rect width="24" height="8" fill="#CE2939"/><rect y="8" width="24" height="8" fill="#fff"/><rect y="16" width="24" height="8" fill="#477050"/></g></svg>
+            <div><strong>MeOut Summit · Budapest</strong><span class="x-country">Hungary</span>
+            <p><span data-until="2026-11-26">Selected as one of 20 startups to pitch on stage, 25–26 November 2026.</span><span data-from="2026-11-27" hidden>Pitched on stage in the Pitch Marathon, November 2026.</span></p></div>
+          </li>
+          <li>
+            <svg class="x-flag" viewBox="0 0 24 24" aria-hidden="true"><clipPath id="fl-az"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#fl-az)"><rect width="24" height="8" fill="#0092BC"/><rect y="8" width="24" height="8" fill="#E4002B"/><rect y="16" width="24" height="8" fill="#00AF66"/><circle cx="11.2" cy="12" r="2.6" fill="#fff"/><circle cx="11.9" cy="12" r="2.1" fill="#E4002B"/><circle cx="14.4" cy="12" r=".9" fill="#fff"/></g></svg>
+            <div><strong>AIREX 2026 · Baku</strong><span class="x-country">Azerbaijan</span><p>Pitched in the PropTech Competition, 6 November 2026.</p></div>
+          </li>
+          <li>
+            <svg class="x-flag" viewBox="0 0 24 24" aria-hidden="true"><clipPath id="fl-fi"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#fl-fi)"><rect width="24" height="24" fill="#fff"/><rect x="6" width="4.4" height="24" fill="#002F6C"/><rect y="9.8" width="24" height="4.4" fill="#002F6C"/></g></svg>
+            <div><strong>Sisu Factory · Helsinki</strong><span class="x-country">Finland</span><p>Won Sauna Pitching, 24 February 2025.</p></div>
+          </li>
+        </ul>
       </div>
-
-
-      <div class="ms-highlights">
-        <figure class="ms-photo">
+      <div class="x-photos">
+        <figure class="x-photo reveal">
           <picture>
             <source type="image/avif" srcset="assets/img/sisu-win-480.avif 480w, assets/img/sisu-win-800.avif 800w, assets/img/sisu-win-1080.avif 1080w" sizes="(min-width: 1024px) 560px, 100vw">
             <img src="assets/img/sisu-win-800.webp" srcset="assets/img/sisu-win-480.webp 480w, assets/img/sisu-win-800.webp 800w, assets/img/sisu-win-1080.webp 1080w" sizes="(min-width: 1024px) 560px, 100vw" width="1080" height="720" loading="lazy" decoding="async" alt="Endrit Kola holding the Sisu Factory certificate of achievement in front of the Sauna Pitching screen.">
           </picture>
-          <figcaption><span class="mono">Winner · 24 Feb 2025</span>Endrit Kola after winning Sauna Pitching at Sisu Factory, Helsinki.</figcaption>
-        </figure>
-        <div class="ms-stats">
-          <div class="ms-stat">
-            <p class="mono ms-label">MeOut Summit · Budapest, Hungary</p>
-            <p class="ms-num">1 of 20</p>
-            <p>startups selected from roughly 200 applications to pitch on stage at the MeOut Summit Pitch Marathon in Budapest, Hungary, 25–26 November 2026.</p>
-          </div>
-          <div class="ms-stat">
-            <p class="mono ms-label">Baltic Impact Accelerator</p>
-            <p class="ms-num">€8,000</p>
-            <p>in programme funding from LUT University's Baltic Impact Accelerator (Interreg Central Baltic, co-funded by the EU), used to build the MVP.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="ms-gallery">
-        <figure class="g-portrait">
-          <picture>
-            <source type="image/avif" srcset="assets/img/sisu-sauna-certificate-480.avif 480w, assets/img/sisu-sauna-certificate-800.avif 800w, assets/img/sisu-sauna-certificate-1080.avif 1080w" sizes="(min-width: 960px) 40vw, 100vw">
-            <img src="assets/img/sisu-sauna-certificate-800.webp" srcset="assets/img/sisu-sauna-certificate-480.webp 480w, assets/img/sisu-sauna-certificate-800.webp 800w, assets/img/sisu-sauna-certificate-1080.webp 1080w" sizes="(min-width: 960px) 40vw, 100vw" width="1333" height="2000" loading="lazy" decoding="async" alt="Endrit Kola seated on a sauna bench, holding the Sisu Factory certificate for winning Sauna Pitching.">
-          </picture>
-          <figcaption class="mono">Sauna Pitching winner's certificate · Helsinki · 24 Feb 2025</figcaption>
-        </figure>
-        <figure class="g-photo">
-          <picture>
-            <source type="image/avif" srcset="assets/img/polar-bear-pitching-oulu-480.avif 480w, assets/img/polar-bear-pitching-oulu-800.avif 800w, assets/img/polar-bear-pitching-oulu-1080.avif 1080w" sizes="(min-width: 960px) 40vw, 100vw">
-            <img src="assets/img/polar-bear-pitching-oulu-800.webp" srcset="assets/img/polar-bear-pitching-oulu-480.webp 480w, assets/img/polar-bear-pitching-oulu-800.webp 800w, assets/img/polar-bear-pitching-oulu-1080.webp 1080w" sizes="(min-width: 960px) 40vw, 100vw" width="1600" height="1200" loading="lazy" decoding="async" alt="WorkGuardAI at the Polar Bear Pitching event wall in Oulu.">
-          </picture>
-          <figcaption class="mono">Guests at Polar Bear Pitching · Oulu · 27 Feb 2025</figcaption>
-        </figure>
-      </div>
-
-      <h3 class="ms-sub">Timeline</h3>
-      <ol class="timeline">
-        <li>
-          <time class="mono">Nov 2026</time>
-          <div>
-            <h3>AIREX 2026 PropTech Competition · Baku</h3>
-            <p>Pitched at the AIREX 2026 PropTech Competition in Baku on 6 November, to a jury of investors and ecosystem representatives.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Nov 2026</time>
-          <div>
-            <h3>MeOut Summit · Budapest, Hungary</h3>
-            <p>Selected as one of 20 startups, from roughly 200 applications, to pitch on stage in the Pitch Marathon on 25–26 November, in front of an investor panel. Featured on EU-Startups.</p>
-            <a href="https://www.eu-startups.com/2026/10/meout-summit-2026-meet-the-pitch-marathon-contestants/" rel="noopener" target="_blank">Article on EU-Startups <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Sep 2026</time>
-          <div>
-            <h3>Finland Global Startup Accelerator · Plug and Play and the City of Tampere</h3>
-            <p>Shortlisted to pitch for the 10-week growth programme, commissioned by the City of Tampere, and pitched to the selection panel on Selection Day, 9 September.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">May 2026</time>
-          <div>
-            <h3>VINCI Energies · Startup Connect</h3>
-            <p>VINCI Energies expressed interest after an initial review, and we applied to its 2026 challenge “Expertise meets AI”.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Feb 2026</time>
-          <div>
-            <h3>Baltic Impact Accelerator · LUT University</h3>
-            <p>Completed cohort 3 of the six-month accelerator, funded by Interreg Central Baltic and co-funded by the European Union, with €8,000 in programme funding.</p>
-            <a href="https://centralbaltic.eu/project/baltic-impact-accelerator/" rel="noopener" target="_blank">About the programme <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Dec 2025</time>
-          <div>
-            <h3>MVP completed</h3>
-            <p>The core engine was built with a development partner, funded through the Baltic Impact Accelerator. Built with input from a site manager at an infrastructure contractor, and tested on one real project plan.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Nov 2025</time>
-          <div>
-            <h3>Slush · Helsinki</h3>
-            <p>At Slush 2025 among the Helsinki Incubators alumni.</p>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7394758461210841088/" rel="noopener" target="_blank">Announcement on LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Oct 2025</time>
-          <div>
-            <h3>Circular Buildings Innovation Challenge · Helsinki, Espoo, Vantaa</h3>
-            <p>Took part in the joint innovation challenge of the three cities and submitted an offer in their tender.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Apr 2025</time>
-          <div>
-            <h3>PitchBob.io</h3>
-            <p>Featured in the Secret Seeds startup spotlight.</p>
-            <a href="https://pitchbob.io/secretseeds/revolutionizing-the-construction-industry-how-workguardai-is-leading-the-ai-driven-transformation" rel="noopener" target="_blank">Read the feature <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Feb 2025</time>
-          <div>
-            <h3>Polar Bear Pitching · Oulu</h3>
-            <p>Guest startup at Polar Bear Pitching in Oulu on 27 February 2025, the prize for winning Sauna Pitching.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Feb 2025</time>
-          <div>
-            <h3>Sisu Factory · Sauna Pitching</h3>
-            <p>Won Sauna Pitching on 24 February 2025.</p>
-            <a href="https://www.linkedin.com/posts/sisu-factory_sisufactory-startup-pitching-activity-7300066903111135233-Zzur" rel="noopener" target="_blank">Announcement on LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Nov 2024</time>
-          <div>
-            <h3>NEXUS Incubator · University of Helsinki</h3>
-            <p>Completed the six-month Helsinki Incubators programme, with mentors and weekly workshops on business models, sales and pitching.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Jul 2024</time>
-          <div>
-            <h3>WorkGuardAI founded</h3>
-            <p>Company founded in Finland on 30 July 2024.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">2023</time>
-          <div>
-            <h3>Compass pre-incubator · Helsinki</h3>
-            <p>Where the idea began, as remote monitoring for vehicles. Mentor feedback and pitching turned it towards construction sites.</p>
-          </div>
-        </li>
-      </ol>
-
-      <div class="supported">
-        <div>
-          <p class="mono">SUPPORTED BY</p>
-          <div class="supported-row">
-            <img src="assets/img/bia-interreg-acknowledgement.webp" width="456" height="232" loading="lazy" decoding="async" alt="Interreg Central Baltic Programme, co-funded by the European Union. Baltic Impact Accelerator.">
-            <p>Programmes completed: Baltic Impact Accelerator (LUT University, Interreg Central Baltic) and NEXUS Incubator (Helsinki Incubators, University of Helsinki).</p>
-          </div>
-        </div>
-        <figure class="cert">
-          <a href="assets/img/bia-certificate-1200.webp" target="_blank" rel="noopener" aria-label="Open the certificate (opens in a new tab)">
-            <picture>
-              <source type="image/avif" srcset="assets/img/bia-certificate-640.avif 640w, assets/img/bia-certificate-1200.avif 1200w" sizes="(min-width: 960px) 420px, 100vw">
-              <img src="assets/img/bia-certificate-640.webp" srcset="assets/img/bia-certificate-640.webp 640w, assets/img/bia-certificate-1200.webp 1200w" sizes="(min-width: 960px) 420px, 100vw" width="1200" height="848" loading="eager" fetchpriority="low" decoding="async" alt="Certificate of participation: WorkGuardAI has successfully participated in the Baltic Impact Accelerator, cohort 3. Dated 18 February 2026.">
-            </picture>
-          </a>
-          <figcaption class="mono">Baltic Impact Accelerator, cohort 3 · certificate of participation · 18 Feb 2026</figcaption>
+          <figcaption class="x-label">Winner · 24 Feb 2025</figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- 7. News (from src/news.json) -->
-  <section class="section section-alt" id="news" aria-labelledby="news-title">
+  <!-- 7. Team (light) -->
+  <section class="x-section" id="team" aria-labelledby="team-title">
     <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">07 · News</p>
-        <h2 id="news-title">Latest news</h2>
-      </div>
-      <ol class="news-list">
-        <li id="meout-2026">
-          <time class="mono" datetime="2026-11-25">25–26 Nov 2026</time>
-          <h3>MeOut Summit Pitch Marathon, Budapest</h3>
-          <p>Selected as one of 20 startups, from roughly 200 applications, to pitch on stage in the Pitch Marathon on 25–26 November, in front of an investor panel. Featured on EU-Startups.</p>
-          <a href="https://www.eu-startups.com/2026/10/meout-summit-2026-meet-the-pitch-marathon-contestants/" rel="noopener" target="_blank">Article on EU-Startups <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
-        </li>
-        <li id="airex-2026">
-          <time class="mono" datetime="2026-11-06">6 Nov 2026</time>
-          <h3>AIREX 2026 PropTech Competition, Baku</h3>
-          <p>Pitched at the AIREX 2026 PropTech Competition in Baku on 6 November, to a jury of investors and ecosystem representatives.</p>
-          <a href="https://airex.az/" rel="noopener" target="_blank">Official source <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
-        </li>
-        <li id="tampere-accelerator-2026">
-          <time class="mono" datetime="2026-09-09">9 Sept 2026</time>
-          <h3>Finland Global Startup Accelerator</h3>
-          <p>Shortlisted to pitch for the 10-week growth programme, commissioned by the City of Tampere, and pitched to the selection panel on Selection Day, 9 September.</p>
-        </li>
-      </ol>
-      <p class="news-more"><a class="link-arrow" href="news/">All news <span aria-hidden="true">→</span></a> <a class="link-arrow" href="./?interest=updates#work-form">Follow our progress <span aria-hidden="true">→</span></a></p>
-    </div>
-  </section>
-
-  <!-- 8. Team -->
-  <section class="section" id="team" aria-labelledby="team-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">08 · Team</p>
-        <h2 id="team-title">Team</h2>
-      </div>
-      <ul class="team">
-        <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-endrit-kola-192.avif 1x, assets/img/team-endrit-kola-384.avif 2x"><img src="assets/img/team-endrit-kola-192.webp" srcset="assets/img/team-endrit-kola-192.webp 1x, assets/img/team-endrit-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Endrit Kola"></picture><span class="name">Endrit Kola</span><span class="role mono">Founder &amp; CEO</span><a href="https://www.linkedin.com/in/endritkola/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-maiju-karhu-192.avif 1x, assets/img/team-maiju-karhu-384.avif 2x"><img src="assets/img/team-maiju-karhu-192.webp" srcset="assets/img/team-maiju-karhu-192.webp 1x, assets/img/team-maiju-karhu-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><span class="name">Maiju Karhu</span><span class="role mono">Startup advisor</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-larissa-chaves-192.avif 1x, assets/img/team-larissa-chaves-384.avif 2x"><img src="assets/img/team-larissa-chaves-192.webp" srcset="assets/img/team-larissa-chaves-192.webp 1x, assets/img/team-larissa-chaves-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><span class="name">Larissa Chaves</span><span class="role mono">Technical contributor</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-pratham-srivastava-192.avif 1x, assets/img/team-pratham-srivastava-384.avif 2x"><img src="assets/img/team-pratham-srivastava-192.webp" srcset="assets/img/team-pratham-srivastava-192.webp 1x, assets/img/team-pratham-srivastava-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><span class="name">Pratham Srivastava</span><span class="role mono">Programming contributor</span></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-altin-kola-192.avif 1x, assets/img/team-altin-kola-384.avif 2x"><img src="assets/img/team-altin-kola-192.webp" srcset="assets/img/team-altin-kola-192.webp 1x, assets/img/team-altin-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Altin Kola"></picture><span class="name">Altin Kola</span><span class="role mono">Field &amp; Infrastructure Advisor</span></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="assets/img/team-ergis-topi-192.avif 1x, assets/img/team-ergis-topi-384.avif 2x"><img src="assets/img/team-ergis-topi-192.webp" srcset="assets/img/team-ergis-topi-192.webp 1x, assets/img/team-ergis-topi-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Ergis Topi"></picture><span class="name">Ergis Topi</span><span class="role mono">Site Management Advisor</span></li>
+      <p class="x-label x-kicker">Team</p>
+      <h2 id="team-title">The people behind WorkGuardAI.</h2>
+      <ul class="x-team">
+        <li class="reveal"><picture><source type="image/avif" srcset="assets/img/team-endrit-kola-192.avif 1x, assets/img/team-endrit-kola-384.avif 2x"><img src="assets/img/team-endrit-kola-192.webp" srcset="assets/img/team-endrit-kola-192.webp 1x, assets/img/team-endrit-kola-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Endrit Kola"></picture><strong>Endrit Kola</strong><span>Founder &amp; CEO</span><a href="https://www.linkedin.com/in/endritkola/" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="assets/img/team-maiju-karhu-192.avif 1x, assets/img/team-maiju-karhu-384.avif 2x"><img src="assets/img/team-maiju-karhu-192.webp" srcset="assets/img/team-maiju-karhu-192.webp 1x, assets/img/team-maiju-karhu-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><strong>Maiju Karhu</strong><span>Startup advisor</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="assets/img/team-larissa-chaves-192.avif 1x, assets/img/team-larissa-chaves-384.avif 2x"><img src="assets/img/team-larissa-chaves-192.webp" srcset="assets/img/team-larissa-chaves-192.webp 1x, assets/img/team-larissa-chaves-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><strong>Larissa Chaves</strong><span>Technical contributor</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="assets/img/team-pratham-srivastava-192.avif 1x, assets/img/team-pratham-srivastava-384.avif 2x"><img src="assets/img/team-pratham-srivastava-192.webp" srcset="assets/img/team-pratham-srivastava-192.webp 1x, assets/img/team-pratham-srivastava-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><strong>Pratham Srivastava</strong><span>Programming contributor</span></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="assets/img/team-altin-kola-192.avif 1x, assets/img/team-altin-kola-384.avif 2x"><img src="assets/img/team-altin-kola-192.webp" srcset="assets/img/team-altin-kola-192.webp 1x, assets/img/team-altin-kola-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Altin Kola"></picture><strong>Altin Kola</strong><span>Field &amp; Infrastructure Advisor</span></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="assets/img/team-ergis-topi-192.avif 1x, assets/img/team-ergis-topi-384.avif 2x"><img src="assets/img/team-ergis-topi-192.webp" srcset="assets/img/team-ergis-topi-192.webp 1x, assets/img/team-ergis-topi-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Ergis Topi"></picture><strong>Ergis Topi</strong><span>Site Management Advisor</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- 9. FAQ -->
-  <section class="section section-alt" id="faq" aria-labelledby="faq-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">09 · FAQ</p>
-        <h2 id="faq-title">Frequently asked questions</h2>
-      </div>
-      <div class="faq">
-        <details><summary>How accurate is it?</summary><p>We do not know yet, because it has not been measured on a live site. That is what the pilot is for: we compare the estimated depths with your own measurements and give you the results in a written report.</p></details>
-        <details><summary>What about privacy and people on camera?</summary><p>The prototype estimates the depth of the ground at points on the plan. It does not identify or track people. Which cameras are used, where they point, who can see the photos and how long they are kept are agreed in the written pilot agreement before any photos are taken.</p></details>
-        <details><summary>What do you need from a pilot site?</summary><p>A DWG plan of the site, and access to site cameras or someone who can take photos at plan coordinates.</p></details>
-        <details><summary>Has it been tested on a live site?</summary><p>Not yet. The prototype works on a real project's DWG plan and imagery. A pilot is the first test on a live site, and we compare the results with your own measurements.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. Work with us: each card opens the one form with its interest preselected -->
-  <section class="section" id="work" aria-labelledby="work-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">10 · Work with us</p>
-        <h2 id="work-title">Work with us</h2>
-      </div>
-      <ul class="who">
-        <li><h3>Customers</h3><p>Groundwork and infrastructure teams with a DWG plan who want to test progress measurement on a real site.</p><a class="link-arrow" href="./?interest=pilot#work-form">Book a pilot call <span aria-hidden="true">→</span></a></li>
-        <li><h3>Universities, research groups and hubs</h3><p>Research and learning collaborations: students and researchers working with a real prototype; scope, data use and IP are agreed in writing first.</p><a class="link-arrow" href="./?interest=research#work-form">Talk about a collaboration <span aria-hidden="true">→</span></a></li>
-        <li><h3>Events</h3><p>Organising an event, or attending one we will be at? Tell us which one.</p><a class="link-arrow" id="event-cta-link" href="./?interest=event&amp;event=MeOut%20Summit%2C%20Budapest#work-form"><span id="event-cta" data-none="Talk to us">Meet us at MeOut Summit, Budapest</span> <span aria-hidden="true">→</span></a></li>
-        <li><h3>Press, podcasts and speaking</h3><p>Facts, photos and contact details are on the press page. <a href="press/">Press and speaking</a></p><a class="link-arrow" href="./?interest=press#work-form">Get in touch <span aria-hidden="true">→</span></a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Events (from src/news.json). The script hides a row once its event has ended. -->
-  <section class="section section-alt" id="events" aria-labelledby="events-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">11 · Events</p>
-        <h2 id="events-title">Meet us at</h2>
-      </div>
-      <ul class="events">
-        <li id="event-meout-2026" data-end="2026-11-26">
-          <time class="mono" datetime="2026-11-25">25–26 Nov 2026</time>
-          <div>
-            <h3>MeOut Summit, Budapest</h3>
-            <p>Pitching on stage at MeOut Summit, Budapest</p>
-            <div class="share"><span class="mono">Share</span>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fworkguardai.com%2F%23event-meout-2026" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden">(opens in a new tab)</span></a>
-            <a href="https://wa.me/?text=Pitching%20on%20stage%20at%20MeOut%20Summit%2C%20Budapest%20https%3A%2F%2Fworkguardai.com%2F%23event-meout-2026" rel="noopener" target="_blank">WhatsApp<span class="visually-hidden">(opens in a new tab)</span></a>
-            <a href="mailto:?subject=Pitching%20on%20stage%20at%20MeOut%20Summit%2C%20Budapest&amp;body=https%3A%2F%2Fworkguardai.com%2F%23event-meout-2026">Email</a>
-            <a href="https://workguardai.com/#event-meout-2026" data-copy="Link copied">Copy link</a>
-            <button type="button" class="share-native" data-share-title="Pitching on stage at MeOut Summit, Budapest" data-share-url="https://workguardai.com/#event-meout-2026" hidden>Share…</button>
-          </div>
-          </div>
-          <a class="btn btn-outline btn-small" href="./?interest=event&amp;event=MeOut%20Summit%2C%20Budapest#work-form">Request a meeting</a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 11. Pilot call + partner -->
-  <section class="section" id="pilot" aria-labelledby="pilot-title">
-    <div class="container pilot-grid">
+  <!-- 8. Contact (gradient). The one contact form, sent through Formspree. -->
+  <section class="x-cta" id="contact" aria-labelledby="work-title">
+    <span id="pilot" class="x-anchor" aria-hidden="true"></span><span id="work" class="x-anchor" aria-hidden="true"></span>
+    <div class="container x-split x-split-wide">
       <div>
-        <div class="sec-head">
-          <p class="sec-index mono">12 · Pilot</p>
-          <h2 id="pilot-title">Book a pilot call.</h2>
-          <p class="sec-lead">We are looking for the first live site. If you run groundwork or infrastructure work and have DWG plans for it, a short call is enough to see whether a pilot fits.</p>
-        </div>
-        <div class="pilot-how">
-          <h3>How a pilot works</h3>
-          <ol class="pilot-steps">
-            <li><span class="mono">01</span><div><strong>A short call</strong><p>We show the prototype on a demo project and check that your site fits: groundwork or infrastructure, DWG plans, and someone who can take photos.</p></div></li>
-            <li><span class="mono">02</span><div><strong>A written scope</strong><p>One site, a fixed period and clear data handling, agreed in a short pilot agreement. We load your DWG plan and set up access for your team.</p></div></li>
-            <li><span class="mono">03</span><div><strong>Field test and review</strong><p>Your team takes photos at plan coordinates. We check in every week and compare the results with your own measurements. You get a written results report.</p></div></li>
-          </ol>
-          <p class="pilot-pricing">Pilots are agreed one site at a time. Pricing is set after the field test, based on what it shows.</p>
-        </div>
-        <div class="partner" id="partner">
-          <h3>Partner with us</h3>
-          <p>For technology, surveying and construction partners, and for funding bodies, cities, universities and investors who back early European construction technology.</p>
-          <a class="link-arrow" href="mailto:ek@workguardai.com?subject=Partnership%20with%20WorkGuardAI">ek@workguardai.com <span aria-hidden="true">→</span></a>
-        </div>
+        <p class="x-label x-kicker">Contact</p>
+        <h2 id="work-title">Looking for developers and contractors for a site project? Let's talk.</h2>
+        <p class="x-intro">We are looking for the first live site. If you run groundwork or infrastructure work and have DWG plans for it, a short call is enough to see whether a pilot fits.</p>
+        <ol class="x-pilot">
+          <li><span>01</span><div><strong>A short call</strong><p>We show the prototype on a demo project and check that your site fits: groundwork or infrastructure, DWG plans, and someone who can take photos.</p></div></li>
+          <li><span>02</span><div><strong>A written scope</strong><p>One site, a fixed period and clear data handling, agreed in a short pilot agreement. We load your DWG plan and set up access for your team.</p></div></li>
+          <li><span>03</span><div><strong>Field test and review</strong><p>Your team takes photos at plan coordinates. We check in every week and compare the results with your own measurements. You get a written results report.</p></div></li>
+        </ol>
+        <p class="x-mail"><a href="mailto:ek@workguardai.com">ek@workguardai.com</a></p>
       </div>
 
       <form class="form" id="work-form" aria-labelledby="work-title" method="POST" action="https://formspree.io/f/xgaoynap"
@@ -1019,12 +461,12 @@
   </section>
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer x-footer">
   <div class="container">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="./" aria-label="WorkGuardAI home"><img src="assets/img/logo.png" alt="WorkGuardAI" width="433" height="71" loading="lazy"></a>
-        <p style="margin-top:var(--s-4);max-width:26rem">Groundwork and infrastructure progress, measured from the DWG plan and ordinary site photos.</p>
+        <a class="brand" href="./" aria-label="WorkGuardAI home"><i aria-hidden="true"></i>WorkGuardAI</a>
+        <p class="x-foot-tag">Groundwork and infrastructure progress, estimated from the DWG plan and ordinary site photos.</p>
       </div>
       <div>
         <p class="foot-label mono">Contact</p>
@@ -1032,9 +474,9 @@
           <li><a href="mailto:ek@workguardai.com">ek@workguardai.com</a></li>
           <li><a href="https://www.linkedin.com/company/workguardai" rel="noopener" target="_blank">LinkedIn</a></li>
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
-          <li><a href="#work">Work with us</a></li>
           <li><a href="news/">News</a></li>
           <li><a href="press/">Press and speaking</a></li>
+          <li><a href="concept/">Vision</a></li>
           <li><a href="privacy/">Privacy notice</a></li>
         </ul>
       </div>

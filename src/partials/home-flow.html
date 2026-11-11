@@ -1,0 +1,50 @@
+<!-- How it works: Photo, Your plan, Progress on the map. -->
+    <div class="steps">
+      <svg class="connector" viewBox="0 0 1000 2" preserveAspectRatio="none" aria-hidden="true"><path d="M0 1H1000" stroke="#5446C9" stroke-width="2" stroke-dasharray="6 8"/></svg>
+      <div class="step reveal">
+        <span class="num">01</span>
+        <h3>{{home.f1t}}</h3>
+        <p>{{home.f1d}}</p>
+        <figure>
+          <svg viewBox="0 0 320 200" role="img" aria-label="{{home.f1a}}">
+            <rect width="320" height="200" rx="28" fill="#fff" stroke="#C9DDF0"/><rect x="1" y="1" width="318" height="99" rx="27" fill="#E4F1FD"/>
+            <path d="M0 100H86L118 168H202L234 100H320V172Q320 200 292 200H28Q0 200 0 172Z" fill="#A08C70"/>
+            <path d="M86 100L118 168H202L234 100" fill="none" stroke="#7E6C55" stroke-width="2.5"/>
+            <circle cx="268" cy="44" r="18" fill="#fff" stroke="#C9DDF0"/>
+            <circle cx="268" cy="44" r="7" fill="#5446C9"/>
+          </svg>
+        </figure>
+      </div>
+      <div class="step reveal">
+        <span class="num">02</span>
+        <h3>{{home.f2t}}</h3>
+        <p>{{home.f2d}}</p>
+        <figure>
+          <svg viewBox="0 0 320 200" role="img" aria-label="{{home.f2a}}">
+            <rect width="320" height="200" rx="28" fill="#fff" stroke="#C9DDF0"/>
+            <g stroke="#E4F1FD"><path d="M64 0V200M128 0V200M192 0V200M256 0V200M0 50H320M0 100H320M0 150H320"/></g>
+            <path d="M30 170 C 90 160, 120 110, 170 100 S 250 60, 296 46" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6"/>
+            <circle cx="170" cy="100" r="9" fill="#5446C9" stroke="#fff" stroke-width="3"/>
+            <rect x="184" y="112" width="74" height="26" rx="13" fill="#1B1650"/>
+            <text x="221" y="129" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#fff">C4 · 2.4 m</text>
+          </svg>
+        </figure>
+      </div>
+      <div class="step reveal">
+        <span class="num">03</span>
+        <h3>{{home.f3t}}</h3>
+        <p>{{home.f3d}}</p>
+        <figure>
+          <svg viewBox="0 0 320 200" role="img" aria-label="{{home.f3a}}">
+            <rect width="320" height="200" rx="28" fill="#fff" stroke="#C9DDF0"/>
+            <path d="M30 170 C 90 160, 120 110, 170 100 S 250 60, 296 46" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6"/>
+            <path class="est-line" d="M30 170 C 90 160, 120 110, 170 100" fill="none" stroke="#17845A" stroke-width="4" stroke-linecap="round"/>
+            <g transform="translate(250 140)">
+              <circle r="30" fill="none" stroke="#E4F1FD" stroke-width="8"/>
+              <circle class="ring-fill" r="30" fill="none" stroke="#17845A" stroke-width="8" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="79" transform="rotate(-90)"/>
+              <text y="6" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16" fill="#1B1650">58%</text>
+            </g>
+          </svg>
+        </figure>
+      </div>
+    </div>
