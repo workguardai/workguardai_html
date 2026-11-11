@@ -172,3 +172,49 @@ if (navigator.share) {
   document.querySelectorAll('[data-until]').forEach((el) => { el.hidden = today > el.dataset.until; });
   document.querySelectorAll('[data-from]').forEach((el) => { el.hidden = today < el.dataset.from; });
 })();
+
+// AIREX gallery: opens the 1500px photo in a native dialog.
+// Previous/Next buttons and arrow keys move, Escape closes (built into <dialog>),
+// and focus goes back to the photo that opened it. Without JS the links open the image.
+(() => {
+  const dialog = document.getElementById('airex-lightbox');
+  const links = [...document.querySelectorAll('[data-gal]')];
+  if (!dialog || !dialog.showModal || !links.length) return;
+  const img = dialog.querySelector('img');
+  const count = dialog.querySelector('.x-lb-count');
+  const cap = dialog.querySelector('.x-lb-cap');
+  let index = 0;
+  let opener = null;
+
+  const show = (i) => {
+    index = (i + links.length) % links.length;
+    const link = links[index];
+    const thumb = link.querySelector('img');
+    img.src = link.href;
+    img.width = Number(link.dataset.w);
+    img.height = Number(link.dataset.h);
+    img.alt = thumb.alt;
+    count.textContent = `${index + 1} / ${links.length}`;
+    cap.textContent = link.closest('figure').querySelector('figcaption').textContent;
+  };
+
+  const open = (event) => {
+    event.preventDefault();
+    opener = event.currentTarget;
+    const ref = opener.dataset.gal || opener.dataset.galRef;
+    show(links.findIndex((l) => l.dataset.gal === ref));
+    dialog.showModal();
+  };
+  document.querySelectorAll('[data-gal], [data-gal-ref]').forEach((a) => a.addEventListener('click', open));
+
+  dialog.querySelector('.x-lb-prev').addEventListener('click', () => show(index - 1));
+  dialog.querySelector('.x-lb-next').addEventListener('click', () => show(index + 1));
+  dialog.querySelector('.x-lb-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') { event.preventDefault(); show(index - 1); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); show(index + 1); }
+  });
+  // A click on the dark backdrop (outside the photo and buttons) closes it.
+  dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+  dialog.addEventListener('close', () => { if (opener) opener.focus(); });
+})();
