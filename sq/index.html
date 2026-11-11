@@ -4,24 +4,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WorkGuardAI: ecuria e punimeve të dheut, e matur nga plani juaj DWG</title>
-<meta name="description" content="WorkGuardAI lexon planin DWG që e keni tashmë dhe mat ecurinë e punimeve të dheut dhe të infrastrukturës nga foto të zakonshme të kantierit, pikë pas pike. Prototip funksional; kërkojmë kantierin e parë pilot.">
+<title>WorkGuardAI: përparimi në plan, nga foto të zakonshme të kantierit</title>
+<meta name="description" content="WorkGuardAI vlerëson përparimin e ndërtimit kundrejt planit nga foto të zakonshme të kantierit dhe e tregon pikë pas pike në plan. Prototip funksional, testi në terren më pas.">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="WorkGuardAI">
-<meta property="og:title" content="WorkGuardAI: ecuria e punimeve të dheut, e matur nga plani juaj DWG">
-<meta property="og:description" content="WorkGuardAI lexon planin DWG që e keni tashmë dhe mat ecurinë e punimeve të dheut dhe të infrastrukturës nga foto të zakonshme të kantierit, pikë pas pike. Prototip funksional; kërkojmë kantierin e parë pilot.">
+<meta property="og:title" content="WorkGuardAI: përparimi në plan, nga foto të zakonshme të kantierit">
+<meta property="og:description" content="WorkGuardAI vlerëson përparimin e ndërtimit kundrejt planit nga foto të zakonshme të kantierit dhe e tregon pikë pas pike në plan. Prototip funksional, testi në terren më pas.">
 <meta property="og:url" content="https://workguardai.com/sq/">
 <meta property="og:image" content="https://workguardai.com/assets/img/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="WorkGuardAI: ecuria e punimeve të dheut, e matur nga plani juaj DWG">
-<meta name="twitter:description" content="WorkGuardAI lexon planin DWG që e keni tashmë dhe mat ecurinë e punimeve të dheut dhe të infrastrukturës nga foto të zakonshme të kantierit, pikë pas pike. Prototip funksional; kërkojmë kantierin e parë pilot.">
+<meta name="twitter:title" content="WorkGuardAI: përparimi në plan, nga foto të zakonshme të kantierit">
+<meta name="twitter:description" content="WorkGuardAI vlerëson përparimin e ndërtimit kundrejt planit nga foto të zakonshme të kantierit dhe e tregon pikë pas pike në plan. Prototip funksional, testi në terren më pas.">
 <meta name="twitter:image" content="https://workguardai.com/assets/img/og-default.jpg">
-<meta name="theme-color" content="#fbfaf7">
+<meta name="theme-color" content="#0E0B2B">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="../assets/img/favicon-48.png">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
 <link rel="canonical" href="https://workguardai.com/sq/">
 <link rel="alternate" hreflang="en" href="https://workguardai.com/">
@@ -30,26 +30,21 @@
 <link rel="alternate" hreflang="fi" href="https://workguardai.com/fi/">
 <link rel="alternate" hreflang="es" href="https://workguardai.com/es/">
 <link rel="alternate" hreflang="x-default" href="https://workguardai.com/">
-<link rel="preload" href="../assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" type="image/avif" imagesrcset="../assets/img/hero-excavation-480.avif 480w, ../assets/img/hero-excavation-800.avif 800w, ../assets/img/hero-excavation-1080.avif 1080w" imagesizes="(min-width: 1280px) 500px, (min-width: 960px) 44vw, (min-width: 768px) 560px, 100vw">
 <link rel="stylesheet" href="../assets/css/site.css">
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">Kalo te përmbajtja</a>
 
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="../sq/" aria-label="Faqja kryesore e WorkGuardAI">
-      <img src="../assets/img/logo.png" alt="WorkGuardAI" width="433" height="71">
-    </a>
+    <a class="brand" href="../sq/" aria-label="Faqja kryesore e WorkGuardAI"><i aria-hidden="true"></i>WorkGuardAI</a>
     <nav class="nav" aria-label="Seksionet">
       <a href="#how">Si funksionon</a>
-      <a href="#prototype">Prototipi</a>
+      <a href="#formats">Formatet e planit</a>
       <a href="#milestones">Arritjet</a>
-      <a href="#about">Rreth nesh</a>
-      <a href="#news">Lajme</a>
-      <a href="#faq">Pyetje</a>
+      <a href="#team">Ekipi</a>
     </nav>
     <div class="header-end">
       <nav class="lang" aria-label="Gjuha">
@@ -59,908 +54,355 @@
         <a href="../fi/" hreflang="fi" lang="fi" title="Suomi">FI</a>
         <a href="../es/" hreflang="es" lang="es" title="Español">ES</a>
       </nav>
-      <a class="btn btn-primary btn-small header-cta" href="#pilot">Rezervo një telefonatë pilot</a>
+      <a class="btn btn-light btn-small header-cta" href="#contact">Rezervoni një telefonatë</a>
     </div>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- 1. Hero -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="container hero-grid">
+  <!-- 1. Hero (dark) -->
+  <section class="x-hero x-dark" aria-labelledby="hero-title">
+    <div class="x-shapes" aria-hidden="true">
+      <svg class="x-d1" viewBox="0 0 560 560">
+        <path d="M300 20 540 260 300 500 60 260Z" fill="#7B6CFF" opacity=".22"/>
+        <path d="M300 20 540 260 300 260Z" fill="#8EEBFF" opacity=".16"/>
+        <path d="M420 300 520 400 420 500 320 400Z" fill="#5CF2B0" opacity=".2"/>
+        <circle cx="150" cy="120" r="64" fill="none" stroke="#8EEBFF" stroke-opacity=".35" stroke-width="1.5"/>
+        <circle cx="150" cy="120" r="100" fill="none" stroke="#8EEBFF" stroke-opacity=".14"/>
+      </svg>
+      <svg class="x-d2" viewBox="0 0 420 420"><path d="M210 20 400 210 210 400 20 210Z" fill="#7B6CFF" opacity=".18"/></svg>
+    </div>
+    <div class="container x-hero-grid">
       <div>
-        <p class="stage mono"><span>Prototip funksional <b>/</b> Hapi tjetër: testi në terren</span></p>
-        <h1 id="hero-title">Nga plani DWG te ecuria e matur.</h1>
-        <p class="lead">WorkGuardAI lexon planin DWG që e keni tashmë dhe mat ecurinë e punimeve të dheut nga foto të zakonshme të kantierit, pikë pas pike. Prototipi funksionon me planin dhe fotot e një projekti real. Tani kërkojmë kantierin e parë pilot.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#pilot">Rezervo një telefonatë pilot</a>
-          <a class="link-arrow" href="#partner">Bëhu partner <span aria-hidden="true">→</span></a>
+        <p class="x-status x-label">Prototip funksional · Hapi tjetër: testi në terren</p>
+        <h1 id="hero-title">Përparimi në plan, <span class="x-grad">nga foto të zakonshme.</span></h1>
+        <p class="x-lead">WorkGuardAI vlerëson sa ka përparuar puna kundrejt planit, nga fotot që ekipi juaj bën tashmë, dhe e tregon pikë pas pike në hartë.</p>
+        <div class="x-actions">
+          <a class="btn btn-light" href="#contact">Rezervoni një telefonatë <span aria-hidden="true">→</span></a>
+          
         </div>
-        <p class="hero-meta mono"><span>Lindur në Finlandë</span><span>Punojmë në gjithë Evropën</span><span>Themeluar në 2024</span></p>
-        <a class="hero-event" id="hero-event" href="#news"><span class="mono" data-event-tag>25–26 nëntor 2026</span> <span data-event-label>Prezantim në skenë në MeOut Summit, Budapest</span> <span aria-hidden="true">→</span></a>
-        <script type="application/json" id="upcoming-events">[{"end":"2026-11-26","tag":"25–26 nëntor 2026","label":"Prezantim në skenë në MeOut Summit, Budapest","cta":"Na takoni në MeOut Summit, Budapest","meet":"../sq/?interest=event&event=MeOut%20Summit%2C%20Budapest#work-form"}]</script>
+      </div>
+<!-- Hero mockups: laptop plan view and phone alert. Sample data only. -->
+    <div class="x-stage reveal">
+      <!-- Laptop: plan view with dashed planned and solid estimated lines, and a 58% progress ring -->
+      <div class="laptop">
+        <div class="lid">
+          <div class="screen">
+            <svg viewBox="0 0 640 400" role="img" aria-label="Laptop që tregon planin e kantierit me të dhëna shembull: një unazë përparimi në 58 për qind, vija me ndërprerje për gërmimin e planifikuar, vijë e plotë për përparimin e vlerësuar dhe pikat C1 deri C6 të ngjyrosura sipas gjendjes, me C4 pas planit.">
+              <rect width="640" height="400" fill="#F6FAFF"/>
+              <rect width="640" height="36" fill="#fff"/>
+              <path d="M0 36H640" stroke="#C9DDF0"/>
+              <path d="M24 18 30 12 36 18 30 24Z" fill="#5446C9"/>
+              <text x="46" y="22" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="12" fill="#1B1650">WorkGuardAI</text>
+              <text x="150" y="22" font-family="Inter, sans-serif" font-size="11" fill="#4A4F7A">Plani · Zona C</text>
+              <text x="616" y="22" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#4A4F7A" letter-spacing=".6">TË DHËNA SHEMBULL</text>
+              <g transform="translate(176 0)">
+                <!-- plan grid -->
+                <g stroke="#E4F1FD" stroke-width="1">
+                  <path d="M60 50V400M120 50V400M180 50V400M240 50V400M300 50V400M360 50V400M420 50V400"/>
+                  <path d="M14 90H470M14 150H470M14 210H470M14 270H470M14 330H470"/>
+                </g>
+                <!-- planned (dashed) and estimated (solid) -->
+                <path d="M40 330 C 110 320, 140 250, 200 230 S 300 150, 420 110" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6"/>
+                <path d="M40 350 C 110 340, 140 290, 200 268 S 300 200, 420 168" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6" opacity=".45"/>
+                <path class="est-line" d="M40 330 C 110 320, 140 250, 200 230 S 262 186, 290 172" fill="none" stroke="#17845A" stroke-width="4" stroke-linecap="round"/>
+                <g font-family="JetBrains Mono, monospace" font-size="9" fill="#1B1650">
+                  <circle cx="62" cy="324" r="7" fill="#17845A" stroke="#fff" stroke-width="2"/><text x="56" y="306">C1</text>
+                  <circle cx="132" cy="290" r="7" fill="#17845A" stroke="#fff" stroke-width="2"/><text x="126" y="272">C2</text>
+                  <circle cx="200" cy="230" r="7" fill="#17845A" stroke="#fff" stroke-width="2"/><text x="194" y="212">C3</text>
+                  <circle class="pulse" cx="262" cy="190" r="7" fill="none" stroke="#E08A2E" stroke-width="2"/>
+                  <circle cx="262" cy="190" r="7" fill="#E08A2E" stroke="#fff" stroke-width="2"/><text x="256" y="172">C4</text>
+                  <circle cx="334" cy="150" r="7" fill="#fff" stroke="#5446C9" stroke-width="2"/><text x="328" y="132">C5</text>
+                  <circle cx="404" cy="116" r="7" fill="#fff" stroke="#5446C9" stroke-width="2"/><text x="398" y="98">C6</text>
+                </g>
+                <!-- legend -->
+                <g font-family="Inter, sans-serif" font-size="10" fill="#4A4F7A">
+                  <path d="M40 372H62" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="6 4"/><text x="68" y="375">Planifikuar</text>
+                  <path d="M128 372H150" stroke="#17845A" stroke-width="4" stroke-linecap="round"/><text x="156" y="375">Vlerësuar</text>
+                </g>
+              </g>
+              <!-- progress panel, left -->
+              <rect x="0" y="36" width="190" height="364" fill="#fff"/>
+              <path d="M190 36V400" stroke="#C9DDF0"/>
+              <text x="22" y="66" font-family="JetBrains Mono, monospace" font-size="9" fill="#4A4F7A" letter-spacing=".6">PËRPARIMI</text>
+              <g transform="translate(95 136)">
+                <circle r="44" fill="none" stroke="#E4F1FD" stroke-width="11"/>
+                <circle class="ring-fill" r="44" fill="none" stroke="#17845A" stroke-width="11" stroke-linecap="round" stroke-dasharray="276.5" stroke-dashoffset="116" transform="rotate(-90)"/>
+                <text y="9" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="26" fill="#1B1650">58%</text>
+              </g>
+              <path d="M22 208H168" stroke="#E4F1FD"/>
+              <g font-family="Inter, sans-serif" font-size="11" fill="#1B1650">
+                <circle cx="28" cy="230" r="4" fill="#17845A"/><text x="40" y="234">Përfunduar</text><text x="168" y="234" text-anchor="end">3</text>
+                <circle cx="28" cy="254" r="4" fill="#E08A2E"/><text x="40" y="258">Pas planit</text><text x="168" y="258" text-anchor="end">1</text>
+                <circle cx="28" cy="278" r="4" fill="#fff" stroke="#5446C9" stroke-width="1.5"/><text x="40" y="282">Pa filluar</text><text x="168" y="282" text-anchor="end">2</text>
+              </g>
+              <path d="M22 302H168" stroke="#E4F1FD"/>
+              <text x="22" y="326" font-family="JetBrains Mono, monospace" font-size="9" fill="#4A4F7A" letter-spacing=".6">FOTO E FUNDIT</text>
+              <text x="22" y="346" font-family="Inter, sans-serif" font-size="11" fill="#1B1650">C4 · sot 10:42</text>
+            </svg>
+          </div>
+        </div>
+        <div class="base" aria-hidden="true"></div>
       </div>
 
-      <figure class="survey">
-        <div class="survey-frame">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/hero-excavation-480.avif 480w, ../assets/img/hero-excavation-800.avif 800w, ../assets/img/hero-excavation-1080.avif 1080w" sizes="(min-width: 1280px) 500px, (min-width: 960px) 44vw, (min-width: 768px) 560px, 100vw">
-            <source type="image/webp" srcset="../assets/img/hero-excavation-480.webp 480w, ../assets/img/hero-excavation-800.webp 800w, ../assets/img/hero-excavation-1080.webp 1080w" sizes="(min-width: 1280px) 500px, (min-width: 960px) 44vw, (min-width: 768px) 560px, 100vw">
-            <img src="../assets/img/hero-excavation-800.webp" width="1080" height="1080" alt="Gërmim i hapur me një skarpatë dheu dhe fund me rërë." fetchpriority="high">
-          </picture>
-          <svg class="survey-grid" viewBox="0 0 300 300" aria-hidden="true">
-            <g class="g">
-              <path d="M50 0V300M100 0V300M150 0V300M200 0V300M250 0V300"/>
-              <path d="M0 50H300M0 100H300M0 150H300M0 200H300M0 250H300"/>
+      <!-- Phone: the alert -->
+      <div class="phone float">
+        <div class="screen">
+          <svg viewBox="0 0 220 420" role="img" aria-label="Telefon që tregon një njoftim me të dhëna shembull: pika C4 është pas planit, 1,2 metra nga 2,4 metra të planifikuar, me foton e kantierit për pikën C4 dhe një unazë në 50 për qind.">
+            <rect width="220" height="420" fill="#F6FAFF"/>
+            <rect x="80" y="10" width="60" height="16" rx="8" fill="#0b0920"/>
+            <text x="20" y="22" font-family="Inter, sans-serif" font-weight="600" font-size="11" fill="#1B1650">9:41</text>
+            <!-- notification -->
+            <rect x="12" y="40" width="196" height="92" rx="18" fill="#fff" stroke="#C9DDF0"/>
+            <path d="M30 60 36 54 42 60 36 66Z" fill="#5446C9"/>
+            <text x="50" y="64" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#4A4F7A" letter-spacing=".5">WORKGUARDAI · TANI</text>
+            <text x="24" y="88" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="12.5" fill="#1B1650">Pika C4 është pas planit</text>
+            <text x="24" y="110" font-family="Inter, sans-serif" font-size="11" fill="#4A4F7A">1,2 m nga 2,4 m të planifikuar</text>
+            <!-- photo tied to C4 -->
+            <g transform="translate(12 148)">
+              <rect width="196" height="140" rx="16" fill="#B9D7EF"/>
+              <path d="M0 70H54L76 120H124L146 70H196V140H0Z" fill="#A08C70"/>
+              <path d="M54 70L76 120H124L146 70" fill="none" stroke="#7E6C55" stroke-width="2"/>
+              <path d="M0 70H54L70 104H130L146 70H196" fill="none" stroke="#5446C9" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <rect x="12" y="12" width="40" height="20" rx="10" fill="#1B1650"/>
+              <text x="32" y="26" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#fff">C4</text>
             </g>
-            <!-- Plan lines (top edge and toe of the cut) with plan points -->
-            <path d="M0 20 L62 30 L125 50 L187 59 L250 67 L300 74" fill="none" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
-            <path d="M0 80 L50 87 L112 125 L156 156 L212 172 L275 162 L300 158" fill="none" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
-            <g>
-              <circle class="pt" cx="62" cy="30" r="3"/><circle class="pt" cx="125" cy="50" r="3"/>
-              <circle class="pt" cx="187" cy="59" r="3"/><circle class="pt" cx="250" cy="67" r="3"/>
-              <circle class="pt" cx="50" cy="87" r="3"/><circle class="pt" cx="112" cy="125" r="3"/>
-              <circle class="pt" cx="156" cy="156" r="3"/><circle class="pt" cx="212" cy="172" r="3"/>
-              <circle class="pt" cx="275" cy="162" r="3"/>
-              <circle class="pulse" cx="156" cy="156" r="3"/>
+            <!-- point progress -->
+            <g transform="translate(52 344)">
+              <circle r="26" fill="none" stroke="#E4F1FD" stroke-width="7"/>
+              <circle class="ring-fill" r="26" fill="none" stroke="#E08A2E" stroke-width="7" stroke-linecap="round" stroke-dasharray="163" stroke-dashoffset="81.5" transform="rotate(-90)"/>
+              <text y="5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" fill="#1B1650">50%</text>
             </g>
-            <g class="tag">
-              <path d="M156 160 L160 196" stroke="#fff" stroke-width="1" vector-effect="non-scaling-stroke"/>
-              <rect x="160" y="196" width="110" height="24" rx="1.5"/>
-              <text x="165" y="206">D·04 PIKË E PLANIT</text>
-              <text x="165" y="215">THELLËSI E VLERËSUAR</text>
-            </g>
-            <g>
-              <text x="23" y="10">A</text><text x="73" y="10">B</text><text x="123" y="10">C</text>
-              <text x="173" y="10">D</text><text x="223" y="10">E</text><text x="273" y="10">F</text>
-              <text x="3" y="29">01</text><text x="3" y="79">02</text><text x="3" y="129">03</text>
-              <text x="3" y="179">04</text><text x="3" y="229">05</text><text x="3" y="279">06</text>
-            </g>
+            <text x="86" y="338" font-family="Inter, sans-serif" font-size="10" fill="#4A4F7A">Thellësia e vlerësuar</text>
+            <text x="86" y="356" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" fill="#1B1650">1.2 m / 2.4 m</text>
+            <text x="20" y="400" font-family="JetBrains Mono, monospace" font-size="8" fill="#4A4F7A" letter-spacing=".6">TË DHËNA SHEMBULL</text>
           </svg>
         </div>
-        <div class="survey-axis mono" aria-hidden="true"><span>X →</span><span>RRJET LOKAL</span><span>VIJA E PLANIT - - -</span></div>
-        <figcaption>Mbivendosje ilustruese mbi një foto gërmimi. Rrjet lokal, jo koordinata reale të kantierit.</figcaption>
-      </figure>
+      </div>
+      <p class="sample">Të dhëna shembull</p>
+    </div>
+
     </div>
   </section>
 
-  <!-- 2. How it works -->
-  <section class="section hiw" id="how" aria-labelledby="how-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">01 · Si funksionon</p>
-        <h2 id="how-title">Nga plani DWG dhe foto të zakonshme te ecuria në çdo pikë.</h2>
-      </div>
-      <figure class="explainer">
-        <figcaption class="mono">Ilustrim i konceptit</figcaption>
-        <input class="ex-toggle" type="checkbox" id="ex-pause">
-        <ol class="ex-steps">
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <line x1="22" y1="44" x2="22" y2="18" stroke="#5f6880" stroke-width="2"/>
-              <rect x="14" y="9" width="18" height="11" rx="2" fill="#0f1b3d"/>
-              <g class="ex-in1">
-                <polygon points="30,16 72,76 92,76" fill="#5255e0" opacity=".2"/>
-                <circle cx="82" cy="76" r="4" fill="#5255e0"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">01</span> Fotografo</p>
-            <p>Një foto në një pikë të planit</p>
-          </li>
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <circle cx="82" cy="76" r="4" fill="#5255e0"/>
-              <g class="ex-in2">
-                <path d="M82 44V72M76 44H88M76 52H82M76 60H82M76 68H82" fill="none" stroke="#17845a" stroke-width="2"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">02</span> Analizo</p>
-            <p>Thellësia vlerësohet nga fotoja</p>
-          </li>
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <g class="ex-in3">
-                <path d="M0 44H46L66 98H94L114 44H160" fill="none" stroke="#5255e0" stroke-width="2" stroke-dasharray="5 4"/>
-                <path d="M46 44L58 76H102L114 44" fill="none" stroke="#17845a" stroke-width="3" stroke-linejoin="round"/>
-                <path d="M80 78V96M76 82L80 78L84 82M76 92L80 96L84 92" fill="none" stroke="#0f1b3d" stroke-width="1.5"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">03</span> Krahaso</p>
-            <p>Thellësia e vlerësuar kundrejt asaj të planifikuar</p>
-          </li>
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <circle cx="82" cy="76" r="4" fill="#9a5f00"/>
-              <g class="ex-in4">
-                <rect x="50" y="8" width="60" height="38" rx="3" fill="#fbf1e1" stroke="#9a5f00" stroke-width="1.5"/>
-                <path d="M50 11L80 30L110 11" fill="none" stroke="#9a5f00" stroke-width="1.5"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">04</span> Vepro</p>
-            <p>Njoftim me email me koordinatat dhe thellësitë</p>
-          </li>
+  <!-- 2. Problem (light) -->
+  <section class="x-section" id="problem" aria-labelledby="problem-title">
+    <div class="container x-split">
+      <div>
+        <p class="x-label x-kicker">Problemi</p>
+        <h2 id="problem-title">Përparimi ende kontrollohet duke ecur nëpër kantier.</h2>
+        <p class="x-intro">Dikush del, mat me dorë dhe e shkruan në një raport. Kur raporti lexohet, puna ka ecur më tej.</p>
+        <ol class="x-points">
+          <li class="reveal"><span class="x-dot" aria-hidden="true"></span><div><h3>Ecni dhe matni</h3><p>Kontrolli i përparimit do të thotë të shkosh në çdo pikë me metër ose nivelues.</p></div></li>
+          <li class="reveal"><span class="x-dot" aria-hidden="true"></span><div><h3>Shkruajeni</h3><p>Rezultatet kopjohen me dorë në tabela dhe raporte.</p></div></li>
+          <li class="reveal"><span class="x-dot x-dot-warn" aria-hidden="true"></span><div><h3>Mësoni vonë</h3><p>Kur një pjesë mbetet pas, mund të kalojnë ditë para se dikush ta dijë.</p></div></li>
         </ol>
-        <label class="ex-pause mono" for="ex-pause">Ndalo animacionin</label>
-      </figure>
+      </div>
+      <svg class="x-rings reveal" viewBox="0 0 420 420" role="img" aria-label="Diagram: ecja nëpër kantier dhe matja me dorë çojnë në një raport që vjen pas disa ditësh.">
+        <circle cx="210" cy="210" r="190" fill="none" stroke="#C9DDF0" stroke-width="1.5"/>
+        <circle cx="210" cy="210" r="190" fill="none" stroke="#5446C9" stroke-width="3" stroke-dasharray="70 1124" stroke-linecap="round" transform="rotate(-100 210 210)"/>
+        <circle cx="210" cy="210" r="135" fill="none" stroke="#C9DDF0" stroke-width="1.5"/>
+        <circle cx="210" cy="210" r="135" fill="none" stroke="#7BD3F7" stroke-width="3" stroke-dasharray="60 788" stroke-linecap="round" transform="rotate(10 210 210)"/>
+        <circle cx="210" cy="210" r="80" fill="#E4F1FD"/>
+        <circle cx="210" cy="210" r="80" fill="none" stroke="#E08A2E" stroke-width="3" stroke-dasharray="6 7"/>
+        <g font-family="JetBrains Mono, monospace" font-size="12" letter-spacing=".08em" fill="#1B1650" text-anchor="middle">
+          <text x="210" y="14">ECJA NË KANTIER</text>
+          <text x="210" y="70">MATJA ME DORË</text>
+          <text x="210" y="205" fill="#9a5f00">RAPORTI</text>
+          <text x="210" y="225" fill="#9a5f00">DITË MË VONË</text>
+        </g>
+      </svg>
+    </div>
+  </section>
 
-      <div class="steps">
-        <article class="step">
-          <div class="step-head"><span class="mono">01</span><h3>Fotografo</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="Një dron dhe kamera që fotografojnë një gërmim">
-            <path d="M0 120H70L85 148H155L170 120H240V170H0Z" fill="#e3dccb"/>
-            <path d="M0 120H70L85 148H155L170 120H240" fill="none" stroke="#b9ae95" stroke-width="2"/>
-            <polygon class="beam" points="120,42 84,146 156,146" fill="#5255e0"/>
-            <g class="drone">
-              <rect x="106" y="30" width="28" height="9" rx="4" fill="#0f1b3d"/>
-              <line class="rotor" x1="96" y1="27" x2="116" y2="27" stroke="#5f6880" stroke-width="2" stroke-linecap="round"/>
-              <line class="rotor" x1="124" y1="27" x2="144" y2="27" stroke="#5f6880" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="120" cy="42" r="3" fill="#5255e0"/>
+  <!-- 3. How it works (light): Photo, Your plan, Progress on the map -->
+  <section class="x-section x-section-2" id="how" aria-labelledby="how-title">
+    <span id="product" class="x-anchor" aria-hidden="true"></span>
+    <div class="container">
+      <p class="x-label x-kicker">Si funksionon</p>
+      <h2 id="how-title">Nga një foto te përparimi në plan.</h2>
+      <p class="x-intro">Ekipi juaj vazhdon të bëjë foto si zakonisht. WorkGuardAI e lidh secilën me një pikë në plan dhe vlerëson sa ka përparuar puna.</p>
+<!-- How it works: Photo, Your plan, Progress on the map. -->
+    <div class="steps">
+      <svg class="connector" viewBox="0 0 1000 2" preserveAspectRatio="none" aria-hidden="true"><path d="M0 1H1000" stroke="#5446C9" stroke-width="2" stroke-dasharray="6 8"/></svg>
+      <div class="step reveal">
+        <span class="num">01</span>
+        <h3>Foto</h3>
+        <p>Një kamera kantieri, telefon ose dron bën një foto të zakonshme.</p>
+        <figure>
+          <svg viewBox="0 0 320 200" role="img" aria-label="Një foto e zakonshme e një gërmimi, e bërë me telefon.">
+            <rect width="320" height="200" rx="28" fill="#fff" stroke="#C9DDF0"/><rect x="1" y="1" width="318" height="99" rx="27" fill="#E4F1FD"/>
+            <path d="M0 100H86L118 168H202L234 100H320V172Q320 200 292 200H28Q0 200 0 172Z" fill="#A08C70"/>
+            <path d="M86 100L118 168H202L234 100" fill="none" stroke="#7E6C55" stroke-width="2.5"/>
+            <circle cx="268" cy="44" r="18" fill="#fff" stroke="#C9DDF0"/>
+            <circle cx="268" cy="44" r="7" fill="#5446C9"/>
+          </svg>
+        </figure>
+      </div>
+      <div class="step reveal">
+        <span class="num">02</span>
+        <h3>Plani juaj</h3>
+        <p>Fotoja lidhet me një koordinatë në planin tuaj DWG, pranë thellësisë së planifikuar.</p>
+        <figure>
+          <svg viewBox="0 0 320 200" role="img" aria-label="Një plan DWG si rrjet koordinatash, me një foto të lidhur me pikën C4.">
+            <rect width="320" height="200" rx="28" fill="#fff" stroke="#C9DDF0"/>
+            <g stroke="#E4F1FD"><path d="M64 0V200M128 0V200M192 0V200M256 0V200M0 50H320M0 100H320M0 150H320"/></g>
+            <path d="M30 170 C 90 160, 120 110, 170 100 S 250 60, 296 46" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6"/>
+            <circle cx="170" cy="100" r="9" fill="#5446C9" stroke="#fff" stroke-width="3"/>
+            <rect x="184" y="112" width="74" height="26" rx="13" fill="#1B1650"/>
+            <text x="221" y="129" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#fff">C4 · 2.4 m</text>
+          </svg>
+        </figure>
+      </div>
+      <div class="step reveal">
+        <span class="num">03</span>
+        <h3>Përparimi në hartë</h3>
+        <p>Thellësia e vlerësuar krahasohet me planin, pikë pas pike, me njoftim kur një pikë mbetet pas.</p>
+        <figure>
+          <svg viewBox="0 0 320 200" role="img" aria-label="Plani me vijë të plotë për përparimin e vlerësuar mbi vijën e planifikuar me ndërprerje dhe një unazë përparimi në 58 për qind.">
+            <rect width="320" height="200" rx="28" fill="#fff" stroke="#C9DDF0"/>
+            <path d="M30 170 C 90 160, 120 110, 170 100 S 250 60, 296 46" fill="none" stroke="#5446C9" stroke-width="2.5" stroke-dasharray="8 6"/>
+            <path class="est-line" d="M30 170 C 90 160, 120 110, 170 100" fill="none" stroke="#17845A" stroke-width="4" stroke-linecap="round"/>
+            <g transform="translate(250 140)">
+              <circle r="30" fill="none" stroke="#E4F1FD" stroke-width="8"/>
+              <circle class="ring-fill" r="30" fill="none" stroke="#17845A" stroke-width="8" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="79" transform="rotate(-90)"/>
+              <text y="6" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16" fill="#1B1650">58%</text>
             </g>
-            <line x1="28" y1="120" x2="28" y2="80" stroke="#5f6880" stroke-width="2"/>
-            <rect x="19" y="70" width="18" height="11" rx="2" fill="#0f1b3d"/>
-            <circle class="blink" cx="33" cy="73" r="1.8" fill="#e05252"/>
-            <line x1="210" y1="120" x2="210" y2="100" stroke="#5f6880" stroke-width="2"/>
-            <circle cx="210" cy="95" r="5" fill="#5255e0"/>
-            <circle class="ring" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
-            <circle class="ring" style="animation-delay:1.2s" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
           </svg>
-          <p>Foto nga kamera fikse në kantier, të bëra automatikisht çdo katër orë, ose të ngarkuara nga telefoni, kamera apo droni në koordinatat e planit tuaj.</p>
-        </article>
-        <article class="step">
-          <div class="step-head"><span class="mono">02</span><h3>Analizo</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="Pika nga plani DWG, me thellësinë e vlerësuar nga një foto e re">
-            <g id="hiw-dots"></g>
-            <g class="chg"><rect x="98" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="114" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="130" y="138" width="10" height="8" rx="1.5" fill="#17845a"/></g>
-            <rect x="28" y="40" width="184" height="26" rx="3" fill="#e6f3ec" stroke="#17845a"/>
-            <text x="120" y="57" text-anchor="middle" fill="#17845a" font-size="12" font-weight="600" font-family="Inter, sans-serif">Thellësia u vlerësua</text>
-          </svg>
-          <p>Një model AI me burim të hapur për thellësinë (Depth Anything V2) vlerëson thellësinë e gërmimit në metra nga çdo foto, në koordinatën e saj të planit.</p>
-        </article>
-        <article class="step">
-          <div class="step-head"><span class="mono">03</span><h3>Krahaso</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="Gërmimi i matur krahasuar me profilin e planifikuar DWG, 62 për qind i përfunduar (të dhëna shembull)">
-            <text x="120" y="32" text-anchor="middle" fill="#0f1b3d" font-size="26" font-weight="600" font-family="Outfit, sans-serif">62%</text>
-            <text x="120" y="50" text-anchor="middle" fill="#5f6880" font-size="11" font-family="Inter, sans-serif">përfunduar (të dhëna shembull)</text>
-            <path d="M16 70H70L84 132H156L170 70H224" fill="none" stroke="#5255e0" stroke-width="2.5" stroke-dasharray="6 5"/>
-            <path class="draw" d="M16 70H70L82 108.5H158L170 70H224" fill="none" stroke="#17845a" stroke-width="3" stroke-linejoin="round"/>
-            <line x1="14" y1="154" x2="32" y2="154" stroke="#5255e0" stroke-width="2.5" stroke-dasharray="5 4"/>
-            <text x="37" y="158" fill="#3e4a66" font-size="10" font-family="Inter, sans-serif">Plani DWG</text>
-            <line x1="112" y1="154" x2="130" y2="154" stroke="#17845a" stroke-width="3"/>
-            <text x="135" y="158" fill="#3e4a66" font-size="10" font-family="Inter, sans-serif">Matur në kantier</text>
-          </svg>
-          <p>Thellësia e vlerësuar krahasohet me thellësinë e planifikuar nga DWG-ja, duke dhënë ecurinë në çdo pikë të planit.</p>
-        </article>
-        <article class="step">
-          <div class="step-head"><span class="mono">04</span><h3>Vepro</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="Një panel me ecurinë dhe një sinjalizim kur puna devijon nga plani (të dhëna shembull)">
-            <rect x="12" y="10" width="216" height="150" rx="4" fill="#ffffff" stroke="#cdc8bb"/>
-            <text x="24" y="30" fill="#5f6880" font-size="10" font-family="Inter, sans-serif">Ecuria e kantierit</text>
-            <text x="216" y="30" text-anchor="end" fill="#17845a" font-size="11" font-weight="700" font-family="Inter, sans-serif">62%</text>
-            <rect x="24" y="38" width="192" height="8" rx="4" fill="#e4e1d8"/>
-            <rect class="fillbar" x="24" y="38" width="119" height="8" rx="4" fill="#17845a"/>
-            <line x1="24" y1="118" x2="216" y2="118" stroke="#e4e1d8"/>
-            <polyline points="24,114 70,100 116,82 162,64 208,50" fill="none" stroke="#5255e0" stroke-width="2" stroke-dasharray="5 4"/>
-            <polyline class="draw" points="24,114 70,103 116,90 162,78" fill="none" stroke="#17845a" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle class="adot" cx="162" cy="78" r="3.5" fill="#17845a"/>
-            <g class="alert">
-              <rect x="24" y="126" width="192" height="26" rx="3" fill="#fbf1e1" stroke="#9a5f00"/>
-              <circle class="adot" cx="40" cy="139" r="3.5" fill="#9a5f00"/>
-              <text x="52" y="143" fill="#9a5f00" font-size="10" font-family="Inter, sans-serif">Devijimi i dërgohet drejtuesit</text>
-            </g>
-          </svg>
-          <p>Çdo pikë tregon gjendjen me ngjyrë, një shirit i përgjithshëm ecurie përmbledh kantierin, dhe njoftimet me email raportojnë koordinatat me thellësinë aktuale dhe të planifikuar.</p>
-        </article>
+        </figure>
       </div>
-      <p class="note">Koncept ilustrues me të dhëna shembull. Prototip funksional; testi në terren në pritje.</p>
+    </div>
 
-      <div class="field">
-        <div class="field-head">
-          <h3>Nga terreni</h3>
-          <p>Foto të zakonshme kantieri, si ato që mat prototipi: të bëra me telefon ose dron, ditën dhe natën.</p>
-        </div>
-        <div class="field-grid">
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/field-cut-480.avif 480w, ../assets/img/field-cut-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/field-cut-480.webp" srcset="../assets/img/field-cut-480.webp 480w, ../assets/img/field-cut-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Mur gërmimi i pjerrët me fund me rërë.">
-            </picture>
-            <figcaption class="mono">Gërmim · ditën</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/field-floor-480.avif 480w, ../assets/img/field-floor-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/field-floor-480.webp" srcset="../assets/img/field-floor-480.webp 480w, ../assets/img/field-floor-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Fundi i gërmimit me ujë të ndenjur dhe një hije të gjatë.">
-            </picture>
-            <figcaption class="mono">Fundi i gërmimit · ditën</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/field-shoring-480.avif 480w, ../assets/img/field-shoring-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/field-shoring-480.webp" srcset="../assets/img/field-shoring-480.webp 480w, ../assets/img/field-shoring-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Gërmim i thellë me përforcime çeliku, i ndriçuar natën.">
-            </picture>
-            <figcaption class="mono">Gërmim i përforcuar · natën</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/field-drone-480.avif 480w, ../assets/img/field-drone-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/field-drone-480.webp" srcset="../assets/img/field-drone-480.webp 480w, ../assets/img/field-drone-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Ekrani i telekomandës së dronit me pamje nga ajri gjatë një testi fotografimi.">
-            </picture>
-            <figcaption class="mono">Test fotografimi · Espoo</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/field-urban-compactor-480.avif 480w, ../assets/img/field-urban-compactor-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/field-urban-compactor-480.webp" srcset="../assets/img/field-urban-compactor-480.webp 480w, ../assets/img/field-urban-compactor-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Kantier ndërtimi në qytet në muzg, me një kompaktor dhe barriera sigurie.">
-            </picture>
-            <figcaption class="mono">Kantier urban · muzg</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/field-urban-materials-480.avif 480w, ../assets/img/field-urban-materials-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/field-urban-materials-480.webp" srcset="../assets/img/field-urban-materials-480.webp 480w, ../assets/img/field-urban-materials-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="Materiale ndërtimi dhe barriera të vendosura në një kantier urban në muzg.">
-            </picture>
-            <figcaption class="mono">Materiale kantieri · muzg</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/excavation-day-01-480.avif 480w, ../assets/img/excavation-day-01-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/excavation-day-01-480.webp" srcset="../assets/img/excavation-day-01-480.webp 480w, ../assets/img/excavation-day-01-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Gërmim i gjerë me ujë të ndenjur, pranë pallateve.">
-            </picture>
-            <figcaption class="mono">Gërmim i hapur · ditën</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/urban-site-dusk-wide-480.avif 480w, ../assets/img/urban-site-dusk-wide-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/urban-site-dusk-wide-480.webp" srcset="../assets/img/urban-site-dusk-wide-480.webp 480w, ../assets/img/urban-site-dusk-wide-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Pamje e gjerë e një kantieri ndërtimi në qytet në muzg, me barriera, një kompaktor dhe një hotel pas gardhit të kantierit.">
-            </picture>
-            <figcaption class="mono">Kantier urban, pamje e gjerë · muzg</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/shored-excavation-night-01-480.avif 480w, ../assets/img/shored-excavation-night-01-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/shored-excavation-night-01-480.webp" srcset="../assets/img/shored-excavation-night-01-480.webp 480w, ../assets/img/shored-excavation-night-01-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Gërmim i përforcuar përgjatë një rruge qyteti natën, me një vinç pas.">
-            </picture>
-            <figcaption class="mono">Përforcime pranë rrugës · natën</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/urban-site-dusk-01-480.avif 480w, ../assets/img/urban-site-dusk-01-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/urban-site-dusk-01-480.webp" srcset="../assets/img/urban-site-dusk-01-480.webp 480w, ../assets/img/urban-site-dusk-01-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Baza e një vinçi kullë dhe kalldrëm me motive në një kantier qyteti në muzg.">
-            </picture>
-            <figcaption class="mono">Vinç dhe kalldrëm · muzg</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/urban-site-dusk-03-480.avif 480w, ../assets/img/urban-site-dusk-03-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/urban-site-dusk-03-480.webp" srcset="../assets/img/urban-site-dusk-03-480.webp 480w, ../assets/img/urban-site-dusk-03-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Terren i pastruar me gjurmë makinerish në një kantier urban në muzg.">
-            </picture>
-            <figcaption class="mono">Terren i pastruar · muzg</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="../assets/img/urban-site-dusk-06-480.avif 480w, ../assets/img/urban-site-dusk-06-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="../assets/img/urban-site-dusk-06-480.webp" srcset="../assets/img/urban-site-dusk-06-480.webp 480w, ../assets/img/urban-site-dusk-06-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="Punime ndërtimi buzë rrugës me një vinç në muzg.">
-            </picture>
-            <figcaption class="mono">Punime në rrugë · muzg</figcaption>
-          </figure>
-        </div>
-      </div>
+      <p class="x-sample">Të dhëna shembull</p>
+      <p class="x-more"><a class="x-link" href="../sq/concept/">Shihni të gjitha ekranet konceptuale <span aria-hidden="true">→</span></a></p>
     </div>
   </section>
 
-  <!-- 3. The prototype -->
-  <section class="section section-alt" id="prototype" aria-labelledby="proto-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">02 · Prototipi</p>
-        <h2 id="proto-title">I ndërtuar mbi planin dhe fotot e një projekti real.</h2>
-        <p class="sec-lead">Prototipi është demonstruar me një skedar real DWG dhe foto reale kantieri. Ende nuk është përdorur në një kantier aktiv. Testi i parë në terren është hapi tjetër.</p>
-      </div>
-      <div class="screens">
-        <figure class="screen">
-          <div class="screen-frame screen-shot">
-            <a href="../assets/img/screen-upload-1200.webp" target="_blank" rel="noopener">
-            <picture>
-              <source type="image/avif" srcset="../assets/img/screen-upload-640.avif 640w, ../assets/img/screen-upload-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
-              <img src="../assets/img/screen-upload-640.webp" srcset="../assets/img/screen-upload-640.webp 640w, ../assets/img/screen-upload-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="Ekrani i prototipit për ngarkimin e fotove në një koordinatë të planit, me fushat X dhe Y.">
-            </picture>
-            </a>
-          </div>
-          <figcaption><span>Ngarkim sipas koordinatës</span><span class="mono">EKRANI 1</span></figcaption>
-        </figure>
-        <figure class="screen">
-          <div class="screen-frame screen-shot">
-            <a href="../assets/img/screen-map-1200.webp" target="_blank" rel="noopener">
-            <picture>
-              <source type="image/avif" srcset="../assets/img/screen-map-640.avif 640w, ../assets/img/screen-map-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
-              <img src="../assets/img/screen-map-640.webp" srcset="../assets/img/screen-map-640.webp 640w, ../assets/img/screen-map-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="Paneli i prototipit që shfaq planin DWG si hartë pikash koordinatash. Emri i skedarit dhe shifra e ecurisë janë të turbulluara.">
-            </picture>
-            </a>
-          </div>
-          <figcaption><span>Harta e koordinatave DWG</span><span class="mono">EKRANI 2</span></figcaption>
-        </figure>
-        <figure class="screen">
-          <div class="screen-frame screen-shot">
-            <a href="../assets/img/screen-alerts-1200.webp" target="_blank" rel="noopener">
-            <picture>
-              <source type="image/avif" srcset="../assets/img/screen-alerts-640.avif 640w, ../assets/img/screen-alerts-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
-              <img src="../assets/img/screen-alerts-640.webp" srcset="../assets/img/screen-alerts-640.webp 640w, ../assets/img/screen-alerts-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="Njoftimet e prototipit për gërmim në vazhdim, me koordinatat të turbulluara.">
-            </picture>
-            </a>
-          </div>
-          <figcaption><span>Njoftim ecurie me email</span><span class="mono">EKRANI 3</span></figcaption>
-        </figure>
-      </div>
-      <p class="note">Ndërfaqja e prototipit, e testuar me planin dhe fotot e një projekti real. Hapi tjetër: testi në terren. Emrat e skedarëve të klientit, koordinatat e kantierit dhe shifrat janë të turbulluara.</p>
-      <p class="alert-open"><a class="btn btn-outline" id="alert-open" href="../assets/img/screen-alerts-1200.webp" target="_blank" rel="noopener">Shihni një njoftim shembull</a></p>
-      <dialog class="alert-dialog" id="alert-dialog" aria-labelledby="alert-dialog-title">
-        <div class="alert-dialog-head">
-          <p id="alert-dialog-title">Njoftim ecurie me email</p>
-          <form method="dialog"><button class="btn btn-outline btn-small" type="submit">Mbyll</button></form>
-        </div>
-        <picture>
-          <source type="image/avif" srcset="../assets/img/screen-alerts-1200.avif">
-          <img src="../assets/img/screen-alerts-1200.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Njoftimet e prototipit për gërmim në vazhdim, me koordinatat të turbulluara.">
-        </picture>
-        <p class="note">Ndërfaqja e prototipit, e testuar me planin dhe fotot e një projekti real. Hapi tjetër: testi në terren. Emrat e skedarëve të klientit, koordinatat e kantierit dhe shifrat janë të turbulluara.</p>
-      </dialog>
-
-      <div class="status-cols">
-        <div>
-          <h3>Çfarë bën sot</h3>
-          <ul class="status-list status-today">
-            <li><span>Lexon planin DWG dhe e kthen në një rrjet pikash plani, secila me thellësinë e saj të planifikuar.</span></li>
-            <li><span>Vlerëson thellësinë e gërmimit nga çdo foto me një model AI me burim të hapur për thellësinë (Depth Anything V2).</span></li>
-            <li><span>Tregon ecurinë për çdo pikë kundrejt thellësisë së planifikuar, me ngjyra nga e pafilluar te në vazhdim dhe e përfunduar, me një shirit të përgjithshëm ecurie.</span></li>
-            <li><span>Merr foto nga kamera fikse në kantier çdo katër orë, ose nga foto të ngarkuara sipas koordinatës.</span></li>
-            <li><span>Dërgon njoftime me email me koordinatat dhe thellësinë aktuale dhe të planifikuar.</span></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Çfarë vjen më pas</h3>
-          <ul class="status-list">
-            <li><span class="chip">Tjetri</span><span>Një test në një kantier aktiv, me një sipërmarrës ose pronar infrastrukture, duke krahasuar thellësitë e vlerësuara me matjet topografike.</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. What you get: only what the app does. Mockups: src/partials/product-devices.html, list: src/partials/product-features.html -->
-  <section class="section" id="product" aria-labelledby="product-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">03 · Çfarë merrni</p>
-        <h2 id="product-title">Një pamje e kantierit kundrejt planit, nga foto të zakonshme.</h2>
-        <p class="sec-lead">Plani juaj DWG, fotot e kantierit dhe thellësia e vlerësuar prej tyre bashkohen në një panel. Ekipi juaj sheh përparimin në çdo pikë dhe merr njoftim kur një pikë duhet kontrolluar.</p>
-      </div>
-        <!-- What you get: the dashboard and the phone, showing only what the app does. Numbers are sample data. -->
-        <figure class="pd-stage">
-          <div class="pd-devices">
-
-            <!-- Laptop: the dashboard -->
-            <div class="pd-laptop" role="img" aria-label="Paneli i WorkGuardAI me të dhëna shembull: plani DWG si hartë koordinatash me pika të ngjyrosura pa filluar, në proces dhe përfunduar, përparimi i përgjithshëm 62 për qind, pika D·04 me thellësi të planifikuar 2,40 metra, thellësi të vlerësuar 1,49 metra dhe përparim 62 për qind, si dhe një listë njoftimesh.">
-              <div class="pd-lid">
-                <div class="pd-screen">
-                  <div class="pd-bar">
-                    <img src="../assets/img/logo.png" alt="" width="433" height="71">
-                    <span>Kantieri 01</span>
-                    <span class="mono">Foto e fundit e kamerës 10:42</span>
-                  </div>
-                  <div class="pd-dash">
-                    <div class="pd-panel pd-map">
-                      <p class="pd-h">Plani DWG · harta e koordinatave</p>
-                      <svg viewBox="0 0 400 230">
-                        <g stroke="#ece9e1" stroke-width="1">
-                          <path d="M40 0V230M100 0V230M160 0V230M220 0V230M280 0V230M340 0V230"/>
-                          <path d="M0 40H400M0 90H400M0 140H400M0 190H400"/>
-                        </g>
-                        <g fill="#5f6880" font-family="JetBrains Mono, monospace" font-size="9">
-                          <text x="67" y="14">B</text><text x="127" y="14">C</text><text x="187" y="14">D</text><text x="247" y="14">E</text><text x="307" y="14">F</text>
-                        </g>
-                        <path d="M20 196 C 80 186, 110 118, 170 116 S 260 70, 380 52" fill="none" stroke="#5255e0" stroke-width="1.5" stroke-dasharray="5 4"/>
-                        <g stroke="#fff" stroke-width="2">
-                          <circle cx="30" cy="194" r="6" fill="#17845a"/><circle cx="66" cy="182" r="6" fill="#17845a"/>
-                          <circle cx="98" cy="156" r="6" fill="#17845a"/><circle cx="128" cy="128" r="6" fill="#17845a"/>
-                          <circle cx="170" cy="116" r="7.5" fill="#5255e0"/><circle cx="206" cy="108" r="6" fill="#5255e0"/>
-                          <circle cx="242" cy="94" r="6" fill="#5255e0"/><circle cx="280" cy="80" r="6" fill="#5255e0"/>
-                          <circle cx="318" cy="68" r="6" fill="#fff" stroke="#85806f" stroke-width="1.5"/><circle cx="356" cy="58" r="6" fill="#fff" stroke="#85806f" stroke-width="1.5"/>
-                        </g>
-                        <circle cx="170" cy="116" r="12" fill="none" stroke="#5255e0" stroke-width="1"/>
-                        <g font-family="JetBrains Mono, monospace" font-size="9">
-                          <rect x="146" y="134" width="48" height="17" rx="2" fill="#0f1b3d"/>
-                          <text x="154" y="146" fill="#fff">D·04</text>
-                        </g>
-                      </svg>
-                      <p class="pd-legend"><span><i class="pd-not"></i>Pa filluar &lt;10%</span><span><i style="background:#5255e0"></i>Në proces</span><span><i style="background:#17845a"></i>Përfunduar &gt;90%</span></p>
-                    </div>
-                    <div class="pd-panel pd-overall">
-                      <p class="pd-h">Përparimi i përgjithshëm</p>
-                      <p class="pd-big">62%</p>
-                      <div class="pd-meter"><span style="width:62%"></span></div>
-                    </div>
-                    <div class="pd-panel pd-point">
-                      <p class="pd-h">Pika D·04</p>
-                      <p class="pd-row"><span>Thellësia e planifikuar</span><b>−2.40 m</b></p>
-                      <p class="pd-row"><span>Thellësia e vlerësuar</span><b>−1.49 m</b></p>
-                      <p class="pd-row"><span>Përparimi</span><b class="pd-prog">62%</b></p>
-                    </div>
-                    <div class="pd-panel pd-notifs">
-                      <p class="pd-h">Njoftime</p>
-                      <ul>
-                        <li><i style="background:#5255e0"></i><span>D·04 · Gërmimi në proces</span><time class="mono">10:42</time></li>
-                        <li><i style="background:#17845a"></i><span>B·02 · Gërmimi përfundoi</span><time class="mono">06:42</time></li>
-                        <li><i style="background:#9a5f00"></i><span>D·07 · Njoftimi me email u dërgua</span><time class="mono">06:42</time></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="pd-deck" aria-hidden="true"></div>
-            </div>
-
-            <!-- Phone: the email alert and an upload at a plan coordinate -->
-            <div class="pd-phone" role="img" aria-label="WorkGuardAI në telefon me të dhëna shembull: një njoftim me email për pikën D·07 me thellësinë aktuale 1,10 metra dhe thellësinë e planifikuar 2,40 metra, dhe një foto kantieri që ngarkohet në koordinatat X dhe Y të planit për pikën D·04.">
-              <div class="pd-phone-screen">
-                <div class="pd-mail">
-                  <p class="pd-mail-from"><b>WorkGuardAI</b><span class="mono">10:42</span></p>
-                  <p class="pd-mail-subject">Njoftim · D·07</p>
-                  <p class="pd-row"><span>Thellësia aktuale</span><b>−1.10 m</b></p>
-                  <p class="pd-row"><span>Thellësia e planifikuar</span><b>−2.40 m</b></p>
-                </div>
-                <p class="pd-h">Ngarko foto</p>
-                <svg class="pd-photo" viewBox="0 0 216 132">
-                  <rect width="216" height="132" fill="#d9d3c6"/>
-                  <path d="M0 52H58L80 110H136L158 52H216V132H0Z" fill="#b8ab90"/>
-                  <path d="M58 52L80 110H136L158 52" fill="none" stroke="#8f8268" stroke-width="2"/>
-                  <path d="M0 52H58L74 92H142L158 52H216" fill="none" stroke="#5255e0" stroke-width="1.5" stroke-dasharray="4 3"/>
-                </svg>
-                <div class="pd-fields">
-                  <span class="pd-field"><small>X</small>6 120.0</span>
-                  <span class="pd-field"><small>Y</small>4 048.5</span>
-                </div>
-                <span class="pd-button">Ngarko · D·04</span>
-              </div>
-            </div>
-          </div>
-          <figcaption class="pd-caption mono">Të dhëna shembull</figcaption>
-        </figure>
-
-        <!-- What you get: only what the app does today, said plainly. -->
-        <div class="pd-groups">
-          <div class="pd-group">
-            <h3><span class="mono">01</span> Përparimi në plan</h3>
-            <ul>
-              <li><strong>Plani juaj DWG si hartë</strong><p>Plani që keni tashmë bëhet një rrjet pikash, secila me thellësinë e planifikuar.</p></li>
-              <li><strong>Përparimi në çdo pikë</strong><p>Çdo pikë tregon thellësinë e vlerësuar kundrejt asaj të planifikuar, e ngjyrosur pa filluar, në proces ose përfunduar.</p></li>
-              <li><strong>Një shifër për kantierin</strong><p>Një shirit përparimi i përgjithshëm përmbledh gjithë kantierin me një shikim.</p></li>
-            </ul>
-          </div>
-          <div class="pd-group">
-            <h3><span class="mono">02</span> Foto pa punë shtesë</h3>
-            <ul>
-              <li><strong>Kamera fikse në kantier</strong><p>Kamerat në kantier dërgojnë automatikisht një foto çdo katër orë.</p></li>
-              <li><strong>Ngarkime sipas koordinatave</strong><p>Ekipi juaj shton foto nga telefoni, kamera ose droni në një koordinatë të planit.</p></li>
-              <li><strong>Thellësia nga çdo foto</strong><p>Një model AI për thellësinë vlerëson thellësinë e gërmimit në metra nga çdo foto.</p></li>
-            </ul>
-          </div>
-          <div class="pd-group">
-            <h3><span class="mono">03</span> Dini kur të veproni</h3>
-            <ul>
-              <li><strong>Njoftime me email</strong><p>Njoftimet japin koordinatat me thellësinë aktuale dhe të planifikuar, që personi i duhur të kontrollojë vendin e duhur.</p></li>
-              <li><strong>Njoftime sipas pikave</strong><p>Paneli liston çfarë ndryshoi dhe ku, pikë pas pike.</p></li>
-              <li><strong>Një raport me shkrim i rezultateve</strong><p>Në një pilot kontrollojmë çdo javë dhe krahasojmë rezultatet me matjet tuaja.</p></li>
-            </ul>
-          </div>
-        </div>
-
-      <p class="pd-delivery">Ne ofrojmë softuerin dhe ndihmojmë ta zbatoni në kantier: konfigurimi, lidhja dhe testimi.</p>
-
-      <!-- Vision: ideas that are not in the product, kept apart from what customers get today -->
-      <div class="pd-vision">
-        <div class="pd-vision-head">
-          <p class="chip">Vizioni</p>
-          <h3>Ku po shkon platforma</h3>
-          <p>I njëjti plan dhe të njëjtat foto hapin rrugën për më shumë. Këto ide janë në planin tonë të zhvillimit.</p>
-          <p class="pd-vision-link"><a class="link-arrow" href="../sq/concept/">Shihni të gjitha ekranet konceptuale <span aria-hidden="true">→</span></a></p>
-        </div>
-        <ul>
-          <li><strong>Planifikim paraprak</strong><p>Ideja është që përparimi i matur të kthehet në parashikim përfundimi dhe hapa të sugjeruar, secili në pritje të miratimit.</p></li>
-          <li><strong>Kosto e lidhur me punën e matur</strong><p>Ideja është të lidhen sasitë e matura me tarifat e kontratës, që faturimi të ndjekë punën e kryer realisht.</p></li>
-          <li><strong>Vëllimet e dheut dhe shkëmbit</strong><p>Projektuar për të vlerësuar sa dhé dhe shkëmb është gërmuar dhe sa mbetet, nga të njëjtat foto.</p></li>
-          <li><strong>Siguria e makinerive dhe e punëtorëve</strong><p>Ideja është të sinjalizohet kur një person ndodhet brenda zonës së punës së një makinerie, pa e identifikuar se kush është.</p></li>
-          <li><strong>Kontrolli i kabllove dhe tubacioneve</strong><p>Mund të ndihmojë të krahasohet gërmimi me planet e rrjeteve, si kujtesë për të kontrolluar kabllot dhe tubat para se puna të vazhdojë.</p></li>
-          <li><strong>Monitorimi i gjendjes së strukturave</strong><p>Ideja është të ndiqen ndryshimet në struktura si muret e digave me kalimin e kohës, nga foto të përsëritura.</p></li>
-          <li><strong>BIM dhe të dhënat e furnitorëve</strong><p>Ideja është të sillen modelet BIM dhe të dhënat e furnitorëve, që plani, dërgesat dhe përparimi të krahasohen në një vend.</p></li>
-          <li><strong>Saktësi më e lartë</strong><p>GPS i kamerës i kombinuar me LiDAR, për të vendosur fotot dhe për të matur thellësinë më saktë.</p></li>
-        </ul>
-        <p class="pd-fine">Idetë për sigurinë janë koncepte. Ato nuk zëvendësojnë procedurat e sigurisë në kantier ose shërbimet e lokalizimit të rrjeteve nëntokësore.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Who it is for -->
-  <section class="section" id="for" aria-labelledby="for-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">04 · Për kë është</p>
-        <h2 id="for-title">Për ata që ndërtojnë dhe zotërojnë punimet e dheut.</h2>
-      </div>
-      <div class="audience">
-        <div>
-          <h3>Sipërmarrës të punimeve të dheut dhe infrastrukturës</h3>
-          <p>Ju e keni tashmë planin DWG. WorkGuardAI e përdor për të treguar sa ka ecur gërmimi dhe punimet e dheut në çdo pikë, nga foto që ekipi juaj mund t'i bëjë gjatë një vizite të zakonshme në kantier.</p>
-        </div>
-        <div>
-          <h3>Pronarë publikë të infrastrukturës</h3>
-          <p>Bashkitë dhe agjencitë që porosisin rrugë, rrjete shërbimesh dhe punime publike mund të ndjekin ecurinë për çdo pikë kundrejt planit të miratuar, të matur nga foto të kantierit.</p>
-        </div>
-      </div>
-      <figure class="for-photo">
-        <picture>
-          <source type="image/avif" srcset="../assets/img/site-earthworks-cranes-640.avif 640w, ../assets/img/site-earthworks-cranes-1080.avif 1080w, ../assets/img/site-earthworks-cranes-1600.avif 1600w" sizes="(min-width: 1280px) 1120px, 100vw">
-          <img src="../assets/img/site-earthworks-cranes-1080.webp" srcset="../assets/img/site-earthworks-cranes-640.webp 640w, ../assets/img/site-earthworks-cranes-1080.webp 1080w, ../assets/img/site-earthworks-cranes-1600.webp 1600w" sizes="(min-width: 1280px) 1120px, 100vw" width="1600" height="1000" loading="lazy" decoding="async" alt="Kantier i madh punimesh dheu në qytet, me grumbuj dheu, dy ekskavatorë dhe dy vinça kullë nën qiell blu, me pallate pas.">
-        </picture>
-        <figcaption>Punime dheu në një kantier të madh urban: lloji i punimeve që WorkGuardAI është ndërtuar të masë.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- 5. Home base and Europe -->
-  <section class="section section-alt" id="about" aria-labelledby="about-title">
-    <div class="container about-grid">
+  <!-- 4. Plan formats (dark) -->
+  <section class="x-dark x-section" id="formats" aria-labelledby="formats-title">
+    <div class="container x-split">
       <div>
-        <div class="sec-head">
-          <p class="sec-index mono">05 · Rreth nesh</p>
-          <h2 id="about-title">Lindur në Finlandë, duke punuar në gjithë Evropën.</h2>
-          <p class="sec-lead">WorkGuardAI u themelua në Finlandë më 30 korrik 2024. Ekipi punon në gjithë Evropën, pranë sipërmarrësve dhe investitorëve publikë që do ta përdornin produktin.</p>
-        </div>
-        <ul class="countries" aria-label="Vendet ku punojmë">
-          <li>Finlanda <span class="home">· baza</span></li><li>Danimarka</li><li>Spanja</li><li>Portugalia</li><li>Shqipëria</li>
+        <p class="x-label x-kicker">Formatet e planit</p>
+        <h2 id="formats-title">Plani juaj, në formatin që keni.</h2>
+        <p class="x-intro">I pavarur nga formati sipas projektimit: një model i brendshëm koordinatash plus importues. DWG funksionon sot; formatet e tjera janë të planifikuara.</p>
+        <ul class="x-formats">
+          <li><span class="x-fmt">DWG</span><span class="x-pill x-pill-ok">Sot</span></li>
+          <li><span class="x-fmt">IFC</span><span class="x-pill">Planifikuar</span></li>
+          <li><span class="x-fmt">LandXML</span><span class="x-pill">Planifikuar</span></li>
+          <li><span class="x-fmt">Retë e pikave</span><span class="x-pill">Planifikuar</span></li>
         </ul>
       </div>
-      <div class="about-photos">
-        <figure class="photo">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/about-helsinki-trench-640.avif 640w, ../assets/img/about-helsinki-trench-1080.avif 1080w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
-            <img src="../assets/img/about-helsinki-trench-640.webp" srcset="../assets/img/about-helsinki-trench-640.webp 640w, ../assets/img/about-helsinki-trench-1080.webp 1080w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="1080" height="720" loading="lazy" decoding="async" alt="Endrit Kola me helmetë dhe jelek reflektues, me një bllok shënimesh në dorë, në një kanal rruge në qendër të Helsinkit me puse të reja, tuba uji dhe një valvul.">
-          </picture>
-          <figcaption class="mono">Punime rrjetesh · qendra e Helsinkit</figcaption>
-        </figure>
-        <figure class="photo">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/site-visit-team-480.avif 480w, ../assets/img/site-visit-team-800.avif 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
-            <img src="../assets/img/site-visit-team-800.webp" srcset="../assets/img/site-visit-team-480.webp 480w, ../assets/img/site-visit-team-800.webp 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="800" height="600" loading="lazy" decoding="async" alt="Tre persona të buzëqeshur në një kantier ndërtimi, njëri me jelek reflektues me mbishkrimin Inxhinier, me një kamion dhe një ekskavator pas tyre.">
-          </picture>
-          <figcaption class="mono">Me ekipin e kantierit · në terren</figcaption>
-        </figure>
-        <figure class="photo">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/drone-controller-field-480.avif 480w, ../assets/img/drone-controller-field-800.avif 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
-            <img src="../assets/img/drone-controller-field-800.webp" srcset="../assets/img/drone-controller-field-480.webp 480w, ../assets/img/drone-controller-field-800.webp 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="800" height="1067" loading="lazy" decoding="async" alt="Duar që mbajnë telekomandën e një droni me hartë në ekran, pranë një rruge në pyll.">
-          </picture>
-          <figcaption class="mono">Test fotografimi · Espoo</figcaption>
-        </figure>
-      </div>
+      <svg class="x-hub reveal" viewBox="0 0 440 400" role="img" aria-label="Diagram: DWG, i mbështetur sot, dhe IFC, LandXML dhe retë e pikave, të planifikuara, ushqejnë të gjitha një model të brendshëm koordinatash.">
+        <g fill="none" stroke-width="2" stroke-dasharray="6 7">
+          <path d="M80 70 C 150 90, 170 150, 220 200" stroke="#5CF2B0"/>
+          <path d="M360 70 C 290 90, 270 150, 220 200" stroke="#8EEBFF" opacity=".7"/>
+          <path d="M80 330 C 150 310, 170 250, 220 200" stroke="#8EEBFF" opacity=".7"/>
+          <path d="M360 330 C 290 310, 270 250, 220 200" stroke="#8EEBFF" opacity=".7"/>
+        </g>
+        <path d="M220 130 290 200 220 270 150 200Z" fill="#7B6CFF" opacity=".55"/>
+        <path d="M220 130 290 200 220 200Z" fill="#8EEBFF" opacity=".35"/>
+        <g font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">
+          <circle cx="72" cy="66" r="40" fill="#0E0B2B" stroke="#5CF2B0" stroke-width="2"/><text x="72" y="70" fill="#F4F2FF">DWG</text>
+          <circle cx="368" cy="66" r="40" fill="#0E0B2B" stroke="#8EEBFF" stroke-opacity=".6" stroke-width="1.5"/><text x="368" y="70" fill="#C9C3EE">IFC</text>
+          <circle cx="72" cy="334" r="40" fill="#0E0B2B" stroke="#8EEBFF" stroke-opacity=".6" stroke-width="1.5"/><text x="72" y="338" fill="#C9C3EE">LandXML</text>
+          <circle cx="368" cy="334" r="40" fill="#0E0B2B" stroke="#8EEBFF" stroke-opacity=".6" stroke-width="1.5"/><text x="368" y="330" fill="#C9C3EE">Re</text><text x="368" y="346" fill="#C9C3EE">pikash</text>
+        </g>
+      </svg>
     </div>
   </section>
 
-  <!-- 6. Milestones -->
-  <section class="section" id="milestones" aria-labelledby="ms-title">
+  <!-- 5. Milestones (light): arrow timelines -->
+  <section class="x-section" id="milestones" aria-labelledby="ms-title">
+    <span id="news" class="x-anchor" aria-hidden="true"></span>
     <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">06 · Arritjet</p>
-        <h2 id="ms-title">Nga një ide në para-inkubator te një prototip funksional, e deri te skenat e prezantimeve në Evropë.</h2>
-        <p class="sec-lead">Tre vite programesh, garash dhe ndërtimi, çdo hap i shënuar me burimin e tij.</p>
+      <p class="x-label x-kicker">Arritjet</p>
+      <h2 id="ms-title">Nga një ide te një prototip funksional, dhe më tej te pilotët e parë.</h2>
+      <h3 class="x-track-h">Deri tani</h3>
+      <ol class="x-track">
+        <li class="reveal"><span class="x-node">Nov 24</span><strong>NEXUS Incubator, Helsinki</strong><span>Përfundoi programin gjashtëmujor të Helsinki Incubators.</span></li>
+        <li class="reveal"><span class="x-node">Oct 25</span><strong>Sfida Circular Buildings</strong><span>Helsinki, Espoo dhe Vantaa: në listën e ngushtë për të dorëzuar ofertë.</span></li>
+        <li class="reveal"><span class="x-node">Nov 25</span><strong>Helsinki Incubators</strong><span>Në Slush 2025 mes alumnëve të Helsinki Incubators.</span></li>
+        <li class="reveal"><span class="x-node x-node-ok">Dec 25</span><strong>MVP u përfundua</strong><span>Një prototip funksional që lexon planin DWG dhe vlerëson thellësinë nga fotot.</span></li>
+        <li class="reveal"><span class="x-node">Feb 26</span><strong>8 000 € financim programi</strong><span>Nga Baltic Impact Accelerator i LUT University, Interreg Central Baltic, i bashkëfinancuar nga BE.</span></li>
+        <li class="reveal"><span class="x-node">May 26</span><strong>VINCI Energies</strong><span>Shprehu interes pas një shqyrtimi fillestar.</span></li>
+      </ol>
+      <h3 class="x-track-h">Ku po shkojmë</h3>
+      <ol class="x-track x-track-plan">
+        <li class="reveal"><span class="x-node">Tjetër</span><strong>Testi në terren</strong><span>Në një kantier aktiv, duke krahasuar vlerësimet me matjet topografike.</span></li>
+        <li class="reveal"><span class="x-node">2027</span><strong>Pilotët e parë</strong><span>Finlandë dhe vendet nordike.</span></li>
+        <li class="reveal"><span class="x-node">Pastaj</span><strong>Rajoni dhe Evropa</strong><span>Rritje nga baza nordike.</span></li>
+        <li class="reveal"><span class="x-node">2030</span><strong>Lojtar global</strong><span>Ambicia jonë për 2030.</span></li>
+      </ol>
+      <p class="x-sample">Plane, jo angazhime.</p>
+      <p class="x-more"><a class="x-link" href="../sq/news/">Të gjitha lajmet <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- 6. Where we have pitched (dark) -->
+  <section class="x-dark x-section" id="pitched" aria-labelledby="pitched-title">
+    <div class="container x-split x-split-wide">
+      <div>
+        <p class="x-label x-kicker">Në skenë</p>
+        <h2 id="pitched-title">Ku kemi prezantuar.</h2>
+        <ul class="x-stages">
+          <li id="event-meout-2026">
+            <svg class="x-flag" viewBox="0 0 24 24" aria-hidden="true"><clipPath id="fl-hu"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#fl-hu)"><rect width="24" height="8" fill="#CE2939"/><rect y="8" width="24" height="8" fill="#fff"/><rect y="16" width="24" height="8" fill="#477050"/></g></svg>
+            <div><strong>MeOut Summit · Budapest</strong><span class="x-country">Hungari</span>
+            <p><span data-until="2026-11-26">E përzgjedhur si një nga 20 startup-et për të prezantuar në skenë, 25–26 nëntor 2026.</span><span data-from="2026-11-27" hidden>Prezantoi në skenë në Pitch Marathon, nëntor 2026.</span></p></div>
+          </li>
+          <li>
+            <svg class="x-flag" viewBox="0 0 24 24" aria-hidden="true"><clipPath id="fl-az"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#fl-az)"><rect width="24" height="8" fill="#0092BC"/><rect y="8" width="24" height="8" fill="#E4002B"/><rect y="16" width="24" height="8" fill="#00AF66"/><circle cx="11.2" cy="12" r="2.6" fill="#fff"/><circle cx="11.9" cy="12" r="2.1" fill="#E4002B"/><circle cx="14.4" cy="12" r=".9" fill="#fff"/></g></svg>
+            <div><strong>AIREX 2026 · Baku</strong><span class="x-country">Azerbajxhan</span><p>Prezantoi në PropTech Competition, 6 nëntor 2026.</p></div>
+          </li>
+          <li>
+            <svg class="x-flag" viewBox="0 0 24 24" aria-hidden="true"><clipPath id="fl-fi"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#fl-fi)"><rect width="24" height="24" fill="#fff"/><rect x="6" width="4.4" height="24" fill="#002F6C"/><rect y="9.8" width="24" height="4.4" fill="#002F6C"/></g></svg>
+            <div><strong>Sisu Factory · Helsinki</strong><span class="x-country">Finlandë</span><p>Fitoi Sauna Pitching, 24 shkurt 2025.</p></div>
+          </li>
+        </ul>
       </div>
-
-
-      <div class="ms-highlights">
-        <figure class="ms-photo">
+      <div class="x-photos">
+        <figure class="x-photo reveal">
           <picture>
             <source type="image/avif" srcset="../assets/img/sisu-win-480.avif 480w, ../assets/img/sisu-win-800.avif 800w, ../assets/img/sisu-win-1080.avif 1080w" sizes="(min-width: 1024px) 560px, 100vw">
             <img src="../assets/img/sisu-win-800.webp" srcset="../assets/img/sisu-win-480.webp 480w, ../assets/img/sisu-win-800.webp 800w, ../assets/img/sisu-win-1080.webp 1080w" sizes="(min-width: 1024px) 560px, 100vw" width="1080" height="720" loading="lazy" decoding="async" alt="Endrit Kola mban certifikatën e arritjes së Sisu Factory para ekranit të Sauna Pitching.">
           </picture>
-          <figcaption><span class="mono">Fitues · 24 shkurt 2025</span>Endrit Kola pas fitores në Sauna Pitching, Sisu Factory, Helsinki.</figcaption>
-        </figure>
-        <div class="ms-stats">
-          <div class="ms-stat">
-            <p class="mono ms-label">MeOut Summit · Budapest, Hungari</p>
-            <p class="ms-num">1 nga 20</p>
-            <p>startupet e përzgjedhura nga rreth 200 aplikime për të prezantuar në skenë në Pitch Marathon të MeOut Summit në Budapest, Hungari, 25–26 nëntor 2026.</p>
-          </div>
-          <div class="ms-stat">
-            <p class="mono ms-label">Baltic Impact Accelerator</p>
-            <p class="ms-num">8.000 €</p>
-            <p>financim programi nga Baltic Impact Accelerator i LUT University (Interreg Central Baltic, i bashkëfinancuar nga BE), i përdorur për ndërtimin e MVP-së.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="ms-gallery">
-        <figure class="g-portrait">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/sisu-sauna-certificate-480.avif 480w, ../assets/img/sisu-sauna-certificate-800.avif 800w, ../assets/img/sisu-sauna-certificate-1080.avif 1080w" sizes="(min-width: 960px) 40vw, 100vw">
-            <img src="../assets/img/sisu-sauna-certificate-800.webp" srcset="../assets/img/sisu-sauna-certificate-480.webp 480w, ../assets/img/sisu-sauna-certificate-800.webp 800w, ../assets/img/sisu-sauna-certificate-1080.webp 1080w" sizes="(min-width: 960px) 40vw, 100vw" width="1333" height="2000" loading="lazy" decoding="async" alt="Endrit Kola ulur në një stol saune, duke mbajtur certifikatën e Sisu Factory për fitoren në Sauna Pitching.">
-          </picture>
-          <figcaption class="mono">Certifikata e fituesit të Sauna Pitching · Helsinki · 24 shkurt 2025</figcaption>
-        </figure>
-        <figure class="g-photo">
-          <picture>
-            <source type="image/avif" srcset="../assets/img/polar-bear-pitching-oulu-480.avif 480w, ../assets/img/polar-bear-pitching-oulu-800.avif 800w, ../assets/img/polar-bear-pitching-oulu-1080.avif 1080w" sizes="(min-width: 960px) 40vw, 100vw">
-            <img src="../assets/img/polar-bear-pitching-oulu-800.webp" srcset="../assets/img/polar-bear-pitching-oulu-480.webp 480w, ../assets/img/polar-bear-pitching-oulu-800.webp 800w, ../assets/img/polar-bear-pitching-oulu-1080.webp 1080w" sizes="(min-width: 960px) 40vw, 100vw" width="1600" height="1200" loading="lazy" decoding="async" alt="WorkGuardAI para murit të eventit Polar Bear Pitching në Oulu.">
-          </picture>
-          <figcaption class="mono">Të ftuar në Polar Bear Pitching · Oulu · 27 shkurt 2025</figcaption>
-        </figure>
-      </div>
-
-      <h3 class="ms-sub">Kronologjia</h3>
-      <ol class="timeline">
-        <li>
-          <time class="mono">Nëntor 2026</time>
-          <div>
-            <h3>AIREX 2026 PropTech Competition · Baku</h3>
-            <p>Prezantoi në AIREX 2026 PropTech Competition në Baku më 6 nëntor, para një jurie investitorësh dhe përfaqësuesish të ekosistemit.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Nëntor 2026</time>
-          <div>
-            <h3>MeOut Summit · Budapest, Hungari</h3>
-            <p>I përzgjedhur si një nga 20 startupet, nga rreth 200 aplikime, për të prezantuar në skenë në Pitch Marathon më 25–26 nëntor, para një paneli investitorësh. I prezantuar në EU-Startups.</p>
-            <a href="https://www.eu-startups.com/2026/10/meout-summit-2026-meet-the-pitch-marathon-contestants/" rel="noopener" target="_blank">Artikulli në EU-Startups <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Shtator 2026</time>
-          <div>
-            <h3>Finland Global Startup Accelerator · Plug and Play dhe Qyteti i Tamperes</h3>
-            <p>Në listën e ngushtë për të prezantuar për programin 10-javor të rritjes, të porositur nga Qyteti i Tamperes, dhe prezantoi para panelit të përzgjedhjes në Selection Day, më 9 shtator.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Maj 2026</time>
-          <div>
-            <h3>VINCI Energies · Startup Connect</h3>
-            <p>VINCI Energies shprehu interes pas një shqyrtimi fillestar dhe ne aplikuam në sfidën e saj të vitit 2026 “Expertise meets AI”.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Shkurt 2026</time>
-          <div>
-            <h3>Baltic Impact Accelerator · LUT University</h3>
-            <p>Përfundoi grupin e 3-të të përshpejtuesit gjashtëmujor, të financuar nga Interreg Central Baltic dhe të bashkëfinancuar nga Bashkimi Evropian, me 8.000 € financim programi.</p>
-            <a href="https://centralbaltic.eu/project/baltic-impact-accelerator/" rel="noopener" target="_blank">Rreth programit <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Dhjetor 2025</time>
-          <div>
-            <h3>MVP e përfunduar</h3>
-            <p>Motori bazë u ndërtua me një partner zhvillimi, i financuar përmes Baltic Impact Accelerator. U ndërtua me kontributin e një menaxheri kantieri te një kontraktor infrastrukture dhe u testua në një plan real projekti.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Nëntor 2025</time>
-          <div>
-            <h3>Slush · Helsinki</h3>
-            <p>Në Slush 2025 mes alumnëve të Helsinki Incubators.</p>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7394758461210841088/" rel="noopener" target="_blank">Njoftimi në LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Tetor 2025</time>
-          <div>
-            <h3>Circular Buildings Innovation Challenge · Helsinki, Espoo, Vantaa</h3>
-            <p>Mori pjesë në sfidën e përbashkët të inovacionit të tre qyteteve dhe dorëzoi ofertë në tenderin e tyre.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Prill 2025</time>
-          <div>
-            <h3>PitchBob.io</h3>
-            <p>I prezantuar në rubrikën Secret Seeds.</p>
-            <a href="https://pitchbob.io/secretseeds/revolutionizing-the-construction-industry-how-workguardai-is-leading-the-ai-driven-transformation" rel="noopener" target="_blank">Lexo artikullin <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Shkurt 2025</time>
-          <div>
-            <h3>Polar Bear Pitching · Oulu</h3>
-            <p>Startup i ftuar në Polar Bear Pitching në Oulu më 27 shkurt 2025, çmimi për fitoren në Sauna Pitching.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Shkurt 2025</time>
-          <div>
-            <h3>Sisu Factory · Sauna Pitching</h3>
-            <p>Fitoi Sauna Pitching më 24 shkurt 2025.</p>
-            <a href="https://www.linkedin.com/posts/sisu-factory_sisufactory-startup-pitching-activity-7300066903111135233-Zzur" rel="noopener" target="_blank">Njoftimi në LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Nëntor 2024</time>
-          <div>
-            <h3>NEXUS Incubator · Universiteti i Helsinkit</h3>
-            <p>Përfundoi programin gjashtëmujor të Helsinki Incubators, me mentorë dhe seminare javore për modelet e biznesit, shitjet dhe prezantimin.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">Korrik 2024</time>
-          <div>
-            <h3>Themelohet WorkGuardAI</h3>
-            <p>Kompania u themelua në Finlandë më 30 korrik 2024.</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">2023</time>
-          <div>
-            <h3>Para-inkubatori Compass · Helsinki</h3>
-            <p>Aty nisi ideja, si monitorim në distancë i automjeteve. Komentet e mentorëve dhe prezantimet e kthyen drejt kantiereve të ndërtimit.</p>
-          </div>
-        </li>
-      </ol>
-
-      <div class="supported">
-        <div>
-          <p class="mono">ME MBËSHTETJEN E</p>
-          <div class="supported-row">
-            <img src="../assets/img/bia-interreg-acknowledgement.webp" width="456" height="232" loading="lazy" decoding="async" alt="Programi Interreg Central Baltic, i bashkëfinancuar nga Bashkimi Evropian. Baltic Impact Accelerator.">
-            <p>Programet e përfunduara: Baltic Impact Accelerator (LUT University, Interreg Central Baltic) dhe NEXUS Incubator (Helsinki Incubators, Universiteti i Helsinkit).</p>
-          </div>
-        </div>
-        <figure class="cert">
-          <a href="../assets/img/bia-certificate-1200.webp" target="_blank" rel="noopener" aria-label="Hap certifikatën (hapet në skedë të re)">
-            <picture>
-              <source type="image/avif" srcset="../assets/img/bia-certificate-640.avif 640w, ../assets/img/bia-certificate-1200.avif 1200w" sizes="(min-width: 960px) 420px, 100vw">
-              <img src="../assets/img/bia-certificate-640.webp" srcset="../assets/img/bia-certificate-640.webp 640w, ../assets/img/bia-certificate-1200.webp 1200w" sizes="(min-width: 960px) 420px, 100vw" width="1200" height="848" loading="eager" fetchpriority="low" decoding="async" alt="Certifikatë pjesëmarrjeje: WorkGuardAI mori pjesë me sukses në Baltic Impact Accelerator, grupi 3. Data 18 shkurt 2026.">
-            </picture>
-          </a>
-          <figcaption class="mono">Baltic Impact Accelerator, grupi 3 · certifikatë pjesëmarrjeje · 18 shkurt 2026</figcaption>
+          <figcaption class="x-label">Fitues · 24 shkurt 2025</figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- 7. News (from src/news.json) -->
-  <section class="section section-alt" id="news" aria-labelledby="news-title">
+  <!-- 7. Team (light) -->
+  <section class="x-section" id="team" aria-labelledby="team-title">
     <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">07 · Lajme</p>
-        <h2 id="news-title">Lajmet e fundit</h2>
-      </div>
-      <ol class="news-list">
-        <li id="meout-2026">
-          <time class="mono" datetime="2026-11-25">25–26 nëntor 2026</time>
-          <h3>MeOut Summit Pitch Marathon, Budapest</h3>
-          <p>I përzgjedhur si një nga 20 startupet, nga rreth 200 aplikime, për të prezantuar në skenë në Pitch Marathon më 25–26 nëntor, para një paneli investitorësh. I prezantuar në EU-Startups.</p>
-          <a href="https://www.eu-startups.com/2026/10/meout-summit-2026-meet-the-pitch-marathon-contestants/" rel="noopener" target="_blank">Artikulli në EU-Startups <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a>
-        </li>
-        <li id="airex-2026">
-          <time class="mono" datetime="2026-11-06">6 nëntor 2026</time>
-          <h3>AIREX 2026 PropTech Competition, Baku</h3>
-          <p>Prezantoi në AIREX 2026 PropTech Competition në Baku më 6 nëntor, para një jurie investitorësh dhe përfaqësuesish të ekosistemit.</p>
-          <a href="https://airex.az/" rel="noopener" target="_blank">Burimi zyrtar <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a>
-        </li>
-        <li id="tampere-accelerator-2026">
-          <time class="mono" datetime="2026-09-09">9 shtator 2026</time>
-          <h3>Finland Global Startup Accelerator</h3>
-          <p>Në listën e ngushtë për të prezantuar për programin 10-javor të rritjes, të porositur nga Qyteti i Tamperes, dhe prezantoi para panelit të përzgjedhjes në Selection Day, më 9 shtator.</p>
-        </li>
-      </ol>
-      <p class="news-more"><a class="link-arrow" href="../sq/news/">Të gjitha lajmet <span aria-hidden="true">→</span></a> <a class="link-arrow" href="../sq/?interest=updates#work-form">Ndiqni përparimin tonë <span aria-hidden="true">→</span></a></p>
-    </div>
-  </section>
-
-  <!-- 8. Team -->
-  <section class="section" id="team" aria-labelledby="team-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">08 · Ekipi</p>
-        <h2 id="team-title">Ekipi</h2>
-      </div>
-      <ul class="team">
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-endrit-kola-192.avif 1x, ../assets/img/team-endrit-kola-384.avif 2x"><img src="../assets/img/team-endrit-kola-192.webp" srcset="../assets/img/team-endrit-kola-192.webp 1x, ../assets/img/team-endrit-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Endrit Kola"></picture><span class="name">Endrit Kola</span><span class="role mono">Themelues dhe CEO</span><a href="https://www.linkedin.com/in/endritkola/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-maiju-karhu-192.avif 1x, ../assets/img/team-maiju-karhu-384.avif 2x"><img src="../assets/img/team-maiju-karhu-192.webp" srcset="../assets/img/team-maiju-karhu-192.webp 1x, ../assets/img/team-maiju-karhu-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><span class="name">Maiju Karhu</span><span class="role mono">Këshilltare për startup</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-larissa-chaves-192.avif 1x, ../assets/img/team-larissa-chaves-384.avif 2x"><img src="../assets/img/team-larissa-chaves-192.webp" srcset="../assets/img/team-larissa-chaves-192.webp 1x, ../assets/img/team-larissa-chaves-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><span class="name">Larissa Chaves</span><span class="role mono">Kontribuese teknike</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">(hapet në skedë të re)</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-pratham-srivastava-192.avif 1x, ../assets/img/team-pratham-srivastava-384.avif 2x"><img src="../assets/img/team-pratham-srivastava-192.webp" srcset="../assets/img/team-pratham-srivastava-192.webp 1x, ../assets/img/team-pratham-srivastava-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><span class="name">Pratham Srivastava</span><span class="role mono">Kontribues në programim</span></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-altin-kola-192.avif 1x, ../assets/img/team-altin-kola-384.avif 2x"><img src="../assets/img/team-altin-kola-192.webp" srcset="../assets/img/team-altin-kola-192.webp 1x, ../assets/img/team-altin-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Altin Kola"></picture><span class="name">Altin Kola</span><span class="role mono">Këshilltar për terrenin dhe infrastrukturën</span></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="../assets/img/team-ergis-topi-192.avif 1x, ../assets/img/team-ergis-topi-384.avif 2x"><img src="../assets/img/team-ergis-topi-192.webp" srcset="../assets/img/team-ergis-topi-192.webp 1x, ../assets/img/team-ergis-topi-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Ergis Topi"></picture><span class="name">Ergis Topi</span><span class="role mono">Këshilltar për menaxhimin e kantierit</span></li>
+      <p class="x-label x-kicker">Ekipi</p>
+      <h2 id="team-title">Njerëzit pas WorkGuardAI.</h2>
+      <ul class="x-team">
+        <li class="reveal"><picture><source type="image/avif" srcset="../assets/img/team-endrit-kola-192.avif 1x, ../assets/img/team-endrit-kola-384.avif 2x"><img src="../assets/img/team-endrit-kola-192.webp" srcset="../assets/img/team-endrit-kola-192.webp 1x, ../assets/img/team-endrit-kola-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Endrit Kola"></picture><strong>Endrit Kola</strong><span>Themelues dhe CEO</span><a href="https://www.linkedin.com/in/endritkola/" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> (hapet në skedë të re)</span></a></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="../assets/img/team-maiju-karhu-192.avif 1x, ../assets/img/team-maiju-karhu-384.avif 2x"><img src="../assets/img/team-maiju-karhu-192.webp" srcset="../assets/img/team-maiju-karhu-192.webp 1x, ../assets/img/team-maiju-karhu-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><strong>Maiju Karhu</strong><span>Këshilltare për startup</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> (hapet në skedë të re)</span></a></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="../assets/img/team-larissa-chaves-192.avif 1x, ../assets/img/team-larissa-chaves-384.avif 2x"><img src="../assets/img/team-larissa-chaves-192.webp" srcset="../assets/img/team-larissa-chaves-192.webp 1x, ../assets/img/team-larissa-chaves-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><strong>Larissa Chaves</strong><span>Kontribuese teknike</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> (hapet në skedë të re)</span></a></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="../assets/img/team-pratham-srivastava-192.avif 1x, ../assets/img/team-pratham-srivastava-384.avif 2x"><img src="../assets/img/team-pratham-srivastava-192.webp" srcset="../assets/img/team-pratham-srivastava-192.webp 1x, ../assets/img/team-pratham-srivastava-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><strong>Pratham Srivastava</strong><span>Kontribues në programim</span></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="../assets/img/team-altin-kola-192.avif 1x, ../assets/img/team-altin-kola-384.avif 2x"><img src="../assets/img/team-altin-kola-192.webp" srcset="../assets/img/team-altin-kola-192.webp 1x, ../assets/img/team-altin-kola-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Altin Kola"></picture><strong>Altin Kola</strong><span>Këshilltar për terrenin dhe infrastrukturën</span></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="../assets/img/team-ergis-topi-192.avif 1x, ../assets/img/team-ergis-topi-384.avif 2x"><img src="../assets/img/team-ergis-topi-192.webp" srcset="../assets/img/team-ergis-topi-192.webp 1x, ../assets/img/team-ergis-topi-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Ergis Topi"></picture><strong>Ergis Topi</strong><span>Këshilltar për menaxhimin e kantierit</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- 9. FAQ -->
-  <section class="section section-alt" id="faq" aria-labelledby="faq-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">09 · Pyetje</p>
-        <h2 id="faq-title">Pyetje të shpeshta</h2>
-      </div>
-      <div class="faq">
-        <details><summary>Sa i saktë është?</summary><p>Ende nuk e dimë, sepse nuk është matur në një kantier aktiv. Për këtë shërben piloti: i krahasojmë thellësitë e vlerësuara me matjet tuaja dhe ju japim rezultatet në një raport me shkrim.</p></details>
-        <details><summary>Po privatësia dhe njerëzit që shfaqen në kamera?</summary><p>Prototipi vlerëson thellësinë e tokës në pikat e planit. Ai nuk identifikon dhe nuk ndjek njerëz. Cilat kamera përdoren, ku drejtohen, kush i sheh fotot dhe sa kohë ruhen bien dakord në marrëveshjen e shkruar të pilotit, përpara se të bëhet ndonjë foto.</p></details>
-        <details><summary>Çfarë ju nevojitet nga një kantier pilot?</summary><p>Një plan DWG të kantierit dhe qasje te kamerat e kantierit, ose dikë që mund të bëjë foto në koordinatat e planit.</p></details>
-        <details><summary>A është testuar në një kantier aktiv?</summary><p>Ende jo. Prototipi funksionon me planin DWG dhe imazhet e një projekti real. Piloti është testi i parë në një kantier aktiv dhe i krahasojmë rezultatet me matjet tuaja.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. Work with us: each card opens the one form with its interest preselected -->
-  <section class="section" id="work" aria-labelledby="work-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">10 · Punoni me ne</p>
-        <h2 id="work-title">Punoni me ne</h2>
-      </div>
-      <ul class="who">
-        <li><h3>Klientë</h3><p>Ekipe të punimeve të tokës dhe infrastrukturës me një plan DWG që duan të testojnë matjen e përparimit në një kantier real.</p><a class="link-arrow" href="../sq/?interest=pilot#work-form">Rezervo një telefonatë pilot <span aria-hidden="true">→</span></a></li>
-        <li><h3>Universitete, grupe kërkimore dhe qendra</h3><p>Bashkëpunime kërkimore dhe mësimore: studentë dhe kërkues që punojnë me një prototip real; fushëveprimi, përdorimi i të dhënave dhe pronësia intelektuale bien dakord fillimisht me shkrim.</p><a class="link-arrow" href="../sq/?interest=research#work-form">Të flasim për një bashkëpunim <span aria-hidden="true">→</span></a></li>
-        <li><h3>Evente</h3><p>Po organizoni një event, ose do të merrni pjesë në një ku do të jemi? Na tregoni cilin.</p><a class="link-arrow" id="event-cta-link" href="../sq/?interest=event&amp;event=MeOut%20Summit%2C%20Budapest#work-form"><span id="event-cta" data-none="Na kontaktoni">Na takoni në MeOut Summit, Budapest</span> <span aria-hidden="true">→</span></a></li>
-        <li><h3>Media, podkaste dhe fjalime</h3><p>Faktet, fotot dhe kontaktet janë në faqen për mediat. <a href="../sq/press/">Media dhe fjalime</a></p><a class="link-arrow" href="../sq/?interest=press#work-form">Na kontaktoni <span aria-hidden="true">→</span></a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Events (from src/news.json). The script hides a row once its event has ended. -->
-  <section class="section section-alt" id="events" aria-labelledby="events-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">11 · Evente</p>
-        <h2 id="events-title">Na takoni në</h2>
-      </div>
-      <ul class="events">
-        <li id="event-meout-2026" data-end="2026-11-26">
-          <time class="mono" datetime="2026-11-25">25–26 nëntor 2026</time>
-          <div>
-            <h3>MeOut Summit, Budapest</h3>
-            <p>Prezantim në skenë në MeOut Summit, Budapest</p>
-            <div class="share"><span class="mono">Shpërndani</span>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fworkguardai.com%2Fsq%2F%23event-meout-2026" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden">(hapet në skedë të re)</span></a>
-            <a href="https://wa.me/?text=Prezantim%20n%C3%AB%20sken%C3%AB%20n%C3%AB%20MeOut%20Summit%2C%20Budapest%20https%3A%2F%2Fworkguardai.com%2Fsq%2F%23event-meout-2026" rel="noopener" target="_blank">WhatsApp<span class="visually-hidden">(hapet në skedë të re)</span></a>
-            <a href="mailto:?subject=Prezantim%20n%C3%AB%20sken%C3%AB%20n%C3%AB%20MeOut%20Summit%2C%20Budapest&amp;body=https%3A%2F%2Fworkguardai.com%2Fsq%2F%23event-meout-2026">Email</a>
-            <a href="https://workguardai.com/sq/#event-meout-2026" data-copy="Lidhja u kopjua">Kopjo lidhjen</a>
-            <button type="button" class="share-native" data-share-title="Prezantim në skenë në MeOut Summit, Budapest" data-share-url="https://workguardai.com/sq/#event-meout-2026" hidden>Shpërndani…</button>
-          </div>
-          </div>
-          <a class="btn btn-outline btn-small" href="../sq/?interest=event&amp;event=MeOut%20Summit%2C%20Budapest#work-form">Kërkoni një takim</a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 11. Pilot call + partner -->
-  <section class="section" id="pilot" aria-labelledby="pilot-title">
-    <div class="container pilot-grid">
+  <!-- 8. Contact (gradient). The one contact form, sent through Formspree. -->
+  <section class="x-cta" id="contact" aria-labelledby="work-title">
+    <span id="pilot" class="x-anchor" aria-hidden="true"></span><span id="work" class="x-anchor" aria-hidden="true"></span>
+    <div class="container x-split x-split-wide">
       <div>
-        <div class="sec-head">
-          <p class="sec-index mono">12 · Pilot</p>
-          <h2 id="pilot-title">Rezervo një telefonatë pilot.</h2>
-          <p class="sec-lead">Kërkojmë kantierin e parë aktiv. Nëse kryeni punime dheu ose infrastrukture dhe keni planet DWG për to, mjafton një telefonatë e shkurtër për të parë nëse një pilot është i përshtatshëm.</p>
-        </div>
-        <div class="pilot-how">
-          <h3>Si funksionon një pilot</h3>
-          <ol class="pilot-steps">
-            <li><span class="mono">01</span><div><strong>Një telefonatë e shkurtër</strong><p>Ju tregojmë prototipin në një projekt demonstrues dhe kontrollojmë nëse kantieri juaj përshtatet: punime dheu ose infrastrukture, plane DWG dhe dikush që mund të bëjë foto.</p></div></li>
-            <li><span class="mono">02</span><div><strong>Një fushëveprim i shkruar</strong><p>Një kantier, një periudhë e caktuar dhe trajtim i qartë i të dhënave, të rëna dakord në një marrëveshje të shkurtër pilot. Ne ngarkojmë planin tuaj DWG dhe krijojmë aksesin për ekipin tuaj.</p></div></li>
-            <li><span class="mono">03</span><div><strong>Testi në terren dhe rishikimi</strong><p>Ekipi juaj bën foto në koordinatat e planit. Ne kontaktojmë çdo javë dhe krahasojmë rezultatet me matjet tuaja. Ju merrni një raport të shkruar me rezultatet.</p></div></li>
-          </ol>
-          <p class="pilot-pricing">Pilotët bien dakord një kantier në një kohë. Çmimi përcaktohet pas testit në terren, bazuar në atë që ai tregon.</p>
-        </div>
-        <div class="partner" id="partner">
-          <h3>Bëhu partner</h3>
-          <p>Për partnerë teknologjie, topografie dhe ndërtimi, si dhe për fonde, qytete, universitete dhe investitorë që mbështesin teknologjinë evropiane të ndërtimit në fazë të hershme.</p>
-          <a class="link-arrow" href="mailto:ek@workguardai.com?subject=Partnership%20with%20WorkGuardAI">ek@workguardai.com <span aria-hidden="true">→</span></a>
-        </div>
+        <p class="x-label x-kicker">Kontakti</p>
+        <h2 id="work-title">Po kërkoni zhvillues dhe kontraktorë për një projekt kantieri? Le të flasim.</h2>
+        <p class="x-intro">Kërkojmë kantierin e parë aktiv. Nëse kryeni punime dheu ose infrastrukture dhe keni planet DWG për to, mjafton një telefonatë e shkurtër për të parë nëse një pilot është i përshtatshëm.</p>
+        <ol class="x-pilot">
+          <li><span>01</span><div><strong>Një telefonatë e shkurtër</strong><p>Ju tregojmë prototipin në një projekt demonstrues dhe kontrollojmë nëse kantieri juaj përshtatet: punime dheu ose infrastrukture, plane DWG dhe dikush që mund të bëjë foto.</p></div></li>
+          <li><span>02</span><div><strong>Një fushëveprim i shkruar</strong><p>Një kantier, një periudhë e caktuar dhe trajtim i qartë i të dhënave, të rëna dakord në një marrëveshje të shkurtër pilot. Ne ngarkojmë planin tuaj DWG dhe krijojmë aksesin për ekipin tuaj.</p></div></li>
+          <li><span>03</span><div><strong>Testi në terren dhe rishikimi</strong><p>Ekipi juaj bën foto në koordinatat e planit. Ne kontaktojmë çdo javë dhe krahasojmë rezultatet me matjet tuaja. Ju merrni një raport të shkruar me rezultatet.</p></div></li>
+        </ol>
+        <p class="x-mail"><a href="mailto:ek@workguardai.com">ek@workguardai.com</a></p>
       </div>
 
       <form class="form" id="work-form" aria-labelledby="work-title" method="POST" action="https://formspree.io/f/xgaoynap"
@@ -1019,12 +461,12 @@
   </section>
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer x-footer">
   <div class="container">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="../sq/" aria-label="Faqja kryesore e WorkGuardAI"><img src="../assets/img/logo.png" alt="WorkGuardAI" width="433" height="71" loading="lazy"></a>
-        <p style="margin-top:var(--s-4);max-width:26rem">Ecuria e punimeve të dheut dhe të infrastrukturës, e matur nga plani DWG dhe foto të zakonshme të kantierit.</p>
+        <a class="brand" href="../sq/" aria-label="Faqja kryesore e WorkGuardAI"><i aria-hidden="true"></i>WorkGuardAI</a>
+        <p class="x-foot-tag">Ecuria e punimeve të dheut dhe të infrastrukturës, e vlerësuar nga plani DWG dhe foto të zakonshme të kantierit.</p>
       </div>
       <div>
         <p class="foot-label mono">Kontakt</p>
@@ -1032,9 +474,9 @@
           <li><a href="mailto:ek@workguardai.com">ek@workguardai.com</a></li>
           <li><a href="https://www.linkedin.com/company/workguardai" rel="noopener" target="_blank">LinkedIn</a></li>
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
-          <li><a href="#work">Punoni me ne</a></li>
           <li><a href="../sq/news/">Lajme</a></li>
           <li><a href="../sq/press/">Media dhe fjalime</a></li>
+          <li><a href="../sq/concept/">Vizioni</a></li>
           <li><a href="../sq/privacy/">Njoftimi i privatësisë</a></li>
         </ul>
       </div>

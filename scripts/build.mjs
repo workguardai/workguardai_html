@@ -31,8 +31,8 @@ const urlOf = (lang, slug = '') => `${config.baseUrl}/${pathOf(lang)}${slug}`;
 
 // Shared blocks, inserted with {{@name}} before the text keys are filled in.
 const PARTIALS = {
-  productDevices: await readFile('src/partials/product-devices.html', 'utf8'),
-  productFeatures: await readFile('src/partials/product-features.html', 'utf8'),
+  homeDevices: await readFile('src/partials/home-devices.html', 'utf8'),
+  homeFlow: await readFile('src/partials/home-flow.html', 'utf8'),
 };
 const usedKeys = new Set([...PAGES.map(({ template }) => template), ...Object.values(PARTIALS)].flatMap((template) => [...template.matchAll(/\{\{([^@}][^}]*)\}\}/g)].map((m) => m[1])));
 let problems = 0;
@@ -180,6 +180,8 @@ for (const lang of LANGS) {
       og: [...og, ...twitter].join('\n'),
       press: `${base}${pathOf(lang)}press/`,
       conceptPage: `${base}${pathOf(lang)}concept/`,
+      // The hero's second button appears once site.config.json has a deck link.
+      deckButton: config.deckUrl ? `<a class="btn btn-ghost" href="${esc(config.deckUrl)}">${esc(text(t, 'home.deck'))}</a>` : '',
       eventList: upcoming.map((n) => eventRow(n, lang, home, t)).join('\n'),
       eventMeet: esc(events[0]?.meet ?? `${home}?interest=event#work-form`),
       articleTitle: item ? esc(item.title[lang]) : '',

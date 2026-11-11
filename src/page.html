@@ -7,791 +7,233 @@
 <meta name="description" content="{{meta.description}}">
 {{@robots}}
 {{@og}}
-<meta name="theme-color" content="#fbfaf7">
+<meta name="theme-color" content="#0E0B2B">
+<link rel="icon" href="{{@base}}assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="{{@base}}assets/img/favicon-32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="{{@base}}assets/img/favicon-48.png">
 <link rel="apple-touch-icon" href="{{@base}}assets/img/apple-touch-icon.png">
 <link rel="canonical" href="{{@canonical}}">
 {{@alternates}}
-<link rel="preload" href="{{@base}}assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{@base}}assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{@base}}assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" type="image/avif" imagesrcset="{{@base}}assets/img/hero-excavation-480.avif 480w, {{@base}}assets/img/hero-excavation-800.avif 800w, {{@base}}assets/img/hero-excavation-1080.avif 1080w" imagesizes="(min-width: 1280px) 500px, (min-width: 960px) 44vw, (min-width: 768px) 560px, 100vw">
 <link rel="stylesheet" href="{{@base}}assets/css/site.css">
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">{{skip}}</a>
 
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="{{@home}}" aria-label="{{home}}">
-      <img src="{{@base}}assets/img/logo.png" alt="WorkGuardAI" width="433" height="71">
-    </a>
+    <a class="brand" href="{{@home}}" aria-label="{{home}}"><i aria-hidden="true"></i>WorkGuardAI</a>
     <nav class="nav" aria-label="{{nav.sections}}">
       <a href="#how">{{nav.how}}</a>
-      <a href="#prototype">{{nav.prototype}}</a>
+      <a href="#formats">{{home.navFormats}}</a>
       <a href="#milestones">{{nav.recognition}}</a>
-      <a href="#about">{{nav.about}}</a>
-      <a href="#news">{{nav.news}}</a>
-      <a href="#faq">{{nav.faq}}</a>
+      <a href="#team">{{team.h2}}</a>
     </nav>
     <div class="header-end">
       <nav class="lang" aria-label="{{nav.language}}">
 {{@langnav}}
       </nav>
-      <a class="btn btn-primary btn-small header-cta" href="#pilot">{{cta.pilot}}</a>
+      <a class="btn btn-light btn-small header-cta" href="#contact">{{home.book}}</a>
     </div>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- 1. Hero -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="container hero-grid">
+  <!-- 1. Hero (dark) -->
+  <section class="x-hero x-dark" aria-labelledby="hero-title">
+    <div class="x-shapes" aria-hidden="true">
+      <svg class="x-d1" viewBox="0 0 560 560">
+        <path d="M300 20 540 260 300 500 60 260Z" fill="#7B6CFF" opacity=".22"/>
+        <path d="M300 20 540 260 300 260Z" fill="#8EEBFF" opacity=".16"/>
+        <path d="M420 300 520 400 420 500 320 400Z" fill="#5CF2B0" opacity=".2"/>
+        <circle cx="150" cy="120" r="64" fill="none" stroke="#8EEBFF" stroke-opacity=".35" stroke-width="1.5"/>
+        <circle cx="150" cy="120" r="100" fill="none" stroke="#8EEBFF" stroke-opacity=".14"/>
+      </svg>
+      <svg class="x-d2" viewBox="0 0 420 420"><path d="M210 20 400 210 210 400 20 210Z" fill="#7B6CFF" opacity=".18"/></svg>
+    </div>
+    <div class="container x-hero-grid">
       <div>
-        <p class="stage mono"><span>{{hero.stage1}} <b>/</b> {{hero.stage2}}</span></p>
-        <h1 id="hero-title">{{hero.h1}}</h1>
-        <p class="lead">{{hero.lead}}</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#pilot">{{cta.pilot}}</a>
-          <a class="link-arrow" href="#partner">{{cta.partner}} <span aria-hidden="true">→</span></a>
+        <p class="x-status x-label">{{hero.stage1}} · {{hero.stage2}}</p>
+        <h1 id="hero-title">{{home.h1a}} <span class="x-grad">{{home.h1b}}</span></h1>
+        <p class="x-lead">{{home.lead}}</p>
+        <div class="x-actions">
+          <a class="btn btn-light" href="#contact">{{home.book}} <span aria-hidden="true">→</span></a>
+          {{@deckButton}}
         </div>
-        <p class="hero-meta mono"><span>{{hero.meta1}}</span><span>{{hero.meta2}}</span><span>{{hero.meta3}}</span></p>
-        <a class="hero-event" id="hero-event" href="#news"{{@eventHidden}}><span class="mono" data-event-tag>{{@eventTag}}</span> <span data-event-label>{{@eventLabel}}</span> <span aria-hidden="true">→</span></a>
-        <script type="application/json" id="upcoming-events">{{@eventsJson}}</script>
       </div>
-
-      <figure class="survey">
-        <div class="survey-frame">
-          <picture>
-            <source type="image/avif" srcset="{{@base}}assets/img/hero-excavation-480.avif 480w, {{@base}}assets/img/hero-excavation-800.avif 800w, {{@base}}assets/img/hero-excavation-1080.avif 1080w" sizes="(min-width: 1280px) 500px, (min-width: 960px) 44vw, (min-width: 768px) 560px, 100vw">
-            <source type="image/webp" srcset="{{@base}}assets/img/hero-excavation-480.webp 480w, {{@base}}assets/img/hero-excavation-800.webp 800w, {{@base}}assets/img/hero-excavation-1080.webp 1080w" sizes="(min-width: 1280px) 500px, (min-width: 960px) 44vw, (min-width: 768px) 560px, 100vw">
-            <img src="{{@base}}assets/img/hero-excavation-800.webp" width="1080" height="1080" alt="{{hero.alt}}" fetchpriority="high">
-          </picture>
-          <svg class="survey-grid" viewBox="0 0 300 300" aria-hidden="true">
-            <g class="g">
-              <path d="M50 0V300M100 0V300M150 0V300M200 0V300M250 0V300"/>
-              <path d="M0 50H300M0 100H300M0 150H300M0 200H300M0 250H300"/>
-            </g>
-            <!-- Plan lines (top edge and toe of the cut) with plan points -->
-            <path d="M0 20 L62 30 L125 50 L187 59 L250 67 L300 74" fill="none" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
-            <path d="M0 80 L50 87 L112 125 L156 156 L212 172 L275 162 L300 158" fill="none" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
-            <g>
-              <circle class="pt" cx="62" cy="30" r="3"/><circle class="pt" cx="125" cy="50" r="3"/>
-              <circle class="pt" cx="187" cy="59" r="3"/><circle class="pt" cx="250" cy="67" r="3"/>
-              <circle class="pt" cx="50" cy="87" r="3"/><circle class="pt" cx="112" cy="125" r="3"/>
-              <circle class="pt" cx="156" cy="156" r="3"/><circle class="pt" cx="212" cy="172" r="3"/>
-              <circle class="pt" cx="275" cy="162" r="3"/>
-              <circle class="pulse" cx="156" cy="156" r="3"/>
-            </g>
-            <g class="tag">
-              <path d="M156 160 L160 196" stroke="#fff" stroke-width="1" vector-effect="non-scaling-stroke"/>
-              <rect x="160" y="196" width="110" height="24" rx="1.5"/>
-              <text x="165" y="206">D·04 {{hero.tag1}}</text>
-              <text x="165" y="215">{{hero.tag2}}</text>
-            </g>
-            <g>
-              <text x="23" y="10">A</text><text x="73" y="10">B</text><text x="123" y="10">C</text>
-              <text x="173" y="10">D</text><text x="223" y="10">E</text><text x="273" y="10">F</text>
-              <text x="3" y="29">01</text><text x="3" y="79">02</text><text x="3" y="129">03</text>
-              <text x="3" y="179">04</text><text x="3" y="229">05</text><text x="3" y="279">06</text>
-            </g>
-          </svg>
-        </div>
-        <div class="survey-axis mono" aria-hidden="true"><span>X →</span><span>{{hero.axis1}}</span><span>{{hero.axis2}} - - -</span></div>
-        <figcaption>{{hero.caption}}</figcaption>
-      </figure>
+{{@homeDevices}}
     </div>
   </section>
 
-  <!-- 2. How it works -->
-  <section class="section hiw" id="how" aria-labelledby="how-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">01 · {{how.index}}</p>
-        <h2 id="how-title">{{how.h2}}</h2>
-      </div>
-      <figure class="explainer">
-        <figcaption class="mono">{{ex.label}}</figcaption>
-        <input class="ex-toggle" type="checkbox" id="ex-pause">
-        <ol class="ex-steps">
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <line x1="22" y1="44" x2="22" y2="18" stroke="#5f6880" stroke-width="2"/>
-              <rect x="14" y="9" width="18" height="11" rx="2" fill="#0f1b3d"/>
-              <g class="ex-in1">
-                <polygon points="30,16 72,76 92,76" fill="#5255e0" opacity=".2"/>
-                <circle cx="82" cy="76" r="4" fill="#5255e0"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">01</span> {{how.s1t}}</p>
-            <p>{{ex.d1}}</p>
-          </li>
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <circle cx="82" cy="76" r="4" fill="#5255e0"/>
-              <g class="ex-in2">
-                <path d="M82 44V72M76 44H88M76 52H82M76 60H82M76 68H82" fill="none" stroke="#17845a" stroke-width="2"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">02</span> {{how.s2t}}</p>
-            <p>{{ex.d2}}</p>
-          </li>
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <g class="ex-in3">
-                <path d="M0 44H46L66 98H94L114 44H160" fill="none" stroke="#5255e0" stroke-width="2" stroke-dasharray="5 4"/>
-                <path d="M46 44L58 76H102L114 44" fill="none" stroke="#17845a" stroke-width="3" stroke-linejoin="round"/>
-                <path d="M80 78V96M76 82L80 78L84 82M76 92L80 96L84 92" fill="none" stroke="#0f1b3d" stroke-width="1.5"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">03</span> {{how.s3t}}</p>
-            <p>{{ex.d3}}</p>
-          </li>
-          <li class="ex-step">
-            <svg viewBox="0 0 160 110" aria-hidden="true">
-              <path class="ex-ground" d="M0 44H46L58 76H102L114 44H160V110H0Z"/>
-              <path class="ex-surface" d="M0 44H46L58 76H102L114 44H160"/>
-              <circle cx="82" cy="76" r="4" fill="#9a5f00"/>
-              <g class="ex-in4">
-                <rect x="50" y="8" width="60" height="38" rx="3" fill="#fbf1e1" stroke="#9a5f00" stroke-width="1.5"/>
-                <path d="M50 11L80 30L110 11" fill="none" stroke="#9a5f00" stroke-width="1.5"/>
-              </g>
-            </svg>
-            <p class="ex-title"><span class="mono">04</span> {{how.s4t}}</p>
-            <p>{{ex.d4}}</p>
-          </li>
+  <!-- 2. Problem (light) -->
+  <section class="x-section" id="problem" aria-labelledby="problem-title">
+    <div class="container x-split">
+      <div>
+        <p class="x-label x-kicker">{{home.pIndex}}</p>
+        <h2 id="problem-title">{{home.pH2}}</h2>
+        <p class="x-intro">{{home.pLead}}</p>
+        <ol class="x-points">
+          <li class="reveal"><span class="x-dot" aria-hidden="true"></span><div><h3>{{home.p1t}}</h3><p>{{home.p1d}}</p></div></li>
+          <li class="reveal"><span class="x-dot" aria-hidden="true"></span><div><h3>{{home.p2t}}</h3><p>{{home.p2d}}</p></div></li>
+          <li class="reveal"><span class="x-dot x-dot-warn" aria-hidden="true"></span><div><h3>{{home.p3t}}</h3><p>{{home.p3d}}</p></div></li>
         </ol>
-        <label class="ex-pause mono" for="ex-pause">{{ex.pause}}</label>
-      </figure>
-
-      <div class="steps">
-        <article class="step">
-          <div class="step-head"><span class="mono">01</span><h3>{{how.s1t}}</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="{{how.s1a}}">
-            <path d="M0 120H70L85 148H155L170 120H240V170H0Z" fill="#e3dccb"/>
-            <path d="M0 120H70L85 148H155L170 120H240" fill="none" stroke="#b9ae95" stroke-width="2"/>
-            <polygon class="beam" points="120,42 84,146 156,146" fill="#5255e0"/>
-            <g class="drone">
-              <rect x="106" y="30" width="28" height="9" rx="4" fill="#0f1b3d"/>
-              <line class="rotor" x1="96" y1="27" x2="116" y2="27" stroke="#5f6880" stroke-width="2" stroke-linecap="round"/>
-              <line class="rotor" x1="124" y1="27" x2="144" y2="27" stroke="#5f6880" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="120" cy="42" r="3" fill="#5255e0"/>
-            </g>
-            <line x1="28" y1="120" x2="28" y2="80" stroke="#5f6880" stroke-width="2"/>
-            <rect x="19" y="70" width="18" height="11" rx="2" fill="#0f1b3d"/>
-            <circle class="blink" cx="33" cy="73" r="1.8" fill="#e05252"/>
-            <line x1="210" y1="120" x2="210" y2="100" stroke="#5f6880" stroke-width="2"/>
-            <circle cx="210" cy="95" r="5" fill="#5255e0"/>
-            <circle class="ring" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
-            <circle class="ring" style="animation-delay:1.2s" cx="210" cy="95" r="6" fill="none" stroke="#5255e0" stroke-width="1.5"/>
-          </svg>
-          <p>{{how.s1d}}</p>
-        </article>
-        <article class="step">
-          <div class="step-head"><span class="mono">02</span><h3>{{how.s2t}}</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="{{how.s2a}}">
-            <g id="hiw-dots"></g>
-            <g class="chg"><rect x="98" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="114" y="138" width="10" height="8" rx="1.5" fill="#17845a"/><rect x="130" y="138" width="10" height="8" rx="1.5" fill="#17845a"/></g>
-            <rect x="28" y="40" width="184" height="26" rx="3" fill="#e6f3ec" stroke="#17845a"/>
-            <text x="120" y="57" text-anchor="middle" fill="#17845a" font-size="12" font-weight="600" font-family="Inter, sans-serif">{{how.s2l}}</text>
-          </svg>
-          <p>{{how.s2d}}</p>
-        </article>
-        <article class="step">
-          <div class="step-head"><span class="mono">03</span><h3>{{how.s3t}}</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="{{how.s3a}}">
-            <text x="120" y="32" text-anchor="middle" fill="#0f1b3d" font-size="26" font-weight="600" font-family="Outfit, sans-serif">62%</text>
-            <text x="120" y="50" text-anchor="middle" fill="#5f6880" font-size="11" font-family="Inter, sans-serif">{{how.s3l}}</text>
-            <path d="M16 70H70L84 132H156L170 70H224" fill="none" stroke="#5255e0" stroke-width="2.5" stroke-dasharray="6 5"/>
-            <path class="draw" d="M16 70H70L82 108.5H158L170 70H224" fill="none" stroke="#17845a" stroke-width="3" stroke-linejoin="round"/>
-            <line x1="14" y1="154" x2="32" y2="154" stroke="#5255e0" stroke-width="2.5" stroke-dasharray="5 4"/>
-            <text x="37" y="158" fill="#3e4a66" font-size="10" font-family="Inter, sans-serif">{{how.s3p}}</text>
-            <line x1="112" y1="154" x2="130" y2="154" stroke="#17845a" stroke-width="3"/>
-            <text x="135" y="158" fill="#3e4a66" font-size="10" font-family="Inter, sans-serif">{{how.s3d_}}</text>
-          </svg>
-          <p>{{how.s3d}}</p>
-        </article>
-        <article class="step">
-          <div class="step-head"><span class="mono">04</span><h3>{{how.s4t}}</h3></div>
-          <svg viewBox="0 0 240 170" role="img" aria-label="{{how.s4a}}">
-            <rect x="12" y="10" width="216" height="150" rx="4" fill="#ffffff" stroke="#cdc8bb"/>
-            <text x="24" y="30" fill="#5f6880" font-size="10" font-family="Inter, sans-serif">{{how.s4p}}</text>
-            <text x="216" y="30" text-anchor="end" fill="#17845a" font-size="11" font-weight="700" font-family="Inter, sans-serif">62%</text>
-            <rect x="24" y="38" width="192" height="8" rx="4" fill="#e4e1d8"/>
-            <rect class="fillbar" x="24" y="38" width="119" height="8" rx="4" fill="#17845a"/>
-            <line x1="24" y1="118" x2="216" y2="118" stroke="#e4e1d8"/>
-            <polyline points="24,114 70,100 116,82 162,64 208,50" fill="none" stroke="#5255e0" stroke-width="2" stroke-dasharray="5 4"/>
-            <polyline class="draw" points="24,114 70,103 116,90 162,78" fill="none" stroke="#17845a" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle class="adot" cx="162" cy="78" r="3.5" fill="#17845a"/>
-            <g class="alert">
-              <rect x="24" y="126" width="192" height="26" rx="3" fill="#fbf1e1" stroke="#9a5f00"/>
-              <circle class="adot" cx="40" cy="139" r="3.5" fill="#9a5f00"/>
-              <text x="52" y="143" fill="#9a5f00" font-size="10" font-family="Inter, sans-serif">{{how.s4l}}</text>
-            </g>
-          </svg>
-          <p>{{how.s4d}}</p>
-        </article>
       </div>
-      <p class="note">{{how.note}}</p>
-
-      <div class="field">
-        <div class="field-head">
-          <h3>{{how.fieldH}}</h3>
-          <p>{{how.fieldP}}</p>
-        </div>
-        <div class="field-grid">
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/field-cut-480.avif 480w, {{@base}}assets/img/field-cut-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="{{@base}}assets/img/field-cut-480.webp" srcset="{{@base}}assets/img/field-cut-480.webp 480w, {{@base}}assets/img/field-cut-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="{{how.f1a}}">
-            </picture>
-            <figcaption class="mono">{{how.f1}}</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/field-floor-480.avif 480w, {{@base}}assets/img/field-floor-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="{{@base}}assets/img/field-floor-480.webp" srcset="{{@base}}assets/img/field-floor-480.webp 480w, {{@base}}assets/img/field-floor-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="{{how.f2a}}">
-            </picture>
-            <figcaption class="mono">{{how.f2}}</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/field-shoring-480.avif 480w, {{@base}}assets/img/field-shoring-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="{{@base}}assets/img/field-shoring-480.webp" srcset="{{@base}}assets/img/field-shoring-480.webp 480w, {{@base}}assets/img/field-shoring-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="{{how.f3a}}">
-            </picture>
-            <figcaption class="mono">{{how.f3}}</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/field-drone-480.avif 480w, {{@base}}assets/img/field-drone-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="{{@base}}assets/img/field-drone-480.webp" srcset="{{@base}}assets/img/field-drone-480.webp 480w, {{@base}}assets/img/field-drone-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="{{how.f4a}}">
-            </picture>
-            <figcaption class="mono">{{how.f4}}</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/field-urban-compactor-480.avif 480w, {{@base}}assets/img/field-urban-compactor-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="{{@base}}assets/img/field-urban-compactor-480.webp" srcset="{{@base}}assets/img/field-urban-compactor-480.webp 480w, {{@base}}assets/img/field-urban-compactor-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="{{how.f5a}}">
-            </picture>
-            <figcaption class="mono">{{how.f5}}</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/field-urban-materials-480.avif 480w, {{@base}}assets/img/field-urban-materials-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="{{@base}}assets/img/field-urban-materials-480.webp" srcset="{{@base}}assets/img/field-urban-materials-480.webp 480w, {{@base}}assets/img/field-urban-materials-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="800" loading="lazy" decoding="async" alt="{{how.f6a}}">
-            </picture>
-            <figcaption class="mono">{{how.f6}}</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/excavation-day-01-480.avif 480w, {{@base}}assets/img/excavation-day-01-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="{{@base}}assets/img/excavation-day-01-480.webp" srcset="{{@base}}assets/img/excavation-day-01-480.webp 480w, {{@base}}assets/img/excavation-day-01-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="{{how.f7a}}">
-            </picture>
-            <figcaption class="mono">{{how.f7}}</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/urban-site-dusk-wide-480.avif 480w, {{@base}}assets/img/urban-site-dusk-wide-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="{{@base}}assets/img/urban-site-dusk-wide-480.webp" srcset="{{@base}}assets/img/urban-site-dusk-wide-480.webp 480w, {{@base}}assets/img/urban-site-dusk-wide-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="{{how.f8a}}">
-            </picture>
-            <figcaption class="mono">{{how.f8}}</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/shored-excavation-night-01-480.avif 480w, {{@base}}assets/img/shored-excavation-night-01-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="{{@base}}assets/img/shored-excavation-night-01-480.webp" srcset="{{@base}}assets/img/shored-excavation-night-01-480.webp 480w, {{@base}}assets/img/shored-excavation-night-01-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="{{how.f9a}}">
-            </picture>
-            <figcaption class="mono">{{how.f9}}</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/urban-site-dusk-01-480.avif 480w, {{@base}}assets/img/urban-site-dusk-01-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="{{@base}}assets/img/urban-site-dusk-01-480.webp" srcset="{{@base}}assets/img/urban-site-dusk-01-480.webp 480w, {{@base}}assets/img/urban-site-dusk-01-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="{{how.f10a}}">
-            </picture>
-            <figcaption class="mono">{{how.f10}}</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/urban-site-dusk-03-480.avif 480w, {{@base}}assets/img/urban-site-dusk-03-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="{{@base}}assets/img/urban-site-dusk-03-480.webp" srcset="{{@base}}assets/img/urban-site-dusk-03-480.webp 480w, {{@base}}assets/img/urban-site-dusk-03-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="{{how.f11a}}">
-            </picture>
-            <figcaption class="mono">{{how.f11}}</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/urban-site-dusk-06-480.avif 480w, {{@base}}assets/img/urban-site-dusk-06-800.avif 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw">
-              <img src="{{@base}}assets/img/urban-site-dusk-06-480.webp" srcset="{{@base}}assets/img/urban-site-dusk-06-480.webp 480w, {{@base}}assets/img/urban-site-dusk-06-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 768px) 30vw, 50vw" width="800" height="1067" loading="lazy" decoding="async" alt="{{how.f12a}}">
-            </picture>
-            <figcaption class="mono">{{how.f12}}</figcaption>
-          </figure>
-        </div>
-      </div>
+      <svg class="x-rings reveal" viewBox="0 0 420 420" role="img" aria-label="{{home.ringsAlt}}">
+        <circle cx="210" cy="210" r="190" fill="none" stroke="#C9DDF0" stroke-width="1.5"/>
+        <circle cx="210" cy="210" r="190" fill="none" stroke="#5446C9" stroke-width="3" stroke-dasharray="70 1124" stroke-linecap="round" transform="rotate(-100 210 210)"/>
+        <circle cx="210" cy="210" r="135" fill="none" stroke="#C9DDF0" stroke-width="1.5"/>
+        <circle cx="210" cy="210" r="135" fill="none" stroke="#7BD3F7" stroke-width="3" stroke-dasharray="60 788" stroke-linecap="round" transform="rotate(10 210 210)"/>
+        <circle cx="210" cy="210" r="80" fill="#E4F1FD"/>
+        <circle cx="210" cy="210" r="80" fill="none" stroke="#E08A2E" stroke-width="3" stroke-dasharray="6 7"/>
+        <g font-family="JetBrains Mono, monospace" font-size="12" letter-spacing=".08em" fill="#1B1650" text-anchor="middle">
+          <text x="210" y="14">{{home.r1}}</text>
+          <text x="210" y="70">{{home.r2}}</text>
+          <text x="210" y="205" fill="#9a5f00">{{home.r3a}}</text>
+          <text x="210" y="225" fill="#9a5f00">{{home.r3b}}</text>
+        </g>
+      </svg>
     </div>
   </section>
 
-  <!-- 3. The prototype -->
-  <section class="section section-alt" id="prototype" aria-labelledby="proto-title">
+  <!-- 3. How it works (light): Photo, Your plan, Progress on the map -->
+  <section class="x-section x-section-2" id="how" aria-labelledby="how-title">
+    <span id="product" class="x-anchor" aria-hidden="true"></span>
     <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">02 · {{proto.index}}</p>
-        <h2 id="proto-title">{{proto.h2}}</h2>
-        <p class="sec-lead">{{proto.lead}}</p>
-      </div>
-      <div class="screens">
-        <figure class="screen">
-          <div class="screen-frame screen-shot">
-            <a href="{{@base}}assets/img/screen-upload-1200.webp" target="_blank" rel="noopener">
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/screen-upload-640.avif 640w, {{@base}}assets/img/screen-upload-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
-              <img src="{{@base}}assets/img/screen-upload-640.webp" srcset="{{@base}}assets/img/screen-upload-640.webp 640w, {{@base}}assets/img/screen-upload-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="{{proto.sc1a}}">
-            </picture>
-            </a>
-          </div>
-          <figcaption><span>{{proto.sc1}}</span><span class="mono">{{proto.screen}} 1</span></figcaption>
-        </figure>
-        <figure class="screen">
-          <div class="screen-frame screen-shot">
-            <a href="{{@base}}assets/img/screen-map-1200.webp" target="_blank" rel="noopener">
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/screen-map-640.avif 640w, {{@base}}assets/img/screen-map-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
-              <img src="{{@base}}assets/img/screen-map-640.webp" srcset="{{@base}}assets/img/screen-map-640.webp 640w, {{@base}}assets/img/screen-map-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="{{proto.sc2a}}">
-            </picture>
-            </a>
-          </div>
-          <figcaption><span>{{proto.sc2}}</span><span class="mono">{{proto.screen}} 2</span></figcaption>
-        </figure>
-        <figure class="screen">
-          <div class="screen-frame screen-shot">
-            <a href="{{@base}}assets/img/screen-alerts-1200.webp" target="_blank" rel="noopener">
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/screen-alerts-640.avif 640w, {{@base}}assets/img/screen-alerts-1200.avif 1200w" sizes="(min-width: 960px) 360px, 100vw">
-              <img src="{{@base}}assets/img/screen-alerts-640.webp" srcset="{{@base}}assets/img/screen-alerts-640.webp 640w, {{@base}}assets/img/screen-alerts-1200.webp 1200w" sizes="(min-width: 960px) 360px, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="{{proto.sc3a}}">
-            </picture>
-            </a>
-          </div>
-          <figcaption><span>{{proto.sc3}}</span><span class="mono">{{proto.screen}} 3</span></figcaption>
-        </figure>
-      </div>
-      <p class="note">{{proto.note}} {{proto.blurNote}}</p>
-      <p class="alert-open"><a class="btn btn-outline" id="alert-open" href="{{@base}}assets/img/screen-alerts-1200.webp" target="_blank" rel="noopener">{{proto.alertBtn}}</a></p>
-      <dialog class="alert-dialog" id="alert-dialog" aria-labelledby="alert-dialog-title">
-        <div class="alert-dialog-head">
-          <p id="alert-dialog-title">{{proto.sc3}}</p>
-          <form method="dialog"><button class="btn btn-outline btn-small" type="submit">{{proto.alertClose}}</button></form>
-        </div>
-        <picture>
-          <source type="image/avif" srcset="{{@base}}assets/img/screen-alerts-1200.avif">
-          <img src="{{@base}}assets/img/screen-alerts-1200.webp" width="1200" height="750" loading="lazy" decoding="async" alt="{{proto.sc3a}}">
-        </picture>
-        <p class="note">{{proto.note}} {{proto.blurNote}}</p>
-      </dialog>
-
-      <div class="status-cols">
-        <div>
-          <h3>{{proto.todayH}}</h3>
-          <ul class="status-list status-today">
-            <li><span>{{proto.today1}}</span></li>
-            <li><span>{{proto.today2}}</span></li>
-            <li><span>{{proto.today3}}</span></li>
-            <li><span>{{proto.today4}}</span></li>
-            <li><span>{{proto.today5}}</span></li>
-          </ul>
-        </div>
-        <div>
-          <h3>{{proto.nextH}}</h3>
-          <ul class="status-list">
-            <li><span class="chip">{{proto.chipNext}}</span><span>{{proto.next1}}</span></li>
-          </ul>
-        </div>
-      </div>
+      <p class="x-label x-kicker">{{nav.how}}</p>
+      <h2 id="how-title">{{home.hH2}}</h2>
+      <p class="x-intro">{{home.hLead}}</p>
+{{@homeFlow}}
+      <p class="x-sample">{{home.sample}}</p>
+      <p class="x-more"><a class="x-link" href="{{@conceptPage}}">{{vis.more}} <span aria-hidden="true">→</span></a></p>
     </div>
   </section>
 
-  <!-- 4. What you get: only what the app does. Mockups: src/partials/product-devices.html, list: src/partials/product-features.html -->
-  <section class="section" id="product" aria-labelledby="product-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">03 · {{prod.index}}</p>
-        <h2 id="product-title">{{prod.h2}}</h2>
-        <p class="sec-lead">{{prod.lead}}</p>
-      </div>
-{{@productDevices}}
-{{@productFeatures}}
-      <p class="pd-delivery">{{prod.delivery}}</p>
-
-      <!-- Vision: ideas that are not in the product, kept apart from what customers get today -->
-      <div class="pd-vision">
-        <div class="pd-vision-head">
-          <p class="chip">{{vis.chip}}</p>
-          <h3>{{vis.h}}</h3>
-          <p>{{vis.lead}}</p>
-          <p class="pd-vision-link"><a class="link-arrow" href="{{@conceptPage}}">{{vis.more}} <span aria-hidden="true">→</span></a></p>
-        </div>
-        <ul>
-          <li><strong>{{vis.f12t}}</strong><p>{{vis.f12d}}</p></li>
-          <li><strong>{{vis.f4t}}</strong><p>{{vis.f4d}}</p></li>
-          <li><strong>{{vis.f5t}}</strong><p>{{vis.f5d}}</p></li>
-          <li><strong>{{vis.f8t}}</strong><p>{{vis.f8d}}</p></li>
-          <li><strong>{{vis.f10t}}</strong><p>{{vis.f10d}}</p></li>
-          <li><strong>{{vis.f11t}}</strong><p>{{vis.f11d}}</p></li>
-          <li><strong>{{vis.f6t}}</strong><p>{{vis.f6d}}</p></li>
-          <li><strong>{{vis.lidT}}</strong><p>{{vis.lidD}}</p></li>
-        </ul>
-        <p class="pd-fine">{{vis.safetyNote}}</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Who it is for -->
-  <section class="section" id="for" aria-labelledby="for-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">04 · {{for.index}}</p>
-        <h2 id="for-title">{{for.h2}}</h2>
-      </div>
-      <div class="audience">
-        <div>
-          <h3>{{for.c_h}}</h3>
-          <p>{{for.c_p}}</p>
-        </div>
-        <div>
-          <h3>{{for.o_h}}</h3>
-          <p>{{for.o_p}}</p>
-        </div>
-      </div>
-      <figure class="for-photo">
-        <picture>
-          <source type="image/avif" srcset="{{@base}}assets/img/site-earthworks-cranes-640.avif 640w, {{@base}}assets/img/site-earthworks-cranes-1080.avif 1080w, {{@base}}assets/img/site-earthworks-cranes-1600.avif 1600w" sizes="(min-width: 1280px) 1120px, 100vw">
-          <img src="{{@base}}assets/img/site-earthworks-cranes-1080.webp" srcset="{{@base}}assets/img/site-earthworks-cranes-640.webp 640w, {{@base}}assets/img/site-earthworks-cranes-1080.webp 1080w, {{@base}}assets/img/site-earthworks-cranes-1600.webp 1600w" sizes="(min-width: 1280px) 1120px, 100vw" width="1600" height="1000" loading="lazy" decoding="async" alt="{{for.photoAlt}}">
-        </picture>
-        <figcaption>{{for.photoCap}}</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- 5. Home base and Europe -->
-  <section class="section section-alt" id="about" aria-labelledby="about-title">
-    <div class="container about-grid">
+  <!-- 4. Plan formats (dark) -->
+  <section class="x-dark x-section" id="formats" aria-labelledby="formats-title">
+    <div class="container x-split">
       <div>
-        <div class="sec-head">
-          <p class="sec-index mono">05 · {{about.index}}</p>
-          <h2 id="about-title">{{about.h2}}</h2>
-          <p class="sec-lead">{{about.lead}}</p>
-        </div>
-        <ul class="countries" aria-label="{{about.countries}}">
-          <li>{{about.c1}} <span class="home">· {{about.homeBase}}</span></li><li>{{about.c2}}</li><li>{{about.c3}}</li><li>{{about.c4}}</li><li>{{about.c5}}</li>
+        <p class="x-label x-kicker">{{home.navFormats}}</p>
+        <h2 id="formats-title">{{home.fmH2}}</h2>
+        <p class="x-intro">{{home.fmLead}}</p>
+        <ul class="x-formats">
+          <li><span class="x-fmt">DWG</span><span class="x-pill x-pill-ok">{{home.today}}</span></li>
+          <li><span class="x-fmt">IFC</span><span class="x-pill">{{home.planned}}</span></li>
+          <li><span class="x-fmt">LandXML</span><span class="x-pill">{{home.planned}}</span></li>
+          <li><span class="x-fmt">{{home.clouds}}</span><span class="x-pill">{{home.planned}}</span></li>
         </ul>
       </div>
-      <div class="about-photos">
-        <figure class="photo">
-          <picture>
-            <source type="image/avif" srcset="{{@base}}assets/img/about-helsinki-trench-640.avif 640w, {{@base}}assets/img/about-helsinki-trench-1080.avif 1080w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
-            <img src="{{@base}}assets/img/about-helsinki-trench-640.webp" srcset="{{@base}}assets/img/about-helsinki-trench-640.webp 640w, {{@base}}assets/img/about-helsinki-trench-1080.webp 1080w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="1080" height="720" loading="lazy" decoding="async" alt="{{about.trenchAlt}}">
-          </picture>
-          <figcaption class="mono">{{about.trenchCap}}</figcaption>
-        </figure>
-        <figure class="photo">
-          <picture>
-            <source type="image/avif" srcset="{{@base}}assets/img/site-visit-team-480.avif 480w, {{@base}}assets/img/site-visit-team-800.avif 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
-            <img src="{{@base}}assets/img/site-visit-team-800.webp" srcset="{{@base}}assets/img/site-visit-team-480.webp 480w, {{@base}}assets/img/site-visit-team-800.webp 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="800" height="600" loading="lazy" decoding="async" alt="{{about.siteAlt}}">
-          </picture>
-          <figcaption class="mono">{{about.siteCap}}</figcaption>
-        </figure>
-        <figure class="photo">
-          <picture>
-            <source type="image/avif" srcset="{{@base}}assets/img/drone-controller-field-480.avif 480w, {{@base}}assets/img/drone-controller-field-800.avif 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw">
-            <img src="{{@base}}assets/img/drone-controller-field-800.webp" srcset="{{@base}}assets/img/drone-controller-field-480.webp 480w, {{@base}}assets/img/drone-controller-field-800.webp 800w" sizes="(min-width: 1280px) 375px, (min-width: 768px) 33vw, 100vw" width="800" height="1067" loading="lazy" decoding="async" alt="{{about.photoAlt}}">
-          </picture>
-          <figcaption class="mono">{{about.photoCaption}}</figcaption>
-        </figure>
-      </div>
+      <svg class="x-hub reveal" viewBox="0 0 440 400" role="img" aria-label="{{home.hubAlt}}">
+        <g fill="none" stroke-width="2" stroke-dasharray="6 7">
+          <path d="M80 70 C 150 90, 170 150, 220 200" stroke="#5CF2B0"/>
+          <path d="M360 70 C 290 90, 270 150, 220 200" stroke="#8EEBFF" opacity=".7"/>
+          <path d="M80 330 C 150 310, 170 250, 220 200" stroke="#8EEBFF" opacity=".7"/>
+          <path d="M360 330 C 290 310, 270 250, 220 200" stroke="#8EEBFF" opacity=".7"/>
+        </g>
+        <path d="M220 130 290 200 220 270 150 200Z" fill="#7B6CFF" opacity=".55"/>
+        <path d="M220 130 290 200 220 200Z" fill="#8EEBFF" opacity=".35"/>
+        <g font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">
+          <circle cx="72" cy="66" r="40" fill="#0E0B2B" stroke="#5CF2B0" stroke-width="2"/><text x="72" y="70" fill="#F4F2FF">DWG</text>
+          <circle cx="368" cy="66" r="40" fill="#0E0B2B" stroke="#8EEBFF" stroke-opacity=".6" stroke-width="1.5"/><text x="368" y="70" fill="#C9C3EE">IFC</text>
+          <circle cx="72" cy="334" r="40" fill="#0E0B2B" stroke="#8EEBFF" stroke-opacity=".6" stroke-width="1.5"/><text x="72" y="338" fill="#C9C3EE">LandXML</text>
+          <circle cx="368" cy="334" r="40" fill="#0E0B2B" stroke="#8EEBFF" stroke-opacity=".6" stroke-width="1.5"/><text x="368" y="330" fill="#C9C3EE">{{home.cl1}}</text><text x="368" y="346" fill="#C9C3EE">{{home.cl2}}</text>
+        </g>
+      </svg>
     </div>
   </section>
 
-  <!-- 6. Milestones -->
-  <section class="section" id="milestones" aria-labelledby="ms-title">
+  <!-- 5. Milestones (light): arrow timelines -->
+  <section class="x-section" id="milestones" aria-labelledby="ms-title">
+    <span id="news" class="x-anchor" aria-hidden="true"></span>
     <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">06 · {{ms.index}}</p>
-        <h2 id="ms-title">{{ms.h2}}</h2>
-        <p class="sec-lead">{{ms.lead}}</p>
+      <p class="x-label x-kicker">{{nav.recognition}}</p>
+      <h2 id="ms-title">{{home.msH2}}</h2>
+      <h3 class="x-track-h">{{home.soFar}}</h3>
+      <ol class="x-track">
+        <li class="reveal"><span class="x-node">Nov 24</span><strong>{{home.m1t}}</strong><span>{{home.m1d}}</span></li>
+        <li class="reveal"><span class="x-node">Oct 25</span><strong>{{home.m2t}}</strong><span>{{home.m2d}}</span></li>
+        <li class="reveal"><span class="x-node">Nov 25</span><strong>{{home.m3t}}</strong><span>{{home.m3d}}</span></li>
+        <li class="reveal"><span class="x-node x-node-ok">Dec 25</span><strong>{{home.m4t}}</strong><span>{{home.m4d}}</span></li>
+        <li class="reveal"><span class="x-node">Feb 26</span><strong>{{home.m5t}}</strong><span>{{home.m5d}}</span></li>
+        <li class="reveal"><span class="x-node">May 26</span><strong>{{home.m6t}}</strong><span>{{home.m6d}}</span></li>
+      </ol>
+      <h3 class="x-track-h">{{home.heading}}</h3>
+      <ol class="x-track x-track-plan">
+        <li class="reveal"><span class="x-node">{{home.next}}</span><strong>{{home.n1t}}</strong><span>{{home.n1d}}</span></li>
+        <li class="reveal"><span class="x-node">2027</span><strong>{{home.n2t}}</strong><span>{{home.n2d}}</span></li>
+        <li class="reveal"><span class="x-node">{{home.then}}</span><strong>{{home.n3t}}</strong><span>{{home.n3d}}</span></li>
+        <li class="reveal"><span class="x-node">2030</span><strong>{{home.n4t}}</strong><span>{{home.n4d}}</span></li>
+      </ol>
+      <p class="x-sample">{{home.plansNote}}</p>
+      <p class="x-more"><a class="x-link" href="{{@newsPage}}">{{news.all}} <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <!-- 6. Where we have pitched (dark) -->
+  <section class="x-dark x-section" id="pitched" aria-labelledby="pitched-title">
+    <div class="container x-split x-split-wide">
+      <div>
+        <p class="x-label x-kicker">{{home.pitchIndex}}</p>
+        <h2 id="pitched-title">{{home.pitchH2}}</h2>
+        <ul class="x-stages">
+          <li id="event-meout-2026">
+            <svg class="x-flag" viewBox="0 0 24 24" aria-hidden="true"><clipPath id="fl-hu"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#fl-hu)"><rect width="24" height="8" fill="#CE2939"/><rect y="8" width="24" height="8" fill="#fff"/><rect y="16" width="24" height="8" fill="#477050"/></g></svg>
+            <div><strong>MeOut Summit · Budapest</strong><span class="x-country">{{home.hu}}</span>
+            <p><span data-until="2026-11-26">{{home.meoutSoon}}</span><span data-from="2026-11-27" hidden>{{home.meoutDone}}</span></p></div>
+          </li>
+          <li>
+            <svg class="x-flag" viewBox="0 0 24 24" aria-hidden="true"><clipPath id="fl-az"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#fl-az)"><rect width="24" height="8" fill="#0092BC"/><rect y="8" width="24" height="8" fill="#E4002B"/><rect y="16" width="24" height="8" fill="#00AF66"/><circle cx="11.2" cy="12" r="2.6" fill="#fff"/><circle cx="11.9" cy="12" r="2.1" fill="#E4002B"/><circle cx="14.4" cy="12" r=".9" fill="#fff"/></g></svg>
+            <div><strong>AIREX 2026 · Baku</strong><span class="x-country">{{home.az}}</span><p>{{home.airex}}</p></div>
+          </li>
+          <li>
+            <svg class="x-flag" viewBox="0 0 24 24" aria-hidden="true"><clipPath id="fl-fi"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#fl-fi)"><rect width="24" height="24" fill="#fff"/><rect x="6" width="4.4" height="24" fill="#002F6C"/><rect y="9.8" width="24" height="4.4" fill="#002F6C"/></g></svg>
+            <div><strong>Sisu Factory · Helsinki</strong><span class="x-country">{{home.fi}}</span><p>{{home.sisu}}</p></div>
+          </li>
+        </ul>
       </div>
-
-
-      <div class="ms-highlights">
-        <figure class="ms-photo">
+      <div class="x-photos">
+        <!-- TODO: add the Baku stage photos here when they arrive -->
+        <figure class="x-photo reveal">
           <picture>
             <source type="image/avif" srcset="{{@base}}assets/img/sisu-win-480.avif 480w, {{@base}}assets/img/sisu-win-800.avif 800w, {{@base}}assets/img/sisu-win-1080.avif 1080w" sizes="(min-width: 1024px) 560px, 100vw">
             <img src="{{@base}}assets/img/sisu-win-800.webp" srcset="{{@base}}assets/img/sisu-win-480.webp 480w, {{@base}}assets/img/sisu-win-800.webp 800w, {{@base}}assets/img/sisu-win-1080.webp 1080w" sizes="(min-width: 1024px) 560px, 100vw" width="1080" height="720" loading="lazy" decoding="async" alt="{{ms.photoAlt}}">
           </picture>
-          <figcaption><span class="mono">{{ms.photoTag}}</span>{{ms.photoCap}}</figcaption>
-        </figure>
-        <div class="ms-stats">
-          <div class="ms-stat">
-            <p class="mono ms-label">{{ms.s1label}}</p>
-            <p class="ms-num">{{ms.s1num}}</p>
-            <p>{{ms.s1text}}</p>
-          </div>
-          <div class="ms-stat">
-            <p class="mono ms-label">{{ms.s2label}}</p>
-            <p class="ms-num">{{ms.s2num}}</p>
-            <p>{{ms.s2text}}</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="ms-gallery">
-        <figure class="g-portrait">
-          <picture>
-            <source type="image/avif" srcset="{{@base}}assets/img/sisu-sauna-certificate-480.avif 480w, {{@base}}assets/img/sisu-sauna-certificate-800.avif 800w, {{@base}}assets/img/sisu-sauna-certificate-1080.avif 1080w" sizes="(min-width: 960px) 40vw, 100vw">
-            <img src="{{@base}}assets/img/sisu-sauna-certificate-800.webp" srcset="{{@base}}assets/img/sisu-sauna-certificate-480.webp 480w, {{@base}}assets/img/sisu-sauna-certificate-800.webp 800w, {{@base}}assets/img/sisu-sauna-certificate-1080.webp 1080w" sizes="(min-width: 960px) 40vw, 100vw" width="1333" height="2000" loading="lazy" decoding="async" alt="{{ms.g1a}}">
-          </picture>
-          <figcaption class="mono">{{ms.g1}}</figcaption>
-        </figure>
-        <figure class="g-photo">
-          <picture>
-            <source type="image/avif" srcset="{{@base}}assets/img/polar-bear-pitching-oulu-480.avif 480w, {{@base}}assets/img/polar-bear-pitching-oulu-800.avif 800w, {{@base}}assets/img/polar-bear-pitching-oulu-1080.avif 1080w" sizes="(min-width: 960px) 40vw, 100vw">
-            <img src="{{@base}}assets/img/polar-bear-pitching-oulu-800.webp" srcset="{{@base}}assets/img/polar-bear-pitching-oulu-480.webp 480w, {{@base}}assets/img/polar-bear-pitching-oulu-800.webp 800w, {{@base}}assets/img/polar-bear-pitching-oulu-1080.webp 1080w" sizes="(min-width: 960px) 40vw, 100vw" width="1600" height="1200" loading="lazy" decoding="async" alt="{{ms.g2a}}">
-          </picture>
-          <figcaption class="mono">{{ms.g2}}</figcaption>
-        </figure>
-      </div>
-
-      <h3 class="ms-sub">{{ms.timelineH}}</h3>
-      <ol class="timeline">
-        <li>
-          <time class="mono">{{ms.t1d}}</time>
-          <div>
-            <h3>{{ms.t0h}}</h3>
-            <p>{{ms.t0p}}</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">{{ms.t1d}}</time>
-          <div>
-            <h3>{{ms.t1h}}</h3>
-            <p>{{ms.t1p}}</p>
-            <a href="https://www.eu-startups.com/2026/10/meout-summit-2026-meet-the-pitch-marathon-contestants/" rel="noopener" target="_blank">{{ms.euStartups}} <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">{{ms.t2d}}</time>
-          <div>
-            <h3>{{ms.t2h}}</h3>
-            <p>{{ms.t2p}}</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">{{ms.t3d}}</time>
-          <div>
-            <h3>{{ms.t3h}}</h3>
-            <p>{{ms.t3p}}</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">{{ms.t4d}}</time>
-          <div>
-            <h3>{{ms.t4h}}</h3>
-            <p>{{ms.t4p}}</p>
-            <a href="https://centralbaltic.eu/project/baltic-impact-accelerator/" rel="noopener" target="_blank">{{ms.programme}} <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">{{ms.t5d}}</time>
-          <div>
-            <h3>{{ms.t5h}}</h3>
-            <p>{{ms.t5p}}</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">{{ms.t6d}}</time>
-          <div>
-            <h3>{{ms.t6h}}</h3>
-            <p>{{ms.t6p}}</p>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7394758461210841088/" rel="noopener" target="_blank">{{recog.linkedin}} <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">{{ms.t7d}}</time>
-          <div>
-            <h3>{{ms.t7h}}</h3>
-            <p>{{ms.t7p}}</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">{{ms.t10d}}</time>
-          <div>
-            <h3>{{ms.t10h}}</h3>
-            <p>{{ms.t10p}}</p>
-            <a href="https://pitchbob.io/secretseeds/revolutionizing-the-construction-industry-how-workguardai-is-leading-the-ai-driven-transformation" rel="noopener" target="_blank">{{recog.read}} <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">{{ms.t8d}}</time>
-          <div>
-            <h3>{{ms.t8h}}</h3>
-            <p>{{ms.t8p}}</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">{{ms.t9d}}</time>
-          <div>
-            <h3>{{ms.t9h}}</h3>
-            <p>{{ms.t9p}}</p>
-            <a href="https://www.linkedin.com/posts/sisu-factory_sisufactory-startup-pitching-activity-7300066903111135233-Zzur" rel="noopener" target="_blank">{{recog.linkedin}} <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a>
-          </div>
-        </li>
-        <li>
-          <time class="mono">{{ms.t11d}}</time>
-          <div>
-            <h3>{{ms.t11h}}</h3>
-            <p>{{ms.t11p}}</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">{{ms.t12d}}</time>
-          <div>
-            <h3>{{ms.t12h}}</h3>
-            <p>{{ms.t12p}}</p>
-          </div>
-        </li>
-        <li>
-          <time class="mono">{{ms.t13d}}</time>
-          <div>
-            <h3>{{ms.t13h}}</h3>
-            <p>{{ms.t13p}}</p>
-          </div>
-        </li>
-      </ol>
-
-      <div class="supported">
-        <div>
-          <p class="mono">{{recog.supported}}</p>
-          <div class="supported-row">
-            <img src="{{@base}}assets/img/bia-interreg-acknowledgement.webp" width="456" height="232" loading="lazy" decoding="async" alt="{{ms.biaAlt}}">
-            <p>{{ms.programmes}}</p>
-          </div>
-        </div>
-        <figure class="cert">
-          <a href="{{@base}}assets/img/bia-certificate-1200.webp" target="_blank" rel="noopener" aria-label="{{ms.certOpen}} {{newtab}}">
-            <picture>
-              <source type="image/avif" srcset="{{@base}}assets/img/bia-certificate-640.avif 640w, {{@base}}assets/img/bia-certificate-1200.avif 1200w" sizes="(min-width: 960px) 420px, 100vw">
-              <img src="{{@base}}assets/img/bia-certificate-640.webp" srcset="{{@base}}assets/img/bia-certificate-640.webp 640w, {{@base}}assets/img/bia-certificate-1200.webp 1200w" sizes="(min-width: 960px) 420px, 100vw" width="1200" height="848" loading="eager" fetchpriority="low" decoding="async" alt="{{ms.certAlt}}">
-            </picture>
-          </a>
-          <figcaption class="mono">{{ms.certCap}}</figcaption>
+          <figcaption class="x-label">{{ms.photoTag}}</figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- 7. News (from src/news.json) -->
-  <section class="section section-alt" id="news" aria-labelledby="news-title">
+  <!-- 7. Team (light) -->
+  <section class="x-section" id="team" aria-labelledby="team-title">
     <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">07 · {{news.index}}</p>
-        <h2 id="news-title">{{news.h2}}</h2>
-      </div>
-      <ol class="news-list">
-{{@newsLatest}}
-      </ol>
-      <p class="news-more"><a class="link-arrow" href="{{@newsPage}}">{{news.all}} <span aria-hidden="true">→</span></a> <a class="link-arrow" href="{{@home}}?interest=updates#work-form">{{upd.h2}} <span aria-hidden="true">→</span></a></p>
-    </div>
-  </section>
-
-  <!-- 8. Team -->
-  <section class="section" id="team" aria-labelledby="team-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">08 · {{team.index}}</p>
-        <h2 id="team-title">{{team.h2}}</h2>
-      </div>
-      <ul class="team">
-        <li><picture class="avatar"><source type="image/avif" srcset="{{@base}}assets/img/team-endrit-kola-192.avif 1x, {{@base}}assets/img/team-endrit-kola-384.avif 2x"><img src="{{@base}}assets/img/team-endrit-kola-192.webp" srcset="{{@base}}assets/img/team-endrit-kola-192.webp 1x, {{@base}}assets/img/team-endrit-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Endrit Kola"></picture><span class="name">Endrit Kola</span><span class="role mono">{{team.ceo}}</span><a href="https://www.linkedin.com/in/endritkola/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="{{@base}}assets/img/team-maiju-karhu-192.avif 1x, {{@base}}assets/img/team-maiju-karhu-384.avif 2x"><img src="{{@base}}assets/img/team-maiju-karhu-192.webp" srcset="{{@base}}assets/img/team-maiju-karhu-192.webp 1x, {{@base}}assets/img/team-maiju-karhu-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><span class="name">Maiju Karhu</span><span class="role mono">{{team.advisor}}</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="{{@base}}assets/img/team-larissa-chaves-192.avif 1x, {{@base}}assets/img/team-larissa-chaves-384.avif 2x"><img src="{{@base}}assets/img/team-larissa-chaves-192.webp" srcset="{{@base}}assets/img/team-larissa-chaves-192.webp 1x, {{@base}}assets/img/team-larissa-chaves-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><span class="name">Larissa Chaves</span><span class="role mono">{{team.techContrib}}</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden">{{newtab}}</span></a></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="{{@base}}assets/img/team-pratham-srivastava-192.avif 1x, {{@base}}assets/img/team-pratham-srivastava-384.avif 2x"><img src="{{@base}}assets/img/team-pratham-srivastava-192.webp" srcset="{{@base}}assets/img/team-pratham-srivastava-192.webp 1x, {{@base}}assets/img/team-pratham-srivastava-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><span class="name">Pratham Srivastava</span><span class="role mono">{{team.progContrib}}</span></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="{{@base}}assets/img/team-altin-kola-192.avif 1x, {{@base}}assets/img/team-altin-kola-384.avif 2x"><img src="{{@base}}assets/img/team-altin-kola-192.webp" srcset="{{@base}}assets/img/team-altin-kola-192.webp 1x, {{@base}}assets/img/team-altin-kola-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Altin Kola"></picture><span class="name">Altin Kola</span><span class="role mono">{{team.field}}</span></li>
-        <li><picture class="avatar"><source type="image/avif" srcset="{{@base}}assets/img/team-ergis-topi-192.avif 1x, {{@base}}assets/img/team-ergis-topi-384.avif 2x"><img src="{{@base}}assets/img/team-ergis-topi-192.webp" srcset="{{@base}}assets/img/team-ergis-topi-192.webp 1x, {{@base}}assets/img/team-ergis-topi-384.webp 2x" width="96" height="96" loading="lazy" decoding="async" alt="Ergis Topi"></picture><span class="name">Ergis Topi</span><span class="role mono">{{team.siteAdvisor}}</span></li>
+      <p class="x-label x-kicker">{{team.index}}</p>
+      <h2 id="team-title">{{home.teamH2}}</h2>
+      <ul class="x-team">
+        <li class="reveal"><picture><source type="image/avif" srcset="{{@base}}assets/img/team-endrit-kola-192.avif 1x, {{@base}}assets/img/team-endrit-kola-384.avif 2x"><img src="{{@base}}assets/img/team-endrit-kola-192.webp" srcset="{{@base}}assets/img/team-endrit-kola-192.webp 1x, {{@base}}assets/img/team-endrit-kola-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Endrit Kola"></picture><strong>Endrit Kola</strong><span>{{team.ceo}}</span><a href="https://www.linkedin.com/in/endritkola/" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> {{newtab}}</span></a></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="{{@base}}assets/img/team-maiju-karhu-192.avif 1x, {{@base}}assets/img/team-maiju-karhu-384.avif 2x"><img src="{{@base}}assets/img/team-maiju-karhu-192.webp" srcset="{{@base}}assets/img/team-maiju-karhu-192.webp 1x, {{@base}}assets/img/team-maiju-karhu-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Maiju Karhu"></picture><strong>Maiju Karhu</strong><span>{{team.advisor}}</span><a href="https://www.linkedin.com/in/maiju-karhu/" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> {{newtab}}</span></a></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="{{@base}}assets/img/team-larissa-chaves-192.avif 1x, {{@base}}assets/img/team-larissa-chaves-384.avif 2x"><img src="{{@base}}assets/img/team-larissa-chaves-192.webp" srcset="{{@base}}assets/img/team-larissa-chaves-192.webp 1x, {{@base}}assets/img/team-larissa-chaves-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Larissa Chaves"></picture><strong>Larissa Chaves</strong><span>{{team.techContrib}}</span><a href="https://www.linkedin.com/in/larissa-delara-chaves/" rel="noopener" target="_blank">LinkedIn<span class="visually-hidden"> {{newtab}}</span></a></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="{{@base}}assets/img/team-pratham-srivastava-192.avif 1x, {{@base}}assets/img/team-pratham-srivastava-384.avif 2x"><img src="{{@base}}assets/img/team-pratham-srivastava-192.webp" srcset="{{@base}}assets/img/team-pratham-srivastava-192.webp 1x, {{@base}}assets/img/team-pratham-srivastava-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Pratham Srivastava"></picture><strong>Pratham Srivastava</strong><span>{{team.progContrib}}</span></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="{{@base}}assets/img/team-altin-kola-192.avif 1x, {{@base}}assets/img/team-altin-kola-384.avif 2x"><img src="{{@base}}assets/img/team-altin-kola-192.webp" srcset="{{@base}}assets/img/team-altin-kola-192.webp 1x, {{@base}}assets/img/team-altin-kola-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Altin Kola"></picture><strong>Altin Kola</strong><span>{{team.field}}</span></li>
+        <li class="reveal"><picture><source type="image/avif" srcset="{{@base}}assets/img/team-ergis-topi-192.avif 1x, {{@base}}assets/img/team-ergis-topi-384.avif 2x"><img src="{{@base}}assets/img/team-ergis-topi-192.webp" srcset="{{@base}}assets/img/team-ergis-topi-192.webp 1x, {{@base}}assets/img/team-ergis-topi-384.webp 2x" width="120" height="120" loading="lazy" decoding="async" alt="Ergis Topi"></picture><strong>Ergis Topi</strong><span>{{team.siteAdvisor}}</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- 9. FAQ -->
-  <section class="section section-alt" id="faq" aria-labelledby="faq-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">09 · {{faq.index}}</p>
-        <h2 id="faq-title">{{faq.h2}}</h2>
-      </div>
-      <div class="faq">
-        <details><summary>{{faq.q1}}</summary><p>{{faq.a1}}</p></details>
-        <details><summary>{{faq.q2}}</summary><p>{{faq.a2}}</p></details>
-        <details><summary>{{faq.q3}}</summary><p>{{faq.a3}}</p></details>
-        <details><summary>{{faq.q4}}</summary><p>{{faq.a4}}</p></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. Work with us: each card opens the one form with its interest preselected -->
-  <section class="section" id="work" aria-labelledby="work-title">
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">10 · {{work.index}}</p>
-        <h2 id="work-title">{{work.h2}}</h2>
-      </div>
-      <ul class="who">
-        <li><h3>{{work.c1h}}</h3><p>{{work.c1p}}</p><a class="link-arrow" href="{{@home}}?interest=pilot#work-form">{{cta.pilot}} <span aria-hidden="true">→</span></a></li>
-        <li><h3>{{work.c2h}}</h3><p>{{work.c2p}}</p><a class="link-arrow" href="{{@home}}?interest=research#work-form">{{work.c2cta}} <span aria-hidden="true">→</span></a></li>
-        <li><h3>{{work.c3h}}</h3><p>{{work.c3p}}</p><a class="link-arrow" id="event-cta-link" href="{{@eventMeet}}"><span id="event-cta" data-none="{{cta.meetNone}}">{{@eventCta}}</span> <span aria-hidden="true">→</span></a></li>
-        <li><h3>{{work.c4h}}</h3><p>{{work.c4p}} <a href="{{@press}}">{{press.link}}</a></p><a class="link-arrow" href="{{@home}}?interest=press#work-form">{{work.c4cta}} <span aria-hidden="true">→</span></a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Events (from src/news.json). The script hides a row once its event has ended. -->
-  <section class="section section-alt" id="events" aria-labelledby="events-title"{{@eventHidden}}>
-    <div class="container">
-      <div class="sec-head">
-        <p class="sec-index mono">11 · {{ev.index}}</p>
-        <h2 id="events-title">{{ev.h2}}</h2>
-      </div>
-      <ul class="events">
-{{@eventList}}
-      </ul>
-    </div>
-  </section>
-
-  <!-- 11. Pilot call + partner -->
-  <section class="section" id="pilot" aria-labelledby="pilot-title">
-    <div class="container pilot-grid">
+  <!-- 8. Contact (gradient). The one contact form, sent through Formspree. -->
+  <section class="x-cta" id="contact" aria-labelledby="work-title">
+    <span id="pilot" class="x-anchor" aria-hidden="true"></span><span id="work" class="x-anchor" aria-hidden="true"></span>
+    <div class="container x-split x-split-wide">
       <div>
-        <div class="sec-head">
-          <p class="sec-index mono">12 · {{pilot.index}}</p>
-          <h2 id="pilot-title">{{pilot.h2}}</h2>
-          <p class="sec-lead">{{pilot.lead}}</p>
-        </div>
-        <div class="pilot-how">
-          <h3>{{pilot.howH}}</h3>
-          <ol class="pilot-steps">
-            <li><span class="mono">01</span><div><strong>{{pilot.s1h}}</strong><p>{{pilot.s1p}}</p></div></li>
-            <li><span class="mono">02</span><div><strong>{{pilot.s2h}}</strong><p>{{pilot.s2p}}</p></div></li>
-            <li><span class="mono">03</span><div><strong>{{pilot.s3h}}</strong><p>{{pilot.s3p}}</p></div></li>
-          </ol>
-          <p class="pilot-pricing">{{pilot.pricing}}</p>
-        </div>
-        <div class="partner" id="partner">
-          <h3>{{partner.h}}</h3>
-          <p>{{partner.p}}</p>
-          <a class="link-arrow" href="mailto:ek@workguardai.com?subject=Partnership%20with%20WorkGuardAI">ek@workguardai.com <span aria-hidden="true">→</span></a>
-        </div>
+        <p class="x-label x-kicker">{{home.contactIndex}}</p>
+        <h2 id="work-title">{{home.ctaH2}}</h2>
+        <p class="x-intro">{{pilot.lead}}</p>
+        <ol class="x-pilot">
+          <li><span>01</span><div><strong>{{pilot.s1h}}</strong><p>{{pilot.s1p}}</p></div></li>
+          <li><span>02</span><div><strong>{{pilot.s2h}}</strong><p>{{pilot.s2p}}</p></div></li>
+          <li><span>03</span><div><strong>{{pilot.s3h}}</strong><p>{{pilot.s3p}}</p></div></li>
+        </ol>
+        <p class="x-mail"><a href="mailto:ek@workguardai.com">ek@workguardai.com</a></p>
       </div>
 
       <form class="form" id="work-form" aria-labelledby="work-title" method="POST" action="{{@formAction}}"
@@ -850,12 +292,12 @@
   </section>
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer x-footer">
   <div class="container">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="{{@home}}" aria-label="{{home}}"><img src="{{@base}}assets/img/logo.png" alt="WorkGuardAI" width="433" height="71" loading="lazy"></a>
-        <p style="margin-top:var(--s-4);max-width:26rem">{{footer.tagline}}</p>
+        <a class="brand" href="{{@home}}" aria-label="{{home}}"><i aria-hidden="true"></i>WorkGuardAI</a>
+        <p class="x-foot-tag">{{footer.tagline}}</p>
       </div>
       <div>
         <p class="foot-label mono">{{footer.contact}}</p>
@@ -863,9 +305,9 @@
           <li><a href="mailto:ek@workguardai.com">ek@workguardai.com</a></li>
           <li><a href="https://www.linkedin.com/company/workguardai" rel="noopener" target="_blank">LinkedIn</a></li>
           <li><a href="https://www.instagram.com/workguardai/" rel="noopener" target="_blank">Instagram @workguardai</a></li>
-          <li><a href="#work">{{work.h2}}</a></li>
           <li><a href="{{@newsPage}}">{{nav.news}}</a></li>
           <li><a href="{{@press}}">{{press.link}}</a></li>
+          <li><a href="{{@conceptPage}}">{{vis.chip}}</a></li>
           <li><a href="{{@privacy}}">{{privacy.link}}</a></li>
         </ul>
       </div>
